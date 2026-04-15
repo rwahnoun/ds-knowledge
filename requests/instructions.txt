@@ -1,0 +1,15 @@
+Objectif : Générer une revue systématique des biomarqueurs tumoraux détectables dans l'urine humaine via des méthodes de optiques et électrochimiques.
+Consignes de recherche :
+1. Biomarqueurs : Inclus les protéines (ex: PSA, NMP22), les acides nucléiques (ADNtc, micro-ARN), les vésicules extracellulaires (exosomes) et les métabolites organiques.
+2. Technologies : > * Optique : Fluorescence, absorbance et diffusion
+Électrochimie : Voltamperométrie, ampérométrie et impédancemétrie (EIS).
+3. Contexte Clinique : Pour chaque biomarqueur, précise s'il est utilisé pour :
+- Le dépistage/diagnostic initial.
+- Le suivi de l'efficacité du traitement (pharmacodynamie).
+- La détection de la maladie résiduelle minimale ou de la récidive (rémission).
+4. Format attendu : Présente les résultats sous forme de tableau comparatif incluant : Nom du biomarqueur, Type de cancer associé, Méthode de détection, Limite de détection (LOD) si disponible, et utilité clinique.
+5. Sources : Priorise les méta-analyses et les revues de littérature publiées entre 2020 et 2026.
+
+important:
+- write all outputs in english
+- download the most relevant papers (you have access to a scihub skill if needed).
