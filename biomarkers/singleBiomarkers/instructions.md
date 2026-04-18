@@ -6,18 +6,11 @@ Perform a full literature review on the biomarkers listed at the bottom. For eac
 
 Every sheet starts with YAML front matter and a single H1:
 
+
 ```markdown
----
 title: {Biomarker name}
 author: Usense Healthcare
 date: {YYYY-MM-DD}
----
-
-# {Biomarker name}
-
-**Author:** Usense Healthcare
-
----
 ```
 
 ## Document Structure
