@@ -12,9 +12,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: concept
-author: Usense Healthcare
+
 ---
 
 # Physics-Grounded Machine Learning for Spectral Analysis
@@ -59,9 +57,9 @@ Six distinct strategies for physically grounded spectral models:
 
 ### Enhanced Beer-Lambert Features (Most Relevant)
 
-**Paper:** arXiv:2509.12253 (2025) — "Physics-engineered Beer-Lambert model for glucose monitoring via NIR spectroscopy"
+**Paper:** arXiv:2509.12253 (2025) — "Physics-engineered Beer-Lambert model for [[glucose]] monitoring via NIR spectroscopy"
 
-**Key finding:** A simple physics-engineered feature set + ridge regression outperformed all tested PINNs for glucose prediction (13.6 mg/dL RMSE vs. 21+ mg/dL for PINNs).
+**Key finding:** A simple physics-engineered feature set + ridge regression outperformed all tested PINNs for [[glucose]] prediction (13.6 mg/dL RMSE vs. 21+ mg/dL for PINNs).
 
 **Feature design (56 features):**
 
@@ -77,8 +75,8 @@ Six distinct strategies for physically grounded spectral models:
 
 | LED | Analyte | ε (M⁻¹cm⁻¹) | Physical basis |
 |-----|---------|-------------|----------------|
-| A₂₇₅ | Uric acid | ~11,300 @ 293 nm | π→π* purine transition |
-| A₃₆₅ | NADH (excitation proxy) | ~6,220 @ 340 nm | Nicotinamide ring n→π* |
+| A₂₇₅ | [[uric-acid\|Uric acid]] | ~11,300 @ 293 nm | π→π* purine transition |
+| A₃₆₅ | [[nadh\|NADH]] (excitation proxy) | ~6,220 @ 340 nm | Nicotinamide ring n→π* |
 | A₄₀₅ | Porphyrin Soret band | ~500,000 | Porphyrin ring π→π* |
 | A₄₅₅ | Bilirubin | ~60,000 @ 453 nm | Extended π-conjugation |
 
@@ -122,7 +120,7 @@ Automatically extracts: Gaussian peak fitting (center, width, height), CDF trans
 
 Training uses simulated Beer-Lambert spectral-concentration pairs. The network learns the inverse mapping: spectra → concentrations. Real-time inference (~1000× faster than classical optimization) with accuracy matching classical least-squares fitting.
 
-**For Jimini:** Replace brain chromophores with urine chromophores (uric acid, bilirubin, hemoglobin, NADH). Train on simulated Beer-Lambert spectra, fine-tune on real urine data.
+**For Jimini:** Replace brain chromophores with urine chromophores ([[uric-acid|uric acid]], bilirubin, hemoglobin, [[nadh|NADH]]). Train on simulated Beer-Lambert spectra, fine-tune on real urine data.
 
 ### Physics-Constrained Autoencoders for Spectral Unmixing
 
@@ -136,7 +134,7 @@ Decoder: abundances × endmembers → reconstructed spectrum
 
 Physical constraints embedded: non-negativity (weight clipping in decoder), sum-to-one (softmax in encoder), linear mixing model in decoder (Beer-Lambert for mixtures). The decoder IS the physical mixing model; the encoder learns to invert it. Endmembers discovered by the decoder correspond to pure-component spectra.
 
-**For Jimini:** Urine is a mixture. The autoencoder could decompose each urine spectrum into contributions from known chromophores (uric acid, bilirubin, protein, hemoglobin, urobilinogen) + a "matrix" component.
+**For Jimini:** Urine is a mixture. The autoencoder could decompose each urine spectrum into contributions from known chromophores ([[uric-acid|uric acid]], bilirubin, protein, hemoglobin, urobilinogen) + a "matrix" component.
 
 ### Physics-Informed Neural Networks (PINNs) — Caution
 
@@ -327,14 +325,14 @@ Layer 3: Validation via Explainability (Category E)
 
 | Analyte | Primary λ | ε (M⁻¹cm⁻¹) | Suggested features |
 |---|---|---|---|
-| **Uric acid** | 275 nm | ~11,300 | A₂₇₅, A₂₇₅/A₃₂₀, A₂₇₅ − α·A₁₀₇₀ (scatter-corrected) |
+| **[[uric-acid\|Uric acid]]** | 275 nm | ~11,300 | A₂₇₅, A₂₇₅/A₃₂₀, A₂₇₅ − α·A₁₀₇₀ (scatter-corrected) |
 | **Bilirubin** | 453 nm | ~60,000 | A₄₅₅, (A₄₅₅−A₆₀₀)/(A₄₅₅+A₆₀₀), A₄₅₅/A₄₀₅ |
 | **Protein (total)** | 280 nm | ~5,500 (Trp) | A₂₇₅ (proxy), fluorescence ex275/em340 |
 | **Hemoglobin** | 405 nm (Soret) | ~128,000 | A₄₀₅, A₄₀₅/A₄₅₅, Q-band doublet 540/575 nm |
-| **NADH** | 340 nm abs / 460 nm fluor | ~6,220 | Fluorescence ratio em@460 / ex@365 |
-| **Porphyrins** | ~405 nm Soret + fluor 620 nm | ~500,000 | Fluor ex405/em620, A₄₀₅/A₄₈₀, 2nd derivative |
+| **[[nadh\|NADH]]** | 340 nm abs / 460 nm fluor | ~6,220 | Fluorescence ratio em@460 / ex@365 |
+| **[[total-urinary-porphyrin\|Porphyrins]]** | ~405 nm Soret + fluor 620 nm | ~500,000 | Fluor ex405/em620, A₄₀₅/A₄₈₀, 2nd derivative |
 
-**Creatinine** absorbs at 234 nm (below Jimini range). Best approached via EIS conductivity + osmolality proxy. See [[datascience/spectroscopy-biomarkers]] for full creatinine analysis.
+**[[creatinin|Creatinine]]** absorbs at 234 nm (below Jimini range). Best approached via EIS conductivity + osmolality proxy. See [[datascience/spectroscopy-biomarkers]] for full [[creatinin|creatinine]] analysis.
 
 ---
 
@@ -342,7 +340,7 @@ Layer 3: Validation via Explainability (Category E)
 
 | Paper | Year | ID | Category | Key Contribution |
 |---|---|---|---|---|
-| Enhanced Beer-Lambert for glucose | 2025 | arXiv:2509.12253 | A | 56 physics features beat all PINNs |
+| Enhanced Beer-Lambert for [[glucose]] | 2025 | arXiv:2509.12253 | A | 56 physics features beat all PINNs |
 | NN learning spectral indices | 2022 | arXiv:2207.10530 | A | NNs spontaneously learn NDVI-like indices |
 | Physics-informed features (PIFs) | 2025 | arXiv:2504.17112 | A | Formal PIF framework via Buckingham π |
 | Spectra-Scope toolkit | 2026 | arXiv:2603.06011 | A | AutoML for interpretable spectral features |
@@ -362,8 +360,8 @@ Layer 3: Validation via Explainability (Category E)
 
 ## Gaps
 
-1. **No paper applies physics-constrained ML to LED-based urinalysis.** Learnable BLL (arXiv:2309.16735) covers brain tissue NIR; glucose PINN (arXiv:2509.12253) covers transcutaneous NIR. Neither addresses discrete-LED excitation in urine.
-2. **Fluorescence features are underexplored.** Most papers focus on absorption spectroscopy. Urine fluorescence (NADH at 365/460 nm, riboflavin at 370/525 nm) is a major information source that few papers address systematically.
+1. **No paper applies physics-constrained ML to LED-based urinalysis.** Learnable BLL (arXiv:2309.16735) covers brain tissue NIR; [[glucose]] PINN (arXiv:2509.12253) covers transcutaneous NIR. Neither addresses discrete-LED excitation in urine.
+2. **Fluorescence features are underexplored.** Most papers focus on absorption spectroscopy. Urine fluorescence ([[nadh|NADH]] at 365/460 nm, riboflavin at 370/525 nm) is a major information source that few papers address systematically.
 3. **Symbolic regression for biofluids is very new.** The PhySO/PySR applications to optical data are from 2025 — no papers yet apply SR specifically to biofluid UV-Vis data.
 4. **Matrix effects in urine are severe.** Physics-grounded models need to account for inner-filter effects, pH-dependent spectral shifts, and variable dilution — most papers assume well-controlled lab conditions. See [[matrix-correction]].
 5. **Calibration transfer with physics models.** If model features are truly physically grounded (extinction coefficients, not learned biases), calibration transfer should be easier — but not empirically tested for LED-based devices. See [[calibration-transfer]].

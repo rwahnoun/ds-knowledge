@@ -13,9 +13,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Signal Processing & Matrix Correction for Jimini Urine Spectroscopy
@@ -136,7 +134,7 @@ Asymmetrically Reweighted Penalized Least Squares. Uses logistic sigmoid weighti
 
 SG 2nd derivative is particularly valuable for urine:
 1. Eliminates baseline offset AND slope (varying dilution)
-2. Resolves overlapping peaks (discriminates creatinine vs. urea NIR bands)
+2. Resolves overlapping peaks (discriminates [[creatinin|creatinine]] vs. [[urea]] NIR bands)
 3. Combined with SNV: validated for PLS quantification (SpectraPhone 2026)
 
 **Fractional-order SG derivatives** (order α ∈ (0,2)): +17% correlation improvement for chlorophyll estimation vs. integer derivatives — emerging for NIR urine.
@@ -147,7 +145,7 @@ SG 2nd derivative is particularly valuable for urine:
 
 ### 4.1 Turbidity Correction
 
-**Problem:** Suspended particles (cells, crystals, bacteria) scatter light at all wavelengths, inflating apparent absorbance.
+**Problem:** Suspended particles (cells, crystals, [[bacteria]]) scatter light at all wavelengths, inflating apparent absorbance.
 
 **Estimation:** At 660–800 nm, urine chromophores have negligible true absorbance → any signal is scatter.
 
@@ -163,11 +161,11 @@ Fit α, β from the 600–800 nm baseline region, then subtract from the full sp
 
 Urine osmolality ranges 50–1200 mmol/kg (24-fold range). All analyte concentrations scale with dilution.
 
-#### Conventional Creatinine Correction (CCRC)
+#### Conventional [[creatinin|Creatinine]] Correction (CCRC)
 
-$$A_{\text{norm}} = \frac{[\text{Analyte}]}{[\text{Creatinine}]}$$
+$$A_{\text{norm}} = \frac{[\text{Analyte}]}{[\text{[[creatinin|Creatinine]]}]}$$
 
-**Limitations:** Creatinine varies with muscle mass (↓20–36% in females/elderly), diet, exercise, disease. WHO excludes CRN < 0.3 or > 3.0 g/L → rejects ~20% of samples.
+**Limitations:** [[creatinin|Creatinine]] varies with muscle mass (↓20–36% in females/elderly), diet, exercise, disease. WHO excludes CRN < 0.3 or > 3.0 g/L → rejects ~20% of samples.
 
 #### V-PFCRC — Variable Power-Functional CRN Correction ⭐
 
@@ -186,7 +184,7 @@ where $b_{\text{variable}} = c \cdot \ln(A_{\text{raw}}) + d$ with analyte-speci
 
 $$A_{\text{SG}} = A_{\text{raw}} \times \frac{0.024}{\text{SG} - 1.000}$$
 
-Not affected by muscle mass or creatinine physiology. EIS conductivity provides a direct SG surrogate for Jimini.
+Not affected by muscle mass or [[creatinin|creatinine]] physiology. EIS conductivity provides a direct SG surrogate for Jimini.
 
 ### 4.3 Colour Correction (Urochrome, Bilirubin)
 
@@ -214,7 +212,7 @@ Valid for $A_{\text{ex}} < 0.3$. For higher absorbance: dilute 1:2–1:5 with PB
 pH shifts urobilin absorbance by ~50 nm and affects indoxyl sulfate fluorescence (enhanced at pH > 7 due to oxidation).
 
 **Correction options:**
-1. Buffer standardisation (add 1/9 volume of 0.5M phosphate pH 7.0)
+1. Buffer standardisation (add 1/9 volume of 0.5M [[phosphate]] pH 7.0)
 2. Include pH as model covariate
 3. EMSC with pH-state reference spectra
 
@@ -286,14 +284,14 @@ DANN with gradient-reversal layer forces device-invariant feature learning. Requ
 
 | Challenge | Impact | Mitigation |
 |---|---|---|
-| Complex UV background | All UV analytes (creatinine, albumin, uric acid) | Derivative spectroscopy, PLS regression |
-| Water dominance in NIR | Urea, creatinine, ions | High-SNR instrument, robust PLS, temperature control |
-| No chromophore on ions | Na, K, Cl, Mg, phosphate | EIS with ISE or conductivity sensor |
-| Weak glucose signal | Glucose | GOx-EIS + ML full-spectrum fingerprinting |
-| Particle overlap (RBC/WBC/epith.) | Cellular classification | MALS + trained ML classifier |
+| Complex UV background | All UV analytes ([[creatinin\|creatinine]], albumin, [[uric-acid\|uric acid]]) | Derivative spectroscopy, PLS regression |
+| Water dominance in NIR | [[[[urea]]\|Urea]], [[creatinin\|creatinine]], ions | High-SNR instrument, robust PLS, temperature control |
+| No chromophore on ions | Na, K, Cl, Mg, [[phosphate]] | EIS with ISE or conductivity sensor |
+| Weak [[glucose]] signal | [[[[glucose]]\|Glucose]] | GOx-EIS + ML full-spectrum fingerprinting |
+| Particle overlap ([[red-blood-cells\|RBC]]/[[white-blood-cells\|WBC]]/epith.) | Cellular classification | MALS + trained ML classifier |
 | Urochrome/bilirubin background | All visible-range analytes | 2nd derivative, PCA outlier removal |
 | Temperature drift | All measurements | Peltier-controlled cell, ±0.1°C tolerance |
-| Sample dilution variability | All concentrations | Normalise to creatinine (ACR, PCR ratios) |
+| Sample dilution variability | All concentrations | Normalise to [[creatinin\|creatinine]] (ACR, PCR ratios) |
 
 ---
 

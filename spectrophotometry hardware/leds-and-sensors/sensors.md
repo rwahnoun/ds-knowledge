@@ -9,14 +9,12 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Spectral Sensors for Portable Spectrophotometry
 
-STM32-compatible sensor selection for Jimini. Targets: Sensor 1 (C12-like, 321–870 nm UV-Vis), Sensor 2 (C14-like, 570–1078 nm Vis-NIR), IR matrix (~1070 nm), and EIS frontend. For component summary see [[overview]].
+STM32-compatible sensor selection for Jimini. Targets: Sensor 1 (C12-like, 321–870 nm UV-Vis), Sensor 2 (C14-like, 570–1078 nm Vis-NIR), IR matrix (~1070 nm), and EIS frontend. For component summary see [[spectrophotometry hardware/leds-and-sensors/overview]].
 
 ---
 
@@ -411,4 +409,4 @@ HAL_ADC_Start_DMA(&hadc1, spectrum_buf, 288);
 1. **STM32 bare-metal AS7341 driver:** No complete STM32 HAL example found. Action: Port SparkFun Arduino library (Apache 2.0 license) to STM32; I²C register map is fully documented in AMS UG000400.
 2. **EIS alternative to AD5933:** AD5941 (lower power, SPI) may be better for battery-powered pen device. Action: Compare AD5933 vs AD5941 datasheets for power budget and interface compatibility.
 3. **C12880MA stray light below 400 nm:** Known issue (elevated baseline from MEMS grating design). Characterization against a calibrated reference spectrometer needed for the 275–400 nm range on Jimini prototypes.
-4. **AS7343 UV gap (380–400 nm):** May need a supplemental UV photodiode channel if absorption at 280 nm (protein) or 293 nm (uric acid peak) is required independently of the C12880MA.
+4. **AS7343 UV gap (380–400 nm):** May need a supplemental UV photodiode channel if absorption at 280 nm (protein) or 293 nm ([[uric-acid|uric acid]] peak) is required independently of the C12880MA.

@@ -9,9 +9,7 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Optical Path Design for Pen-Form Spectrophotometry of Urine
@@ -49,11 +47,11 @@ Normal urine bilirubin: <5 µmol/L (negative). Pathological: 5–100+ µmol/L. *
 | **1 mm** | **0.08** | **4** | Still saturates at max concentration |
 | **0.5 mm** | **0.04** | **2** | ✅ Linear at physiological range; low SNR |
 
-Urine uric acid: 250–750 µmol/L typical; up to 5,000 µmol/L in hyperuricuria. **This is the most constraining analyte. Optimal path: 0.5–2 mm, possibly with dual-path or HDR measurement.**
+Urine [[uric-acid|uric acid]]: 250–750 µmol/L typical; up to 5,000 µmol/L in hyperuricuria. **This is the most constraining analyte. Optimal path: 0.5–2 mm, possibly with dual-path or HDR measurement.**
 
-#### Hemoglobin / RBC (ε = 128,000 M⁻¹cm⁻¹ @ 415 nm for oxyHb)
+#### Hemoglobin / [[red-blood-cells|RBC]] (ε = 128,000 M⁻¹cm⁻¹ @ 415 nm for oxyHb)
 
-Clinical hematuria threshold: ~5 RBC/µL. Free hemoglobin from lysed RBCs at 5 RBC/µL ≈ ~0.009–0.019 µmol/L.
+Clinical hematuria threshold: ~5 [[red-blood-cells|RBC]]/µL. Free hemoglobin from lysed [[red-blood-cells|RBC]] at 5 [[red-blood-cells|RBC]]/µL ≈ ~0.009–0.019 µmol/L.
 
 | Path length | A @ 0.01 µmol/L (threshold) | A @ 1 µmol/L (gross haematuria) | Assessment |
 |---|---|---|---|
@@ -67,7 +65,7 @@ Hemoglobin is the **most demanding analyte for sensitivity**. **Path ≥ 5 mm pr
 
 The analytes pull in **opposite directions**:
 
-- Uric acid → short path (≤1 mm) to avoid saturation
+- [[uric-acid|Uric acid]] → short path (≤1 mm) to avoid saturation
 - Hemoglobin at threshold → long path (≥5 mm) for sensitivity
 
 **Solution: dual-path or variable-path design.** Two standard approaches:
@@ -84,7 +82,7 @@ The analytes pull in **opposite directions**:
 - Allows software selection of the non-saturated exposure for each LED
 - 2 mm is a standard micro-cuvette dimension (Hellma, Starna)
 
-**For UV-C (275 nm), consider 1 mm** if uric acid saturation is confirmed empirically.
+**For UV-C (275 nm), consider 1 mm** if [[uric-acid|uric acid]] saturation is confirmed empirically.
 
 ---
 
@@ -101,9 +99,9 @@ LED → [collimating lens] → SAMPLE → [collection lens] → DETECTOR
 Light travels straight through the sample along the optical axis.
 
 Advantages: maximum signal throughput; well-defined Beer-Lambert path length; simplest optical alignment.
-Disadvantages: scatter from particles (WBCs, bacteria) mixes with absorption signal.
+Disadvantages: scatter from particles ([[white-blood-cells|WBC]], [[bacteria]]) mixes with absorption signal.
 
-Best for: Chemical analyte quantification (bilirubin, uric acid, hemoglobin) where scatter is a correction, not the primary measurement.
+Best for: Chemical analyte quantification (bilirubin, [[uric-acid|uric acid]], hemoglobin) where scatter is a correction, not the primary measurement.
 
 ### Angular Transmission (AT) — Off-Axis
 
@@ -230,7 +228,7 @@ UV-C radiation induces solarization in optical elements over time:
 
 ### Photobleaching Risk
 
-UV-C at 275 nm can photobleach urine fluorophores (NADH, porphyrins) and degrade analytes (uric acid partial photodestruction over extended exposure). Use pulsed LED (1–10 ms pulses) and minimize total UV dose per measurement.
+UV-C at 275 nm can photobleach urine fluorophores ([[nadh|NADH]], [[total-urinary-porphyrin|porphyrins]]) and degrade analytes ([[uric-acid|uric acid]] partial photodestruction over extended exposure). Use pulsed LED (1–10 ms pulses) and minimize total UV dose per measurement.
 
 ---
 
@@ -348,9 +346,9 @@ For particles of radius $r$ and wavelength $\lambda$, the size parameter is $x =
 
 | Particle | Size | λ = 500 nm → x | Scattering regime |
 |---|---|---|---|
-| Bacteria (E. coli) | ~1 µm | ~6 | Mie |
-| RBCs | ~7 µm disk | ~44 | Geometric optics |
-| WBCs | ~12 µm | ~75 | Geometric optics |
+| [[[[bacteria]]\|Bacteria]] (E. coli) | ~1 µm | ~6 | Mie |
+| [[red-blood-cells\|RBC]] | ~7 µm disk | ~44 | Geometric optics |
+| [[white-blood-cells\|WBC]] | ~12 µm | ~75 | Geometric optics |
 | Crystals | 10–100 µm | ~63–630 | Geometric optics |
 | Proteins (uromodulin) | ~100 nm | ~0.6 | Mie/Rayleigh |
 
@@ -358,10 +356,10 @@ For particles of radius $r$ and wavelength $\lambda$, the size parameter is $x =
 
 The scatter slope $\alpha$ from a power-law fit $I_\text{scatter} \propto \lambda^{-\alpha}$:
 - $\alpha \approx 4$: Rayleigh scattering (sub-wavelength particles)
-- $\alpha \approx 1$–2: Mie scattering (bacteria-sized)
+- $\alpha \approx 1$–2: Mie scattering ([[bacteria]]-sized)
 - $\alpha \approx 0$: Geometric optics (cells, crystals, large particles)
 
-Measuring $\alpha$ from the ratio $A_{400}/A_{800}$ using the white LED continuous spectrum gives a **particle size proxy** and can **discriminate bacteria from WBCs from crystals from dissolved protein** without imaging or flow cytometry.
+Measuring $\alpha$ from the ratio $A_{400}/A_{800}$ using the white LED continuous spectrum gives a **particle size proxy** and can **discriminate [[bacteria]] from [[white-blood-cells|WBC]] from crystals from dissolved protein** without imaging or flow cytometry.
 
 ---
 
@@ -471,6 +469,6 @@ EIS electrodes:
 ## Gaps
 
 1. **Zemax simulation not yet performed** for the Jimini pen geometry. Kuenert 2025 used Ansys Zemax OpticStudio 2023 to optimize lens positions — this should be replicated for Jimini to minimize wall interactions and validate the 2 mm path length choice.
-2. **Uric acid saturation at 1 mm path length not empirically confirmed** — path length selection for the 275 nm channel should be validated with known uric acid standards.
+2. **[[uric-acid|Uric acid]] saturation at 1 mm path length not empirically confirmed** — path length selection for the 275 nm channel should be validated with known [[uric-acid|uric acid]] standards.
 3. **Bubble rejection algorithm not designed** — the operating sequence specifies a 3 s wait, but a quantitative bubble detection check (intensity ratio threshold) has not been specified or validated.
 4. **Capillary fill surface treatment protocol** — PEG coating vs plasma treatment vs surfactant pre-rinse have not been evaluated for the Jimini cuvette material (SLA resin + quartz windows).

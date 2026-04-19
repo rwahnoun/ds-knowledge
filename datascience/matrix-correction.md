@@ -12,9 +12,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: concept
-author: Usense Healthcare
+
 ---
 
 # Matrix Correction for Urine Variability in Spectroscopic Measurements
@@ -28,7 +26,7 @@ How to correct for urine matrix variability — turbidity, dilution/hydration, c
 No single correction handles all matrix effects simultaneously. In practice, a **layered correction pipeline** is required:
 
 1. **Turbidity** → subtract wavelength-dependent scatter baseline (exponential or polynomial model)
-2. **Dilution** → normalize to creatinine (V-PFCRC for nonlinear bias), osmolality, or specific gravity
+2. **Dilution** → normalize to [[creatinin|creatinine]] (V-PFCRC for nonlinear bias), osmolality, or specific gravity
 3. **Color** → subtract urochrome/bilirubin spectral contribution or use CIE L\*a\*b\* to flag extremes
 4. **Fluorescence background & scatter** → apply EMSC, SNV, or MSC before chemometric modelling
 5. **Inner filter effect** → use Leinner–Lakowicz correction formula in cuvette geometry, or Weitner variable-focus method for microplates
@@ -40,7 +38,7 @@ No single correction handles all matrix effects simultaneously. In practice, a *
 
 ### Problem
 
-Turbidity arises from suspended particles (crystals, cells, bacteria, lipid droplets). It causes apparent absorbance at all wavelengths via Mie and Rayleigh scattering:
+Turbidity arises from suspended particles (crystals, cells, [[bacteria]], lipid droplets). It causes apparent absorbance at all wavelengths via Mie and Rayleigh scattering:
 
 ```
 A_scatter(λ) ≈ A_ref · (λ_ref / λ)^n
@@ -87,7 +85,7 @@ See [[turbidity]] for the full turbidity assessment methods.
 
 Urine osmolality ranges from ~50 mmol/kg (maximally dilute) to ~1200 mmol/kg (maximally concentrated) — a 24-fold range. All analyte concentrations scale approximately with urine concentration, creating dilution bias that swamps biological signal.
 
-### Conventional Creatinine Correction (CCRC)
+### Conventional [[creatinin|Creatinine]] Correction (CCRC)
 
 ```
 Analyte_corrected [µg/g CRN] = Analyte [µg/L] / Creatinine [g/L]
@@ -111,7 +109,7 @@ Analyte_corrected [µg/g CRN] = Analyte [µg/L] / Creatinine [g/L]
 Analyte_SG_corrected = Analyte_measured × (1.024 − 1.000) / (SG_measured − 1.000)
 ```
 
-Not affected by muscle mass or diet protein. SG inflated by glucose, protein, contrast media, or IV fluids.
+Not affected by muscle mass or diet protein. SG inflated by [[glucose]], protein, contrast media, or IV fluids.
 
 ### Variable Power-Functional CRN Correction (V-PFCRC)
 
@@ -146,7 +144,7 @@ Two analyte-specific and sex-specific coefficients c and d define the correction
 Analyte_osm = Analyte_measured × 300 / Osmolality_measured
 ```
 
-Not affected by muscle mass or creatinine physiology. Requires additional instrumentation (osmometry). Pre-dilution to a fixed creatinine concentration (rather than post-acquisition normalization) yielded the most complete metabolite fingerprints in CKD metabolomics (Vogl et al., 2016).
+Not affected by muscle mass or [[creatinin|creatinine]] physiology. Requires additional instrumentation (osmometry). Pre-dilution to a fixed [[creatinin|creatinine]] concentration (rather than post-acquisition normalization) yielded the most complete metabolite fingerprints in CKD metabolomics (Vogl et al., 2016).
 
 ### Total Spectral Area Normalization
 
@@ -279,11 +277,11 @@ Where z_k are basis spectra: polynomial baseline, known interferent spectra (uro
 |-------------|-----|---------------|-----------------|
 | Urobilin | ~6.5 | ~50 nm shift (pH 5 → pH 8) | Dominant visible interferent |
 | Bilirubin | ~8.2 | Yellow-orange at physiological pH | Strong 400–500 nm |
-| Creatinine | ~9.2 | Negligible in physiological range | — |
+| [[creatinin\|Creatinine]] | ~9.2 | Negligible in physiological range | — |
 
 ### Correction Strategies
 
-**Option 1 — Physical pH standardization:** Add 1/9 volume of 0.5M phosphate buffer pH 7.0 → adjusts to ~pH 7.0 with <10% dilution.
+**Option 1 — Physical pH standardization:** Add 1/9 volume of 0.5M [[phosphate]] buffer pH 7.0 → adjusts to ~pH 7.0 with <10% dilution.
 
 **Option 2 — pH as model covariate:** Measure urine pH (dipstick or electrode), include as numerical input to PLS/ML model.
 
@@ -373,7 +371,7 @@ Where z_k are basis spectra: polynomial baseline, known interferent spectra (uro
 ## Gaps
 
 1. **Combined turbidity + color correction**: No validated method simultaneously handles high turbidity AND strong urochrome color. EMSC with both scatter and urochrome basis vectors is theoretically sound but needs validation in real clinical urine.
-2. **V-PFCRC for spectroscopic analytes**: V-PFCRC validated for metals/iodine by ICP-MS. Whether c/d coefficients transfer to spectroscopically-estimated biomarkers (e.g., creatinine by Raman) is unknown.
+2. **V-PFCRC for spectroscopic analytes**: V-PFCRC validated for metals/iodine by ICP-MS. Whether c/d coefficients transfer to spectroscopically-estimated biomarkers (e.g., [[creatinin|creatinine]] by Raman) is unknown.
 3. **pH correction formula for urobilin**: Qualitative documentation exists but no quantitative isobestic-point-based correction formula validated across pH 4.5–8.5.
 4. **EMSC reference spectra for urine**: No standard library of urine interferent spectra (urochrome, bilirubin, indoxyl sulfate at physiological concentrations) has been published.
 5. **IFE in EEM (2D version)**: The 2D IFE correction for EEM matrices in urine has not been systematically validated.

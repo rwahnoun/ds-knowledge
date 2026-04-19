@@ -9,9 +9,7 @@ tags:
   - type/reference
   - status/in-progress
 date: 2026-04-19
-status: in-progress
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Python Libraries for UV-Vis Spectrophotometry in Biomarker Estimation

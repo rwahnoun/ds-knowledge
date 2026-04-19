@@ -12,16 +12,14 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: concept
-author: Usense Healthcare
+
 ---
 
 # Multi-Task & Multi-Output Prediction for Spectroscopic Biomarker Analysis
 
 When and how multiple urine biomarkers should be predicted jointly from the same spectral/EIS input. Covers architectures (hard/soft sharing, cross-stitch, modality-specific encoders, PI-MTL), loss functions (Kendall uncertainty weighting, GradNorm, PCGrad, CAGrad), and task-grouping strategies for Jimini's 16-target panel. See [[datascience/spectroscopy-biomarkers]] for per-analyte spectral properties, [[signal-processing]] for the preprocessing pipeline, and [[physics-grounded-ml]] for physics-informed constraints applicable to MTL architectures.
 
-**Inputs:** LED signals at 275/365/405/455 nm + broadband visible (C12: 340–850 nm) + 1070 nm NIR (C14: 640–1050 nm) + multi-frequency EIS (10 Hz – 100 kHz). **Targets:** WBC, BAC, RBC, epiCells, Crystals, Creatinine, Osmolality, TUP, PBG, Sodium, Chloride, Nitrites, Uric acid, Bilirubin, Protein, NADH — a mix of binary classifiers and continuous regressors.
+**Inputs:** LED signals at 275/365/405/455 nm + broadband visible (C12: 340–850 nm) + 1070 nm NIR (C14: 640–1050 nm) + multi-frequency EIS (10 Hz – 100 kHz). **Targets:** [[white-blood-cells|WBC]], BAC, [[red-blood-cells|RBC]], epiCells, Crystals, [[creatinin|Creatinine]], Osmolality, TUP, [[[[porphobilinogen]]|PBG]], [[[[sodium]]|Sodium]], [[[[chloride]]|Chloride]], Nitrites, [[uric-acid|Uric acid]], Bilirubin, Protein, [[nadh|NADH]] — a mix of binary classifiers and continuous regressors.
 
 ---
 
@@ -31,17 +29,17 @@ The fundamental decision in multi-output modeling: train one shared model for al
 
 ### When joint training wins
 
-1. **Correlated targets sharing spectral features:** If bilirubin and RBC both depend on signal at 405 nm, sharing a spectral encoder avoids learning the same feature extraction twice and can improve both if data is limited.
+1. **Correlated targets sharing spectral features:** If bilirubin and [[red-blood-cells|RBC]] both depend on signal at 405 nm, sharing a spectral encoder avoids learning the same feature extraction twice and can improve both if data is limited.
 2. **Small dataset, many features:** With n < 500 samples and 300+ spectral channels, single-task models overfit. MTL acts as regularization by forcing the encoder to represent features useful for N tasks simultaneously — reducing the effective overfitting risk by ~N times (Caruana, 1998).
-3. **Auxiliary tasks as regularizers:** Even if WBC prediction is the primary goal, training jointly with strongly-predictable analytes (bilirubin, osmolality) helps the shared encoder learn physically meaningful spectral representations rather than noise.
+3. **Auxiliary tasks as regularizers:** Even if [[white-blood-cells|WBC]] prediction is the primary goal, training jointly with strongly-predictable analytes (bilirubin, osmolality) helps the shared encoder learn physically meaningful spectral representations rather than noise.
 4. **Data augmentation effect:** Different tasks have different noise patterns. Jointly training tasks averages these noise patterns, producing a more robust shared representation.
 
 ### When independent models win
 
-1. **Tasks with conflicting spectral features:** If bilirubin and uric acid both use the 275–455 nm region but in conflicting ways, forcing a shared representation degrades both — this is **negative transfer** (Section 11).
+1. **Tasks with conflicting spectral features:** If bilirubin and [[uric-acid|uric acid]] both use the 275–455 nm region but in conflicting ways, forcing a shared representation degrades both — this is **negative transfer** (Section 11).
 2. **Wildly different measurement modalities:** Chemical analytes (optical) vs ionic species (EIS-only) should likely use separate encoders with feature fusion, not fully shared representations.
 3. **Large imbalanced label distributions:** If one task is extremely rare (e.g., porphyria), the shared encoder will be dominated by the common tasks and ignore the rare task's relevant features.
-4. **Tasks at very different difficulty levels:** If bilirubin prediction reaches R² = 0.97 while creatinine remains at R² = 0.35, joint training may stall at a loss compromise that hurts the easy task without helping the hard one.
+4. **Tasks at very different difficulty levels:** If bilirubin prediction reaches R² = 0.97 while [[creatinin|creatinine]] remains at R² = 0.35, joint training may stall at a loss compromise that hurts the easy task without helping the hard one.
 
 ### Decision heuristic for Jimini
 
@@ -71,18 +69,18 @@ Multi-task learning (MTL) trains a single model to predict multiple targets simu
 | Phenomenon | Why it favors MTL |
 |---|---|
 | **Same physical input** | All biomarkers come from the same spectrum; shared feature extraction is natural |
-| **Chemical correlations** | Osmolality correlates with creatinine; hematuria correlates with WBC count; porphyrins correlate with PBG |
+| **Chemical correlations** | Osmolality correlates with [[creatinin\|creatinine]]; hematuria correlates with [[white-blood-cells\|WBC]] count; [[total-urinary-porphyrin\|porphyrins]] correlate with [[[[porphobilinogen]]\|PBG]] |
 | **Scarce labeled data** | n < 500 per target is common in clinical pilots; joint training effectively multiplies useful signal |
 | **Shared confounders** | Turbidity, pH, and concentration all affect multiple targets simultaneously — a shared encoder can learn to factor these out once |
-| **Mixed task types** | Binary classifiers (WBC, BAC) and regressors (creatinine, osmolality) can share a spectral encoder while having task-specific output heads |
+| **Mixed task types** | Binary classifiers ([[white-blood-cells\|WBC]], BAC) and regressors ([[creatinin\|creatinine]], osmolality) can share a spectral encoder while having task-specific output heads |
 
 ### Mechanisms (Ruder 2017, Caruana 1998)
 
-**Implicit data augmentation.** Different tasks have different label noise patterns. Joint training averages noise, producing a more general encoder. For Jimini: bilirubin ground-truth (spectrophotometric assay) has different measurement noise than WBC (manual microscopy). Training jointly helps the spectral encoder learn the signal, not the noise of any single reference method.
+**Implicit data augmentation.** Different tasks have different label noise patterns. Joint training averages noise, producing a more general encoder. For Jimini: bilirubin ground-truth (spectrophotometric assay) has different measurement noise than [[white-blood-cells|WBC]] (manual microscopy). Training jointly helps the spectral encoder learn the signal, not the noise of any single reference method.
 
 **Attention focusing.** In high-dimensional spectral data (300+ channels), MTL helps distinguish relevant from irrelevant wavelengths. If 12 tasks all use signal at 405 nm, the model learns that 405 nm is important. If only one task spuriously correlates with a noisy region, the other tasks suppress that spurious feature.
 
-**Eavesdropping.** Some features are easy to learn for task B but hard for task A. If the osmolality model easily captures the NIR water band at 970 nm, this representation becomes available to the creatinine model, which depends on total dissolved solids in a correlated way.
+**Eavesdropping.** Some features are easy to learn for task B but hard for task A. If the osmolality model easily captures the NIR water band at 970 nm, this representation becomes available to the [[creatinin|creatinine]] model, which depends on total dissolved solids in a correlated way.
 
 **Representation bias.** MTL biases the encoder toward representations that generalize across tasks — exactly what you want for a device that must be robust to new patients, different urine matrices, and device drift.
 
@@ -188,7 +186,7 @@ The cross-stitch coefficients {α} are learned — when α_AB is large, task A b
 
 **Pros:** Automatically learns how much to share; gracefully handles partial task relationships.
 **Cons:** More parameters; harder to train; needs careful initialization.
-**Spectroscopy use case:** Let the bilirubin task borrow from the hemoglobin task (both use 405–455 nm region) while the creatinine/EIS task gradually decouples.
+**Spectroscopy use case:** Let the bilirubin task borrow from the hemoglobin task (both use 405–455 nm region) while the [[creatinin|creatinine]]/EIS task gradually decouples.
 
 ### Modality-Specific Encoders (best for Jimini's mixed inputs)
 
@@ -247,7 +245,7 @@ Input: UV-Vis absorption spectrum (200–1050 nm, normalized)
 | **PI-MTL** | **0.941** | **0.958** | **-60.9% RMSE** |
 
 > [!IMPORTANT]
-> The turbidity/chromaticity interference in water is directly analogous to urine's matrix variability (turbidity from cells, crystals, bacteria; color from bilirubin, urobilinogen). PI-MTL — treating background interference as an auxiliary task — is directly transferable to Jimini. See [[matrix-correction]] for the urine-specific interference model.
+> The turbidity/chromaticity interference in water is directly analogous to urine's matrix variability (turbidity from cells, crystals, [[bacteria]]; color from bilirubin, urobilinogen). PI-MTL — treating background interference as an auxiliary task — is directly transferable to Jimini. See [[matrix-correction]] for the urine-specific interference model.
 
 **For Jimini, the "background tasks" could be:**
 - Turbidity (optical: $A_{1070}$)
@@ -303,7 +301,7 @@ $$\min \| X - TP^T \|^2 + \| Y - TQ^T \|^2$$
 
 PLS2 baseline was beaten by multi-output DL (~13% lower RMSE). Importantly, **individual single-output DL models slightly outperformed multi-output DL** for well-conditioned problems. Multi-task DL wins most when targets are correlated and data is scarce.
 
-**For Jimini:** Train PLS2 with all continuous targets simultaneously: creatinine, osmolality, bilirubin, uric acid. Binary targets (WBC, RBC, BAC) are better handled separately as classifiers or via PLS-DA.
+**For Jimini:** Train PLS2 with all continuous targets simultaneously: [[creatinin|creatinine]], osmolality, bilirubin, [[uric-acid|uric acid]]. Binary targets ([[white-blood-cells|WBC]], [[red-blood-cells|RBC]], BAC) are better handled separately as classifiers or via PLS-DA.
 
 ### SO-PLS — Sequential Orthogonalized PLS
 
@@ -343,7 +341,7 @@ Standard Random Forest extended to multi-output by splitting nodes based on redu
 
 $$\text{gain} = \sum_t \text{Var}(y_t | \text{parent}) - \text{Var}(y_t | \text{split})$$
 
-**Key property:** Tasks naturally cluster during tree construction — if bilirubin and RBC both improve from the same 405 nm split, they will share tree structure. Non-correlated tasks will use different branches.
+**Key property:** Tasks naturally cluster during tree construction — if bilirubin and [[red-blood-cells|RBC]] both improve from the same 405 nm split, they will share tree structure. Non-correlated tasks will use different branches.
 
 **When to use:** If you want a non-parametric multi-output model without defining architecture; good baseline for mixed regression/classification panels.
 
@@ -355,7 +353,7 @@ $$\text{gain} = \sum_t \text{Var}(y_t | \text{parent}) - \text{Var}(y_t | \text{
 
 $$\mathcal{L}_{\text{total}} = \sum_{t=1}^{T} \lambda_t \mathcal{L}_t, \quad \lambda_t = 1 \, \forall t$$
 
-**Problem:** If losses are on very different scales (e.g., binary cross-entropy for WBC vs MSE for creatinine in mmol/L), one task dominates gradient updates. MSE for bilirubin (range 0–20 mg/dL) might be 100× larger than BCE for WBC (range 0–1). The optimizer will effectively ignore WBC. Manual tuning of $\lambda_t$ is tedious and brittle.
+**Problem:** If losses are on very different scales (e.g., binary cross-entropy for [[white-blood-cells|WBC]] vs MSE for [[creatinin|creatinine]] in mmol/L), one task dominates gradient updates. MSE for bilirubin (range 0–20 mg/dL) might be 100× larger than BCE for [[white-blood-cells|WBC]] (range 0–1). The optimizer will effectively ignore [[white-blood-cells|WBC]]. Manual tuning of $\lambda_t$ is tedious and brittle.
 
 **When it works:** Tasks with similar scales and similar convergence speeds. Rare in practice.
 
@@ -398,10 +396,10 @@ where $\sigma_t$ are **learned parameters** alongside the network weights. Cruci
 - In practice, learn $s_t = \log \sigma_t^2$ for numerical stability
 
 **Why this is perfect for Jimini:**
-- Creatinine (hard, high uncertainty) → large $\sigma$, small weight → model doesn't waste gradient on it
+- [[creatinin|Creatinine]] (hard, high uncertainty) → large $\sigma$, small weight → model doesn't waste gradient on it
 - Bilirubin (easy, strong signal) → small $\sigma$, large weight → model focuses here
-- WBC (binary classification) → separate $\sigma$ term from regression tasks
-- WBC count in urine is inherently noisy (cell lysis between collection and measurement, inter-observer variability in gold standard microscopy) — uncertainty weighting automatically reduces WBC's weight relative to the more precisely labeled bilirubin target
+- [[white-blood-cells|WBC]] (binary classification) → separate $\sigma$ term from regression tasks
+- [[white-blood-cells|WBC]] count in urine is inherently noisy (cell lysis between collection and measurement, inter-observer variability in gold standard microscopy) — uncertainty weighting automatically reduces [[white-blood-cells|WBC]]'s weight relative to the more precisely labeled bilirubin target
 - Task weights adapt automatically during training — no grid search needed
 
 **Implementation (PyTorch):**
@@ -485,7 +483,7 @@ $$g_i^{\text{PC}} = g_i - \frac{g_i \cdot g_j}{\|g_j\|^2} g_j \quad \text{if } g
 
 This removes the conflicting component from $g_i$, preventing $g_j$ from being canceled out. Tasks that don't conflict are left unchanged.
 
-**For Jimini:** Turbidity scatter (high $A_{1070}$) helps bacteria detection but *hurts* bilirubin quantification (turbidity baseline confounds 453 nm absorbance). PCGrad would automatically resolve this conflicting gradient — letting each task benefit from shared features without being harmed by the other. If the bilirubin gradient and the creatinine gradient point in opposite directions (because creatinine has no spectral signal and the model is learning nonsense for it), PCGrad prevents the creatinine gradient from destroying the bilirubin representation.
+**For Jimini:** Turbidity scatter (high $A_{1070}$) helps [[bacteria]] detection but *hurts* bilirubin quantification (turbidity baseline confounds 453 nm absorbance). PCGrad would automatically resolve this conflicting gradient — letting each task benefit from shared features without being harmed by the other. If the bilirubin gradient and the [[creatinin|creatinine]] gradient point in opposite directions (because [[creatinin|creatinine]] has no spectral signal and the model is learning nonsense for it), PCGrad prevents the [[creatinin|creatinine]] gradient from destroying the bilirubin representation.
 
 ### CAGrad — Conflict-Averse Gradient Descent (Liu et al., NeurIPS 2021)
 
@@ -503,7 +501,7 @@ $$w_t^{(k)} = \cos(g_{\text{main}}^{(k)}, g_t^{(k)})$$
 
 Tasks whose gradients align with the main task get higher weight; conflicting tasks get downweighted or excluded. Converges to the main task's critical points, unlike simple gradient averaging.
 
-**For Jimini:** Designate WBC as the "main task" (primary clinical objective). All other tasks get weighted by how much their gradients agree with WBC optimization. Bilirubin and hemoglobin (strong spectral features) will naturally align; creatinine (indirect) will be downweighted.
+**For Jimini:** Designate [[white-blood-cells|WBC]] as the "main task" (primary clinical objective). All other tasks get weighted by how much their gradients agree with [[white-blood-cells|WBC]] optimization. Bilirubin and hemoglobin (strong spectral features) will naturally align; [[creatinin|creatinine]] (indirect) will be downweighted.
 
 ### GradDrop (Chen et al., 2020)
 
@@ -532,14 +530,14 @@ Define task types:
 
 | Influencing task | Listener task | Physical/biochemical reason |
 |---|---|---|
-| **Bilirubin** (strong at 453 nm) | **WBC** (weak, no chromophore) | Both elevated in hepatic/cholestatic conditions with inflammatory response |
-| **RBC / Hemoglobin** (strong at 405 nm) | **WBC** (weak) | Hematuria + pyuria co-occur in UTI, nephritis |
-| **Osmolality** (proxy via EIS + NIR) | **Creatinine** | Creatinine is a major osmolyte; corr ≈ 0.7 |
-| **Uric acid** (strong at 275 nm) | **TUP** (weak overlap) | Both UV absorbers; uric acid subtraction improves TUP residual |
-| **PBG** (via porphyrin fluorescence) | **TUP** | PBG → porphyrins; the two are sequential in the same pathway |
-| **Bilirubin** | **Porphyrins** (TUP) | Both degradation products of heme; correlated in hepatic disease |
-| **Bacteria** | **Nitrites** | Gram-negative bacteria → nitrite production |
-| **Turbidity/scatter** ($A_{1070}$) | All cell targets (WBC, BAC, RBC, epiCells, Crystals) | Scatter is a shared confound for all particulate-containing samples |
+| **Bilirubin** (strong at 453 nm) | **[[white-blood-cells\|WBC]]** (weak, no chromophore) | Both elevated in hepatic/cholestatic conditions with inflammatory response |
+| **[[red-blood-cells\|RBC]] / Hemoglobin** (strong at 405 nm) | **[[white-blood-cells\|WBC]]** (weak) | Hematuria + pyuria co-occur in UTI, nephritis |
+| **Osmolality** (proxy via EIS + NIR) | **[[creatinin\|Creatinine]]** | [[creatinin\|Creatinine]] is a major osmolyte; corr ≈ 0.7 |
+| **[[uric-acid\|Uric acid]]** (strong at 275 nm) | **TUP** (weak overlap) | Both UV absorbers; [[uric-acid\|uric acid]] subtraction improves TUP residual |
+| **[[[[porphobilinogen]]\|PBG]]** (via porphyrin fluorescence) | **TUP** | [[[[porphobilinogen]]\|PBG]] → [[total-urinary-porphyrin\|porphyrins]]; the two are sequential in the same pathway |
+| **Bilirubin** | **[[total-urinary-porphyrin\|Porphyrins]]** (TUP) | Both degradation products of heme; correlated in hepatic disease |
+| **[[[[bacteria]]\|Bacteria]]** | **Nitrites** | Gram-negative [[bacteria]] → nitrite production |
+| **Turbidity/scatter** ($A_{1070}$) | All cell targets ([[white-blood-cells\|WBC]], BAC, [[red-blood-cells\|RBC]], epiCells, Crystals) | Scatter is a shared confound for all particulate-containing samples |
 
 ### Implementation Strategy
 
@@ -611,19 +609,19 @@ Some Jimini targets are much easier to predict reliably (high spectral signal-to
 
 **Stage 1 — Physically grounded, high-confidence targets:**
 - Bilirubin (453 nm Beer-Lambert, very direct)
-- Hemoglobin / RBC (405 nm Soret, strong signal)
-- Porphyrins/TUP (405 nm fluorescence, specific)
-- Uric acid (275 nm Beer-Lambert)
+- Hemoglobin / [[red-blood-cells|RBC]] (405 nm Soret, strong signal)
+- [[total-urinary-porphyrin|Porphyrins]]/TUP (405 nm fluorescence, specific)
+- [[uric-acid|Uric acid]] (275 nm Beer-Lambert)
 - Osmolality (EIS conductivity proxy)
 
 **Stage 2 — Indirect/weak-signal targets, using Stage 1 as input features:**
-- WBC — use {Hb, osmolality, turbidity, NADH fluorescence} as inputs
-- Bacteria — use {turbidity, scatter slope, flavin fluorescence} + Stage 1 residuals
-- Creatinine — use {osmolality, uric acid, EIS} as predictors
-- Nitrites — use {bacteria prediction, scatter} as proxies
+- [[white-blood-cells|WBC]] — use {Hb, osmolality, turbidity, [[nadh|NADH]] fluorescence} as inputs
+- [[[[bacteria]]|Bacteria]] — use {turbidity, scatter slope, flavin fluorescence} + Stage 1 residuals
+- [[creatinin|Creatinine]] — use {osmolality, [[uric-acid|uric acid]], EIS} as predictors
+- Nitrites — use {[[bacteria]] prediction, scatter} as proxies
 - epiCells — use {turbidity, scatter slope, Stage 1 residuals}
 
-**Advantage:** Stage 2 models are more interpretable — their inputs have physical meaning. If the model uses high hemoglobin + high osmolality to predict elevated WBC, that's a physically plausible inference (inflammatory state with hematuria).
+**Advantage:** Stage 2 models are more interpretable — their inputs have physical meaning. If the model uses high hemoglobin + high osmolality to predict elevated [[white-blood-cells|WBC]], that's a physically plausible inference (inflammatory state with hematuria).
 
 ### Physical Hierarchy for Jimini (3 levels)
 
@@ -672,7 +670,7 @@ bac_hat = bacteria_head(full_features)       # uses turbidity + WBC context
 
 ### Regression → Classification Cascade
 
-For binary targets (WBC ≥+, BAC positive): first build a continuous score model, then threshold. The continuous prediction at Stage 1 can be used as a soft feature for Stage 2 classifiers. This provides uncertainty estimates (prediction near the threshold = high uncertainty).
+For binary targets ([[white-blood-cells|WBC]] ≥+, BAC positive): first build a continuous score model, then threshold. The continuous prediction at Stage 1 can be used as a soft feature for Stage 2 classifiers. This provides uncertainty estimates (prediction near the threshold = high uncertainty).
 
 ### "Hints" as Auxiliary Tasks (Caruana, 1998)
 
@@ -680,16 +678,16 @@ Instead of cascading at inference time, use intermediate targets as **auxiliary 
 
 - Add a supervision signal for bilirubin at layer 3 of the encoder
 - Force the network to represent bilirubin-relevant features early in the processing hierarchy
-- The bilirubin feature then naturally propagates to deeper layers used by WBC, RBC, and bacterial detection
+- The bilirubin feature then naturally propagates to deeper layers used by [[white-blood-cells|WBC]], [[red-blood-cells|RBC]], and bacterial detection
 
 **Joint Many-Task model (Hashimoto et al., 2016):** This is the NLP analog — lower-level tasks (part-of-speech tagging) supervised at lower layers; higher-level tasks (semantic analysis) supervised at higher layers. For Jimini, the analogy is: Beer-Lambert absorbers at lower layers, scatter-based cellular markers at higher layers.
 
 ### Evidence from Spectroscopy Literature
 
 **Predicting anemia from NIR spectroscopy of spent dialysis fluid (Nature Sci. Rep., 2021):**
-- Predicted 9 blood parameters simultaneously (RBC, Hb, Fe, TIBC, FER, Hct, MCV, MCHC, MCH)
+- Predicted 9 blood parameters simultaneously ([[red-blood-cells|RBC]], Hb, Fe, TIBC, FER, Hct, MCV, MCHC, MCH)
 - R values 0.91–0.96 for all 9 parameters
-- Key observation: parameters that are biologically correlated (RBC, Hct, MCV — all related to red cell morphology) share spectral features and improve each other's predictions
+- Key observation: parameters that are biologically correlated ([[red-blood-cells|RBC]], Hct, MCV — all related to red cell morphology) share spectral features and improve each other's predictions
 
 ---
 
@@ -711,9 +709,9 @@ Negative transfer occurs when jointly training two tasks degrades performance co
 
 | Cause | Description | Jimini example |
 |---|---|---|
-| **Gradient conflict** | Task gradients point in opposite directions; one task's update undoes another's | Creatinine (EIS-dependent) gradient conflicts with bilirubin (optical) gradient |
-| **Task asymmetry** | One task dominates the loss magnitude; others are suppressed | Regression MSE for osmolality >> binary CE for WBC → WBC effectively not trained |
-| **Spurious correlations** | Task B shares a spurious feature with task A in training data but not at test time | If WBC correlates with pH in training data but pH-independent bilirubin is jointly trained, the encoder may over-fit to pH |
+| **Gradient conflict** | Task gradients point in opposite directions; one task's update undoes another's | [[creatinin\|Creatinine]] (EIS-dependent) gradient conflicts with bilirubin (optical) gradient |
+| **Task asymmetry** | One task dominates the loss magnitude; others are suppressed | Regression MSE for osmolality >> binary CE for [[white-blood-cells\|WBC]] → [[white-blood-cells\|WBC]] effectively not trained |
+| **Spurious correlations** | Task B shares a spurious feature with task A in training data but not at test time | If [[white-blood-cells\|WBC]] correlates with pH in training data but pH-independent bilirubin is jointly trained, the encoder may over-fit to pH |
 | **Representation bottleneck** | Shared representation too narrow to capture all task-relevant features | Shared z ∈ ℝ⁸ cannot represent both spectral shape features AND EIS impedance profile |
 | **Unrelated task** | Task B has genuinely different spectral basis from task A | Nitrites (spectrally transparent) and bilirubin (optical) should NOT share a spectral encoder |
 
@@ -723,7 +721,7 @@ Negative transfer occurs when jointly training two tasks degrades performance co
 
 **Method 2 — Gradient cosine similarity.** Monitor $\cos(g_t, g_{t'})$ during training. Consistently negative cosine similarity between tasks t and t' signals conflict.
 
-**Method 3 — Probing experiments.** Freeze the shared encoder and train task-specific heads from scratch. If WBC head performance drops significantly when the shared encoder is trained with creatinine vs without, creatinine is causing negative transfer for WBC.
+**Method 3 — Probing experiments.** Freeze the shared encoder and train task-specific heads from scratch. If [[white-blood-cells|WBC]] head performance drops significantly when the shared encoder is trained with [[creatinin|creatinine]] vs without, [[creatinin|creatinine]] is causing negative transfer for [[white-blood-cells|WBC]].
 
 ### Mitigation (ranked by implementation effort)
 
@@ -741,15 +739,15 @@ Negative transfer occurs when jointly training two tasks degrades performance co
 
 | Task pair | Transfer risk | Reason |
 |---|---|---|
-| WBC ↔ BAC | **Low** — positive transfer likely | Both correlated with infection state and turbidity |
-| Bilirubin ↔ RBC | **Low** — positive transfer likely | Both visible absorbers; Hb degradation produces bilirubin |
-| Uric acid ↔ Creatinine | **Medium** — weak positive | Both UV-active solutes; creatinine barely visible at 275 nm |
+| [[white-blood-cells\|WBC]] ↔ BAC | **Low** — positive transfer likely | Both correlated with infection state and turbidity |
+| Bilirubin ↔ [[red-blood-cells\|RBC]] | **Low** — positive transfer likely | Both visible absorbers; Hb degradation produces bilirubin |
+| [[uric-acid\|Uric acid]] ↔ [[creatinin\|Creatinine]] | **Medium** — weak positive | Both UV-active solutes; [[creatinin\|creatinine]] barely visible at 275 nm |
 | TUP ↔ Bilirubin | **Medium** | Both at 405 nm but different mechanisms; risk of spectral overlap confusion |
-| Uric acid ↔ Scatter targets (WBC, BAC) | **High risk** | UV absorption (analyte signal) vs scatter (cell detection signal) are mechanistically unrelated at 275 nm |
+| [[uric-acid\|Uric acid]] ↔ Scatter targets ([[white-blood-cells\|WBC]], BAC) | **High risk** | UV absorption (analyte signal) vs scatter (cell detection signal) are mechanistically unrelated at 275 nm |
 | Nitrites ↔ Optical targets | **High risk** | Nitrites are spectrally invisible; forcing joint training with optical features adds no signal |
 
 > [!NOTE]
-> Do NOT include Nitrites, Sodium, Chloride in the optical-domain MTL model. These are EIS targets and should be modeled separately with EIS-specific inputs.
+> Do NOT include Nitrites, [[[[sodium]]|Sodium]], [[[[chloride]]|Chloride]] in the optical-domain MTL model. These are EIS targets and should be modeled separately with EIS-specific inputs.
 
 ---
 
@@ -786,7 +784,7 @@ Simultaneously predicts 4 molecular concentrations (HbO₂, HHb, oxCCO, redCCO) 
 
 **Key finding:** MTL approach is 1000× faster than sequential optimization of each species independently. The shared encoder naturally learns the spectral unmixing basis functions.
 
-**Direct analogy to Jimini:** Predict uric acid + bilirubin + hemoglobin + porphyrins simultaneously as a spectral unmixing problem with known extinction coefficients as physics-based constraints.
+**Direct analogy to Jimini:** Predict [[uric-acid|uric acid]] + bilirubin + hemoglobin + [[total-urinary-porphyrin|porphyrins]] simultaneously as a spectral unmixing problem with known extinction coefficients as physics-based constraints.
 
 ### Drug Sensitivity Prediction (Multi-Task + Spectral-like data)
 
@@ -798,7 +796,7 @@ Multi-task learning across 100+ drugs simultaneously from gene expression profil
 
 ### Anemia prediction from NIR dialysate (Nature Sci. Rep., 2021)
 
-Predicts 9 blood parameters simultaneously (RBC, Hb, Fe, TIBC, FER, Hct, MCV, MCHC, MCH) from NIR spectra of dialysate fluid; R = 0.91–0.96. Parameters that are biologically correlated (red-cell morphology cluster) share spectral features and mutually improve predictions — direct empirical demonstration of positive transfer in spectroscopic MTL.
+Predicts 9 blood parameters simultaneously ([[red-blood-cells|RBC]], Hb, Fe, TIBC, FER, Hct, MCV, MCHC, MCH) from NIR spectra of dialysate fluid; R = 0.91–0.96. Parameters that are biologically correlated (red-cell morphology cluster) share spectral features and mutually improve predictions — direct empirical demonstration of positive transfer in spectroscopic MTL.
 
 ---
 
@@ -820,13 +818,13 @@ Predicts 9 blood parameters simultaneously (RBC, Hb, Fe, TIBC, FER, Hct, MCV, MC
 
 | Method | Data size | Task types | Negative transfer | Interpretability | Implementation | Best for Jimini target |
 |---|---|---|---|---|---|---|
-| **Multi-output PLS2** | Small (n<500) | Regression only | Low risk | High (loadings) | Trivial (sklearn) | Creatinine, osmolality, bilirubin, uric acid |
-| **Multi-target RF** | Small-medium | Mixed | Low | Medium | Easy | WBC, RBC (binary); creatinine (regression) — mixed panel |
+| **Multi-output PLS2** | Small (n<500) | Regression only | Low risk | High (loadings) | Trivial (sklearn) | [[creatinin\|Creatinine]], osmolality, bilirubin, [[uric-acid\|uric acid]] |
+| **Multi-target RF** | Small-medium | Mixed | Low | Medium | Easy | [[white-blood-cells\|WBC]], [[red-blood-cells\|RBC]] (binary); [[creatinin\|creatinine]] (regression) — mixed panel |
 | **Hard sharing + Kendall loss** | Medium (n>200) | Mixed | Medium | Low-Medium | Moderate | Full panel if n sufficient |
 | **Hard sharing + GradNorm** | Medium-Large | Mixed | Low-Medium | Low | Moderate | Full panel; better gradient control |
 | **Hard sharing + PCGrad** | Medium-Large | Mixed | Low | Low | Moderate | When gradient conflicts detected |
 | **Hierarchical cascade** | Any | Mixed | Low (decoupled) | High | Moderate | Jimini: Stage1 optical → Stage2 scatter/EIS |
-| **Cross-stitch network** | Medium | Mixed | Very low | Medium | High | Bilirubin/TUP pair (high affinity); WBC/BAC pair |
+| **Cross-stitch network** | Medium | Mixed | Very low | Medium | High | Bilirubin/TUP pair (high affinity); [[white-blood-cells\|WBC]]/BAC pair |
 | **Modality-specific encoders** | Medium | Mixed | Low | High | Moderate | Recommended for Jimini (optical vs EIS split) |
 | **Multi-output LASSO** | Small | Regression | Low | Very high | Easy | Wavelength selection for all regression targets |
 | **GradNorm + Kendall** | Medium | Mixed | Low | Low | High | Full panel with proper gradient control |
@@ -841,20 +839,20 @@ Predicts 9 blood parameters simultaneously (RBC, Hb, Fe, TIBC, FER, Hct, MCV, MC
 | Task | Type | Direct spectral? | Primary signal | Recommended group |
 |---|---|---|---|---|
 | **Bilirubin** | Regression | ★★★★★ | A455, Beer-Lambert | A (optical absorbers) |
-| **RBC (hemoglobin)** | Classification | ★★★★★ | A405 Soret | A (optical absorbers) |
-| **Uric acid** | Regression | ★★★★★ | A275, Beer-Lambert | A (optical absorbers) |
-| **TUP (porphyrins)** | Classification | ★★★★ | ex405/em620 fluorescence | A (optical absorbers) |
-| **PBG** | Classification | ★★★ | A405 (converted form) | A (optical absorbers) |
+| **[[red-blood-cells\|RBC]] (hemoglobin)** | Classification | ★★★★★ | A405 Soret | A (optical absorbers) |
+| **[[uric-acid\|Uric acid]]** | Regression | ★★★★★ | A275, Beer-Lambert | A (optical absorbers) |
+| **TUP ([[total-urinary-porphyrin\|porphyrins]])** | Classification | ★★★★ | ex405/em620 fluorescence | A (optical absorbers) |
+| **[[[[porphobilinogen]]\|PBG]]** | Classification | ★★★ | A405 (converted form) | A (optical absorbers) |
 | **Protein** | Regression | ★★★★ | A275 (Trp), fluorescence | A (optical absorbers) |
-| **NADH** | Regression | ★★★ | ex365/em460 fluorescence | A (optical absorbers) |
-| **WBC** | Classification | ★★ | Scatter + fluorescence | B (scatter/cellular) |
-| **Bacteria (BAC)** | Classification | ★★ | Scatter + UV + fluorescence | B (scatter/cellular) |
+| **[[nadh\|NADH]]** | Regression | ★★★ | ex365/em460 fluorescence | A (optical absorbers) |
+| **[[white-blood-cells\|WBC]]** | Classification | ★★ | Scatter + fluorescence | B (scatter/cellular) |
+| **[[[[bacteria]]\|Bacteria]] (BAC)** | Classification | ★★ | Scatter + UV + fluorescence | B (scatter/cellular) |
 | **Crystals** | Classification | ★ | Scatter slope | B (scatter/cellular) |
 | **epiCells** | Classification | ★ | Scatter | B (scatter/cellular) |
 | **Osmolality** | Regression | ★★ | EIS + NIR water band | C (EIS/colligative) |
-| **Creatinine** | Regression | ★ | EIS conductivity | C (EIS/colligative) |
-| **Sodium** | Regression | ☆ | EIS only | C (EIS/colligative) |
-| **Chloride** | Regression | ☆ | EIS only | C (EIS/colligative) |
+| **[[creatinin\|Creatinine]]** | Regression | ★ | EIS conductivity | C (EIS/colligative) |
+| **[[[[sodium]]\|Sodium]]** | Regression | ☆ | EIS only | C (EIS/colligative) |
+| **[[[[chloride]]\|Chloride]]** | Regression | ☆ | EIS only | C (EIS/colligative) |
 | **Nitrites** | Classification | ☆ | Proxy: BAC model | B proxy |
 
 ### Recommended Task Groups
@@ -889,7 +887,7 @@ Notes:   Osmolality as influencing task for Creatinine
 
 **NOT in any MTL group:**
 - Nitrites → model as downstream of BAC binary prediction
-- CKD markers (glucose, urea) → require wavelengths outside Jimini range
+- CKD markers ([[glucose]], [[urea]]) → require wavelengths outside Jimini range
 
 ### Recommended Full Architecture (modality-specific + hierarchical)
 
@@ -1003,12 +1001,12 @@ class JiminiOpticalMTL(nn.Module):
 
 Based on physical relationships:
 
-| | Bili | RBC/Hb | UricA | TUP | WBC | BAC | Creat | Osm |
+| | Bili | [[red-blood-cells\|RBC]]/Hb | UricA | TUP | [[white-blood-cells\|WBC]] | BAC | Creat | Osm |
 |--|--|--|--|--|--|--|--|--|
 | **Bili** | — | 0.3 | 0.2 | 0.6 | 0.1 | 0.1 | 0.0 | 0.1 |
-| **RBC/Hb** | 0.3 | — | 0.1 | 0.3 | 0.2 | 0.1 | 0.1 | 0.1 |
+| **[[red-blood-cells\|RBC]]/Hb** | 0.3 | — | 0.1 | 0.3 | 0.2 | 0.1 | 0.1 | 0.1 |
 | **TUP** | **0.6** | 0.3 | 0.3 | — | 0.1 | 0.1 | 0.0 | 0.0 |
-| **WBC** | 0.1 | 0.2 | 0.0 | 0.0 | — | **0.7** | 0.2 | 0.2 |
+| **[[white-blood-cells\|WBC]]** | 0.1 | 0.2 | 0.0 | 0.0 | — | **0.7** | 0.2 | 0.2 |
 | **BAC** | 0.1 | 0.1 | 0.0 | 0.0 | **0.7** | — | 0.1 | 0.1 |
 | **Creat** | 0.0 | 0.1 | 0.2 | 0.0 | 0.2 | 0.1 | — | **0.8** |
 | **Osm** | 0.1 | 0.1 | 0.2 | 0.0 | 0.2 | 0.1 | **0.8** | — |
@@ -1019,13 +1017,13 @@ Based on physical relationships:
 
 | Target | Minimum n for MTL | Minimum n for single-task |
 |---|---|---|
-| WBC, BAC, RBC (binary) | ~200/class | ~300/class |
+| [[white-blood-cells\|WBC]], BAC, [[red-blood-cells\|RBC]] (binary) | ~200/class | ~300/class |
 | Bilirubin (regression) | ~150 | ~200 |
-| TUP, PBG (binary, rare condition) | ~100/class (but rare!) | ~200/class |
-| Creatinine (regression) | ~200 | ~300 |
+| TUP, [[[[porphobilinogen]]\|PBG]] (binary, rare condition) | ~100/class (but rare!) | ~200/class |
+| [[creatinin\|Creatinine]] (regression) | ~200 | ~300 |
 | Osmolality (regression) | ~150 | ~200 |
 
-For rare-positive targets (TUP, PBG) in the ~5–15% prevalence range, **data augmentation** (spectral noise addition, concentration jitter via Beer-Lambert simulation) is essential before MTL.
+For rare-positive targets (TUP, [[[[porphobilinogen]]|PBG]]) in the ~5–15% prevalence range, **data augmentation** (spectral noise addition, concentration jitter via Beer-Lambert simulation) is essential before MTL.
 
 ---
 
@@ -1059,18 +1057,18 @@ For rare-positive targets (TUP, PBG) in the ~5–15% prevalence range, **data au
 Before joint training of regressors:
 - Standardize continuous targets to zero mean, unit variance
 - Or use min-max normalization to [0,1] range
-- This prevents high-magnitude targets (osmolality: 50–1200 mOsm/kg) from dominating the loss over low-magnitude targets (creatinine: 0.5–25 mmol/L)
+- This prevents high-magnitude targets (osmolality: 50–1200 mOsm/kg) from dominating the loss over low-magnitude targets ([[creatinin|creatinine]]: 0.5–25 mmol/L)
 
 ### Binary + Regression Mix
 
-For mixed classification/regression MTL (e.g., WBC binary + osmolality regression):
+For mixed classification/regression MTL (e.g., [[white-blood-cells|WBC]] binary + osmolality regression):
 - Use **binary cross-entropy** for classifiers + **MSE or Huber** for regressors
 - Apply uncertainty weighting to handle the different loss scales
 - Consider a **Huber loss** (smooth L1) for regressors to reduce sensitivity to concentration outliers
 
 ### Class Imbalance
 
-WBC, BAC, TUP are binary with positive-class prevalence ~10–40%. Use:
+[[white-blood-cells|WBC]], BAC, TUP are binary with positive-class prevalence ~10–40%. Use:
 - Weighted binary cross-entropy: `pos_weight = n_negative / n_positive`
 - Focal loss: down-weights easy negatives, focuses on hard positives
 - Never use plain BCE with imbalanced classes in a MTL setting — the imbalanced task will get over-optimized
@@ -1128,7 +1126,7 @@ Before deploying a multi-task model:
 2. **Optimal task grouping is empirical.** The transfer gain matrix (which tasks help/hurt each other) can only be measured on Jimini data. Theory gives guidance but actual grouping requires ablation studies.
 3. **Effect of sample size on MTL advantage.** The literature shows consistent MTL advantage at n < 500 and neutral/negative at n > 1000. Jimini's clinical dataset size per target will determine whether MTL or ensemble of single-task models is better.
 4. **EIS + optical fusion.** No published paper jointly trains on UV-Vis spectra + multi-frequency EIS for multi-biomarker prediction. The MB-PLS / SO-PLS framework is the natural chemometric approach; for DL, a dual-encoder architecture (one for spectra, one for EIS impedance features) with a shared fusion layer is the natural design.
-5. **Temporal dynamics.** If sequential measurements of the same urine sample are possible (e.g., watching PBG darken over time), time-series MTL models could extract richer information than single-shot predictions.
+5. **Temporal dynamics.** If sequential measurements of the same urine sample are possible (e.g., watching [[[[porphobilinogen]]|PBG]] darken over time), time-series MTL models could extract richer information than single-shot predictions.
 
 ---
 

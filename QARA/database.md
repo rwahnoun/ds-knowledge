@@ -10,14 +10,12 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Datascience ETL and Database (PostgreSQL)
 
-Technical reference for the DS-DB data pipeline that normalizes Jimini records and biomarkers into a queryable PostgreSQL database. See [[overview]] (QARA) for the broader datascience architecture and [[device]] for the Jimini device and SLC naming conventions.
+Technical reference for the DS-DB data pipeline that normalizes Jimini records and biomarkers into a queryable PostgreSQL database. See [[QARA/overview]] (QARA) for the broader datascience architecture and [[device]] for the Jimini device and SLC naming conventions.
 
 ---
 
@@ -121,7 +119,7 @@ A USense storage service allowing direct saving and querying (including individu
 | Source | Notes |
 |---|---|
 | `datascience.dataio.remote.dbpg.DbPostGreSql` | Primary class for DB creation and querying |
-| [[overview]] (QARA) | Broader datascience architecture |
+| [[QARA/overview]] (QARA) | Broader datascience architecture |
 | [[device]] | SLC naming conventions and record structure |
 
 ## Gaps

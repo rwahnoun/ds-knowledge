@@ -14,9 +14,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # ML Models for Jimini Urine Spectroscopy
@@ -49,10 +47,10 @@ See also: [[signal-processing]] [[optical-signatures]] [[biomarker-panel]] [[lit
 
 | Study | Biomarker | Preprocessing | R² | RMSE |
 |---|---|---|---|---|
-| SpectraPhone 2026 | Hematuria (RBC) | 2nd derivative | **0.9913** | 61.6 RBC/µL |
+| SpectraPhone 2026 | Hematuria ([[red-blood-cells\|RBC]]) | 2nd derivative | **0.9913** | 61.6 [[red-blood-cells\|RBC]]/µL |
 | SpectraPhone 2026 | Albumin (reagent-free) | SNV | **0.9981** | 11.85 mg/dL |
 | Spectrochip 2024 | 12 parameters | Calibration curve | > 0.95 | — |
-| Shaw et al. 1996 | Protein, creatinine, urea | NIR PLS | High | Clinical range |
+| Shaw et al. 1996 | Protein, [[creatinin\|creatinine]], [[urea]] | NIR PLS | High | Clinical range |
 
 **Hyperparameter selection:** Number of latent variables (LVs) selected by Monte Carlo Cross-Validation (MCCV) — less biased than LOO-CV for small datasets.
 
@@ -102,13 +100,13 @@ model = Sequential([
 
 When using multiple excitation wavelengths (Jimini's 4 LEDs) with broadband detection, the data forms a **partial Excitation-Emission Matrix (EEM)** tensor. PARAFAC decomposes the three-way data (samples × excitation × emission) into independent fluorophore components.
 
-This enables simultaneous quantification of tryptophan, NADH, riboflavin, and porphyrins from Jimini's native multi-LED fluorescence data without overlap artefacts.
+This enables simultaneous quantification of [[tryptophan]], [[nadh|NADH]], riboflavin, and [[total-urinary-porphyrin|porphyrins]] from Jimini's native multi-LED fluorescence data without overlap artefacts.
 
 **Direct application:** Jimini 4 LEDs (275, 365, 405, 455 nm) × C12 broadband detection (321–870 nm) = partial EEM. PARAFAC separates:
-- Tryptophan: Ex 275→Em 330–360 nm
-- NADH: Ex 365→Em 440–470 nm
+- [[[[tryptophan]]|Tryptophan]]: Ex 275→Em 330–360 nm
+- [[nadh|NADH]]: Ex 365→Em 440–470 nm
 - Riboflavin: Ex 365/455→Em 520 nm
-- Porphyrins: Ex 405→Em 620–640 nm
+- [[total-urinary-porphyrin|Porphyrins]]: Ex 405→Em 620–640 nm
 
 ---
 
@@ -193,11 +191,11 @@ Global metrics:
 
 | Biomarker | RMSEP target | Clinical decision point |
 |---|---|---|
-| Uric acid | < 0.5 mg/dL | Hyperuricaemia > 7 mg/dL |
-| Hematuria (RBC) | < 10 RBC/µL | Abnormal > 3 RBC/HPF |
+| [[uric-acid\|Uric acid]] | < 0.5 mg/dL | Hyperuricaemia > 7 mg/dL |
+| Hematuria ([[red-blood-cells\|RBC]]) | < 10 [[red-blood-cells\|RBC]]/µL | Abnormal > 3 [[red-blood-cells\|RBC]]/HPF |
 | Bilirubin | Binary (present/absent) | Any detectable = abnormal |
 | Total protein | < 30 mg/dL | Proteinuria > 150 mg/day |
-| Creatinine | < 0.5 mM | For ACR normalisation |
+| [[creatinin\|Creatinine]] | < 0.5 mM | For ACR normalisation |
 | Specific gravity | < 0.002 | Range 1.001–1.035 |
 
 ---
@@ -206,20 +204,20 @@ Global metrics:
 
 ### Immediate Priorities
 
-1. **Validate uric acid at 275 nm** in n ≥ 50 real urine samples vs. enzymatic reference. Expected R² > 0.90 for uric acid > 2 mg/dL.
-2. **Map fluorescence response** at all 4 LED excitations for 20+ diverse urines. Confirm tryptophan (275→335), NADH (365→460), porphyrins (405→620), riboflavin (455→520). Build reference EEM library.
-3. **EIS + optical fusion:** Test multi-modal prediction (EIS features + spectral features) for creatinine and specific gravity. No published precedent — Jimini's unique opportunity.
+1. **Validate [[uric-acid|uric acid]] at 275 nm** in n ≥ 50 real urine samples vs. enzymatic reference. Expected R² > 0.90 for [[uric-acid|uric acid]] > 2 mg/dL.
+2. **Map fluorescence response** at all 4 LED excitations for 20+ diverse urines. Confirm [[tryptophan]] (275→335), [[nadh|NADH]] (365→460), [[total-urinary-porphyrin|porphyrins]] (405→620), riboflavin (455→520). Build reference EEM library.
+3. **EIS + optical fusion:** Test multi-modal prediction (EIS features + spectral features) for [[creatinin|creatinine]] and specific gravity. No published precedent — Jimini's unique opportunity.
 4. **Collect paired device data:** Measure 15–20 reference solutions on 2–3 Jimini units to enable MVG augmentation for cross-device transfer.
 
 ### Key Unknowns
 
 | Question | Why it matters | How to resolve |
 |---|---|---|
-| Can 275 nm LED distinguish uric acid from tryptophan? | Both absorb near 280 nm | Derivative spectroscopy on spiked solutions |
+| Can 275 nm LED distinguish [[uric-acid\|uric acid]] from [[tryptophan]]? | Both absorb near 280 nm | Derivative spectroscopy on spiked solutions |
 | What is the practical LOD for bilirubin at 455 nm? | Clinical threshold is trace amounts | Calibration curve with spiked urine |
 | Does PARAFAC work with only 4 excitation wavelengths? | Standard EEM uses 20+ excitations | Test on simulated + real data |
-| Can EIS conductivity predict creatinine independently? | Would enable dilution correction without optical measurement | Correlate EIS low-freq impedance with CRN |
-| Is tryptophan fluorescence quantitative enough for albumin? | Clinical microalbuminuria = 30–300 µg/mL | Spike-recovery experiment |
+| Can EIS conductivity predict [[creatinin\|creatinine]] independently? | Would enable dilution correction without optical measurement | Correlate EIS low-freq impedance with CRN |
+| Is [[tryptophan]] fluorescence quantitative enough for albumin? | Clinical microalbuminuria = 30–300 µg/mL | Spike-recovery experiment |
 
 ### Novel Opportunities (Unpublished)
 

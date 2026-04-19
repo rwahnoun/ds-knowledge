@@ -12,9 +12,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: concept
-author: Usense Healthcare
+
 ---
 
 # Signal Normalization in Photospectroscopy
@@ -31,18 +29,18 @@ Urine is a highly variable matrix. The same biomarker concentration produces dif
 - **Dilution** — hydration state shifts all concentrations
 - **Color** — pigments (urobilin, bilirubin) add broad absorbing backgrounds
 - **Turbidity** — particles scatter light multiplicatively, inflating all signals
-- **Creatinine / osmolality** — proxies for overall concentration and renal output
+- **[[creatinin|Creatinine]] / osmolality** — proxies for overall concentration and renal output
 - **pH and ionic strength** — shift peak positions and baseline
 
 ### Methods
 
-#### 1. Creatinine Normalization
+#### 1. [[creatinin|Creatinine]] Normalization
 
-Divide analyte signal by urinary creatinine concentration. Creatinine is excreted at a roughly constant rate, making it a reliable dilution marker.
+Divide analyte signal by urinary [[creatinin|creatinine]] concentration. [[creatinin|Creatinine]] is excreted at a roughly constant rate, making it a reliable dilution marker.
 
-$$A_{\text{norm}} = \frac{A_{\text{analyte}}}{[\text{creatinine}]}$$
+$$A_{\text{norm}} = \frac{A_{\text{analyte}}}{[\text{[[creatinin|creatinine]]}]}$$
 
-**Limitations:** Creatinine varies with muscle mass, age, and disease. Fails in extreme renal conditions. A Variable Power-Functional CRN Correction (V-PFCRC) improves on simple ratio normalization for nonlinear dilution effects. See [[matrix-correction]] for full V-PFCRC derivation.
+**Limitations:** [[creatinin|Creatinine]] varies with muscle mass, age, and disease. Fails in extreme renal conditions. A Variable Power-Functional CRN Correction (V-PFCRC) improves on simple ratio normalization for nonlinear dilution effects. See [[matrix-correction]] for full V-PFCRC derivation.
 
 #### 2. Specific Gravity / Osmolality Normalization
 
@@ -50,7 +48,7 @@ Refractometry or reagent strips measure specific gravity (SG); osmolality is mor
 
 $$A_{\text{norm}} = \frac{A_{\text{raw}}}{\text{SG} - 1.000}$$
 
-**Use when:** Creatinine measurement is unavailable. Prefer direct osmolality in pathological urines.
+**Use when:** [[creatinin|Creatinine]] measurement is unavailable. Prefer direct osmolality in pathological urines.
 
 #### 3. Standard Normal Variate (SNV)
 
@@ -212,6 +210,6 @@ Model:
 
 ## Gaps
 
-1. **V-PFCRC for spectroscopic analytes**: Validated for metals/iodine by ICP-MS; unclear if the same c/d coefficients transfer to spectroscopically-estimated biomarkers (e.g., creatinine by Raman).
+1. **V-PFCRC for spectroscopic analytes**: Validated for metals/iodine by ICP-MS; unclear if the same c/d coefficients transfer to spectroscopically-estimated biomarkers (e.g., [[creatinin|creatinine]] by Raman).
 2. **LED-specific SNV behavior**: Most SNV validation is for bench-top spectrometers. Whether SNV behaves differently for narrow-band LED excitation sources (e.g., 275 nm LED with sparse spectral coverage) has not been characterized.
 3. **Optimal cross-device method for Jimini**: The empirical comparison of water-reference regression calibration vs. CORAL vs. per-channel gain correction on actual Jimini inter-unit data has not been published.

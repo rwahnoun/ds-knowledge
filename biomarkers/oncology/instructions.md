@@ -3,7 +3,7 @@
 Generate a systematic review of tumor biomarkers detectable in human urine and for treatment monitoring via optical and electrochemical methods.
 
 # Research Guidelines
-1. **Biomarkers**: Include proteins (e.g., PSA, NMP22), nucleic acids (ctDNA, microRNA), extracellular vesicles (exosomes), and metabolites (e.g., NAD, FAD).
+1. **Biomarkers**: Include proteins (e.g., PSA, NMP22), nucleic acids (ctDNA, microRNA), extracellular vesicles (exosomes), and metabolites (e.g., NAD, [[fad|FAD]]).
 
 2. **Technologies**:
    - Optical: Fluorescence, absorbance, and scattering

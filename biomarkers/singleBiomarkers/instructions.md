@@ -125,7 +125,7 @@ Numbered list, one entry per routine clinical method. For each, bolded sub-field
 
 #### `### Optimal Urine Type for Measurement`
 
-Bullets on 24-h vs. spot, morning vs. random, creatinine normalisation, preservation (temperature, additives).
+Bullets on 24-h vs. spot, morning vs. random, [[creatinin|creatinine]] normalisation, preservation (temperature, additives).
 
 #### `### Actual Gold Standard`
 
@@ -201,33 +201,33 @@ The `md2pdf` skill applies the Usense branded template (Cambria body text with f
 
 # Biomarkers List
 
-- porphobilinogen
+- [[porphobilinogen]]
 - total urinary porphyrin (TUP)
-- bacteria
+- [[bacteria]]
 - red blood cells
 - haemoglobin
 - nitrites
 - white blood cells
 - leukocytes
-- sodium
-- chloride
+- [[sodium]]
+- [[chloride]]
 - creatinin
-- phosphate
-- magnesium
+- [[phosphate]]
+- [[magnesium]]
 - urine specific gravity (USG)
 - osmolality
-- glucose
+- [[glucose]]
 - ketone
 - bilirubin
-- urea
-- uric acid
-- NADH
-- FAD
+- [[urea]]
+- [[uric-acid|uric acid]]
+- [[nadh|NADH]]
+- [[fad|FAD]]
 - riboflavin
 - oxalate
 - citrate
 - pH
-- tryptophan
+- [[tryptophan]]
 - copper
 - metolachlore
 - PFAs

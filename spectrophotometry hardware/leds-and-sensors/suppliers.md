@@ -9,9 +9,7 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Suppliers & Distributors for UV/Vis/NIR LEDs and Spectral Sensors
@@ -117,7 +115,7 @@ Vs Crystal IS Optan: Seoul Viosys offers ~3× higher power (16 mW vs 3 mW at 100
 - **Where to buy:** Nichia distributor network; Digi-Key, Mouser
 
 > [!NOTE]
-> 405 nm is the classic mercury lamp alternative for visible range spectrophotometry (matches the 405 nm Hg line). Widely used for bilirubin, NADH, and protein assays.
+> 405 nm is the classic mercury lamp alternative for visible range spectrophotometry (matches the 405 nm Hg line). Widely used for bilirubin, [[nadh|NADH]], and protein assays.
 
 ---
 
@@ -266,21 +264,21 @@ Critical for spectrophotometry — you must know the **exact spectral shape**, n
 
 ## Ordering Summary — Bill of Materials Sourcing
 
-| Component | Recommended Part | Supplier | Approx Price |
-|---|---|---|---|
-| 275 nm UV LED | Crystal IS OPTAN-275K-BL | CDI (led.cdiweb.com) | $15–50/unit (request quote) |
-| 275 nm UV LED (alt) | Seoul Viosys CUD7GF1B | RS Components #247-1977 | ~£10/unit |
-| 365 nm UV LED | Nichia NVSU233B | Future Electronics / Digi-Key | ~$8–15/unit |
-| 405 nm violet LED | Nichia NCSU035D | Digi-Key / Mouser | ~$5–10/unit |
-| 455 nm royal blue LED | ams OSRAM LD W5KM-1T4T-35 | Digi-Key / Mouser | $2–8/unit |
-| White CRI>95 (SMD) | Seoul SunLike S1S0-3030 | DigiKey / Future | ~$0.20/unit |
-| White CRI>95 (alt) | Nichia NF2W757G-F1 (Optisolis) | TDElektronik / specialist | ~$3–8/unit |
-| 1070 nm NIR LED | Ushio Epitex SWIR 1070 nm | Ushio direct / Marubeni | Contact for quote |
-| AS7343 14-ch sensor | AS7343-DLGM | Digi-Key / Mouser | ~$10 @1 |
-| Hamamatsu mini-spectrometer | C12880MA | shop.hamamatsu.com | **$286** |
-| Hamamatsu NIR spectrometer | C14384MA-01 | Farnell / Hamamatsu direct | **~$500** |
-| EIS IC | AD5933 | Digi-Key / Mouser | ~$11/unit |
-| EIS Eval Board | EVAL-AD5933EBZ | analog.com / Digi-Key | **~$67** |
+| Component                   | Recommended Part               | Supplier                      | Approx Price                |
+| --------------------------- | ------------------------------ | ----------------------------- | --------------------------- |
+| 275 nm UV LED               | Crystal IS OPTAN-275K-BL       | CDI (led.cdiweb.com)          | $15–50/unit (request quote) |
+| 275 nm UV LED (alt)         | Seoul Viosys CUD7GF1B          | RS Components  247-1977       | ~£10/unit                   |
+| 365 nm UV LED               | Nichia NVSU233B                | Future Electronics / Digi-Key | ~$8–15/unit                 |
+| 405 nm violet LED           | Nichia NCSU035D                | Digi-Key / Mouser             | ~$5–10/unit                 |
+| 455 nm royal blue LED       | ams OSRAM LD W5KM-1T4T-35      | Digi-Key / Mouser             | $2–8/unit                   |
+| White CRI>95 (SMD)          | Seoul SunLike S1S0-3030        | DigiKey / Future              | ~$0.20/unit                 |
+| White CRI>95 (alt)          | Nichia NF2W757G-F1 (Optisolis) | TDElektronik / specialist     | ~$3–8/unit                  |
+| 1070 nm NIR LED             | Ushio Epitex SWIR 1070 nm      | Ushio direct / Marubeni       | Contact for quote           |
+| AS7343 14-ch sensor         | AS7343-DLGM                    | Digi-Key / Mouser             | ~$10 @1                     |
+| Hamamatsu mini-spectrometer | C12880MA                       | shop.hamamatsu.com            | **$286**                    |
+| Hamamatsu NIR spectrometer  | C14384MA-01                    | Farnell / Hamamatsu direct    | **~$500**                   |
+| EIS IC                      | AD5933                         | Digi-Key / Mouser             | ~$11/unit                   |
+| EIS Eval Board              | EVAL-AD5933EBZ                 | analog.com / Digi-Key         | **~$67**                    |
 
 ---
 

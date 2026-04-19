@@ -1,4 +1,6 @@
 {
   "baseFontSizeAction": true,
-  "baseFontSize": 18
+  "baseFontSize": 18,
+  "cssTheme": "",
+  "showViewHeader": true
 }

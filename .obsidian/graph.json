@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "bio",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -9,14 +9,14 @@
   "colorGroups": [],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -2.3,
-  "nodeSizeMultiplier": 1.31223958333333,
-  "lineSizeMultiplier": 0.59765625,
+  "textFadeMultiplier": -2.1,
+  "nodeSizeMultiplier": 1.18463541666667,
+  "lineSizeMultiplier": 0.725260416666667,
   "collapse-forces": false,
   "centerStrength": 0.549479166666667,
   "repelStrength": 7.65625,
   "linkStrength": 0.8984375,
-  "linkDistance": 406,
-  "scale": 0.36288736930120824,
-  "close": true
+  "linkDistance": 376,
+  "scale": 0.7132754626224341,
+  "close": false
 }

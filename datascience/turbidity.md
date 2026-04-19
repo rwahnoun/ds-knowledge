@@ -11,14 +11,12 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: concept
-author: Usense Healthcare
+
 ---
 
 # Turbidity Estimation in Urine Spectrophotometry
 
-Objective measurement of urine turbidity (Uturb) using spectrophotometric methods — no sample prep beyond optional heating. Relevant to the Jimini device as a confound to biomarker absorption and as a proxy for particulate load (cells, crystals, bacteria). See [[matrix-correction]] for turbidity correction methods in biomarker pipelines and [[signal-processing]] for preprocessing integration.
+Objective measurement of urine turbidity (Uturb) using spectrophotometric methods — no sample prep beyond optional heating. Relevant to the Jimini device as a confound to biomarker absorption and as a proxy for particulate load (cells, crystals, [[bacteria]]). See [[matrix-correction]] for turbidity correction methods in biomarker pipelines and [[signal-processing]] for preprocessing integration.
 
 ---
 
@@ -69,7 +67,7 @@ A 1220-sample validation study measured CIE L\*a\*b\* color space with a bench-t
 Osmolality = 74.7 + 0.52·L* − 19.87·a* + 19.95·b*    (Adjusted R² = 0.735, n=151)
 ```
 
-The b\* axis (blue↔yellow) correlates most strongly with urochrome concentration (τ_b = 0.708 with osmolality), making it a useful dilution proxy when creatinine is unavailable. See [[matrix-correction]] for the full dilution correction pipeline.
+The b\* axis (blue↔yellow) correlates most strongly with urochrome concentration (τ_b = 0.708 with osmolality), making it a useful dilution proxy when [[creatinin|creatinine]] is unavailable. See [[matrix-correction]] for the full dilution correction pipeline.
 
 ---
 

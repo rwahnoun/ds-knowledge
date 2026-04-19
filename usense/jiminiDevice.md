@@ -11,9 +11,7 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Jimini Device

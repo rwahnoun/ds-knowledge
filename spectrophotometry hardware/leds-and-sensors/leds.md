@@ -9,14 +9,12 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # UV and Specific-Wavelength LEDs for Portable Spectrophotometry
 
-Detailed per-wavelength LED review for the Jimini pen spectrophotometer. For summary tables and selection guidance see [[overview]]; for optical design context see [[optical-path-design]].
+Detailed per-wavelength LED review for the Jimini pen spectrophotometer. For summary tables and selection guidance see [[spectrophotometry hardware/leds-and-sensors/overview]]; for optical design context see [[optical-path-design]].
 
 ---
 
@@ -132,10 +130,10 @@ Where to buy (Klaran WD/LA): CDI LED (cdi.com), per request; not standard Mouser
 
 ## 365 nm UV-A
 
-**Technology:** InGaN or GaN. 365 nm is well-established, high-yielding technology. Many suppliers, good power levels. Used for NADH/NADPH fluorescence excitation (~340 nm abs, ~460 nm emission) and riboflavin excitation.
+**Technology:** InGaN or GaN. 365 nm is well-established, high-yielding technology. Many suppliers, good power levels. Used for [[nadh|NADH]]/NADPH fluorescence excitation (~340 nm abs, ~460 nm emission) and riboflavin excitation.
 
 > [!NOTE]
-> 365 nm is at the very edge of the NADH absorption band (~340 nm). For optimal NADH excitation, 340 nm is ideal, but 365 nm is a practical compromise with far better LED availability and power. Riboflavin absorbs strongly at 370 nm and 450 nm — 365 nm is a good match.
+> 365 nm is at the very edge of the [[nadh|NADH]] absorption band (~340 nm). For optimal [[nadh|NADH]] excitation, 340 nm is ideal, but 365 nm is a practical compromise with far better LED availability and power. Riboflavin absorbs strongly at 370 nm and 450 nm — 365 nm is a good match.
 
 ### Seoul Viosys — CUN66A1F (Recommended)
 
@@ -190,7 +188,7 @@ Notes: Nichia 233-series is a workhorse UV-A platform with multiple wavelength b
 
 ## 405 nm Violet
 
-**Technology:** InGaN. This is the Blu-ray disc wavelength — extremely well-developed technology. High efficiency, very good power levels. Porphyrin Soret band centers ~410 nm (HbO2) and ~405 nm (for general porphyrins); 405 nm is also bilirubin's secondary absorption peak.
+**Technology:** InGaN. This is the Blu-ray disc wavelength — extremely well-developed technology. High efficiency, very good power levels. Porphyrin Soret band centers ~410 nm (HbO2) and ~405 nm (for general [[total-urinary-porphyrin|porphyrins]]); 405 nm is also bilirubin's secondary absorption peak.
 
 ### Nichia — NVSU233C-D4 (405 nm bin) (Recommended)
 
@@ -231,7 +229,7 @@ Notes: Larger footprint than 3535. The NVSU233C-D4 is the newer recommended repl
 
 ## 455 nm Blue
 
-**Technology:** InGaN. Standard blue LED wavelength range. Very mature, high efficiency. Bilirubin absorbs at 454 nm (primary peak); FAD absorbs at 450 nm. 455 nm is an excellent match for both.
+**Technology:** InGaN. Standard blue LED wavelength range. Very mature, high efficiency. Bilirubin absorbs at 454 nm (primary peak); [[fad|FAD]] absorbs at 450 nm. 455 nm is an excellent match for both.
 
 ### Lumileds — LUXEON Z LXZ1-PR01 (Recommended for Compact PCB)
 
@@ -306,7 +304,7 @@ Where to buy:
 Notes on spectral choice for spectrophotometry:
 - Choose **4000K or 5000K** for flattest SPD across visible range
 - The Optisolis spectrum avoids the "blue spike" that contaminates measurements in the 440–460 nm region with standard white LEDs
-- No UV emission below ~400 nm prevents NADH/flavin autofluorescence from being excited by the white source itself
+- No UV emission below ~400 nm prevents [[nadh|NADH]]/flavin autofluorescence from being excited by the white source itself
 
 ---
 
@@ -484,9 +482,9 @@ Standard LED lenses/encapsulants (silicone, epoxy) absorb UV-C. Only:
 
 are UV-C transparent. All recommended 275 nm SMDs (CUD7GF1B, Würth, Bolb) use flat/bare ceramic windows or quartz windows. Do NOT add epoxy conformal coating or silicone encapsulant over these LEDs.
 
-### 365 nm for NADH: Consider 340 nm
+### 365 nm for [[nadh|NADH]]: Consider 340 nm
 
-The primary NADH absorption peak is **340 nm** (ε = 6,220 M⁻¹cm⁻¹). At 365 nm, absorption is ~3–4× weaker. If NADH quantification is important, investigate whether a 340 nm LED can be sourced.
+The primary [[nadh|NADH]] absorption peak is **340 nm** (ε = 6,220 M⁻¹cm⁻¹). At 365 nm, absorption is ~3–4× weaker. If [[nadh|NADH]] quantification is important, investigate whether a 340 nm LED can be sourced.
 
 ### OSRAM/ams Product Transitions
 
@@ -513,7 +511,7 @@ Several OSRAM violet/UV products (LD CQ7P, LA CP7P) have been discontinued follo
 ## Gaps
 
 1. **275 nm: Nichia NCSU275(T)** — Found reference to Nichia spec doc but couldn't confirm current production status or distributor pricing. Worth checking Nichia's current catalog.
-2. **340 nm for NADH** — Not searched; if NADH is a primary target, a separate search for 340 nm LEDs is warranted.
+2. **340 nm for [[nadh|NADH]]** — Not searched; if [[nadh|NADH]] is a primary target, a separate search for 340 nm LEDs is warranted.
 3. **1070 nm exact pricing** — Epigap OSA and Ushio Epitex both require direct contact/quote for 1070 nm. Standard pricing not publicly available.
 4. **Availability confirmation** — Several parts (OSRAM Golden Dragon LD W5KM) should be verified against current Mouser/DigiKey stock before BOM finalization.
-5. **Optical bandwidth requirements** — For uric acid at 275 nm, the LED FWHM (~11 nm) combined with the 15 nm C12880MA resolution may limit specificity. Thread on optical filters should address this.
+5. **Optical bandwidth requirements** — For [[uric-acid|uric acid]] at 275 nm, the LED FWHM (~11 nm) combined with the 15 nm C12880MA resolution may limit specificity. Thread on optical filters should address this.

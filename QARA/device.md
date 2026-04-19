@@ -9,14 +9,12 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Jimini Device Description
 
-The Jimini device is developed by Usense Healthcare. It consists of a pen-like device that can be plunged into a liquid sample (air, water, urine). With its companion app, we can generate signals from sensors or emitter-sensor couples. See [[optical-path-design]] for optical system details and [[overview]] (leds-and-sensors) for component specifications.
+The Jimini device is developed by Usense Healthcare. It consists of a pen-like device that can be plunged into a liquid sample (air, water, urine). With its companion app, we can generate signals from sensors or emitter-sensor couples. See [[optical-path-design]] for optical system details and [[QARA/overview]] (leds-and-sensors) for component specifications.
 
 ---
 
@@ -87,7 +85,7 @@ SLC column names in the processed dataframe follow the format `{sensor}-{emitter
 | Source | Notes |
 |---|---|
 | [[optical-path-design]] | Physical optical system design and LED/sensor specs |
-| [[overview]] (leds-and-sensors) | LED and sensor selection tables |
+| [[QARA/overview]] (leds-and-sensors) | LED and sensor selection tables |
 | [[database]] | ETL pipeline and data storage |
 
 ## Gaps

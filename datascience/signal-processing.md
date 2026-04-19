@@ -13,9 +13,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: pipeline
-author: Usense Healthcare
+
 ---
 
 # Signal Processing & Chemometrics for Spectral Urine Analysis
@@ -129,7 +127,7 @@ xᵢₖ* = (xᵢₖ - ĉᵢ) / b̂ᵢ
 
 **EMSC** extends MSC to include polynomial baseline terms, PCA-based interferent terms (water vapor, temperature), and explicit subtraction of known confounders (urobilin at ~490 nm). Achieved 97% specificity for Crohn's disease biomarkers in FTIR serum analysis.
 
-**Recommendation:** Use **SNV** as default for Vis-NIR (400–1078 nm). Use **EMSC with polynomial correction** in the UV range (275–400 nm) where fluorescence background from urinary compounds (porphyrins, NADH) is significant.
+**Recommendation:** Use **SNV** as default for Vis-NIR (400–1078 nm). Use **EMSC with polynomial correction** in the UV range (275–400 nm) where fluorescence background from urinary compounds ([[total-urinary-porphyrin|porphyrins]], [[nadh|NADH]]) is significant.
 
 See [[matrix-correction]] for interferent subtraction strategies.
 
@@ -142,10 +140,10 @@ See [[matrix-correction]] for interferent subtraction strategies.
 
 **SG 2nd derivatives** are particularly valuable for urine spectroscopy:
 1. Eliminate baseline offset and slope (critical for varying urine dilution)
-2. Reveal overlapping peaks (discriminating creatinine vs. urea NIR bands)
+2. Reveal overlapping peaks (discriminating [[creatinin|creatinine]] vs. [[urea]] NIR bands)
 3. Combined with SNV provide excellent performance in NIRS biofluid studies
 
-For NIR urea/creatinine prediction, SG 2nd derivative typically reduces RMSECV by 15–30% vs. raw spectra.
+For NIR [[urea]]/[[creatinin|creatinine]] prediction, SG 2nd derivative typically reduces RMSECV by 15–30% vs. raw spectra.
 
 **Fractional-order SG derivatives (FOSGD):** Emerging technique using order α ∈ (0,2) for tuning resolution-noise tradeoff. Showed +17% correlation improvement for chlorophyll estimation vs. integer derivatives.
 
@@ -162,7 +160,7 @@ For the UV range (275–380 nm) where urine autofluorescence is strongest, **ite
 
 **Recommended for UV range (275–400 nm):**
 1. arPLS or IairPLS (λ = 10⁴–10⁵) for LED-excited fluorescence baseline
-2. Verify baseline doesn't over-smooth near UV absorption peaks (280 nm aromatic amino acids, 340 nm NADH, 400–450 nm urobilinogen/bilirubin)
+2. Verify baseline doesn't over-smooth near UV absorption peaks (280 nm aromatic amino acids, 340 nm [[nadh|NADH]], 400–450 nm urobilinogen/bilirubin)
 
 ### Orthogonal Signal Correction (OSC) and OPLS
 
@@ -230,7 +228,7 @@ CARS iteratively removes wavelengths with low PLS regression coefficients:
 2. Competitive penalty reweights survivors
 3. Monte Carlo cross-validation selects the optimal subset
 
-Performance: CARS + PLSR achieved R²=0.927 for apple Brix. Particularly valuable for 900–1100 nm NIR where water overtones dominate but creatinine/urea have weak bands.
+Performance: CARS + PLSR achieved R²=0.927 for apple Brix. Particularly valuable for 900–1100 nm NIR where water overtones dominate but [[creatinin|creatinine]]/[[urea]] have weak bands.
 
 **Combined approach: CARS-SPA** — SPA removes collinear wavelengths from the CARS-selected set. Outperforms either method alone.
 
@@ -252,9 +250,9 @@ SPA selects wavelengths by minimizing collinearity. Produces small, non-redundan
 | Hemoglobin/erythrocytes | ~414 nm, 540/580 nm | Soret + Q-bands |
 | Urobilinogen | ~490 nm | — |
 | Protein | Multiple (broad) | Diverse protein types |
-| Glucose, albumin | **None** in 340–850 nm | Confirmed absent in Vis range |
+| [[[[glucose]]\|Glucose]], albumin | **None** in 340–850 nm | Confirmed absent in Vis range |
 
-**Key insight:** The UV extension to 275 nm is critical. Below 340 nm: aromatic amino acids (tryptophan 280 nm, tyrosine 274 nm), nucleobases ~260 nm, uric acid ~290 nm, nitrite 354 nm.
+**Key insight:** The UV extension to 275 nm is critical. Below 340 nm: aromatic amino acids ([[tryptophan]] 280 nm, tyrosine 274 nm), nucleobases ~260 nm, [[uric-acid|uric acid]] ~290 nm, nitrite 354 nm.
 
 See [[datascience/spectroscopy-biomarkers]] for full chromophore reference.
 
@@ -272,8 +270,8 @@ See [[datascience/spectroscopy-biomarkers]] for full chromophore reference.
 
 | Analyte | R² range | RMSEP |
 |---------|----------|-------|
-| Creatinine | 0.85–0.95 | 0.5–1.5 mM |
-| Urea | 0.80–0.90 | — |
+| [[creatinin\|Creatinine]] | 0.85–0.95 | 0.5–1.5 mM |
+| [[[[urea]]\|Urea]] | 0.80–0.90 | — |
 | Total protein | 0.75–0.85 | — |
 
 When PLS is sufficient: for small datasets (n < 200), PLS with proper cross-validation is typically more robust than ML methods which overfit.
@@ -492,13 +490,13 @@ For each CV fold:
 | Kuenert 2025 | LED Vis (340–850 nm) | 401 | Bilirubin (binary) | LRRE | AUC=0.921 |
 | Kuenert 2025 | LED Vis | 401 | Specific gravity | LRRE | AUC=0.890 |
 | Kuenert 2025 | LED Vis | 401 | Erythrocytes | LRRE | AUC=0.908 |
-| SpectraPhone 2026 | Vis (400–750 nm) | — | Hematuria (RBC) | PLS + 2nd deriv. | R²=0.9913 |
-| Suzuki 2020 | NIR (900–1700 nm) | Small | Creatinine/urea | PLS | R²≈0.85 |
+| SpectraPhone 2026 | Vis (400–750 nm) | — | Hematuria ([[red-blood-cells\|RBC]]) | PLS + 2nd deriv. | R²=0.9913 |
+| Suzuki 2020 | NIR (900–1700 nm) | Small | [[creatinin\|Creatinine]]/[[urea]] | PLS | R²≈0.85 |
 
 **Critical observations for 275–1078 nm range:**
 - UV (275–400 nm): Best for UV chromophores (aromatic aa, bilirubin, urobilinogen, nucleotides, nitrite)
 - Vis (400–700 nm): Hemoglobin, erythrocytes, urobilin, bilirubin color bands
-- NIR (700–1078 nm): Water overtones dominate; weak C-H/N-H/O-H overtones of urea, creatinine, protein
+- NIR (700–1078 nm): Water overtones dominate; weak C-H/N-H/O-H overtones of [[urea]], [[creatinin|creatinine]], protein
 
 ---
 
@@ -556,13 +554,13 @@ See [[libraries]] for the full curated library reference.
 | Analyte | Expected UV-Vis Peaks | Key Preprocessing |
 |---------|----------------------|------------------|
 | Bilirubin | 344, 387, 426 nm | SNV; EMSC if icteric matrix |
-| Hemoglobin/RBC | 414, 540, 576, 630 nm | SNV sufficient; Beer-Lambert holds well |
+| Hemoglobin/[[red-blood-cells\|RBC]] | 414, 540, 576, 630 nm | SNV sufficient; Beer-Lambert holds well |
 | Urobilinogen | ~490 nm | SNV; careful baseline at UV edge |
-| Creatinine | No strong Vis abs.; 230 nm UV | UV: arPLS + SNV; SG 2nd derivative |
-| Urea | No Vis abs.; 200 nm deep UV | NIR overtones 900–1000 nm; SG 2nd derivative |
+| [[creatinin\|Creatinine]] | No strong Vis abs.; 230 nm UV | UV: arPLS + SNV; SG 2nd derivative |
+| [[[[urea]]\|Urea]] | No Vis abs.; 200 nm deep UV | NIR overtones 900–1000 nm; SG 2nd derivative |
 | Protein | 280 nm (aromatic), broad Vis | SNV + SG derivative; VIP selection |
 | Nitrite | 354 nm (UV) | arPLS baseline crucial; near LED noise floor |
-| Glucose | No Vis/UV abs. in aqueous | Essentially invisible 275–1078 nm |
+| [[[[glucose]]\|Glucose]] | No Vis/UV abs. in aqueous | Essentially invisible 275–1078 nm |
 | pH | Indirect (multiple chromophores) | PLS on full spectrum; AUC > 0.85 |
 | Specific gravity | Refractive/multi-compound | PLS on full spectrum; AUC > 0.89 |
 
@@ -596,10 +594,10 @@ See [[datascience/spectroscopy-biomarkers]] for full chromophore reference.
 
 1. **LED-specific noise not characterized:** Most preprocessing literature is for bench-top spectrometers. LED-specific noise: thermal drift of LED emission wavelength (~0.1–0.3 nm/°C); intensity fluctuation between LEDs (pulsed vs. continuous); narrow-band gaps if LED coverage is incomplete between 275–1078 nm. Recommendation: characterize noise statistics empirically and use Kalman filter for real-time LED drift correction.
 
-2. **No published 275–400 nm preprocessing for urine:** All current LED urine studies start at ≥340 nm. Key unknowns: fluorescence contribution from urinary porphyrins and pyridines at 275–320 nm; whether arPLS handles this adequately. Next step: acquire urine spectra at 275–400 nm and compare arPLS vs. EMSC vs. polynomial correction.
+2. **No published 275–400 nm preprocessing for urine:** All current LED urine studies start at ≥340 nm. Key unknowns: fluorescence contribution from urinary [[total-urinary-porphyrin|porphyrins]] and pyridines at 275–320 nm; whether arPLS handles this adequately. Next step: acquire urine spectra at 275–400 nm and compare arPLS vs. EMSC vs. polynomial correction.
 
 3. **Multi-patient temporal stability:** The Kuenert 2025 study used frozen-thawed samples. Real-time catheter urine may show temperature-dependent spectral shifts, bacterial metabolism changes, and foam/turbidity variations in continuous flow.
 
-4. **Quantification vs. classification:** Most recent studies focus on binary classification. Quantitative prediction requires concentration-balanced training sets and RMSEP below clinical decision threshold: creatinine RMSEP < 0.5 mM; total protein RMSEP < 30 mg/24h; specific gravity RMSEP < 0.002 SG units.
+4. **Quantification vs. classification:** Most recent studies focus on binary classification. Quantitative prediction requires concentration-balanced training sets and RMSEP below clinical decision threshold: [[creatinin|creatinine]] RMSEP < 0.5 mM; total protein RMSEP < 30 mg/24h; specific gravity RMSEP < 0.002 SG units.
 
 5. **Comparison with strip-based systems:** No published comparison between pure spectroscopic methods and semi-quantitative strips for the 275–1078 nm range.

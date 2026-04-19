@@ -11,9 +11,7 @@ tags:
   - status/complete
   - device/jimini
 date: 2026-04-19
-status: complete
-type: concept
-author: Usense Healthcare
+
 ---
 
 # Calibration Transfer & Device Harmonization for Portable Spectrometers
@@ -150,7 +148,7 @@ def mvg_augmentation(X_device1, X_device2, n_synthetic=100):
     return np.vstack(augmented)
 ```
 
-**For Jimini:** Measure 15–20 reference solutions (creatinine, urea, uric acid, known concentrations) on 2–3 devices. New field devices require NO paired measurements.
+**For Jimini:** Measure 15–20 reference solutions ([[creatinin|creatinine]], [[urea]], [[uric-acid|uric acid]], known concentrations) on 2–3 devices. New field devices require NO paired measurements.
 
 ### Domain Adversarial Neural Networks (DANN)
 
@@ -278,7 +276,7 @@ After water-blank normalization (absorbance = −log(I/I₀)), residual preproce
 ## Gaps
 
 1. **LED spectral characterization**: Measure LED emission spectra of 5–10 Jimini units to quantify actual inter-unit variation (peak shift, FWHM). This determines which methods are sufficient.
-2. **Reference solution design**: What reference solutions bracket Jimini's urine measurement space? Need: creatinine (1–15 mM), urea (50–400 mM), uric acid, pH range.
+2. **Reference solution design**: What reference solutions bracket Jimini's urine measurement space? Need: [[creatinin|creatinine]] (1–15 mM), [[urea]] (50–400 mM), [[uric-acid|uric acid]], pH range.
 3. **Empirical comparison**: Run DS, slope-bias, CORAL, and MVG augmentation on actual Jimini inter-unit data. Theoretical preference is MVG + per-channel gain but empirical validation is needed.
 4. **Temporal drift**: Methods above address unit-to-unit variation but not temporal drift (LED aging, detector degradation). EPO applied to water reference trends over time can address this separately.
-5. **AS7343 vs AS7341 for urine**: AS7343's UV channel at ~340 nm could detect uric acid indirectly. AS7341 limited to 415+ nm.
+5. **AS7343 vs AS7341 for urine**: AS7343's UV channel at ~340 nm could detect [[uric-acid|uric acid]] indirectly. AS7341 limited to 415+ nm.

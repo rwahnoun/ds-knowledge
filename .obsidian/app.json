@@ -1,5 +1,7 @@
 {
   "readableLineLength": false,
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "propertiesInDocument": "visible",
+  "attachmentFolderPath": "./"
 }

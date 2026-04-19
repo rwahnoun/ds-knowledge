@@ -1,8 +1,8 @@
 # Claude Code — ds-knowledge Knowledge Base
 
 ## Markdown File Template
-
-**Always follow `template/markdownTemplate.md`** when writing or editing markdown files in this vault.
+**Always follow `meta/tplMarkdown.md`** when writing or editing generic markdown files in this vault.
+**Always follow `meta/tplModule.md`** when writing or editing markdown files for a code module.
 
 Key requirements:
 - YAML frontmatter with `title`, `aliases`, `tags`, `date`, `status`, `type`, `author`

@@ -10,9 +10,7 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: architecture
-author: Usense Healthcare
+
 ---
 
 # Datascience Architecture & API
@@ -199,7 +197,7 @@ The algorithm takes as input a Jimini scan of a urine sample and goes through th
    - The spectra `C12-405` and `C12-275` are available.
 2. (Further steps to be documented as algorithm matures)
 
-### Acute Porphyria — Porphobilinogen (PBG)
+### Acute Porphyria — Porphobilinogen ([[[[porphobilinogen]]|PBG]])
 
 The algorithm takes as input two Jimini scans of a raw then heated urine sample. (Further steps to be documented as algorithm matures)
 
@@ -216,6 +214,6 @@ The algorithm takes as input two Jimini scans of a raw then heated urine sample.
 
 ## Gaps
 
-1. The TUP and PBG algorithm step-by-step design documentation is incomplete — algorithm-specific design docs should be added as algorithms are finalized.
+1. The TUP and [[[[porphobilinogen]]|PBG]] algorithm step-by-step design documentation is incomplete — algorithm-specific design docs should be added as algorithms are finalized.
 2. The API endpoint URL and authentication method for external callers not documented here — refer to ds-compute repository.
 3. Staging vs production environment configuration differences not documented.

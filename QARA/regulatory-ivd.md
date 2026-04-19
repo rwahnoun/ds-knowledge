@@ -10,9 +10,7 @@ tags:
   - device/jimini
   - status/complete
 date: 2026-04-19
-status: complete
-type: reference
-author: Usense Healthcare
+
 ---
 
 # Regulatory Pathway for Spectroscopic IVD Devices
@@ -29,9 +27,9 @@ Before any classification can be determined, the **intended purpose** must be pr
 
 > Jimini is a portable in vitro diagnostic device intended for the qualitative and semi-quantitative analysis of human urine in point-of-care or near-patient settings. The device uses multi-wavelength UV-Vis-NIR optical spectroscopy (275–1078 nm) and electrochemical impedance spectroscopy (EIS) to detect and estimate the following analytes in urine:
 >
-> **Cellular/particulate markers (binary classification):** white blood cells (WBC/leukocytes), red blood cells (RBC/erythrocytes), bacteria (BAC), epithelial cells, crystals
-> **Chemical analytes (quantitative/semi-quantitative):** creatinine, osmolality, total urinary porphyrins (TUP), porphobilinogen (PBG), bilirubin, uric acid, protein
-> **Supporting markers:** sodium, chloride, nitrites
+> **Cellular/particulate markers (binary classification):** white blood cells ([[white-blood-cells|WBC]]/leukocytes), red blood cells ([[red-blood-cells|RBC]]/erythrocytes), [[bacteria]] (BAC), epithelial cells, crystals
+> **Chemical analytes (quantitative/semi-quantitative):** [[creatinin|creatinine]], osmolality, total urinary [[total-urinary-porphyrin|porphyrins]] (TUP), [[porphobilinogen]] ([[[[porphobilinogen]]|PBG]]), bilirubin, [[uric-acid|uric acid]], protein
+> **Supporting markers:** [[sodium]], [[chloride]], nitrites
 >
 > Results are intended to assist healthcare professionals in screening for urinary tract infection, haematuria, metabolic disorders, and porphyria. They are not intended as a definitive diagnosis. Confirmation by laboratory testing is required when clinically indicated.
 
@@ -49,19 +47,19 @@ The EU IVDR (Regulation 2017/746) uses a risk-based seven-rule classification sy
 
 | Rule | Application to Jimini | Classification |
 |---|---|---|
-| **Rule 1** | Jimini detects bacteria in urine (not blood supply screening) | Not applicable → Not Class D |
+| **Rule 1** | Jimini detects [[bacteria]] in urine (not blood supply screening) | Not applicable → Not Class D |
 | **Rule 2** | No blood group or transplant markers | Not applicable |
-| **Rule 3(a–l)** | **Key question: does porphyria screening trigger Rule 3(j)?** Porphyria is life-threatening — detecting PBG/TUP for acute attack identification *could* trigger Rule 3(j) | Borderline Class B/C — see below |
+| **Rule 3(a–l)** | **Key question: does porphyria screening trigger Rule 3(j)?** Porphyria is life-threatening — detecting [[[[porphobilinogen]]\|PBG]]/TUP for acute attack identification *could* trigger Rule 3(j) | Borderline Class B/C — see below |
 | **Rule 4** | Intended for professional use, not home self-testing | Not applicable |
 | **Rule 5** | Jimini IS intended for a specific IVD purpose | Not a Class A instrument |
 
 ### Classification Determination
 
-**Most biomarkers (WBC, RBC, BAC, creatinine, osmolality, bilirubin, uric acid, protein) → Class B**
+**Most biomarkers ([[white-blood-cells|WBC]], [[red-blood-cells|RBC]], BAC, [[creatinin|creatinine]], osmolality, bilirubin, [[uric-acid|uric acid]], protein) → Class B**
 
 General urinalysis falls under the **Class B default** for devices not meeting Rules 1–4. MDCG 2020-16 rev.3 explicitly lists clinical chemistry analyzers and general urinalysis systems as Class B examples.
 
-**Porphyria markers (PBG, TUP) → potentially Class C**
+**Porphyria markers ([[[[porphobilinogen]]|PBG]], TUP) → potentially Class C**
 
 If the device's intended purpose explicitly includes "detection of acute porphyria attacks" or "management of patients with porphyria," Rule 3(j) — "devices used in the management of patients suffering from life-threatening diseases or conditions" — may apply, elevating these analytes to **Class C**.
 
@@ -79,9 +77,9 @@ If the device's intended purpose explicitly includes "detection of acute porphyr
 
 | Analyte Group | Classification | Rule | Rationale |
 |---|---|---|---|
-| General urinalysis (WBC, RBC, BAC, epiCells, crystals, bilirubin, protein, uric acid, creatinine, osmolality, Na, Cl, nitrites) | **Class B** | Rule 5/default | General urinalysis — Class B default |
-| TUP, PBG (scoped as screening) | **Class B** | Rule 5/default | Screening/informational claim |
-| TUP, PBG (if acute management claimed) | **Class C** | Rule 3(j) | Life-threatening condition management |
+| General urinalysis ([[white-blood-cells\|WBC]], [[red-blood-cells\|RBC]], BAC, epiCells, crystals, bilirubin, protein, [[uric-acid\|uric acid]], [[creatinin\|creatinine]], osmolality, Na, Cl, nitrites) | **Class B** | Rule 5/default | General urinalysis — Class B default |
+| TUP, [[[[porphobilinogen]]\|PBG]] (scoped as screening) | **Class B** | Rule 5/default | Screening/informational claim |
+| TUP, [[[[porphobilinogen]]\|PBG]] (if acute management claimed) | **Class C** | Rule 3(j) | Life-threatening condition management |
 | **Overall device (recommended)** | **Class B** | — | Conservative scoping; revisit for v2.0 |
 
 ---
@@ -132,7 +130,7 @@ Under IVDR Article 48 and Annex IX, Class B devices require:
 | **KQO** | Automated Urinalysis System (analyzer + sediment) | 21 CFR 864.6550 | II | 510(k) |
 | **JIO** | Occult Blood Test / Hemoglobin (urine) | 21 CFR 864.7400 | II | 510(k) |
 | **JJY** | Bilirubin (semi-quantitative) | 21 CFR 862.1095 | II | 510(k) |
-| **MYN** | Urine Creatinine | 21 CFR 862.1145 | II | 510(k) |
+| **MYN** | Urine [[creatinin\|Creatinine]] | 21 CFR 862.1145 | II | 510(k) |
 
 Jimini will likely require multiple product codes. The primary product code will be **KQO** (Automated Urinalysis System).
 
@@ -143,7 +141,7 @@ Jimini will likely require multiple product codes. The primary product code will
 | Predicate | Manufacturer | 510(k) # | Technology | Notes |
 |---|---|---|---|---|
 | **Clinitek Novus** | Siemens Healthineers | K140717 | Optical reflectance strip + CMOS sediment | Gold standard urine chemistry + sediment |
-| **UF-5000** | Sysmex | K171883 | Flow cytometry (fluorescence) for sediment | Strongest predicate for cellular markers (WBC, RBC, BAC) |
+| **UF-5000** | Sysmex | K171883 | Flow cytometry (fluorescence) for sediment | Strongest predicate for cellular markers ([[white-blood-cells\|WBC]], [[red-blood-cells\|RBC]], BAC) |
 
 **Best predicate strategy:** Use **UF-5000 (K171883)** as primary predicate for cellular markers and **Clinitek Novus (K140717)** as secondary predicate for chemical analytes.
 
@@ -174,12 +172,12 @@ If the spectroscopic approach is considered **novel** (no predicate with the sam
 
 | Analyte | Reference standard |
 |---|---|
-| **WBC (leukocytes)** | Manual phase-contrast microscopy, Fuchs-Rosenthal chamber |
-| **RBC (erythrocytes)** | Manual phase-contrast microscopy |
-| **Bacteria (BAC)** | Urine culture (>10⁵ CFU/mL) |
-| **Creatinine** | Enzymatic creatinine assay |
+| **[[white-blood-cells\|WBC]] (leukocytes)** | Manual phase-contrast microscopy, Fuchs-Rosenthal chamber |
+| **[[red-blood-cells\|RBC]] (erythrocytes)** | Manual phase-contrast microscopy |
+| **[[[[bacteria]]\|Bacteria]] (BAC)** | Urine culture (>10⁵ CFU/mL) |
+| **[[creatinin\|Creatinine]]** | Enzymatic [[creatinin\|creatinine]] assay |
 | **Bilirubin** | Clinical chemistry analyzer |
-| **TUP/PBG** | HPLC porphyrin quantification |
+| **TUP/[[[[porphobilinogen]]\|PBG]]** | HPLC porphyrin quantification |
 
 ### Performance Benchmarks
 
@@ -187,13 +185,13 @@ Cellular markers — target performance (per CLSI GP16-A3 and ISLH guidelines):
 
 | Analyte | Sensitivity target | Specificity target | Jimini v20 current | Gap |
 |---|---|---|---|---|
-| WBC (pyuria threshold ≥5/µL or ≥10/µL) | ≥0.80 | ≥0.90 | Sen 0.74, Spe 0.86 | Sen −0.06, Spe −0.04 |
-| RBC (haematuria ≥5/µL) | ≥0.80 | ≥0.90 | Sen 0.64, Spe 0.72 | Sen −0.16, Spe −0.18 |
+| [[white-blood-cells\|WBC]] (pyuria threshold ≥5/µL or ≥10/µL) | ≥0.80 | ≥0.90 | Sen 0.74, Spe 0.86 | Sen −0.06, Spe −0.04 |
+| [[red-blood-cells\|RBC]] (haematuria ≥5/µL) | ≥0.80 | ≥0.90 | Sen 0.64, Spe 0.72 | Sen −0.16, Spe −0.18 |
 | BAC (>10⁵ CFU/mL by culture) | ≥0.85 | ≥0.70 | Sen 0.98, Spe 0.62 | Spe −0.08 |
 | Nitrites | ≥0.75 | ≥0.90 | Sen 0.79, Spe 0.92 | ✅ Met |
 
 > [!WARNING]
-> V20 results show WBC and RBC are both below specification on sensitivity AND specificity. BAC has high sensitivity but specificity gap. These gaps define the primary regulatory risk: performance below targets at time of submission will result in FDA deficiency letters or IVDR NB assessment failure.
+> V20 results show [[white-blood-cells|WBC]] and [[red-blood-cells|RBC]] are both below specification on sensitivity AND specificity. BAC has high sensitivity but specificity gap. These gaps define the primary regulatory risk: performance below targets at time of submission will result in FDA deficiency letters or IVDR NB assessment failure.
 
 ---
 
@@ -216,8 +214,8 @@ The Jimini AI/ML prediction models qualify as **high-risk AI** under the EU AI A
 |---|---|---|
 | Spectral acquisition firmware (STM32) | Class B | Hardware failure could affect measurement accuracy |
 | Signal processing pipeline | Class B | Errors could propagate to incorrect results |
-| ML prediction models | **Class B–C** | Incorrect WBC/RBC/BAC result could delay treatment |
-| Porphyria detection (PBG/TUP) | **Class C** | Acute porphyria is life-threatening; missed detection has serious consequences |
+| ML prediction models | **Class B–C** | Incorrect [[white-blood-cells\|WBC]]/[[red-blood-cells\|RBC]]/BAC result could delay treatment |
+| Porphyria detection ([[[[porphobilinogen]]\|PBG]]/TUP) | **Class C** | Acute porphyria is life-threatening; missed detection has serious consequences |
 | Result display and reporting | Class B | |
 
 ### Predetermined Change Control Plan (PCCP)
@@ -332,17 +330,17 @@ For a Class B IVD, the technical documentation (TD) must contain:
 ### Priority 1: Classification Decision (Month 1–3)
 
 1. Engage a regulatory consultant for a formal IVDR classification opinion on the porphyria marker question.
-2. Scope intended purpose: initial Jimini v1.0 claim should be **Class B** — general urinalysis including WBC/RBC/BAC/bilirubin/creatinine/osmolality, with porphyrins as "informational screening" only.
+2. Scope intended purpose: initial Jimini v1.0 claim should be **Class B** — general urinalysis including [[white-blood-cells|WBC]]/[[red-blood-cells|RBC]]/BAC/bilirubin/[[creatinin|creatinine]]/osmolality, with [[total-urinary-porphyrin|porphyrins]] as "informational screening" only.
 
 ### Priority 2: Performance Gap Closure (Month 1–12)
 
-The V20 results show WBC (Sen 0.74) and RBC (Sen 0.64, Spe 0.72) below regulatory targets. Regulatory submissions require performance AT OR ABOVE targets.
+The V20 results show [[white-blood-cells|WBC]] (Sen 0.74) and [[red-blood-cells|RBC]] (Sen 0.64, Spe 0.72) below regulatory targets. Regulatory submissions require performance AT OR ABOVE targets.
 
 ### Risk Register
 
 | Risk | Probability | Impact | Mitigation |
 |---|---|---|---|
-| Performance gaps in WBC/RBC not closed before submission | High | High | Prioritize ML improvements in v21/v22; do not file until targets met |
+| Performance gaps in [[white-blood-cells\|WBC]]/[[red-blood-cells\|RBC]] not closed before submission | High | High | Prioritize ML improvements in v21/v22; do not file until targets met |
 | NB capacity delays EU timeline by 12+ months | Medium | Medium | Apply to NB early; have multiple NB applications in parallel |
 | FDA classifies spectroscopic approach as novel → De Novo required | Medium | Medium | Q-Sub meeting early; prepare for De Novo as backup |
 | Rule 3(j) porphyria claim escalates to Class C | Low-Medium | Medium | Scope porphyria markers as informational screening only |

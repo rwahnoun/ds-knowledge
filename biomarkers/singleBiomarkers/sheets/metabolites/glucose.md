@@ -1,0 +1,281 @@
+---
+title: Glucose
+aliases:
+  - Glucose
+  - Glucosuria
+  - Glycosuria
+  - Dextrose
+  - Blood sugar
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
+author: Usense Healthcare
+---
+
+# [[[[glucose]]|Glucose]]
+
+[[[[glucose]]|Glucose]] is a six-carbon aldose monosaccharide and the primary energy substrate for most human cells. It is normally completely reabsorbed from the glomerular filtrate by SGLT2 and SGLT1 transporters in the proximal tubule. Its presence in urine (glucosuria/glycosuria) indicates either hyperglycaemia exceeding the renal threshold (~180 mg/dL blood [[glucose]]) or a renal tubular defect. See [[datascience/spectroscopy-biomarkers]] for clinical context and [[signatures]] for Raman/FTIR data.
+
+---
+
+## Identity Sheet
+
+| Property | Value |
+|---|---|
+| **Name** | [[[[glucose]]\|Glucose]] |
+| **Other names** | Dextrose, D-[[glucose]], blood sugar, grape sugar |
+| **Chemical formula** | C₆H₁₂O₆ |
+| **Molecular weight** | 180.16 g/mol |
+| **CAS number** | 50-99-7 |
+| **PubChem CID** | 5793 |
+| **SMILES** | OC[C@H]1OC(O)[C@H](O)[C@@H](O)[C@@H]1O |
+| **Appearance** | White crystalline solid; colourless in solution |
+| **Solubility in water** | ~910 g/L at 25 °C |
+| **Melting point** | 146 °C (alpha form) |
+
+### Molecules Not to Be Confused With
+
+| Molecule | Formula | MW (g/mol) | Key Difference |
+|---|---|---|---|
+| **Fructose** | C₆H₁₂O₆ | 180.16 | Ketose isomer; not detected by [[glucose]] oxidase dipstick |
+| **Galactose** | C₆H₁₂O₆ | 180.16 | Aldose epimer; galactosuria in galactosaemia |
+| **Lactose** | C₁₂H₂₂O₁₁ | 342.30 | Disaccharide; lactosuria in pregnancy |
+| **Ascorbic acid** | C₆H₈O₆ | 176.12 | Reducing agent; interferes with [[glucose]] dipstick (false negative) |
+
+---
+
+## Medical Information
+
+### Origin
+
+#### Endogenous: [[[[glucose]]|Glucose]] Metabolism
+
+Blood [[glucose]] is maintained by dietary carbohydrate absorption, hepatic glycogenolysis, and gluconeogenesis (liver, kidneys). Regulated by insulin (lowers [[glucose]]) and counter-regulatory hormones (glucagon, cortisol, epinephrine, growth hormone). Normal fasting blood [[glucose]]: 70–100 mg/dL.
+
+#### Exogenous
+
+Dietary carbohydrates (starch, sugars) are the primary source. IV dextrose infusions. Parenteral nutrition.
+
+### Primary & Secondary Biological Roles
+
+**Primary role:**
+- **Universal energy substrate:** [[[[glucose]]|Glucose]] is metabolised via glycolysis, TCA cycle, and oxidative phosphorylation to produce ATP. Brain and [[red-blood-cells|RBC]] are obligate [[glucose]] users.
+
+**Secondary roles:**
+- **Structural precursor:** Glycosaminoglycans, glycoproteins, glycolipids.
+- **Pentose [[phosphate]] pathway:** Generates NADPH and ribose-5-[[phosphate]].
+- **Energy storage:** Glycogen synthesis in liver and muscle.
+
+### Catabolism and Elimination Pathway
+
+- [[[[glucose]]|Glucose]] freely filtered at glomerulus (~180 g/day at normal blood [[glucose]]).
+- **100% reabsorbed** in proximal tubule via SGLT2 (90%, S1/S2 segments) and SGLT1 (10%, S3 segment) if blood [[glucose]] <180 mg/dL.
+- **Renal threshold (Tm [[glucose]]):** ~180–200 mg/dL. Above this, reabsorption is saturated and [[glucose]] spills into urine.
+- SGLT2 inhibitors (dapagliflozin, empagliflozin) pharmacologically cause glucosuria for diabetes treatment.
+
+### Expression in Humans
+
+#### Normal Levels
+
+| Compartment | Reference Range |
+|---|---|
+| **Fasting blood [[glucose]]** | 70–100 mg/dL (3.9–5.6 mmol/L) |
+| **Urine [[glucose]]** | Negative (<25 mg/dL) |
+| **24-h urinary [[glucose]]** | <0.5 g/day |
+| **Renal threshold** | ~180 mg/dL blood [[glucose]] |
+
+#### Factors Influencing Levels
+
+**Glucosuria ([[glucose]] in urine):**
+- Diabetes mellitus (most common cause)
+- Gestational diabetes
+- SGLT2 inhibitor therapy (intentional glucosuria)
+- Renal glucosuria (genetic SGLT2 deficiency; benign, autosomal recessive)
+- Fanconi syndrome (generalised proximal tubular dysfunction)
+- Cushing syndrome
+- Stress hyperglycaemia (burns, trauma, sepsis)
+- Pregnancy (lowered renal threshold)
+
+**Absent glucosuria (normal):**
+- Normal blood [[glucose]] and intact tubular function
+- Fasting state
+
+#### Associated Pathologies
+
+| Condition | [[[[glucose]]\|Glucose]] Pattern | Key Symptoms |
+|---|---|---|
+| **Type 2 diabetes** | Glucosuria when BG >180 mg/dL | Polyuria, polydipsia, weight loss; prevalence ~10% adults |
+| **Type 1 diabetes** | Often heavy glucosuria at presentation | DKA, weight loss; ~0.3% population |
+| **Gestational diabetes** | Intermittent glucosuria | May be asymptomatic; ~7% pregnancies |
+| **Renal glucosuria** | Glucosuria with normal BG | Benign; rare (~0.2–0.6%) |
+| **Fanconi syndrome** | Glucosuria + aminoaciduria + phosphaturia | Metabolic acidosis, rickets |
+
+### Presence in Urine
+
+**Should it be normally present?** **No** — urine should be [[glucose]]-free in healthy individuals with normal blood [[glucose]].
+
+**Normal urinary levels:** <25 mg/dL; <0.5 g/day.
+
+**Form in urine:** Dissolved **D-[[glucose]]** in native molecular form.
+
+**Pathological significance:**
+
+| Urinary [[[[glucose]]\|Glucose]] | Possible Causes | Prevalence |
+|---|---|---|
+| **Present (glucosuria)** | Diabetes, renal glucosuria, Fanconi, SGLT2i use | DM: ~10% of adults |
+| **Absent** | Normal | — |
+
+**Solubility:** Extremely soluble (~910 g/L). Never crystallises in urine.
+
+---
+
+## Detection in Urine
+
+### Available Clinical Assays
+
+1. **Dipstick [[glucose]] oxidase (most common):**
+   - **Principle:** [[[[glucose]]|Glucose]] oxidase converts [[glucose]] + O₂ → gluconic acid + H₂O₂. H₂O₂ + peroxidase oxidises chromogen (o-toluidine or potassium iodide) → colour change.
+   - **Detection:** Colour from green (negative) to brown (high). Semi-quantitative (negative, trace, 1+ to 4+).
+   - **LOD:** ~50–100 mg/dL (~2.8–5.6 mmol/L). Specific for [[glucose]].
+   - **Absorption:** Chromogen product ~450–650 nm depending on dye.
+   - **Advantages:** Rapid, specific for [[glucose]] (not other sugars).
+   - **Disadvantages:** Ascorbic acid causes false negatives; only semi-quantitative.
+
+2. **Hexokinase method (quantitative, lab):**
+   - **Principle:** Hexokinase phosphorylates [[glucose]] (ATP → ADP); G-6-P + NAD⁺ (via G6PDH) → 6-phosphogluconate + [[nadh|NADH]].
+   - **Detection:** [[nadh|NADH]] absorbance at **340 nm**.
+   - **LOD:** ~1 mg/dL (~0.06 mmol/L).
+   - **Advantages:** Reference method; highly specific.
+
+3. **[[[[glucose]]|Glucose]] oxidase-peroxidase (GOD-POD, quantitative):**
+   - **Principle:** Same as dipstick but solution-phase with spectrophotometric readout.
+   - **Detection:** 505 nm (Trinder colour) or 340 nm ([[nadh|NADH]]-coupled).
+   - **LOD:** ~1–5 mg/dL.
+
+4. **Benedict's test (historical, non-specific):**
+   - **Principle:** Reducing sugars reduce Cu²⁺ → Cu⁺ (Cu₂O precipitate, orange).
+   - **Detection:** Visual colour change.
+   - **LOD:** ~200 mg/dL.
+   - **Disadvantages:** Non-specific (detects all reducing sugars, ascorbic acid, drugs).
+
+### Optimal Urine Type for Measurement
+
+- **Random specimen** adequate for screening.
+- **Second-void (postprandial) urine** more likely to detect glucosuria.
+- First morning urine may miss transient postprandial glucosuria.
+- Fresh sample preferred; [[glucose]] can be consumed by [[bacteria]] if delayed.
+- Refrigerate or add preservative (NaF) if delay >2 h.
+
+### Actual Gold Standard
+
+**Hexokinase method** ([[nadh|NADH]] at 340 nm) is the clinical chemistry reference. GOD-POD is the common automated alternative. Both on Roche Cobas, Siemens, Abbott platforms. CV: 2–4%.
+
+### Interferences in Measurement
+
+| Interference | Effect | Mechanism |
+|---|---|---|
+| **Ascorbic acid** | False negative (dipstick) | Reduces H₂O₂, prevents chromogen oxidation |
+| **Bleach/oxidants** | False positive (dipstick) | Oxidise chromogen directly |
+| **[[[[bacteria]]\|Bacteria]] (delayed)** | False negative | Consume [[glucose]] |
+| **Ketone bodies (high)** | Minor false negative (GOD-POD) | Interfere with Trinder reaction |
+| **Fructose, galactose** | Not detected by [[glucose]] oxidase | Specific for [[glucose]] only |
+| **Benedict's: ascorbic acid, drugs** | False positive | Non-specific reducing agent |
+
+### Research Detection Methods
+
+#### Spectroscopy Detection (UV-Vis / NIR)
+
+- **UV-Vis:** [[[[glucose]]|Glucose]] has no chromophore; no direct UV-Vis absorption above 200 nm. All methods require enzymatic or chemical conversion to generate a chromophore.
+- **NIR:** [[[[glucose]]|Glucose]] has overtone/combination bands at ~1600 nm, ~2100–2270 nm. Used for non-invasive blood [[glucose]] monitoring (challenging). In urine, PLS models can detect [[glucose]] at LOD ~10 mg/dL with NIR.
+
+#### Fluorescence Detection
+
+- [[[[glucose]]|Glucose]] is non-fluorescent. Indirect methods:
+- **Enzymatic ([[nadh|NADH]] production):** Hexokinase + G6PDH produces [[nadh|NADH]] (Ex 340 / Em 460 nm). LOD: ~0.5 mg/dL.
+- **Boronic acid probes:** Anthracene-boronic acid derivatives bind [[glucose]] and change fluorescence. Ex 370 / Em 420–440 nm. LOD: ~0.5 mM.
+- **GOx + Amplex Red:** H₂O₂ from GOx reaction oxidises Amplex Red to resorufin (Ex 571 / Em 585 nm). LOD: ~1 µM.
+- **[[[[glucose]]|Glucose]]-binding protein (FRET sensors):** Conformational change upon [[glucose]] binding alters FRET. Various Ex/Em depending on pair.
+
+#### Raman Detection
+
+| Peak (cm⁻¹) | Assignment |
+|---|---|
+| **~520** | C-C-O deformation |
+| **~850** | C-H deformation |
+| **~1065** | C-O stretch |
+| **~1130** | C-O-H bending |
+| **~1340** | C-H/O-H bending |
+
+- Conventional Raman: LOD ~50–100 mM (too high for clinical glucosuria).
+- SERS: LOD improved to ~0.1–1 mM on functionalised substrates.
+- Excitation: 785 nm preferred (less fluorescence background).
+
+#### FTIR Detection
+
+| Band (cm⁻¹) | Assignment | Notes |
+|---|---|---|
+| **~1035** | C-O stretch | Strongest [[glucose]] band |
+| **~1080** | C-O stretch | — |
+| **~1150** | C-O-C asymmetric stretch | — |
+| **~3300** | O-H stretch | Overlaps with water |
+
+- ATR-FTIR can detect [[glucose]] in urine at ~5–10 mM (90–180 mg/dL). Relevant for glucosuria detection.
+- Interference: [[urea]] and water bands overlap.
+
+#### Voltammetry Detection
+
+- **Non-enzymatic:** Direct [[glucose]] oxidation on noble metal (Au, Pt) or metal oxide (CuO, NiO, Co₃O₄) electrodes.
+  - LOD: ~1–10 µM on nanostructured electrodes.
+  - Oxidation potential: +0.2 to +0.6 V vs Ag/AgCl (alkaline media).
+- **Enzymatic (GOx) amperometric:** GOx immobilised on electrode; H₂O₂ measured at +0.6 V.
+  - LOD: ~5 µM.
+  - Linear range: 0.01–30 mM.
+- **SGLT2 inhibitors complicate interpretation** — glucosuria is pharmacologically induced.
+
+### Other Detection Technologies
+
+1. **Continuous [[glucose]] monitors (CGM):** Subcutaneous enzymatic sensors. Not for urine.
+2. **Paper-based enzymatic strips:** GOx + chromogen on paper. LOD: ~50 mg/dL. Smartphone readout.
+3. **Microfluidic [[glucose]] chips:** Integrated GOx + electrochemical or optical detection. LOD: ~1 µM.
+4. **Polarimetry:** Optical rotation of [[glucose]] solutions. LOD: ~100 mg/dL. Not practical for urine (too many chiral solutes).
+
+---
+
+## Detection Methods Comparison
+
+| Method | LOD | Key Parameter | Sample Prep | Strengths |
+|---|---|---|---|---|
+| **Dipstick (GOx)** | ~50 mg/dL | Colour change | None | Rapid, specific |
+| **Hexokinase** | ~1 mg/dL | 340 nm ([[nadh\|NADH]]) | None | Reference, precise |
+| **GOD-POD** | ~1–5 mg/dL | 505 nm | None | Automated |
+| **NIR** | ~10 mg/dL | 2100–2270 nm | None | Reagent-free |
+| **FTIR** | ~90 mg/dL | 1035 cm⁻¹ | None | Non-destructive |
+| **Raman/SERS** | ~0.1–1 mM | 1065 cm⁻¹ | Nanoparticles | Label-free |
+| **Electrochemical (GOx)** | ~5 µM | +0.6 V | Enzyme membrane | Continuous |
+| **Non-enzymatic EC** | ~1–10 µM | +0.2–0.6 V | Alkaline | No enzyme |
+| **Fluorescence (Amplex)** | ~1 µM | Ex 571/Em 585 nm | GOx + reagent | Ultra-sensitive |
+
+---
+
+## Sources
+
+| # | Citation |
+|---|---|
+| 1 | StatPearls — Peroxidase-Coupled [[[[glucose]]\|Glucose]] Method. https://www.ncbi.nlm.nih.gov/books/NBK594277/ |
+| 2 | StatPearls — Hexokinase Method. https://www.ncbi.nlm.nih.gov/books/NBK587446/ |
+| 3 | Wikipedia — Glycosuria. https://en.wikipedia.org/wiki/Glycosuria |
+| 4 | RCPA Manual — Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick |
+| 5 | Wikipedia — Urine Test Strip. https://en.wikipedia.org/wiki/Urine_test_strip |
+| 6 | PubChem — [[[[glucose]]\|Glucose]], CID 5793. https://pubchem.ncbi.nlm.nih.gov/compound/5793 |
+
+## Gaps
+
+- NIR detection of glucosuria in urine is challenging due to overlap with [[urea]], [[creatinin|creatinine]], and water bands; validated multivariate models across diverse urine matrices are lacking.
+- SERS detection of [[glucose]] in urine has not been demonstrated with sufficient specificity at clinically relevant concentrations.
+- SGLT2 inhibitor-induced glucosuria is indistinguishable from pathological glucosuria by chemical detection alone; clinical context is required.
+- The renal threshold varies considerably between individuals (~160–200 mg/dL); a fixed threshold may miss glucosuria in patients with low renal threshold (e.g., pregnancy).
