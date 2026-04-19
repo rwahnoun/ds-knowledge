@@ -1,12 +1,24 @@
 ---
 title: Bilirubin
+aliases:
+  - Bilirubin
+  - Bilirubinuria
+  - Conjugated bilirubin
+  - Direct bilirubin
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Bilirubin
 
-**Author:** Usense Healthcare
+Bilirubin is the yellow breakdown product of heme degradation. Only **conjugated (direct) bilirubin** appears in urine because unconjugated bilirubin is tightly bound to albumin and not filtered by the glomerulus. Bilirubinuria is an early sign of hepatobiliary disease. See [[optical-properties]] for UV-Vis absorption characteristics and [[datascience/spectroscopy-biomarkers]] for clinical context.
 
 ---
 
@@ -31,8 +43,6 @@ date: 2026-04-17
   (with vinyl, methyl, propionic acid side chains)
 ```
 
-Bilirubin is the yellow breakdown product of heme degradation. Only **conjugated (direct) bilirubin** appears in urine because unconjugated bilirubin is tightly bound to albumin and is not filtered by the glomerulus. Bilirubinuria is an early sign of hepatobiliary disease.
-
 ### Molecules Not to Be Confused With
 
 | Molecule | Formula | MW (g/mol) | Key Difference |
@@ -49,9 +59,9 @@ Bilirubin is the yellow breakdown product of heme degradation. Only **conjugated
 
 #### Endogenous: Heme Degradation
 
-Bilirubin is produced from heme catabolism (75-85% from senescent RBC haemoglobin, 15-25% from other haemoproteins). Pathway: Heme -> biliverdin (heme oxygenase) -> bilirubin (biliverdin reductase). Unconjugated bilirubin is transported bound to albumin to the liver, where UDP-glucuronosyltransferase (UGT1A1) conjugates it with glucuronic acid -> conjugated bilirubin (water-soluble), excreted in bile.
+Bilirubin is produced from heme catabolism (75–85% from senescent RBC haemoglobin, 15–25% from other haemoproteins). Pathway: Heme → biliverdin (heme oxygenase) → bilirubin (biliverdin reductase). Unconjugated bilirubin is transported bound to albumin to the liver, where UDP-glucuronosyltransferase (UGT1A1) conjugates it with glucuronic acid → conjugated bilirubin (water-soluble), excreted in bile.
 
-Daily production: ~250-350 mg bilirubin.
+Daily production: ~250–350 mg bilirubin.
 
 #### Exogenous
 
@@ -69,9 +79,9 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 ### Catabolism and Elimination Pathway
 
 - Conjugated bilirubin is excreted in bile into the intestine.
-- Gut bacteria reduce conjugated bilirubin -> urobilinogen -> stercobilin (faecal colour).
-- ~10-15% of urobilinogen is reabsorbed (enterohepatic circulation), re-excreted in bile or filtered by kidneys into urine.
-- Conjugated bilirubin can be filtered by the glomerulus if serum levels are elevated -> bilirubinuria.
+- Gut bacteria reduce conjugated bilirubin → urobilinogen → stercobilin (faecal colour).
+- ~10–15% of urobilinogen is reabsorbed (enterohepatic circulation), re-excreted in bile or filtered by kidneys into urine.
+- Conjugated bilirubin can be filtered by the glomerulus if serum levels are elevated → bilirubinuria.
 - Unconjugated bilirubin is not excreted in urine (albumin-bound).
 
 ### Expression in Humans
@@ -80,11 +90,11 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 | Compartment | Reference Range |
 |---|---|
-| **Total serum bilirubin** | 0.1-1.2 mg/dL (2-21 umol/L) |
-| **Direct (conjugated)** | 0-0.3 mg/dL |
-| **Indirect (unconjugated)** | 0.1-0.8 mg/dL |
+| **Total serum bilirubin** | 0.1–1.2 mg/dL (2–21 µmol/L) |
+| **Direct (conjugated)** | 0–0.3 mg/dL |
+| **Indirect (unconjugated)** | 0.1–0.8 mg/dL |
 | **Urine bilirubin** | Negative (absent or <0.02 mg/dL) |
-| **Urine urobilinogen** | 0.1-1.0 Ehrlich units (trace amounts normal) |
+| **Urine urobilinogen** | 0.1–1.0 Ehrlich units (trace amounts normal) |
 
 #### Factors Influencing Levels
 
@@ -110,7 +120,7 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 ### Presence in Urine
 
-**Should it be normally present?** **No** -- urine bilirubin should be absent. Its presence (bilirubinuria) always indicates pathology (conjugated hyperbilirubinaemia).
+**Should it be normally present?** **No** — urine bilirubin should be absent. Its presence (bilirubinuria) always indicates pathology (conjugated hyperbilirubinaemia).
 
 **Normal urinary levels:** Negative (<0.02 mg/dL).
 
@@ -120,8 +130,8 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 | Urinary Bilirubin | Possible Causes | Prevalence |
 |---|---|---|
-| **Positive** | Obstructive or hepatocellular jaundice | Varies; gallstones ~10-15% adults |
-| **Negative** | Normal; or haemolytic jaundice (unconjugated) | -- |
+| **Positive** | Obstructive or hepatocellular jaundice | Varies; gallstones ~10–15% adults |
+| **Negative** | Normal; or haemolytic jaundice (unconjugated) | — |
 
 **Solubility:** Conjugated bilirubin is water-soluble. Unconjugated is insoluble (albumin-bound).
 
@@ -132,26 +142,26 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 ### Available Clinical Assays
 
 1. **Dipstick diazo reaction:**
-   - **Principle:** Conjugated bilirubin reacts with diazonium salt (2,4-dichloroaniline or similar) -> azobilirubin (pink-tan colour).
+   - **Principle:** Conjugated bilirubin reacts with diazonium salt (2,4-dichloroaniline or similar) → azobilirubin (pink-tan colour).
    - **Detection:** Colour change on pad.
-   - **LOD:** ~0.5 mg/dL (~8.5 umol/L).
+   - **LOD:** ~0.5 mg/dL (~8.5 µmol/L).
    - **Advantages:** Rapid, included on standard dipstick.
-   - **Disadvantages:** Light degrades bilirubin -> false negatives; insensitive.
+   - **Disadvantages:** Light degrades bilirubin → false negatives; insensitive.
 
 2. **Ictotest (confirmatory tablet test):**
-   - **Principle:** Bilirubin adsorbs onto special mat; diazo tablet reagent -> blue-purple colour.
+   - **Principle:** Bilirubin adsorbs onto special mat; diazo tablet reagent → blue-purple colour.
    - **Detection:** Visual colour on mat.
-   - **LOD:** ~0.05-0.1 mg/dL (more sensitive than dipstick).
+   - **LOD:** ~0.05–0.1 mg/dL (more sensitive than dipstick).
    - **Advantages:** Confirmatory; Siemens Ictotest tablets.
 
 3. **Total bilirubin by diazo (Jendrassik-Grof, lab):**
-   - **Principle:** Bilirubin + diazotised sulfanilic acid -> azobilirubin.
-   - **Detection:** Absorbance at **540-560 nm**.
+   - **Principle:** Bilirubin + diazotised sulfanilic acid → azobilirubin.
+   - **Detection:** Absorbance at **540–560 nm**.
    - **LOD:** ~0.1 mg/dL.
 
 ### Optimal Urine Type for Measurement
 
-- **Fresh specimen** essential -- bilirubin is photolabile (decomposes rapidly in light).
+- **Fresh specimen** essential — bilirubin is photolabile (decomposes rapidly in light).
 - Protect from light (foil-wrapped container).
 - Analyse within **1 hour** of collection.
 - Random specimen adequate.
@@ -175,7 +185,7 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 #### Spectroscopy Detection (UV-Vis / NIR)
 
-- **UV-Vis:** Bilirubin absorbs strongly at **453 nm** (epsilon ~55,000 M-1cm-1 in chloroform; shifts in aqueous solution). Direct spectrophotometry at 453 nm possible if concentrated enough.
+- **UV-Vis:** Bilirubin absorbs strongly at **453 nm** (ε ~55,000 M⁻¹cm⁻¹ in chloroform; shifts in aqueous solution). Direct spectrophotometry at 453 nm possible if concentrated enough.
   - LOD: ~0.05 mg/dL in clean solutions.
   - In urine matrix: interfered by other chromogens.
 - **NIR:** No useful bilirubin absorption.
@@ -189,7 +199,7 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 #### Raman Detection
 
-| Peak (cm-1) | Assignment |
+| Peak (cm⁻¹) | Assignment |
 |---|---|
 | **~1615** | C=C stretching (vinyl groups) |
 | **~1575** | Pyrrole ring stretching |
@@ -201,19 +211,19 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 #### FTIR Detection
 
-| Band (cm-1) | Assignment | Notes |
+| Band (cm⁻¹) | Assignment | Notes |
 |---|---|---|
 | **~1690** | C=O stretch (lactam) | Strong |
-| **~1620** | C=C stretch | -- |
-| **~1570** | Pyrrole ring | -- |
+| **~1620** | C=C stretch | — |
+| **~1570** | Pyrrole ring | — |
 | **~3300** | N-H stretch | Broad |
 
 - ATR-FTIR: Not sensitive enough for normal or mildly elevated urinary bilirubin.
 
 #### Voltammetry Detection
 
-- Bilirubin is electrochemically oxidised at **+0.1-0.4 V vs Ag/AgCl** on carbon electrodes.
-- LOD: ~0.01-0.1 mg/dL on modified electrodes (graphene, MWCNTs).
+- Bilirubin is electrochemically oxidised at **+0.1–0.4 V vs Ag/AgCl** on carbon electrodes.
+- LOD: ~0.01–0.1 mg/dL on modified electrodes (graphene, MWCNTs).
 - Interference from ascorbic acid and uric acid (similar oxidation potentials).
 - **MIP sensors:** Molecularly imprinted polymers for bilirubin. LOD: ~0.005 mg/dL.
 
@@ -225,26 +235,35 @@ No significant dietary source. Bilirubin is exclusively endogenous.
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Key Parameter | Sample Prep | Strengths |
 |---|---|---|---|---|
 | **Dipstick (diazo)** | ~0.5 mg/dL | Pink-tan colour | None | Standard, rapid |
 | **Ictotest** | ~0.05 mg/dL | Blue-purple | Mat adsorption | More sensitive |
-| **Jendrassik-Grof** | ~0.1 mg/dL | 540-560 nm | Reagent | Quantitative |
+| **Jendrassik-Grof** | ~0.1 mg/dL | 540–560 nm | Reagent | Quantitative |
 | **UV-Vis (453 nm)** | ~0.05 mg/dL | 453 nm | None | Direct |
 | **Zn-bilirubin fluorescence** | ~0.01 mg/dL | Ex 430/Em 530 nm | Zn addition | Sensitive |
-| **Voltammetry** | ~0.01 mg/dL | +0.1-0.4 V | Buffer | Sensitive |
+| **Voltammetry** | ~0.01 mg/dL | +0.1–0.4 V | Buffer | Sensitive |
 | **MIP electrochemical** | ~0.005 mg/dL | DPV | Buffer | Selective |
-| **Raman/FTIR** | Not practical | -- | -- | Concentrations too low |
+| **Raman/FTIR** | Not practical | — | — | Concentrations too low |
 
 ---
 
-## References
+## Sources
 
-1. eClinpath - Bilirubin. https://eclinpath.com/chemistry/liver/cholestasis/bilirubin/
-2. Mayo Clinic - Bilirubin Test. https://www.mayoclinic.org/tests-procedures/bilirubin/about/pac-20393041
-3. Siemens - Ictotest Reagent Tablets. https://www.siemens-healthineers.com/en-us/poct-urinalysis/ictotest-reagent-tablets
-4. FPnotebook - Urine Bilirubin. https://fpnotebook.com/Uro/Lab/UrnBlrbn.htm
-5. RCPA - Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick
-6. PubChem - Bilirubin, CID 5280352. https://pubchem.ncbi.nlm.nih.gov/compound/5280352
+| # | Citation |
+|---|---|
+| 1 | eClinpath — Bilirubin. https://eclinpath.com/chemistry/liver/cholestasis/bilirubin/ |
+| 2 | Mayo Clinic — Bilirubin Test. https://www.mayoclinic.org/tests-procedures/bilirubin/about/pac-20393041 |
+| 3 | Siemens — Ictotest Reagent Tablets. https://www.siemens-healthineers.com/en-us/poct-urinalysis/ictotest-reagent-tablets |
+| 4 | FPnotebook — Urine Bilirubin. https://fpnotebook.com/Uro/Lab/UrnBlrbn.htm |
+| 5 | RCPA — Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick |
+| 6 | PubChem — Bilirubin, CID 5280352. https://pubchem.ncbi.nlm.nih.gov/compound/5280352 |
+
+## Gaps
+
+- Native fluorescence of bilirubin in urine is poorly characterised; quantum yield values in aqueous/urine matrix are not well-established.
+- Raman/SERS detection of bilirubin in urine has not been validated in patient samples.
+- Differentiation of urinary bilirubin from urobilinogen by optical methods in complex urine matrix requires further study.
+- No POC quantitative bilirubin assay with clinical-grade accuracy for urine exists.

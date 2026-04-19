@@ -1,0 +1,247 @@
+{
+  "main": {
+    "id": "8a0bdc9b8f53ac1b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e56689c85fd4fc48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a77bda32bb1e4cd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "biomarkers/misc/pre-analytics.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "pre-analytics"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5f43e88454f7f91f",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea666a166851b744",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94840e1b394100c6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5d9ed0728ec87f11",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "[\"tags\"]",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "76d61e2ff96d6a90",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 436.5
+  },
+  "right": {
+    "id": "6982c054f9a3b1f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "f612f49fcee0a83f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "516cf2610a8d251b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "biomarkers/oncology/oncology1-claude/CHANGELOG.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for CHANGELOG"
+            }
+          },
+          {
+            "id": "fb40d4bf0e7e9a26",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "biomarkers/oncology/oncology1-claude/CHANGELOG.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from CHANGELOG"
+            }
+          },
+          {
+            "id": "1e1365363e29ac66",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "11cfbc0de966ed66",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4cf07ea0b6f0a4e0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "biomarkers/oncology/oncology1-claude/CHANGELOG.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of CHANGELOG"
+            }
+          },
+          {
+            "id": "5533758dd85bb02a",
+            "type": "leaf",
+            "state": {
+              "type": "vault-terminal",
+              "state": {},
+              "icon": "bot",
+              "title": "Claude"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 954.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "claude-sidebar:New Claude Tab": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "a77bda32bb1e4cd6",
+  "lastOpenFiles": [
+    "biomarkers/misc/signal-processing.md",
+    "biomarkers/misc/pre-analytics.md",
+    "biomarkers/misc/README.md",
+    "biomarkers/misc/optical-signatures.md",
+    "biomarkers/misc/literature.md",
+    "biomarkers/misc/image.png",
+    "biomarkers/misc/biomarker-panel.md",
+    "biomarkers/misc/feasibility-analysis.md",
+    "datascience/ml-models.md",
+    "biomarkers/misc/ml-models.md",
+    "biomarkers/misc/image 1.png",
+    "biomarkers/misc/bladder-cancer-eem-cnn-2025.pdf",
+    "biomarkers/misc/papers/spectraphone-urinalysis-2026.pdf",
+    "biomarkers/misc/papers/kuenert-catheter-spectroscopy-2025.pdf",
+    "biomarkers/misc/papers/body-fluid-fluorescence-2023.pdf",
+    "biomarkers/misc/papers/bladder-cancer-eem-cnn-2025.pdf",
+    "biomarkers/misc/papers",
+    "biomarkers/oncology/journal-article.md",
+    "biomarkers/oncology/journal-article.pdf",
+    "biomarkers/oncology/instructions.md",
+    "biomarkers/oncology/oncology1-qwen/papers/urinary-tumor-biomarkers.md",
+    "biomarkers/oncology/oncology1-qwen/outputs/urinary-tumor-biomarkers-detection-research-biomarkers.md",
+    "biomarkers/oncology/oncology1-qwen/outputs/final-paper-summary.md",
+    "biomarkers/oncology/oncology1-qwen/outputs/final-delivery.md",
+    "biomarkers/oncology/oncology1-claude/claude aberkane_urinary-tumor-biomarkers-review.pdf",
+    "biomarkers/oncology/oncology1-claude/notes/session-logs/README.md",
+    "biomarkers/misc/spectraphone-urinalysis-2026.pdf",
+    "biomarkers/misc/kuenert-catheter-spectroscopy-2025.pdf",
+    "CLAUDE.md",
+    "biomarkers/oncology/oncology1-claude/AGENTS.md",
+    "biomarkers/oncology/oncology1-claude/outputs/urinary-tumor-biomarkers-detection.provenance.md",
+    "biomarkers/singleBiomarkers/outputs/urea.provenance.md",
+    "biomarkers/misc/biomarkersSignatures.md",
+    "biomarkers/misc/urine-spectroscopy-biomarkers/README.md",
+    "biomarkers/oncology/oncology1-claude/CHANGELOG.md",
+    "template/markdownTemplate.md",
+    "usense/jiminiDevice.md"
+  ]
+}

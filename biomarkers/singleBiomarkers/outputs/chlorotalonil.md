@@ -1,12 +1,25 @@
 ---
 title: Chlorothalonil
+aliases:
+  - Chlorothalonil
+  - Chlorotalonil
+  - Tetrachloroisophthalonitrile
+  - Daconil
+  - Bravo
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Chlorothalonil
 
-**Author:** Usense Healthcare
+Chlorothalonil is a broad-spectrum **organochlorine fungicide** widely used on crops until its EU ban in 2019. In humans, exposure is assessed via urinary metabolites, primarily **4-hydroxy-2,5,6-trichloroisophthalonitrile (4-OH-chlorothalonil)** and its glutathione/mercapturate conjugates. It is a xenobiotic contaminant, not a physiological biomarker. See [[datascience/spectroscopy-biomarkers]] for pesticide detection context.
 
 ---
 
@@ -21,9 +34,9 @@ date: 2026-04-17
 | **CAS number** | 1897-45-6 |
 | **PubChem CID** | 15910 |
 | **Appearance** | Colourless to white crystalline solid |
-| **Solubility in water** | ~0.81 mg/L at 25 C (very poorly soluble) |
+| **Solubility in water** | ~0.81 mg/L at 25 °C (very poorly soluble) |
 | **Log Kow** | 2.94 |
-| **Melting point** | 250-251 C |
+| **Melting point** | 250–251 °C |
 
 **Structural formula:**
 
@@ -37,8 +50,6 @@ date: 2026-04-17
       Cl
   (tetrachlorinated isophthalonitrile ring)
 ```
-
-Chlorothalonil is a broad-spectrum **organochlorine fungicide** widely used on crops (peanuts, potatoes, tomatoes), turf grass, and ornamentals. It was one of the most used fungicides globally until its ban in the EU (2019) due to environmental and health concerns. In humans, exposure is assessed via urinary metabolites, primarily **4-hydroxy-2,5,6-trichloroisophthalonitrile (4-OH-chlorothalonil)** and its glutathione/mercapturate conjugates.
 
 ### Molecules Not to Be Confused With
 
@@ -63,7 +74,7 @@ Chlorothalonil is **not endogenous**. It is a synthetic xenobiotic.
 - **Agricultural application:** Used on >50 crop types worldwide.
 - **Banned in EU since 2019** (groundwater contamination and classified as "likely carcinogenic" by EFSA); still registered in USA, Brazil, China.
 - **Exposure routes:** Dietary residues on treated produce, contaminated drinking water (metabolite 4-OH-CHT commonly detected in groundwater), occupational (farmers, applicators).
-- **Drinking water:** 4-OH-CHT frequently detected in European groundwater at >0.1 ug/L.
+- **Drinking water:** 4-OH-CHT frequently detected in European groundwater at >0.1 µg/L.
 
 ### Primary & Secondary Biological Roles
 
@@ -79,7 +90,7 @@ Chlorothalonil has **no physiological role**. It is a xenobiotic fungicide.
 ### Catabolism and Elimination Pathway
 
 In humans:
-1. **Glutathione conjugation** (primary Phase II metabolism): chlorothalonil reacts with GSH via GST -> mono- and di-glutathione conjugates -> mercapturic acid conjugates (N-acetylcysteine derivatives) excreted in urine.
+1. **Glutathione conjugation** (primary Phase II metabolism): chlorothalonil reacts with GSH via GST → mono- and di-glutathione conjugates → mercapturic acid conjugates (N-acetylcysteine derivatives) excreted in urine.
 2. **4-Hydroxylation:** Formation of 4-OH-chlorothalonil (also formed in the environment).
 3. Half-life in mammals: relatively short (~hours); rapid urinary excretion of conjugated metabolites.
 
@@ -89,9 +100,9 @@ In humans:
 
 | Compartment | Reference Range |
 |---|---|
-| **Urine chlorothalonil metabolites (general population)** | Generally <LOD (~0.1 ug/L) in non-agricultural populations |
-| **Urine chlorothalonil metabolites (occupational)** | 0.1-50 ug/L (exposure-dependent) |
-| **Drinking water 4-OH-CHT (EU monitoring)** | Frequently >0.1 ug/L in groundwater near treated areas |
+| **Urine chlorothalonil metabolites (general population)** | Generally <LOD (~0.1 µg/L) in non-agricultural populations |
+| **Urine chlorothalonil metabolites (occupational)** | 0.1–50 µg/L (exposure-dependent) |
+| **Drinking water 4-OH-CHT (EU monitoring)** | Frequently >0.1 µg/L in groundwater near treated areas |
 
 #### Factors Influencing Levels
 
@@ -117,7 +128,7 @@ In humans:
 
 ### Presence in Urine
 
-**Should it be normally present?** **No** -- it is a xenobiotic contaminant. However, low levels of metabolites may be detectable in populations with environmental exposure.
+**Should it be normally present?** **No** — it is a xenobiotic contaminant. However, low levels of metabolites may be detectable in populations with environmental exposure.
 
 **Normal urinary levels:** <LOD in most individuals.
 
@@ -134,22 +145,22 @@ In humans:
 1. **LC-MS/MS (gold standard):**
    - **Principle:** RP-HPLC + tandem MS for chlorothalonil metabolites (mercapturate conjugate, 4-OH-CHT).
    - **Detection:** MRM transitions in negative ESI mode.
-   - **LOD:** ~0.01-0.1 ug/L.
+   - **LOD:** ~0.01–0.1 µg/L.
    - **Advantages:** Definitive identification; multi-metabolite profiling.
 
 2. **GC-MS (for parent compound in water):**
    - **Principle:** SPE or LLE extraction + GC-ECD or GC-MS.
    - **Detection:** ECD or EI-MS; m/z 266 (M+), 268, 270 (isotope pattern).
-   - **LOD:** ~0.01 ug/L in water; higher in urine matrix.
+   - **LOD:** ~0.01 µg/L in water; higher in urine matrix.
    - **Advantages:** Parent compound detection.
    - **Disadvantages:** Urine contains metabolites, not parent; GC is less suitable.
 
 ### Optimal Urine Type for Measurement
 
 - **Spot urine** with creatinine correction.
-- Store frozen at -20 C.
+- Store frozen at -20 °C.
 - No PTFE or treated containers.
-- Samples stable at -20 C for months.
+- Samples stable at -20 °C for months.
 
 ### Actual Gold Standard
 
@@ -167,72 +178,82 @@ In humans:
 
 #### Spectroscopy Detection (UV-Vis / NIR)
 
-- Chlorothalonil absorbs in the UV: **~232 nm** (strong, aromatic/nitrile conjugation, epsilon ~40,000 M-1cm-1) and **~320 nm** (weaker).
-- HPLC-UV at 232 nm: LOD ~1-10 ug/L (parent in water). Not sufficient for urinary metabolites at trace levels.
+- Chlorothalonil absorbs in the UV: **~232 nm** (strong, aromatic/nitrile conjugation, ε ~40,000 M⁻¹cm⁻¹) and **~320 nm** (weaker).
+- HPLC-UV at 232 nm: LOD ~1–10 µg/L (parent in water). Not sufficient for urinary metabolites at trace levels.
 - NIR: Not applicable.
 
 #### Fluorescence Detection
 
 - Chlorothalonil is **non-fluorescent** (nitrile groups are quenching).
-- **Immunofluorescence:** Anti-chlorothalonil antibodies + fluorescent tracer. Ex/Em: probe-dependent. LOD: ~0.1-1 ug/L. Research stage.
+- **Immunofluorescence:** Anti-chlorothalonil antibodies + fluorescent tracer. Ex/Em: probe-dependent. LOD: ~0.1–1 µg/L. Research stage.
 
 #### Raman Detection
 
-| Peak (cm-1) | Assignment |
+The nitrile peak at 2240 cm⁻¹ is highly characteristic and falls in a spectral region free from most biological interferences. See [[signatures]] for spectral context.
+
+| Peak (cm⁻¹) | Assignment |
 |---|---|
-| **~2240** | C-N triple bond stretch (nitrile) -- diagnostic |
+| **~2240** | C≡N triple bond stretch (nitrile) — diagnostic |
 | **~1580** | Aromatic C=C stretch |
 | **~380** | C-Cl stretch |
 
-- The nitrile peak at 2240 cm-1 is highly characteristic and falls in a spectral region free from most biological interferences.
-- SERS: Potential LOD ~1-10 ug/L with Au/Ag substrates. Not validated for urine.
+- SERS: Potential LOD ~1–10 µg/L with Au/Ag substrates. Not validated for urine.
 
 #### FTIR Detection
 
-| Band (cm-1) | Assignment | Notes |
+| Band (cm⁻¹) | Assignment | Notes |
 |---|---|---|
-| **~2240** | C-N stretch (nitrile) | Diagnostic, strong |
-| **~1580** | Aromatic C=C | -- |
-| **~850** | C-Cl stretch | -- |
-| **~750** | Ring deformation | -- |
+| **~2240** | C≡N stretch (nitrile) | Diagnostic, strong |
+| **~1580** | Aromatic C=C | — |
+| **~850** | C-Cl stretch | — |
+| **~750** | Ring deformation | — |
 
-- The nitrile band at 2240 cm-1 is in a clear spectral region, making FTIR potentially useful for concentrated samples.
-- Not practical for urinary metabolites at ng/L to ug/L levels.
+- The nitrile band at 2240 cm⁻¹ is in a clear spectral region, making FTIR potentially useful for concentrated samples.
+- Not practical for urinary metabolites at ng/L to µg/L levels.
 
 #### Voltammetry Detection
 
 - Chlorothalonil can be reduced at mercury or bismuth electrodes:
   - C-Cl bond reduction at **-0.6 to -1.0 V vs Ag/AgCl**.
   - CN reduction at more negative potentials.
-- **Adsorptive stripping voltammetry (AdSV):** LOD ~0.1-1 ug/L for parent compound in water.
+- **Adsorptive stripping voltammetry (AdSV):** LOD ~0.1–1 µg/L for parent compound in water.
 - Not established for urinary metabolites.
 
 ### Other Detection Technologies
 
-1. **ELISA:** Commercial kits available for chlorothalonil in water/food. LOD: ~0.05-0.5 ug/L. Cross-reactivity with metabolites varies.
-2. **GC-ECD:** Excellent sensitivity for chlorinated compounds. LOD: ~0.01 ug/L for parent. Requires extraction.
+1. **ELISA:** Commercial kits available for chlorothalonil in water/food. LOD: ~0.05–0.5 µg/L. Cross-reactivity with metabolites varies.
+2. **GC-ECD:** Excellent sensitivity for chlorinated compounds. LOD: ~0.01 µg/L for parent. Requires extraction.
 3. **Biomonitoring panels:** Some occupational health labs include chlorothalonil metabolites in multi-pesticide LC-MS/MS panels.
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Key Parameter | Sample Prep | Strengths |
 |---|---|---|---|---|
-| **LC-MS/MS (metabolites)** | ~0.01-0.1 ug/L | MRM (ESI-) | SPE | Gold standard for urine |
-| **GC-MS (parent)** | ~0.01 ug/L | m/z 266 | LLE/SPE | Parent in water |
-| **GC-ECD** | ~0.01 ug/L | ECD response | LLE/SPE | Sensitive for Cl compounds |
-| **ELISA** | ~0.05-0.5 ug/L | 450 nm | Plate | Screening |
-| **AdSV** | ~0.1-1 ug/L | -0.8 V | Adsorption | Low-cost |
-| **Raman (nitrile)** | >10 ug/L | 2240 cm-1 | None | Diagnostic peak |
-| **FTIR (nitrile)** | >100 ug/L | 2240 cm-1 | None | Characteristic |
+| **LC-MS/MS (metabolites)** | ~0.01–0.1 µg/L | MRM (ESI-) | SPE | Gold standard for urine |
+| **GC-MS (parent)** | ~0.01 µg/L | m/z 266 | LLE/SPE | Parent in water |
+| **GC-ECD** | ~0.01 µg/L | ECD response | LLE/SPE | Sensitive for Cl compounds |
+| **ELISA** | ~0.05–0.5 µg/L | 450 nm | Plate | Screening |
+| **AdSV** | ~0.1–1 µg/L | -0.8 V | Adsorption | Low-cost |
+| **Raman (nitrile)** | >10 µg/L | 2240 cm⁻¹ | None | Diagnostic peak |
+| **FTIR (nitrile)** | >100 µg/L | 2240 cm⁻¹ | None | Characteristic |
 
 ---
 
-## References
+## Sources
 
-1. PubChem - Chlorothalonil, CID 15910. https://pubchem.ncbi.nlm.nih.gov/compound/15910
-2. EFSA - Chlorothalonil peer review conclusion (2018).
-3. US EPA - Chlorothalonil reregistration eligibility decision.
-4. EU Commission - Regulation (EU) 2019/677 (non-renewal of chlorothalonil).
-5. Environmental Health Perspectives - Chlorothalonil metabolites in groundwater.
+| # | Citation |
+|---|---|
+| 1 | PubChem — Chlorothalonil, CID 15910. https://pubchem.ncbi.nlm.nih.gov/compound/15910 |
+| 2 | EFSA — Chlorothalonil peer review conclusion (2018). |
+| 3 | US EPA — Chlorothalonil reregistration eligibility decision. |
+| 4 | EU Commission — Regulation (EU) 2019/677 (non-renewal of chlorothalonil). |
+| 5 | Environmental Health Perspectives — Chlorothalonil metabolites in groundwater. |
+
+## Gaps
+
+- Validated LC-MS/MS reference ranges for urinary chlorothalonil metabolites in the general population outside the US (NHANES) are lacking.
+- Raman/SERS detection of metabolite conjugates (not parent) in urine has not been demonstrated.
+- Long-term health effects of chronic low-level exposure (general population, drinking water route) remain incompletely characterised.
+- No rapid POC test exists for chlorothalonil metabolite biomonitoring.

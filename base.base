@@ -1,0 +1,18 @@
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.size
+      - title
+      - aliases
+      - tags
+    sort:
+      - property: type
+        direction: ASC
+      - property: file.tags
+        direction: DESC
+    columnSize:
+      file.name: 198
+      note.title: 619
+      note.aliases: 728

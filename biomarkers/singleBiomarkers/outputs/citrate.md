@@ -1,12 +1,24 @@
 ---
 title: Citrate
+aliases:
+  - Citrate
+  - Citric acid
+  - Urinary citrate
+  - Hypocitraturia
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Citrate
 
-**Author:** Usense Healthcare
+Citrate is a key intermediate in the TCA (Krebs) cycle and the most important **endogenous inhibitor of calcium stone formation** in urine. It chelates calcium, reduces CaOx and CaPO₄ supersaturation, and directly inhibits crystal growth and aggregation. Hypocitraturia is a major risk factor for nephrolithiasis. See [[datascience/spectroscopy-biomarkers]] for broader urinary analyte context.
 
 ---
 
@@ -21,7 +33,7 @@ date: 2026-04-17
 | **CAS number** | 77-92-9 |
 | **PubChem CID** | 311 |
 | **pKa values** | pKa1=3.13, pKa2=4.76, pKa3=6.40 |
-| **Solubility** | Very soluble (~590 g/L at 20 C for citric acid) |
+| **Solubility** | Very soluble (~590 g/L at 20 °C for citric acid) |
 
 **Structural formula:**
 
@@ -29,8 +41,6 @@ date: 2026-04-17
   HOOC-CH2-C(OH)(COOH)-CH2-COOH
        (tricarboxylic acid with central hydroxyl)
 ```
-
-Citrate is a key intermediate in the TCA (Krebs) cycle and the most important **endogenous inhibitor of calcium stone formation** in urine. It chelates calcium, reduces CaOx and CaPO4 supersaturation, and directly inhibits crystal growth and aggregation. Hypocitraturia is a major risk factor for nephrolithiasis.
 
 ### Molecules Not to Be Confused With
 
@@ -48,7 +58,7 @@ Citrate is a key intermediate in the TCA (Krebs) cycle and the most important **
 
 #### Endogenous: TCA Cycle
 
-Citrate is synthesised in mitochondria by citrate synthase (acetyl-CoA + oxaloacetate -> citrate). It is a central metabolite in the TCA cycle. Plasma citrate: ~100 umol/L. Most urinary citrate derives from plasma filtration and tubular handling.
+Citrate is synthesised in mitochondria by citrate synthase (acetyl-CoA + oxaloacetate → citrate). It is a central metabolite in the TCA cycle. Plasma citrate: ~100 µmol/L. Most urinary citrate derives from plasma filtration and tubular handling.
 
 #### Exogenous
 
@@ -58,19 +68,19 @@ Dietary citrate from citrus fruits (lemons, oranges, grapefruit), berries, tomat
 
 **Primary role:**
 - **TCA cycle intermediate:** Central to aerobic energy metabolism.
-- **Urinary stone inhibitor:** Chelates Ca2+ in urine, reducing CaOx and CaPO4 supersaturation.
+- **Urinary stone inhibitor:** Chelates Ca²⁺ in urine, reducing CaOx and CaPO₄ supersaturation.
 
 **Secondary roles:**
 - **Fatty acid synthesis precursor:** Cytoplasmic citrate is cleaved by ATP-citrate lyase to oxaloacetate + acetyl-CoA (lipogenesis).
-- **Acid-base metabolism:** Citrate is metabolised to HCO3-; its excretion represents alkali loss.
+- **Acid-base metabolism:** Citrate is metabolised to HCO₃⁻; its excretion represents alkali loss.
 
 ### Catabolism and Elimination Pathway
 
 - Citrate is freely filtered at glomerulus.
-- ~65-90% reabsorbed in proximal tubule via NaDC-1 transporter (sodium-dicarboxylate cotransporter).
-- Reabsorption is **increased by acidosis** (reduces urinary citrate -- hypocitraturia).
+- ~65–90% reabsorbed in proximal tubule via NaDC-1 transporter (sodium-dicarboxylate cotransporter).
+- Reabsorption is **increased by acidosis** (reduces urinary citrate — hypocitraturia).
 - Reabsorption is **decreased by alkalosis** (increases urinary citrate).
-- Remaining 10-35% excreted in urine.
+- Remaining 10–35% excreted in urine.
 
 ### Expression in Humans
 
@@ -78,7 +88,7 @@ Dietary citrate from citrus fruits (lemons, oranges, grapefruit), berries, tomat
 
 | Compartment | Reference Range |
 |---|---|
-| **Serum citrate** | 50-130 umol/L |
+| **Serum citrate** | 50–130 µmol/L |
 | **Urinary citrate (24-h)** | Male: >250 mg/day; Female: >300 mg/day |
 | **Hypocitraturia threshold** | Male: <250 mg/day; Female: <300 mg/day |
 
@@ -103,19 +113,19 @@ Dietary citrate from citrus fruits (lemons, oranges, grapefruit), berries, tomat
 
 | Condition | Citrate Pattern | Key Symptoms |
 |---|---|---|
-| **Hypocitraturia + nephrolithiasis** | <250 mg/day (male) | Recurrent CaOx/CaPO4 stones; ~20-60% of stone formers |
-| **Distal RTA** | Very low citrate + alkaline urine | CaPO4 stones, nephrocalcinosis, metabolic acidosis |
+| **Hypocitraturia + nephrolithiasis** | <250 mg/day (male) | Recurrent CaOx/CaPO₄ stones; ~20–60% of stone formers |
+| **Distal RTA** | Very low citrate + alkaline urine | CaPO₄ stones, nephrocalcinosis, metabolic acidosis |
 | **Chronic diarrhoea** | Low citrate (metabolic acidosis) | Dehydration, stone risk |
 
 ### Presence in Urine
 
-**Should it be normally present?** **Yes** -- citrate is a normal and important urinary solute.
+**Should it be normally present?** **Yes** — citrate is a normal and important urinary solute.
 
 **Normal urinary levels:** >250 mg/day (men); >300 mg/day (women).
 
-**Form in urine:** At urinary pH 5-7, citrate exists as a mixture of **Hcit²⁻** and **cit³⁻** anions. These chelate Ca²⁺, forming soluble calcium-citrate complexes.
+**Form in urine:** At urinary pH 5–7, citrate exists as a mixture of **Hcit²⁻** and **cit³⁻** anions. These chelate Ca²⁺, forming soluble calcium-citrate complexes.
 
-**Solubility:** Citric acid and its sodium/potassium salts are highly soluble. Calcium citrate is moderately soluble (~850 mg/L) -- much more so than calcium oxalate.
+**Solubility:** Citric acid and its sodium/potassium salts are highly soluble. Calcium citrate is moderately soluble (~850 mg/L) — much more so than calcium oxalate.
 
 ---
 
@@ -124,18 +134,18 @@ Dietary citrate from citrus fruits (lemons, oranges, grapefruit), berries, tomat
 ### Available Clinical Assays
 
 1. **Citrate lyase enzymatic assay:**
-   - **Principle:** Citrate lyase cleaves citrate -> oxaloacetate + acetate. OAA + NADH (MDH) -> malate + NAD+. NADH consumption measured.
+   - **Principle:** Citrate lyase cleaves citrate → oxaloacetate + acetate. OAA + NADH (MDH) → malate + NAD⁺. NADH consumption measured.
    - **Detection:** Absorbance decrease at **340 nm**.
-   - **LOD:** ~0.5 mg/dL (~25 umol/L).
+   - **LOD:** ~0.5 mg/dL (~25 µmol/L).
    - **Advantages:** Specific, automated (Roche, Beckman).
 
 2. **Ion chromatography:**
    - **Principle:** Anion exchange + conductivity.
-   - **LOD:** ~1 umol/L.
+   - **LOD:** ~1 µmol/L.
 
 3. **Capillary electrophoresis:**
    - **Principle:** Electrophoretic separation + UV at 210 nm.
-   - **LOD:** ~5 umol/L.
+   - **LOD:** ~5 µmol/L.
 
 ### Optimal Urine Type for Measurement
 
@@ -146,7 +156,7 @@ Dietary citrate from citrus fruits (lemons, oranges, grapefruit), berries, tomat
 
 ### Actual Gold Standard
 
-**Citrate lyase enzymatic assay** (NADH at 340 nm) on automated platforms. CV: 3-5%.
+**Citrate lyase enzymatic assay** (NADH at 340 nm) on automated platforms. CV: 3–5%.
 
 ### Interferences in Measurement
 
@@ -167,57 +177,66 @@ Dietary citrate from citrus fruits (lemons, oranges, grapefruit), berries, tomat
 #### Fluorescence Detection
 
 - Citrate is non-fluorescent. Indirect:
-- **NADH consumption fluorescence:** Decrease in NADH fluorescence (Ex 340 / Em 460 nm) after citrate lyase + MDH. LOD: ~10 umol/L.
-- **Eu(III) or Tb(III) complexes:** Citrate enhances lanthanide fluorescence via antenna effect. Ex 278 / Em 545 nm (Tb). LOD: ~1 umol/L.
+- **NADH consumption fluorescence:** Decrease in NADH fluorescence (Ex 340 / Em 460 nm) after citrate lyase + MDH. LOD: ~10 µmol/L.
+- **Eu(III) or Tb(III) complexes:** Citrate enhances lanthanide fluorescence via antenna effect. Ex 278 / Em 545 nm (Tb). LOD: ~1 µmol/L.
 
 #### Raman Detection
 
-| Peak (cm-1) | Assignment |
+| Peak (cm⁻¹) | Assignment |
 |---|---|
 | **~840** | C-C stretch |
 | **~960** | C-OH stretch |
-| **~1390** | COO- symmetric stretch |
-| **~1580** | COO- asymmetric stretch |
+| **~1390** | COO⁻ symmetric stretch |
+| **~1580** | COO⁻ asymmetric stretch |
 
-- Conventional Raman: LOD ~10 mM. SERS: LOD ~10-100 umol/L.
+- Conventional Raman: LOD ~10 mM. SERS: LOD ~10–100 µmol/L.
 
 #### FTIR Detection
 
-| Band (cm-1) | Assignment | Notes |
+| Band (cm⁻¹) | Assignment | Notes |
 |---|---|---|
-| **~1580** | COO- asymmetric stretch | Overlaps with urea, proteins |
-| **~1390** | COO- symmetric stretch | More specific |
-| **~1080** | C-O stretch | -- |
+| **~1580** | COO⁻ asymmetric stretch | Overlaps with urea, proteins |
+| **~1390** | COO⁻ symmetric stretch | More specific |
+| **~1080** | C-O stretch | — |
 
-- ATR-FTIR: LOD ~5-10 mM. Marginal for urinary concentrations.
+- ATR-FTIR: LOD ~5–10 mM. Marginal for urinary concentrations.
 
 #### Voltammetry Detection
 
 - Citrate is electrochemically inert in the normal potential window.
-- **Indirect:** Citrate complexes Cu2+ or Fe3+ -> shifts their redox potentials. LOD: ~10-50 umol/L.
-- **Potentiometric membrane electrode:** Citrate-selective ionophore. LOD: ~1 umol/L.
+- **Indirect:** Citrate complexes Cu²⁺ or Fe³⁺ → shifts their redox potentials. LOD: ~10–50 µmol/L.
+- **Potentiometric membrane electrode:** Citrate-selective ionophore. LOD: ~1 µmol/L.
 
 ### Other Detection Technologies
 
-1. **LC-MS/MS:** LOD ~0.1 umol/L. Definitive.
-2. **Biosensor (citrate lyase on electrode):** Amperometric NADH detection. LOD: ~5 umol/L.
+1. **LC-MS/MS:** LOD ~0.1 µmol/L. Definitive.
+2. **Biosensor (citrate lyase on electrode):** Amperometric NADH detection. LOD: ~5 µmol/L.
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Key Parameter | Sample Prep | Strengths |
 |---|---|---|---|---|
-| **Citrate lyase/NADH** | ~25 umol/L | 340 nm | None | Standard clinical |
-| **Ion chromatography** | ~1 umol/L | Conductivity | Dilution | Multi-anion |
-| **Tb(III) fluorescence** | ~1 umol/L | Ex 278/Em 545 nm | Probe | Sensitive |
-| **SERS** | ~10 umol/L | 1390 cm-1 | Ag NPs | Label-free |
-| **LC-MS/MS** | ~0.1 umol/L | m/z 191->111 | Extraction | Definitive |
+| **Citrate lyase/NADH** | ~25 µmol/L | 340 nm | None | Standard clinical |
+| **Ion chromatography** | ~1 µmol/L | Conductivity | Dilution | Multi-anion |
+| **Tb(III) fluorescence** | ~1 µmol/L | Ex 278/Em 545 nm | Probe | Sensitive |
+| **SERS** | ~10 µmol/L | 1390 cm⁻¹ | Ag NPs | Label-free |
+| **LC-MS/MS** | ~0.1 µmol/L | m/z 191→111 | Extraction | Definitive |
 
 ---
 
-## References
+## Sources
 
-1. StatPearls - Nephrolithiasis. https://www.ncbi.nlm.nih.gov/books/NBK442014/
-2. AUA/EAU Guidelines - Metabolic Stone Workup.
-3. PubChem - Citric acid, CID 311. https://pubchem.ncbi.nlm.nih.gov/compound/311
+| # | Citation |
+|---|---|
+| 1 | StatPearls — Nephrolithiasis. https://www.ncbi.nlm.nih.gov/books/NBK442014/ |
+| 2 | AUA/EAU Guidelines — Metabolic Stone Workup. |
+| 3 | PubChem — Citric acid, CID 311. https://pubchem.ncbi.nlm.nih.gov/compound/311 |
+
+## Gaps
+
+- Raman/SERS quantification of citrate in urine matrix at clinical concentrations (sub-mM) has not been validated in patient cohorts.
+- Direct NIR detection of urinary citrate has not been demonstrated; multivariate models are needed.
+- Reference ranges for citrate vary between guidelines; sex-specific thresholds are not universally standardised.
+- The interaction between urinary citrate and other stone inhibitors (pyrophosphate, magnesium) is not fully captured by current assays.

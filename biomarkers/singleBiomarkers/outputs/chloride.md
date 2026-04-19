@@ -1,12 +1,23 @@
 ---
 title: Chloride
+aliases:
+  - Chloride
+  - Cl-
+  - Chloride ion
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Chloride
 
-**Author:** Usense Healthcare
+Chloride is the **principal extracellular anion** in the body. It accompanies sodium in maintaining ECF volume, osmolality, and electrical neutrality. In urine, chloride excretion largely parallels sodium excretion and is clinically valuable in assessing volume status, metabolic alkalosis aetiology, and acid-base disorders. See [[datascience/spectroscopy-biomarkers]] for electrolyte context; Cl⁻ is not detectable by [[optical-properties|direct optical methods]].
 
 ---
 
@@ -27,8 +38,6 @@ date: 2026-04-17
 ```
   Cl(-)   (monovalent anion, fully hydrated in solution)
 ```
-
-Chloride is the **principal extracellular anion** in the body. It accompanies sodium in maintaining ECF volume, osmolality, and electrical neutrality. In urine, chloride excretion largely parallels sodium excretion and is clinically valuable in assessing volume status, metabolic alkalosis aetiology, and acid-base disorders.
 
 ### Molecules Not to Be Confused With
 
@@ -202,23 +211,31 @@ Cl⁻ has no IR absorption in solution (monatomic). Not detectable by FTIR.
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Key Parameter | Sample Prep | Strengths |
 |---|---|---|---|---|
 | **ISE** | ~1 mmol/L | Potentiometric | None | Standard, fast |
 | **Chloridometer** | ~1 mmol/L | Amperometric | Dilution | Reference, precise |
-| **Colorimetric (Hg/Fe)** | ~0.5 mmol/L | 460-480 nm | Reagent | Simple, cheap |
+| **Colorimetric (Hg/Fe)** | ~0.5 mmol/L | 460–480 nm | Reagent | Simple, cheap |
 | **Lucigenin fluorescence** | ~1 mmol/L | Ex 368/Em 505 nm | Probe addition | Imaging capable |
 | **Ion chromatography** | ~0.01 mmol/L | Conductivity | Dilution | Multi-anion |
 | **Raman / FTIR** | N/A | N/A | N/A | Not applicable |
 
 ---
 
-## References
+## Sources
 
-1. PMC - Urine Electrolytes in Clinical Diagnosis. https://ncbi.nlm.nih.gov/pmc/articles/PMC8116912/
-2. AAFP - Sodium Disorders (Cl discussed). https://www.aafp.org/pubs/afp/issues/2015/0301/p299.html
-3. StatPearls - Metabolic Alkalosis. https://www.ncbi.nlm.nih.gov/books/NBK482291/
-4. MedlinePlus - Sweat Electrolytes Test. https://www.medlineplus.gov/ency/article/003630.htm
-5. PubChem - Chloride, CID 312. https://pubchem.ncbi.nlm.nih.gov/compound/312
+| # | Citation |
+|---|---|
+| 1 | PMC — Urine Electrolytes in Clinical Diagnosis. https://ncbi.nlm.nih.gov/pmc/articles/PMC8116912/ |
+| 2 | AAFP — Sodium Disorders (Cl discussed). https://www.aafp.org/pubs/afp/issues/2015/0301/p299.html |
+| 3 | StatPearls — Metabolic Alkalosis. https://www.ncbi.nlm.nih.gov/books/NBK482291/ |
+| 4 | MedlinePlus — Sweat Electrolytes Test. https://www.medlineplus.gov/ency/article/003630.htm |
+| 5 | PubChem — Chloride, CID 312. https://pubchem.ncbi.nlm.nih.gov/compound/312 |
+
+## Gaps
+
+- No optical (Raman/FTIR/fluorescence) method has been validated for quantitative Cl⁻ measurement in urine at clinical concentrations.
+- The diagnostic utility of spot urine Cl for acid-base classification outside of research settings is not well-validated in large prospective studies.
+- Sweat chloride measurement (CF diagnostic) is a distinct matrix — methods do not translate directly to urine.

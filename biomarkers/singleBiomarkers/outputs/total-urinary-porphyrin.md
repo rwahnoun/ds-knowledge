@@ -1,12 +1,27 @@
 ---
-title: Total Urinary Porphyrin (TUP)
+title: Total Urinary Porphyrin
+aliases:
+  - TUP
+  - Total urinary porphyrins
+  - Urine porphyrin fractionation
+  - Urinary porphyrin panel
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
-# Total Urinary Porphyrin (TUP)
+# Total Urinary Porphyrin
 
-**Author:** Usense Healthcare
+Composite measure of heme pathway by-products in urine. The Soret band (~400 nm) and intense red fluorescence (Em ~595–630 nm) make porphyrins uniquely suited to spectroscopic detection. Closely related to [[porphobilinogen]]. See [[signatures]] and [[optical-properties]] for spectral reference data.
+
+> [!TIP]
+> All porphyrins share the Soret band (~400 nm) and red fluorescence (Ex 400 nm / Em 618 nm). This makes fluorescence the most sensitive detection modality, with sub-nanomolar LOD achievable without derivatisation.
 
 ---
 
@@ -16,297 +31,167 @@ date: 2026-04-17
 |---|---|
 | **Name** | Total Urinary Porphyrins (TUP) |
 | **Other names** | Urine porphyrin fractionation, urinary porphyrin panel |
-| **Chemical formula** | Variable — porphyrins are macrocyclic tetrapyrroles; core porphine ring: C₂₀H₁₄N₄ |
-| **Molecular weight** | Uroporphyrin: 830.76; Coproporphyrin: 654.71; Protoporphyrin: 562.66 g/mol |
-| **CAS numbers** | Uroporphyrin I: 607-14-7; Coproporphyrin I: 531-15-7; Coproporphyrin III: 14643-77-7 |
+| **Porphine core formula** | C₂₀H₁₄N₄ |
+| **Key species (MW)** | Uroporphyrin: 830.76; Coproporphyrin: 654.71; Protoporphyrin: 562.66 g/mol |
 | **Appearance** | Intensely coloured (red-purple) fluorescent compounds |
 
-**Structural formula (porphine core):**
-
-```
-         N         N
-        / \       / \
-   H-C   C---C   C-H
-   |  ||  |   |  ||  |
-   H-C   C   C   C-H
-       \ /  |  \ /
-        N---Fe---N   (metalloporphyrin)
-       / \  |  / \
-   H-C   C   C   C-H
-   |  ||  |   |  ||  |
-   H-C   C---C   C-H
-        \ /       \ /
-         N         N
-```
-
-TUP is a composite measure of all porphyrins excreted in urine, primarily **uroporphyrin** (octacarboxylic, 8-COOH), **heptacarboxylporphyrin** (7-COOH), **hexacarboxylporphyrin** (6-COOH), **pentacarboxylporphyrin** (5-COOH), and **coproporphyrin** (tetracarboxylic, 4-COOH). These are intermediates or by-products of the heme biosynthetic pathway. All porphyrins share the characteristic **Soret absorption band** (~400 nm) and red fluorescence (emission ~595–630 nm), making them uniquely suited for spectroscopic detection. They are anionic at urinary pH due to multiple carboxyl groups.
+TUP is a composite measure of all porphyrins excreted in urine: primarily **uroporphyrin** (8-COOH), **heptacarboxylporphyrin** (7-COOH), **hexacarboxylporphyrin** (6-COOH), **pentacarboxylporphyrin** (5-COOH), and **coproporphyrin** (4-COOH). All share the characteristic **Soret absorption band** (~400 nm) and red fluorescence (Em ~595–630 nm).
 
 ### Molecules Not to Be Confused With
 
-| Molecule | Formula | MW (g/mol) | Key Difference |
-|---|---|---|---|
-| **Porphobilinogen (PBG)** | C₁₀H₁₄N₂O₄ | 226.23 | Monopyrrole precursor, not a porphyrin; no Soret band or fluorescence |
-| **Bilirubin** | C₃₃H₃₆N₄O₆ | 584.66 | Linear tetrapyrrole (open ring), not cyclic; yellow not red; different metabolism |
-| **Protoporphyrin IX** | C₃₄H₃₄N₄O₄ | 562.66 | Predominantly in erythrocytes/faeces, minimal urinary excretion (too hydrophobic) |
-| **Heme (iron protoporphyrin IX)** | C₃₄H₃₂FeN₄O₄ | 616.49 | Metal-complexed porphyrin; fluorescence quenched by iron |
+| Molecule | MW (g/mol) | Key Difference |
+|---|---|---|
+| **Porphobilinogen (PBG)** | 226.23 | Monopyrrole precursor; no Soret band or fluorescence |
+| **Bilirubin** | 584.66 | Linear tetrapyrrole (open ring); yellow not red; different metabolism |
+| **Protoporphyrin IX** | 562.66 | Predominantly in erythrocytes/faeces; minimal urinary excretion (too hydrophobic) |
+| **Heme (iron protoporphyrin IX)** | 616.49 | Metal-complexed porphyrin; fluorescence quenched by iron |
 
 ---
 
 ## Medical Information
 
-### Origin
+### Origin — Heme Biosynthesis
 
-#### Endogenous: Biosynthesis — Heme Pathway
+Porphyrins are synthesised in all nucleated cells. Major urinary porphyrins arise from:
 
-Porphyrins are synthesised in all nucleated cells as part of the **heme biosynthesis pathway** (8 enzymatic steps from glycine + succinyl-CoA to heme). The major urinary porphyrins (uroporphyrin and coproporphyrin) arise from:
+1. ALA synthase → ALA (rate-limiting)
+2. ALA dehydratase → porphobilinogen (PBG)
+3. PBG deaminase → hydroxymethylbilane
+4. Uroporphyrinogen III synthase → uroporphyrinogen III (physiological)
+5. Uroporphyrinogen decarboxylase → coproporphyrinogen III
+6. Protoporphyrinogen IX → heme (with iron insertion by ferrochelatase)
 
-1. **ALA synthase** produces δ-aminolevulinic acid (ALA) — rate-limiting step.
-2. **ALA dehydratase** condenses 2 ALA → porphobilinogen (PBG).
-3. **PBG deaminase** polymerises 4 PBG → hydroxymethylbilane.
-4. **Uroporphyrinogen III synthase** cyclises → uroporphyrinogen III (type III isomer, physiological).
-5. **Uroporphyrinogen decarboxylase** → coproporphyrinogen III.
-6. Subsequent steps yield protoporphyrinogen IX → protoporphyrin IX → heme (with iron insertion by ferrochelatase).
+Urinary porphyrins are oxidised by-products: uroporphyrinogen and coproporphyrinogen spontaneously oxidise to uroporphyrin and coproporphyrin, which cannot be utilised for heme synthesis. Major production sites: **bone marrow** (erythropoiesis) and **liver**.
 
-Urinary porphyrins are oxidised by-products: uroporphyrinogen and coproporphyrinogen spontaneously oxidise to uroporphyrin and coproporphyrin (which cannot be utilised for heme synthesis). Both type I (non-physiological) and type III isomers are excreted. Major production sites: **bone marrow** (erythropoiesis) and **liver**.
+**Exogenous:** No dietary contribution. Dietary chlorophyll (a Mg-porphyrin) is metabolised differently and does not contribute to urinary porphyrins.
 
-#### Exogenous
+### Biological Roles
 
-Porphyrins are not absorbed from diet in significant amounts. Dietary chlorophyll (a magnesium porphyrin) is structurally related but metabolised differently and does not contribute to urinary porphyrin excretion.
+- **Primary:** Porphyrinogens are essential heme precursors.
+- **Secondary:** Free porphyrins are waste products. They are **phototoxic** — absorb light at Soret band ~400 nm, generating ROS → tissue damage in cutaneous porphyrias.
 
-### Primary & Secondary Biological Roles
+### Elimination Pathway
 
-**Primary role:**
-- **Heme precursors:** Porphyrinogens are essential intermediates in heme biosynthesis, required for haemoglobin, cytochromes, and other haemoproteins.
+- **Uroporphyrin** (8 COOH, highly hydrophilic): excreted predominantly in **urine**.
+- **Coproporphyrin** (4 COOH, intermediate): ~60% urine, ~40% faeces/bile.
+- **Protoporphyrin** (2 COOH, hydrophobic): almost exclusively in **faeces via bile**; virtually absent from urine.
 
-**Secondary roles:**
-- **No independent physiological role.** Free porphyrins are waste products from non-enzymatic oxidation of porphyrinogens. They are phototoxic — upon absorption of light (Soret band ~400 nm), they generate reactive oxygen species, causing tissue damage in cutaneous porphyrias.
+No significant hepatic catabolism; porphyrins are excreted intact.
 
-### Catabolism and Elimination Pathway
-
-- **Uroporphyrin** (8 carboxyl groups, highly hydrophilic): excreted **predominantly in urine**.
-- **Coproporphyrin** (4 carboxyl groups, intermediate hydrophilicity): excreted in both **urine and bile/faeces** (~60% urine, ~40% faeces).
-- **Protoporphyrin** (2 carboxyl groups, hydrophobic): excreted almost exclusively in **faeces via bile**; virtually absent from urine.
-- Porphyrins are freely filtered at the glomerulus; coproporphyrin undergoes some tubular secretion.
-- There is no significant hepatic catabolism of porphyrins; they are excreted intact.
-
-### Expression in Humans
-
-#### Normal Levels
+### Clinical Levels
 
 | Compartment | Reference Range |
 |---|---|
-| **Total urinary porphyrins (24-h)** | < 300 µg/day (some labs: < 200 µg/day) |
-| **Uroporphyrin, urine** | < 30 µg/day (< 36 nmol/day) |
-| **Coproporphyrin, urine** | < 200 µg/day (< 300 nmol/day) |
-| **Heptacarboxylporphyrin, urine** | < 10 µg/day |
-| **Hexa- and pentacarboxylporphyrins** | < 5 µg/day each |
+| **Total urinary porphyrins (24-h)** | <300 µg/day (some labs: <200 µg/day) |
+| **Uroporphyrin, urine** | <30 µg/day (<36 nmol/day) |
+| **Coproporphyrin, urine** | <200 µg/day (<300 nmol/day) |
+| **Heptacarboxylporphyrin** | <10 µg/day |
+| **Hexa- and pentacarboxylporphyrins** | <5 µg/day each |
 | **Coproporphyrin III/I ratio** | Normally III > I (ratio ~2.5–4:1) |
 
-#### Factors Influencing Levels
+### Factors Influencing Levels
 
-**Increased TUP:**
-- Porphyria cutanea tarda (PCT) — marked uroporphyrin elevation
-- Acute intermittent porphyria (AIP) — moderate coproporphyrin increase during attacks
-- Variegate porphyria (VP) — coproporphyrin elevation
-- Hereditary coproporphyria (HCP) — coproporphyrin III markedly elevated
-- Lead poisoning (coproporphyrin elevated, ALA elevated)
-- Liver disease (alcoholic, hepatitis) — secondary coproporphyrinuria
-- Heavy metal exposure (arsenic, mercury)
+**Increased TUP:** PCT (marked uroporphyrin elevation), AIP (moderate coproporphyrin), VP/HCP (coproporphyrin), lead poisoning (coproporphyrin + elevated ALA), liver disease, heavy metal exposure (arsenic, mercury).
 
-**Decreased TUP:**
-- Not clinically significant
-- Low protein intake (reduced heme turnover)
-- Iron deficiency (reduced heme synthesis)
-- Adequate nutritional status
-- No known pathology associated with low urinary porphyrins
+**Decreased TUP:** Low protein intake, iron deficiency. Not clinically significant.
 
-#### Associated Pathologies
+### Associated Pathologies
 
 | Condition | TUP Pattern | Key Symptoms |
 |---|---|---|
-| **Porphyria cutanea tarda (PCT)** | Uroporphyrin >>coproporphyrin; TUP >1000 µg/day | Photosensitive skin blistering, fragility, hypertrichosis; prevalence ~1:10,000 |
-| **Acute intermittent porphyria (AIP)** | Moderate coproporphyrin rise during attacks; PBG markedly elevated | Abdominal pain, neuropsychiatric symptoms; ~1:20,000 |
-| **Hereditary coproporphyria (HCP)** | Coproporphyrin III markedly elevated | Acute attacks + occasional photosensitivity; ~1:100,000 |
-| **Variegate porphyria (VP)** | Coproporphyrin > uroporphyrin | Acute attacks + skin photosensitivity; ~1:100,000 (except South Africa ~1:300) |
+| **Porphyria cutanea tarda (PCT)** | Uroporphyrin >>coproporphyrin; TUP >1000 µg/day | Photosensitive skin blistering, hypertrichosis; ~1:10,000 |
+| **Acute intermittent porphyria (AIP)** | Moderate coproporphyrin; PBG markedly elevated | Abdominal pain, neuropsychiatric; ~1:20,000 |
+| **Hereditary coproporphyria (HCP)** | Coproporphyrin III markedly elevated | Acute attacks + photosensitivity; ~1:100,000 |
+| **Variegate porphyria (VP)** | Coproporphyrin > uroporphyrin | Acute attacks + skin; ~1:100,000 (except South Africa ~1:300) |
 | **Congenital erythropoietic porphyria (CEP)** | Massive uroporphyrin I elevation | Severe photosensitivity from infancy, red urine; extremely rare |
 | **Lead poisoning** | Coproporphyrin elevated (predominantly type III) | Abdominal colic, anaemia, neuropathy |
 
 ### Presence in Urine
 
-**Should they be normally present?** Yes, in **small amounts**. Normal urinary excretion of total porphyrins is < 200–300 µg/day. Coproporphyrin is the dominant urinary porphyrin in health.
-
-**Normal urinary levels:** Total < 300 µg/day; coproporphyrin < 200 µg/day; uroporphyrin < 30 µg/day.
-
-**Form in urine:** Porphyrins are excreted as free (non-metal-complexed), oxidised porphyrins in their **anionic forms** (deprotonated carboxyl groups at urinary pH). They are intensely coloured (red-purple) and fluorescent.
-
-**Pathological significance:**
-
-| Urinary Porphyrins | Possible Causes | Prevalence |
-|---|---|---|
-| **Elevated (total >300 µg/day)** | Porphyrias (PCT, AIP, VP, HCP, CEP), lead poisoning, liver disease, heavy metals | PCT: ~1:10,000; lead exposure varies |
-| **Decreased** | No clinical significance | — |
-
-**Solubility:** Uroporphyrin is highly water-soluble (8 carboxyl groups). Coproporphyrin is moderately soluble. Protoporphyrin is poorly water-soluble (excreted in faeces, not urine). Porphyrins do not form urinary crystals.
+Present in small amounts normally (<300 µg/day total). Coproporphyrin is dominant in health. Form: free (non-metal-complexed), oxidised porphyrins in anionic forms. Intensely coloured (red-purple) and fluorescent. Porphyrins do not form urinary crystals.
 
 ---
 
 ## Detection in Urine
 
-### Available Clinical Assays
+### Clinical Assays
 
-1. **Spectrophotometric scanning (Soret band):**
-   - **Principle:** Acidified urine extract scanned by UV-Vis spectrophotometer; total porphyrins quantified by Soret band absorption.
-   - **Detection:** Absorption peak at **~400–405 nm** (Soret band) in acidic solution (0.5 N HCl).
-   - **LOD:** ~10–20 µg/L.
-   - **Advantages:** Simple, rapid screening.
-   - **Disadvantages:** Does not differentiate individual porphyrin species.
+| Method | Principle | Detection | LOD | Notes |
+|---|---|---|---|---|
+| **Spectrophotometry (Soret)** | Acidified urine extract; UV-Vis scan | ~400–405 nm | ~10–20 µg/L | Simple screening; no fractionation |
+| **HPLC-fluorescence (gold standard)** | RP-HPLC separates by carboxyl number | Ex 400–410 / Em 618–625 nm | ~1–5 µg/L per species | Full fractionation, isomers (I vs III); ~30 min |
+| **Wood's lamp screening** | Acidified urine under long-wave UV | Ex 365 / Em 595–630 nm | ~100–200 µg/L | Instant bedside; qualitative only |
 
-2. **HPLC with fluorescence detection (gold standard for fractionation):**
-   - **Principle:** Reversed-phase HPLC separates individual porphyrins (uro-, hepta-, hexa-, penta-, copro-) by carboxyl number.
-   - **Detection:** Fluorescence — **Ex 400–410 nm / Em 618–625 nm**.
-   - **LOD:** ~1–5 µg/L per species.
-   - **Advantages:** Full fractionation, quantitative, identifies isomers (I vs III).
-   - **Disadvantages:** Instrumentation cost, ~30 min run time.
+Gold standard: **HPLC-fluorescence** (Ex 400 / Em 620 nm) on RP-C18 columns. Reference labs: Mayo Clinic, ARUP, Quest.
 
-3. **Qualitative fluorescence screening (Wood's lamp):**
-   - **Principle:** Acidified urine examined under long-wave UV light (Wood's lamp, 365 nm); porphyrins fluoresce pink-red.
-   - **Detection:** Visual fluorescence at **Em ~595–630 nm** under **Ex 365 nm**.
-   - **LOD:** ~100–200 µg/L (insensitive).
-   - **Advantages:** Instant bedside screening.
-   - **Disadvantages:** Qualitative only; many interfering fluorescent substances.
+Optimal specimen: **24-hour urine** protected from light (opaque containers). Stabilise at pH 6–7; store at 2–8 °C. Porphyrins are photodegradable — light protection is essential.
 
-### Optimal Urine Type for Measurement
-
-- **24-hour urine** is preferred for quantitative porphyrin measurement (results expressed as µg/day).
-- Random (spot) urine can be used with creatinine correction.
-- **Protection from light is essential** — porphyrins are photodegradable. Collect in dark/opaque containers.
-- Preserve at **pH <7** (add 5 g sodium carbonate per 24-h container, OR keep at pH 6–7 with small amount of sodium bicarbonate — lab-dependent); store at **2–8 °C**.
-- First morning urine offers higher concentration but no diagnostic advantage over 24-h.
-
-### Actual Gold Standard
-
-**HPLC with fluorescence detection** (Ex 400 nm / Em 620 nm) on reversed-phase C18 columns is the reference method for urinary porphyrin fractionation. Used on Shimadzu, Agilent, and Waters platforms. Provides individual quantification of uroporphyrin, heptacarboxyl-, hexacarboxyl-, pentacarboxyl-, and coproporphyrin with isomer resolution (I vs III). CV: 5–10%. Reference labs: Mayo Clinic, ARUP, Quest.
-
-### Interferences in Measurement
+### Interferences
 
 | Interference | Effect | Mechanism |
 |---|---|---|
 | **Light exposure** | False decrease | Photodegradation of porphyrins |
 | **Alkaline pH** | False decrease | Accelerated degradation |
-| **Antibiotics (fluoroquinolones)** | False positive (fluorescence) | Intrinsic fluorescence interferes |
+| **Fluoroquinolone antibiotics** | False positive (fluorescence) | Intrinsic fluorescence interference |
 | **Rifampicin** | False positive (colorimetric) | Orange colour overlaps with porphyrin absorbance |
-| **Bilirubin (high levels)** | Spectral interference | Absorption near 450 nm may affect baseline |
+| **Bilirubin (high)** | Spectral interference | Absorption near 450 nm affects baseline |
 | **Bacterial contamination** | False decrease | Bacterial metabolism of porphyrins |
-| **Dietary beetroot / food dyes** | False positive (visual screening) | Red pigments mimic porphyrin fluorescence |
+| **Dietary beetroot/food dyes** | False positive (visual) | Red pigments mimic porphyrin fluorescence |
 
-### Research Detection Methods
+### Spectroscopic Detection
 
-#### Spectroscopy Detection (UV-Vis / NIR)
+**UV-Vis (Soret band):** The defining feature of porphyrins. Intense Soret (B) band at **~398–405 nm** (ε ≈ 3–5 × 10⁵ M⁻¹cm⁻¹) and weaker Q bands at ~500, 530, 565, 620 nm. Dual-wavelength (Soret peak vs baseline at 430 nm) for TUP quantification. LOD ~5–10 µg/L in acidified urine extracts.
 
-- **UV-Vis (Soret band):** The defining feature of porphyrins. All porphyrins show an intense Soret (B) band at **~398–405 nm** (ε ≈ 3–5 × 10⁵ M⁻¹cm⁻¹) and weaker Q bands at **~500, 530, 565, 620 nm**.
-  - Dual-wavelength spectrophotometry (Soret peak vs baseline at 430 nm) for TUP quantification.
-  - LOD: ~5–10 µg/L in acidified urine extracts.
-  - Sample prep: Acidification to pH 1–2 (HCl), extraction with ethyl acetate/acetic acid, back-extraction into HCl.
-- **NIR:** Not useful — porphyrins have no significant NIR absorption at clinically relevant concentrations.
+**Fluorescence:** Porphyrins are **intensely fluorescent** — most sensitive detection modality.
 
-#### Fluorescence Detection
+| Method | Excitation | Emission | LOD |
+|---|---|---|---|
+| Direct fluorescence spectroscopy | 398–410 nm | 595–630 nm | ~0.1–1 µg/L |
+| HPLC-fluorescence (gold standard) | 400 nm | 618 nm | ~1 µg/L per species |
+| Time-resolved fluorescence | 405 nm | 620 nm | ~0.01 µg/L |
+| CE-LIF | 405 nm (diode laser) | — | ~0.05 µg/L |
+| Bedside LED device (Lang et al.) | 405 nm | — | ~5 µg/L |
 
-Porphyrins are **intensely fluorescent**, making this the most sensitive detection modality.
+Porphyrin lifetimes ~10–20 ns → time-gated detection rejects short-lived background.
 
-- **Direct fluorescence spectroscopy:** Ex 398–410 nm / Em 595–630 nm. The Soret band excitation yields characteristic two-peak red emission (uroporphyrin: Em 596 + 653 nm; coproporphyrin: Em 618 + 676 nm).
-  - LOD: ~0.1–1 µg/L (sub-nanomolar sensitivity).
-  - Sample prep: Acidification; optionally extraction to remove matrix quenchers.
-- **HPLC-fluorescence:** Ex 400 nm / Em 618 nm — gold standard fractionation.
-  - LOD: ~1 µg/L per species.
-- **Time-resolved fluorescence:** Porphyrins have long fluorescence lifetimes (~10–20 ns), enabling time-gated detection to reject short-lived background fluorescence.
-  - LOD: ~0.01 µg/L (10 pg/mL).
-- **Capillary electrophoresis with laser-induced fluorescence (CE-LIF):** Ex 405 nm (diode laser).
-  - LOD: ~0.05 µg/L.
-  - Sample prep: Dilution, filtration.
-- **Fluorescence screening device (Lang et al., 2018, JBO):** Custom device with LED excitation at 405 nm for bedside porphyrin quantification in urine.
-  - LOD: ~5 µg/L.
-  - No sample prep required.
+**Raman:** Characteristic conjugated macrocycle peaks: ~1550–1560 cm⁻¹ (Cβ–Cβ stretch, ν₂), ~1490–1500 cm⁻¹ (Cα–Cm stretch, ν₃), ~1370–1380 cm⁻¹ (pyrrole half-ring, ν₄), ~750–760 cm⁻¹ (pyrrole breathing). **Resonance Raman** at ~405 nm (Soret resonance) gives 10³–10⁴ enhancement. SERS LOD in sub-µg/L range for metalloporphyrins.
 
-#### Raman Detection
+**FTIR:** Bands at ~1690–1720 cm⁻¹ (C=O, multiple COOH), ~1600–1610 cm⁻¹ (C=C ring), ~1400–1450 cm⁻¹ (COO⁻). ATR-FTIR detects only at >100 µg/L — normal levels below sensitivity.
 
-Porphyrins show characteristic Raman spectra due to the conjugated macrocyclic ring:
+**Voltammetry:** Conjugated ring system undergoes well-defined electrochemistry. Oxidation peaks at +0.6 to +1.0 V vs Ag/AgCl. DPV LOD ~10–50 nM for coproporphyrin on carbon electrodes.
 
-| Peak (cm⁻¹) | Assignment |
-|---|---|
-| **~1550–1560** | Cβ–Cβ stretch (ν₂) |
-| **~1490–1500** | Cα–Cm stretch (ν₃) |
-| **~1370–1380** | Pyrrole half-ring (ν₄) — oxidation state marker |
-| **~1000–1010** | Cα–N stretch |
-| **~750–760** | Pyrrole breathing mode |
-| **~670–680** | Porphyrin ring deformation |
+### Detection Methods Comparison
 
-- **Resonance Raman spectroscopy** (excitation at Soret band ~405 nm) greatly enhances porphyrin-specific signals (10³–10⁴ enhancement).
-- **SERS:** Silver or gold nanoparticles with 633/785 nm excitation; LOD in sub-µg/L range reported for metalloporphyrins.
-- Conventional Raman is insufficient for trace urinary porphyrins without resonance enhancement.
-- **Sample prep:** Acidification, optional extraction.
-
-#### FTIR Detection
-
-Porphyrin infrared bands:
-
-| Band (cm⁻¹) | Assignment | Notes |
-|---|---|---|
-| **~1690–1720** | C=O stretch (carboxyl groups) | Multiple COOH groups give strong absorption |
-| **~1600–1610** | C=C ring stretch | Porphyrin macrocycle |
-| **~1400–1450** | COO⁻ symmetric stretch | If deprotonated |
-| **~1000–1050** | C–N stretch, ring breathing | — |
-| **~800–850** | C–H out-of-plane bending | — |
-
-- ATR-FTIR can detect porphyrins only at elevated concentrations (>100 µg/L). Normal urinary levels are below typical FTIR sensitivity.
-- In severely affected porphyria patients (TUP >1000 µg/day), ATR-FTIR might detect porphyrins in dried urine.
-- **Research gap:** No validated FTIR method for routine urinary porphyrin quantification.
-
-#### Voltammetry Detection
-
-- Porphyrins are **electrochemically active** — the conjugated ring system undergoes well-defined oxidation/reduction.
-- **Cyclic voltammetry:** Free-base porphyrins show oxidation peaks at **+0.6 to +1.0 V** and reduction at **–1.0 to –1.4 V** vs Ag/AgCl, depending on substituents.
-- **Differential pulse voltammetry (DPV):** LOD ~10–50 nM for coproporphyrin on carbon electrodes.
-- **Electrochemical HPLC detection** as alternative to fluorescence: amperometric detection at +0.8 V.
-- **Sample prep:** Acidification, extraction, or direct injection (HPLC-EC).
-- **Limitation:** Selectivity in complex urine matrix is challenging without chromatographic separation.
-
-### Other Detection Technologies
-
-1. **Capillary electrophoresis (CE):** UV or fluorescence detection; LOD ~0.05–1 µg/L. Sample prep: dilution, filtration. Fast separation (~10 min).
-
-2. **Lateral flow / paper-based fluorescence:** Experimental devices using UV LED excitation and smartphone cameras to image porphyrin fluorescence on paper strips. LOD ~50–100 µg/L. Low cost, point-of-care potential.
-
-3. **Microfluidic platforms:** Lab-on-chip with integrated fluorescence detection; LOD ~1 µg/L. Miniaturised sample handling.
-
----
-
-## Summary Table: Detection Methods Comparison
-
-| Method | LOD | Wavelength / Key Parameter | Sample Prep | Strengths | Limitations |
+| Method | LOD | Key Parameter | Sample Prep | Strengths | Limitations |
 |---|---|---|---|---|---|
-| **Spectrophotometry (Soret)** | ~5–10 µg/L | 400–405 nm absorption | Acidification + extraction | Simple, rapid | No fractionation |
+| **Spectrophotometry (Soret)** | ~5–10 µg/L | 400–405 nm | Acidification + extraction | Simple, rapid | No fractionation |
 | **HPLC-fluorescence (gold standard)** | ~1 µg/L | Ex 400 / Em 618 nm | Acidification | Full fractionation, isomers | Cost, 30 min |
-| **Wood's lamp screening** | ~100–200 µg/L | Ex 365 / Em 595–630 nm | None | Instant, bedside | Qualitative, insensitive |
+| **Wood's lamp** | ~100–200 µg/L | Ex 365 / Em 595–630 nm | None | Instant, bedside | Qualitative |
 | **Direct fluorescence** | ~0.1 µg/L | Ex 398–410 / Em 595–630 nm | Acidification | Ultra-sensitive | No species ID |
 | **Time-resolved fluorescence** | ~0.01 µg/L | Ex 405 / Em 620 nm | Acidification | Rejects background | Specialised instrument |
-| **CE-LIF** | ~0.05 µg/L | Ex 405 nm laser | Dilution, filtration | Fast, sensitive | CE instrument needed |
-| **Resonance Raman** | ~1 µg/L | Ex 405 nm (Soret resonance) | Acidification | Porphyrin-specific | Specialised, costly |
-| **FTIR** | >100 µg/L | 1690–1720 cm⁻¹ | Dried sample | Multianalyte potential | Insensitive for porphyrins |
-| **DPV (voltammetry)** | ~10–50 nM | +0.6 to +1.0 V oxidation | Extraction | Sensitive | Selectivity challenges |
-| **Paper-based fluorescence** | ~50–100 µg/L | UV LED / smartphone | None | Low cost, portable | Semi-quantitative |
+| **CE-LIF** | ~0.05 µg/L | Ex 405 nm laser | Dilution + filtration | Fast, sensitive | CE instrument |
+| **Resonance Raman** | ~1 µg/L | Ex 405 nm | Acidification | Porphyrin-specific | Specialised |
+| **FTIR** | >100 µg/L | 1690–1720 cm⁻¹ | Dried sample | Multianalyte | Insensitive |
+| **DPV** | ~10–50 nM | +0.6 to +1.0 V | Extraction | Sensitive | Selectivity in matrix |
 
 ---
 
-## References
+## Sources
 
-1. ARUP Consult — Porphyrias: Choose the Right Test. https://arupconsult.com/content/porphyrias
-2. UCSF Health — Porphyrins Urine Test. https://www.ucsfhealth.org/medical-tests/porphyrins-urine-test
-3. Mayo Clinic Labs — Porphyrins Quantitative Urine (PQNU). https://neurology.testcatalog.org/show/PQNU
-4. PMC — Laboratory Diagnosis of Porphyria (Diagnostics, 2021). https://ncbi.nlm.nih.gov/pmc/articles/PMC8391404/
-5. StatPearls — Biochemistry, Heme Synthesis. https://www.ncbi.nlm.nih.gov/books/NBK537329/
-6. Shimadzu — Quantification of Six Porphyrin Biomarkers by LC-Fluorescence. https://shimadzu.com/an/apl/21666/index.html
-7. Christensen et al. (1977) — Rapid assay of urinary porphyrins by dual-wavelength spectrophotometry. Clin Chim Acta. https://www.sciencedirect.com/science/article/abs/pii/0009898177900535
-8. ScienceDirect — HPLC determination of porphyrins in urine. https://www.sciencedirect.com/science/article/abs/pii/S0378434700843431
-9. ScienceDirect — CE of urinary porphyrins with fluorescence detection. https://www.sciencedirect.com/science/article/abs/pii/S0021967301902250
-10. Lang et al. (2018) — Spectrophotometric quantification of urinary porphyrins and PBG. J Biomed Opt. https://journals.spiedigitallibrary.org/journalArticle/Download?fullDOI=10.1117/1.JBO.23.5.055006
-11. UF Health — Porphyrins Urine Test. https://ufhealth.org/conditions-and-treatments/porphyrins-urine-test
+| # | Reference |
+|---|---|
+| 1 | ARUP Consult — Porphyrias: Choose the Right Test. https://arupconsult.com/content/porphyrias |
+| 2 | PMC — Laboratory Diagnosis of Porphyria (Diagnostics, 2021). https://ncbi.nlm.nih.gov/pmc/articles/PMC8391404/ |
+| 3 | Shimadzu — Quantification of Six Porphyrin Biomarkers by LC-Fluorescence. https://shimadzu.com/an/apl/21666/index.html |
+| 4 | Christensen et al. (1977) — Rapid assay of urinary porphyrins by dual-wavelength spectrophotometry. Clin Chim Acta. |
+| 5 | Lang et al. (2018) — Spectrophotometric quantification of urinary porphyrins and PBG. J Biomed Opt. https://journals.spiedigitallibrary.org/journalArticle/Download?fullDOI=10.1117/1.JBO.23.5.055006 |
+| 6 | Mayo Clinic Labs — Porphyrins Quantitative Urine (PQNU). https://neurology.testcatalog.org/show/PQNU |
+
+---
+
+## Gaps
+
+- Bedside LED fluorescence device (Lang 2018) provides LOD ~5 µg/L and no sample prep — promising for point-of-care but not yet validated for clinical use
+- Resonance Raman (Ex 405 nm) can identify porphyrin species but isomer differentiation (I vs III) is not demonstrated
+- FTIR and voltammetry are not sensitive enough for routine clinical porphyrin monitoring without preconcentration
+- Spectroscopic methods cannot differentiate PCT from secondary porphyrinuria (liver disease, heavy metals) without fractionation

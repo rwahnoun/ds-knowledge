@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/derek-larson14/obsidian-claude-sidebar/main/main.js\" -o \"D:/code/ds-knowledge/.obsidian/plugins/obsidian-claude-sidebar/main.js\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/derek-larson14/obsidian-claude-sidebar/main/manifest.json\" -o \"D:/code/ds-knowledge/.obsidian/plugins/obsidian-claude-sidebar/manifest.json\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/derek-larson14/obsidian-claude-sidebar/main/styles.css\" -o \"D:/code/ds-knowledge/.obsidian/plugins/obsidian-claude-sidebar/styles.css\")",
+      "Bash(pip install *)",
+      "Bash(rm -f biomarkersSignatures.md signatures.md optical-properties.md urine-biomarkers-photospectrometry.md urine-biomarkers-lit-review.md urine-biomarkers-review.md urine-preanalytics.md \"urine-preanalytics 1.md\" summary.md signatures-deep-dive.md)",
+      "Bash(mv urine-spectroscopy-biomarkers/README.md .)",
+      "Bash(rmdir urine-spectroscopy-biomarkers *)"
+    ]
+  }
+}

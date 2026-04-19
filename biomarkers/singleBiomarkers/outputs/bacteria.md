@@ -1,12 +1,23 @@
 ---
-title: Bacteria
+title: Bacteria (Bacteriuria)
+aliases:
+  - Bacteria
+  - Bacteriuria
+  - Urinary bacteria
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
-# Bacteria
+# Bacteria (Bacteriuria)
 
-**Author:** Usense Healthcare
+Bacteria in urine are a [[datascience/spectroscopy-biomarkers|biomarker]] category rather than a single chemical entity. Presence and quantity of bacteria (bacteriuria) is the key diagnostic marker for urinary tract infections (UTIs). Detection relies on culture, biochemical by-products (nitrite), enzyme activity, or direct visualisation and counting. See also [[optical-properties]] and [[signatures]] for spectral characteristics.
 
 ---
 
@@ -19,7 +30,7 @@ date: 2026-04-17
 | **Nature** | Prokaryotic microorganisms (not a single molecule) |
 | **Size** | Typically 0.5–5 µm (cocci ~1 µm; rods 1–3 µm length) |
 | **Common species in UTI** | *Escherichia coli* (75–90%), *Klebsiella pneumoniae*, *Proteus mirabilis*, *Enterococcus faecalis*, *Staphylococcus saprophyticus* |
-| **Diagnostic threshold** | >=10^5 CFU/mL (significant bacteriuria); >=10^3 CFU/mL in symptomatic women |
+| **Diagnostic threshold** | ≥10^5 CFU/mL (significant bacteriuria); ≥10^3 CFU/mL in symptomatic women |
 
 **Representative morphologies:**
 
@@ -30,8 +41,6 @@ date: 2026-04-17
 
   Chains:            o-o-o-o   (e.g. Streptococcus)
 ```
-
-Bacteria in urine represent a biomarker category rather than a single chemical entity. The presence and quantity of bacteria in urine (bacteriuria) is a key diagnostic marker for urinary tract infections (UTIs). Bacteria are detected by growth (culture), biochemical by-products (nitrite from nitrate reduction), enzyme activity (catalase, oxidase), or direct visualisation/counting.
 
 ### Molecules Not to Be Confused With
 
@@ -112,10 +121,10 @@ The most common pathogen, *E. coli*, originates from the patient's own gastroint
 
 | Condition | Bacterial Level | Key Symptoms |
 |---|---|---|
-| **Uncomplicated cystitis** | >=10^3 CFU/mL (*E. coli*) in symptomatic women | Dysuria, frequency, urgency; prevalence ~50–60% of women lifetime |
-| **Pyelonephritis** | >=10^5 CFU/mL + pyuria | Fever, flank pain, nausea, costovertebral angle tenderness |
-| **Asymptomatic bacteriuria (ASB)** | >=10^5 CFU/mL, no symptoms | No symptoms; significant in pregnancy (~2–10% prevalence) and pre-surgery |
-| **Catheter-associated UTI (CAUTI)** | >=10^3 CFU/mL + symptoms | Fever, suprapubic pain; ~80% of nosocomial UTIs |
+| **Uncomplicated cystitis** | ≥10^3 CFU/mL (*E. coli*) in symptomatic women | Dysuria, frequency, urgency; prevalence ~50–60% of women lifetime |
+| **Pyelonephritis** | ≥10^5 CFU/mL + pyuria | Fever, flank pain, nausea, costovertebral angle tenderness |
+| **Asymptomatic bacteriuria (ASB)** | ≥10^5 CFU/mL, no symptoms | No symptoms; significant in pregnancy (~2–10% prevalence) and pre-surgery |
+| **Catheter-associated UTI (CAUTI)** | ≥10^3 CFU/mL + symptoms | Fever, suprapubic pain; ~80% of nosocomial UTIs |
 | **Urosepsis** | Positive blood + urine culture | Systemic sepsis from urinary source; ~25% of all sepsis |
 
 ### Presence in Urine
@@ -130,7 +139,7 @@ The most common pathogen, *E. coli*, originates from the patient's own gastroint
 
 | Finding | Possible Causes | Prevalence |
 |---|---|---|
-| **>=10^5 CFU/mL** | UTI (cystitis, pyelonephritis), ASB | UTI: ~150 million cases/year globally |
+| **≥10^5 CFU/mL** | UTI (cystitis, pyelonephritis), ASB | UTI: ~150 million cases/year globally |
 | **10^3–10^5 CFU/mL** | Early/treated UTI, contamination, urethritis | Context-dependent |
 | **<10^3 CFU/mL** | Normal / contamination | — |
 
@@ -155,7 +164,7 @@ The most common pathogen, *E. coli*, originates from the patient's own gastroint
    - **LOD:** ~10^5 CFU/mL (requires sufficient bacteria and incubation time in bladder).
    - **Sensitivity:** 45–60%; **Specificity:** 85–98%.
    - **Advantages:** Rapid (<2 min), inexpensive.
-   - **Disadvantages:** Misses non-nitrate-reducing organisms (Enterococcus, Staphylococcus); requires bladder dwell time >=4 h.
+   - **Disadvantages:** Misses non-nitrate-reducing organisms (Enterococcus, Staphylococcus); requires bladder dwell time ≥4 h.
 
 3. **Dipstick leukocyte esterase (LE):**
    - **Principle:** Detects esterase from neutrophils (indirect marker of infection).
@@ -173,21 +182,21 @@ The most common pathogen, *E. coli*, originates from the patient's own gastroint
 5. **Gram stain microscopy:**
    - **Principle:** Centrifuged urine sediment stained with crystal violet/iodine; examined microscopically.
    - **Detection:** Visual identification of bacteria morphology and Gram reaction.
-   - **LOD:** ~10^4–10^5 CFU/mL (>=1 organism per oil-immersion field in uncentrifuged urine ≈ 10^5 CFU/mL).
+   - **LOD:** ~10^4–10^5 CFU/mL (≥1 organism per oil-immersion field in uncentrifuged urine ≈ 10^5 CFU/mL).
    - **Advantages:** Rapid, guides empirical therapy.
    - **Disadvantages:** Operator-dependent, low sensitivity.
 
 ### Optimal Urine Type for Measurement
 
 - **Clean-catch midstream urine (MSU):** Standard for culture; reduces periurethral contamination.
-- **First morning urine:** Higher bacterial concentration (longer bladder dwell time >=4 h); preferred for nitrite testing.
+- **First morning urine:** Higher bacterial concentration (longer bladder dwell time ≥4 h); preferred for nitrite testing.
 - **Catheter specimen:** Preferred for catheterised patients.
 - **Suprapubic aspirate:** Gold standard specimen (bypasses urethra) — any growth significant.
 - **Transport:** Process within **2 hours** or refrigerate (4 °C) to prevent bacterial multiplication. Boric acid preservative tubes maintain counts for up to 24 h.
 
 ### Actual Gold Standard
 
-**Quantitative urine culture** on standard media (blood agar + MacConkey or CLED agar) with colony counting and species identification (MALDI-TOF MS, biochemical panels, or molecular methods). Threshold for significance: >=10^5 CFU/mL (Kass criteria), though >=10^3 CFU/mL is accepted for symptomatic women with pyuria. Antibiotic susceptibility testing (AST) by disc diffusion or MIC determination is integral.
+**Quantitative urine culture** on standard media (blood agar + MacConkey or CLED agar) with colony counting and species identification (MALDI-TOF MS, biochemical panels, or molecular methods). Threshold for significance: ≥10^5 CFU/mL (Kass criteria), though ≥10^3 CFU/mL is accepted for symptomatic women with pyuria. Antibiotic susceptibility testing (AST) by disc diffusion or MIC determination is integral.
 
 ### Interferences in Measurement
 
@@ -218,7 +227,7 @@ The most common pathogen, *E. coli*, originates from the patient's own gastroint
 
 #### Raman Detection
 
-Raman spectroscopy provides species-specific fingerprints of bacteria:
+Raman spectroscopy provides species-specific fingerprints of bacteria. See [[signatures]] for spectral details.
 
 | Peak (cm⁻¹) | Assignment |
 |---|---|
@@ -234,8 +243,6 @@ Raman spectroscopy provides species-specific fingerprints of bacteria:
 - **Sample prep:** Centrifugation/filtration to concentrate bacteria; transfer to optical substrate.
 
 #### FTIR Detection
-
-Bacterial FTIR fingerprints:
 
 | Band (cm⁻¹) | Assignment | Notes |
 |---|---|---|
@@ -270,7 +277,7 @@ Bacterial FTIR fingerprints:
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Wavelength / Key Parameter | Sample Prep | Strengths | Limitations |
 |---|---|---|---|---|---|
@@ -288,15 +295,24 @@ Bacterial FTIR fingerprints:
 
 ---
 
-## References
+## Sources
 
-1. RCPA Manual — Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick
-2. PMC — Sensitivity and Specificity of WBC and Nitrite in Dipstick Urinalysis. https://pmc.ncbi.nlm.nih.gov/articles/PMC8253458/
-3. AAFP — Dipstick Urinalysis for UTI Diagnosis. https://aafp.org/pubs/afp/issues/2013/0515/od2.html
-4. NCBI Books — Urine Dipstick Meta-analysis. https://www.ncbi.nlm.nih.gov/books/NBK70576/
-5. Wikipedia — Urine Test Strip. https://en.wikipedia.org/wiki/Urine_test_strip
-6. NEPJOL — Nitrite Test vs Urine Culture. https://nepjol.info/index.php/JCMSN/article/view/38388
-7. LWW JFMPC — Dipstick Reliability. https://journals.lww.com/jfmpc/fulltext/2015/04020/reliability_of_dipstick_assay_in_predicting.22.aspx
-8. StatPearls — Urinary Tract Infection. https://www.ncbi.nlm.nih.gov/books/NBK470195/
-9. Sysmex UF-5000 — Automated Urine Analyser. https://www.sysmex.com/
-10. Pahlow S. et al. (2020) — Raman spectroscopy for rapid bacterial identification. Adv Drug Deliv Rev. PMID: 31837345
+| # | Citation |
+|---|---|
+| 1 | RCPA Manual — Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick |
+| 2 | PMC — Sensitivity and Specificity of WBC and Nitrite in Dipstick Urinalysis. https://pmc.ncbi.nlm.nih.gov/articles/PMC8253458/ |
+| 3 | AAFP — Dipstick Urinalysis for UTI Diagnosis. https://aafp.org/pubs/afp/issues/2013/0515/od2.html |
+| 4 | NCBI Books — Urine Dipstick Meta-analysis. https://www.ncbi.nlm.nih.gov/books/NBK70576/ |
+| 5 | Wikipedia — Urine Test Strip. https://en.wikipedia.org/wiki/Urine_test_strip |
+| 6 | NEPJOL — Nitrite Test vs Urine Culture. https://nepjol.info/index.php/JCMSN/article/view/38388 |
+| 7 | LWW JFMPC — Dipstick Reliability. https://journals.lww.com/jfmpc/fulltext/2015/04020/reliability_of_dipstick_assay_in_predicting.22.aspx |
+| 8 | StatPearls — Urinary Tract Infection. https://www.ncbi.nlm.nih.gov/books/NBK470195/ |
+| 9 | Sysmex UF-5000 — Automated Urine Analyser. https://www.sysmex.com/ |
+| 10 | Pahlow S. et al. (2020) — Raman spectroscopy for rapid bacterial identification. Adv Drug Deliv Rev. PMID: 31837345 |
+
+## Gaps
+
+- Validated Raman/SERS LOD benchmarks directly in urine matrix are lacking; most studies use buffer.
+- NIR classification of bacterial species in polymicrobial urine has not been demonstrated.
+- The clinical urinary microbiome (low-biomass) remains poorly characterised and its diagnostic significance is unresolved.
+- FTIR species-level classification requires concentration steps not yet integrated into automated urinalysis workflows.

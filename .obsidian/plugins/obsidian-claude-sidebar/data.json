@@ -1,0 +1,5 @@
+{
+  "additionalFlags": "--dangerously-skip-permissions",
+  "lastCwd": "D:\\code\\ds-knowledge",
+  "cliBackend": "claude"
+}

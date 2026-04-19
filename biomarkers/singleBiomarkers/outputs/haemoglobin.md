@@ -1,12 +1,25 @@
 ---
 title: Haemoglobin
+aliases:
+  - Haemoglobin
+  - Hemoglobin
+  - Hb
+  - Hgb
+  - Haemoglobinuria
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Haemoglobin
 
-**Author:** Usense Healthcare
+Haemoglobin is a **globular metalloprotein** (~64.5 kDa) composed of four globin subunits, each containing one heme prosthetic group. The heme iron (Fe²⁺) reversibly binds oxygen. Haemoglobin is normally **intracellular** within RBCs. Its presence as a free molecule in urine (haemoglobinuria) indicates intravascular haemolysis or RBC lysis within the urinary tract. It has an intense **Soret absorption band at ~415 nm** and Q bands at 540 and 577 nm (oxyHb). See [[optical-properties]] for absorption spectra and [[signatures]] for Raman data.
 
 ---
 
@@ -33,8 +46,6 @@ date: 2026-04-17
      (4 pyrrole rings
       with Fe2+ centre)
 ```
-
-Haemoglobin is a **globular metalloprotein** (~64.5 kDa) composed of four globin subunits, each containing one heme prosthetic group. The heme iron (Fe²⁺) reversibly binds oxygen. Haemoglobin is normally **intracellular** within RBCs. Its presence as a free molecule in urine (haemoglobinuria) indicates intravascular haemolysis or RBC lysis within the urinary tract. It exhibits characteristic optical properties: intense **Soret absorption band at ~415 nm** and Q bands at 540 and 577 nm (oxyHb).
 
 ### Molecules Not to Be Confused With
 
@@ -77,7 +88,6 @@ No dietary source of intact haemoglobin contributes to circulating Hb. Dietary i
 - Free plasma Hb (from intravascular haemolysis) is bound by **haptoglobin** → cleared by hepatic macrophages.
 - When haptoglobin is saturated, free Hb is **filtered by the glomerulus** (Hb dimers ~32 kDa pass the glomerular barrier). Tubular cells reabsorb Hb (megalin/cubilin receptors) and catabolise it.
 - When reabsorptive capacity is exceeded → **haemoglobinuria** (free Hb in urine).
-- Minor route: Hb → methaemalbumin (bound to albumin in plasma).
 
 ### Expression in Humans
 
@@ -86,7 +96,7 @@ No dietary source of intact haemoglobin contributes to circulating Hb. Dietary i
 | Compartment | Reference Range |
 |---|---|
 | **Blood Hb** | Male: 13.5–17.5 g/dL; Female: 12.0–16.0 g/dL |
-| **Plasma free Hb** | < 5 mg/dL (normally negligible) |
+| **Plasma free Hb** | <5 mg/dL (normally negligible) |
 | **Urine Hb (free)** | Absent (negative on dipstick) |
 | **Urine RBC/Hb (dipstick)** | Negative |
 
@@ -104,13 +114,12 @@ No dietary source of intact haemoglobin contributes to circulating Hb. Dietary i
 **Absent (normal):**
 - Intact RBC membranes, functional haptoglobin system
 - No haemolytic process
-- Adequate haptoglobin capacity
 
 #### Associated Pathologies
 
 | Condition | Urine Hb | Key Symptoms |
 |---|---|---|
-| **Paroxysmal nocturnal haemoglobinuria (PNH)** | Dark morning urine, free Hb | Haemolysis, thrombosis, pancytopenia; rare (~1–10/million |
+| **Paroxysmal nocturnal haemoglobinuria (PNH)** | Dark morning urine, free Hb | Haemolysis, thrombosis, pancytopenia; rare (~1–10/million) |
 | **Autoimmune haemolytic anaemia** | Haemoglobinuria if severe | Anaemia, jaundice, fatigue |
 | **Transfusion reaction** | Acute haemoglobinuria | Fever, flank pain, dark urine, DIC |
 | **Rhabdomyolysis (myoglobin)** | Dipstick positive but myoglobin not Hb | Muscle pain, dark urine, AKI risk |
@@ -193,20 +202,18 @@ The **urine dipstick** is the primary screening tool. For confirmation and quant
 - **UV-Vis (Soret band):** OxyHb: **415 nm** (ε ≈ 131,000 M⁻¹cm⁻¹ per heme), 542 nm, 577 nm. DeoxyHb: 430 nm, 555 nm. MetHb: 405 nm, 500 nm, 630 nm.
   - LOD: ~0.1 mg/dL (~60 nM tetramer).
   - Sample prep: Centrifuge; measure supernatant; correct for turbidity.
-- **NIR:** Weak absorption at ~760 nm (deoxyHb), ~940 nm (water interference). Not practical for urine.
-  - LOD: >10 mg/dL.
+- **NIR:** Weak absorption at ~760 nm (deoxyHb), ~940 nm (water interference). Not practical for urine. LOD: >10 mg/dL.
 
 #### Fluorescence Detection
 
 - **Intrinsic porphyrin fluorescence:** Hb fluorescence is heavily **quenched by iron** — very weak (quantum yield <0.01%).
-- **Zinc protoporphyrin (ZnPP):** If heme iron is replaced by zinc (as in iron deficiency), ZnPP fluoresces strongly (Ex 425 nm / Em 594 nm). Not relevant for urinary Hb.
+- **Zinc protoporphyrin (ZnPP):** If heme iron is replaced by zinc (iron deficiency), ZnPP fluoresces strongly (Ex 425 nm / Em 594 nm). Not relevant for urinary Hb.
 - **Indirect methods:** Heme extraction → demetallation → free protoporphyrin fluorescence (Ex 405 nm / Em 630 nm). LOD: ~10 nM heme.
 - **Fluorescent anti-Hb immunoassays:** FITC-labelled antibodies; Ex 490 / Em 520 nm. LOD: ~0.001 mg/dL.
-- **Sample prep:** For direct methods, centrifugation; for immunoassays, standard ELISA/lateral flow protocols.
 
 #### Raman Detection
 
-Haemoglobin has a rich resonance Raman spectrum:
+Haemoglobin has a rich resonance Raman spectrum. See [[signatures]] for full assignments.
 
 | Peak (cm⁻¹) | Assignment |
 |---|---|
@@ -222,7 +229,6 @@ Haemoglobin has a rich resonance Raman spectrum:
 - **Resonance Raman** with excitation at **405 nm (Soret)** or **532 nm (Q-band)**: enhancement factor 10³–10⁶ for porphyrin modes.
 - LOD: ~1 µM Hb in buffer; ~10 µM in urine (with background subtraction).
 - Can distinguish oxyHb, deoxyHb, metHb by oxidation/spin markers.
-- **Sample prep:** Centrifuge urine; measure supernatant or concentrate.
 
 #### FTIR Detection
 
@@ -235,7 +241,6 @@ Haemoglobin has a rich resonance Raman spectrum:
 | **~1080** | C–O stretch (carbohydrate, if glycated) | Relevant for HbA1c |
 
 - ATR-FTIR can detect Hb at >1 mg/dL concentrations in dried samples. Not sensitive enough for typical haemoglobinuria levels.
-- **Sample prep:** Centrifuge supernatant, dry on ATR crystal.
 - LOD: ~1 mg/dL (~0.6 µM tetramer).
 
 #### Voltammetry Detection
@@ -243,8 +248,6 @@ Haemoglobin has a rich resonance Raman spectrum:
 - **Heme iron electrochemistry:** Direct electron transfer at modified electrodes. Fe³⁺/Fe²⁺ reduction at **-0.2 to -0.4 V vs Ag/AgCl** (pH 7, carbon nanotube/graphene electrodes).
 - **Amperometric detection:** Applied potential at -0.3 V; current proportional to Hb concentration.
 - LOD: ~0.01–0.1 mg/dL on nanostructured electrodes.
-- Linear range: 0.1–100 mg/dL.
-- **Sample prep:** Centrifuged supernatant; buffer pH adjustment.
 
 ### Other Detection Technologies
 
@@ -256,7 +259,7 @@ Haemoglobin has a rich resonance Raman spectrum:
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Wavelength / Key Parameter | Sample Prep | Strengths | Limitations |
 |---|---|---|---|---|---|
@@ -271,15 +274,24 @@ Haemoglobin has a rich resonance Raman spectrum:
 
 ---
 
-## References
+## Sources
 
-1. RCPA Manual — Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick
-2. Harboe (1959) — Hemoglobin determination by Soret band spectrophotometry. J Clin Invest.
-3. MDPI Biomolecules (2024) — UV-Vis approaches for Hb quantification. https://www.mdpi.com/2218-273X/14/9/1046
-4. PMC (2024) — Quantitative analysis of heme and hemoglobin. https://pmc.ncbi.nlm.nih.gov/articles/PMC11625178/
-5. ACS Anal Chem (2020) — Heme detection and quantification methods. https://pubs.acs.org/doi/10.1021/acs.analchem.0c00415
-6. BMJ JCP — Myoglobin vs haemoglobin in urine. https://jcp.bmj.com/content/24/9/816
-7. Wikipedia — Urine Test Strip. https://en.wikipedia.org/wiki/Urine_test_strip
-8. StatPearls — Hemoglobinuria. https://www.ncbi.nlm.nih.gov/books/NBK557628/
-9. Siemens Healthineers — Urinalysis reagent strips. https://www.siemens-healthineers.com/
-10. PubChem — Protoporphyrin IX, CID 4971. https://pubchem.ncbi.nlm.nih.gov/compound/4971
+| # | Citation |
+|---|---|
+| 1 | RCPA Manual — Urine Dipstick. https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/U/Urine-dipstick |
+| 2 | Harboe (1959) — Hemoglobin determination by Soret band spectrophotometry. J Clin Invest. |
+| 3 | MDPI Biomolecules (2024) — UV-Vis approaches for Hb quantification. https://www.mdpi.com/2218-273X/14/9/1046 |
+| 4 | PMC (2024) — Quantitative analysis of heme and hemoglobin. https://pmc.ncbi.nlm.nih.gov/articles/PMC11625178/ |
+| 5 | ACS Anal Chem (2020) — Heme detection and quantification methods. https://pubs.acs.org/doi/10.1021/acs.analchem.0c00415 |
+| 6 | BMJ JCP — Myoglobin vs haemoglobin in urine. https://jcp.bmj.com/content/24/9/816 |
+| 7 | Wikipedia — Urine Test Strip. https://en.wikipedia.org/wiki/Urine_test_strip |
+| 8 | StatPearls — Hemoglobinuria. https://www.ncbi.nlm.nih.gov/books/NBK557628/ |
+| 9 | Siemens Healthineers — Urinalysis reagent strips. https://www.siemens-healthineers.com/ |
+| 10 | PubChem — Protoporphyrin IX, CID 4971. https://pubchem.ncbi.nlm.nih.gov/compound/4971 |
+
+## Gaps
+
+- The dipstick cannot distinguish Hb from myoglobin; clinical differentiation still requires immunoassay or centrifugation + visual inspection, not automated.
+- Resonance Raman LOD in urine matrix (not buffer) with background subtraction at clinically relevant Hb concentrations needs further validation.
+- The impact of urine pH and age on Hb spectral properties (Soret shift, MetHb formation) is not well-characterised for clinical measurement contexts.
+- Microfluidic Soret-band sensors have not been validated against clinical dipstick in multicentre studies.

@@ -1,7 +1,25 @@
+---
+title: learn.explain — SHAP Model Explainability
+aliases:
+  - ExploreShap
+  - learn.explain
+  - SHAP spectral explainer
+tags:
+  - topic/ml
+  - type/reference
+  - device/jimini
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
+author: Usense Healthcare
+---
+
 # learn.explain
+
 `d:\code\ds-learn\src\learn\explain.py` | `from learn.explain import ExploreShap`
 
-SHAP-based model explainability for spectral data. Wraps SHAP explainers to provide wavelength importance profiles, contiguous band extraction, per-sample explanations, and publication-ready plots for spectral classification models.
+SHAP-based model explainability for spectral data. Wraps SHAP explainers to provide wavelength importance profiles, contiguous band extraction, per-sample explanations, and publication-ready plots for spectral classification models. Integrates with [[signal-processing]] pipelines and [[multi-task-modeling]] workflows.
 
 ## Index
 
@@ -12,17 +30,24 @@ SHAP-based model explainability for spectral data. Wraps SHAP explainers to prov
 ## Reference
 
 ### `ExploreShap(mdl, X: DataFrame, y: Series = None, explainerType: str = "tree")`
+
 Computes SHAP values on init and exposes getters and plot methods for spectral analysis.
-- `mdl`: Fitted model. Tree-based models use TreeSHAP (exact, fast); others use KernelSHAP (slow).
-- `X`: Feature matrix (samples x wavelengths). Column names must be castable to float (wavelength values).
-- `y`: True labels. Optional, required only for `mkPltSpectraComparison`.
-- `explainerType`: `"tree"` (default) or `"kernel"`.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `mdl` | fitted model | Tree-based → TreeSHAP (exact, fast); others → KernelSHAP (slow) |
+| `X` | DataFrame | Feature matrix (samples × wavelengths). Columns must be castable to float (wavelength values) |
+| `y` | Series | True labels. Optional — required only for `mkPltSpectraComparison` |
+| `explainerType` | str | `"tree"` (default) or `"kernel"` |
 
 **Attributes** (available after init):
-- `sv`: Raw `shap.Explanation` object
-- `wavelengths`: numpy array of wavelength values (float)
-- `meanAbsShap`: mean |SHAP| per wavelength (numpy array)
-- `meanShap`: mean signed SHAP per wavelength (numpy array)
+
+| Attribute | Type | Description |
+|-----------|------|-------------|
+| `sv` | shap.Explanation | Raw SHAP explanation object |
+| `wavelengths` | ndarray | Wavelength values (float) |
+| `meanAbsShap` | ndarray | Mean \|SHAP\| per wavelength |
+| `meanShap` | ndarray | Mean signed SHAP per wavelength |
 
 ### Getters
 
@@ -34,17 +59,18 @@ Mean |SHAP| per wavelength. Series indexed by wavelength (float).
 
 #### `getBands(percentile: int = 75) → DataFrame`
 Contiguous wavelength bands above the given importance percentile.
-- `percentile`: Threshold as percentile of mean |SHAP| (default 75).
-- Returns DataFrame with columns: `start`, `end`, `width`, `peakImportance`, `meanShap`, `direction`.
-- `direction`: `"positive"` (pushes toward positive class) or `"negative"`.
-- Sorted by `peakImportance` descending.
+- `percentile`: Threshold as percentile of mean |SHAP| (default 75)
+- Returns DataFrame with columns: `start`, `end`, `width`, `peakImportance`, `meanShap`, `direction`
+- `direction`: `"positive"` (pushes toward positive class) or `"negative"`
+- Sorted by `peakImportance` descending
 
 #### `getTopWavelengths(n: int = 20) → Series`
 Top N wavelengths ranked by mean |SHAP|. Series sorted descending, indexed by wavelength.
 
 ### Plots
 
-All plot methods accept `ax: Axes = None`. When `ax` is None, a new figure is created and shown. When `ax` is provided, the plot is drawn on the given axes without calling `plt.show()`.
+> [!NOTE]
+> All plot methods accept `ax: Axes = None`. When `ax` is None, a new figure is created and shown. When `ax` is provided, the plot is drawn on the given axes without calling `plt.show()`.
 
 #### `mkPltBar(maxDisplay: int = 20, ax: Axes = None)`
 Bar plot of mean |SHAP| per wavelength (top N).
@@ -70,10 +96,11 @@ Scatter plots of feature value vs SHAP value for the top N wavelengths, with aut
 
 #### `mkPltSpectraComparison(labels: dict = None, ax: tuple[Axes, Axes] = None) → tuple[Axes, Axes]`
 Two-panel plot: top = mean spectra per class, bottom = SHAP importance spectrum.
-- `labels`: Dict mapping class values to display names (default `{0: "Negative", 1: "Positive"}`).
-- `ax`: Tuple of two axes `(axSpectra, axShap)`.
+- `labels`: Dict mapping class values to display names (default `{0: "Negative", 1: "Positive"}`)
+- `ax`: Tuple of two axes `(axSpectra, axShap)`
 
-⚠ Requires `y` to be passed at init.
+> [!WARNING]
+> Requires `y` to be passed at init.
 
 ## Example
 
@@ -99,3 +126,16 @@ fig, axes = plt.subplots(1, 2, figsize=(16, 4))
 es.mkPltImportanceSpectrum(ax=axes[0])
 es.mkPltBar(ax=axes[1])
 ```
+
+## Sources
+
+| Source | Notes |
+|--------|-------|
+| [SHAP library](https://shap.readthedocs.io/) | TreeSHAP and KernelSHAP implementations |
+| `d:\code\ds-learn\src\learn\explain.py` | Module source |
+
+## Gaps
+
+- KernelSHAP is slow on large datasets — no batch/sampling strategy documented
+- No multi-class support documented (binary classification assumed throughout)
+- `getBands` direction logic not validated for non-binary outputs

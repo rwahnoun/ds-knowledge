@@ -1,12 +1,24 @@
 ---
 title: Magnesium
+aliases:
+  - Magnesium
+  - Mg
+  - Mg2+
+  - Urinary magnesium
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Magnesium
 
-**Author:** Usense Healthcare
+Magnesium is the second most abundant intracellular cation and the fourth most abundant cation in the body. It is an essential cofactor for >300 enzymatic reactions, including all ATP-dependent processes. Only ~1% of total body Mg is in ECF; ~60% is in bone, ~39% in soft tissue. Urinary Mg measurement helps differentiate renal from extrarenal causes of hypomagnesaemia. Mg²⁺ is not detectable by [[optical-properties|optical spectroscopy]] methods directly. See [[datascience/spectroscopy-biomarkers]] for trace mineral context.
 
 ---
 
@@ -28,8 +40,6 @@ date: 2026-04-17
   Mg(2+)   (divalent cation, hydrated in solution)
 ```
 
-Magnesium is the second most abundant intracellular cation and the fourth most abundant cation in the body. It is an essential cofactor for >300 enzymatic reactions, including all ATP-dependent processes. Only ~1% of total body Mg is in ECF; ~60% is in bone, ~39% in soft tissue. Urinary Mg measurement helps differentiate renal from extrarenal causes of hypomagnesaemia.
-
 ### Molecules Not to Be Confused With
 
 | Molecule | Formula | MW (g/mol) | Key Difference |
@@ -49,7 +59,7 @@ Magnesium is not synthesised. Total body Mg: ~24 g (~1000 mmol) in adults. Bone 
 
 #### Exogenous
 
-Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, whole grains, legumes, dark chocolate, mineral water. Typical intake: 300-400 mg/day. Intestinal absorption: 30-50% (small intestine, primarily jejunum and ileum via TRPM6 channels). Mg supplements and antacids are additional sources.
+Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, whole grains, legumes, dark chocolate, mineral water. Typical intake: 300–400 mg/day. Intestinal absorption: 30–50% (small intestine, primarily jejunum and ileum via TRPM6 channels). Mg supplements and antacids are additional sources.
 
 ### Primary & Secondary Biological Roles
 
@@ -65,8 +75,8 @@ Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, 
 ### Catabolism and Elimination Pathway
 
 - Mg freely filtered at glomerulus (~2400 mg/day, ~80% of plasma Mg is filterable).
-- **~95-97%** reabsorbed: 15% proximal tubule, 70% thick ascending loop of Henle (paracellular via claudin-16/19), 10% distal convoluted tubule (TRPM6, fine-tuning).
-- 3-5% excreted in urine (~100 mg/day).
+- **~95–97%** reabsorbed: 15% proximal tubule, 70% thick ascending loop of Henle (paracellular via claudin-16/19), 10% distal convoluted tubule (TRPM6, fine-tuning).
+- 3–5% excreted in urine (~100 mg/day).
 - Minor losses: GI, sweat.
 
 ### Expression in Humans
@@ -75,8 +85,8 @@ Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, 
 
 | Compartment | Reference Range |
 |---|---|
-| **Serum Mg** | 1.7-2.2 mg/dL (0.70-0.95 mmol/L) |
-| **Urinary Mg (24-h)** | 73-122 mg/day (3-5 mmol/day) |
+| **Serum Mg** | 1.7–2.2 mg/dL (0.70–0.95 mmol/L) |
+| **Urinary Mg (24-h)** | 73–122 mg/day (3–5 mmol/day) |
 | **Urinary Mg (spot)** | Variable; FEMg <4% normally |
 
 #### Factors Influencing Levels
@@ -107,9 +117,9 @@ Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, 
 
 ### Presence in Urine
 
-**Should it be normally present?** **Yes** -- urinary Mg excretion is the primary regulatory mechanism. Normal: 3-5 mmol/day.
+**Should it be normally present?** **Yes** — urinary Mg excretion is the primary regulatory mechanism. Normal: 3–5 mmol/day.
 
-**Normal urinary levels:** 73-122 mg/day (3-5 mmol/day).
+**Normal urinary levels:** 73–122 mg/day (3–5 mmol/day).
 
 **Form in urine:** **Mg²⁺ ion**, hydrated. May complex with phosphate (struvite: MgNH₄PO₄) in infected alkaline urine.
 
@@ -129,8 +139,8 @@ Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, 
 ### Available Clinical Assays
 
 1. **Colorimetric (xylidyl blue / calmagite):**
-   - **Principle:** Mg²⁺ reacts with calmagite or xylidyl blue in alkaline pH -> blue-violet complex.
-   - **Detection:** Absorbance at **520-550 nm**.
+   - **Principle:** Mg²⁺ reacts with calmagite or xylidyl blue in alkaline pH → blue-violet complex.
+   - **Detection:** Absorbance at **520–550 nm**.
    - **LOD:** ~0.1 mg/dL (~0.04 mmol/L).
    - **Advantages:** Automated, standard on clinical platforms.
 
@@ -154,7 +164,7 @@ Dietary sources: green leafy vegetables (chlorophyll contains Mg), nuts, seeds, 
 
 ### Actual Gold Standard
 
-**Flame AAS at 285.2 nm** is the reference method. Colorimetric methods (calmagite/xylidyl blue) on automated platforms are the standard clinical assay. CV: 3-5%.
+**Flame AAS at 285.2 nm** is the reference method. Colorimetric methods (calmagite/xylidyl blue) on automated platforms are the standard clinical assay. CV: 3–5%.
 
 ### Interferences in Measurement
 
@@ -203,23 +213,32 @@ Mg²⁺ has no IR absorption. Not detectable by FTIR.
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Key Parameter | Sample Prep | Strengths |
 |---|---|---|---|---|
-| **Colorimetric (calmagite)** | ~0.04 mmol/L | 520-550 nm | None | Standard, automated |
+| **Colorimetric (calmagite)** | ~0.04 mmol/L | 520–550 nm | None | Standard, automated |
 | **Flame AAS** | ~0.001 mg/dL | 285.2 nm | Dilution | Reference, specific |
 | **ICP-OES** | ~0.0001 mg/dL | 279.6 nm | Dilution | Multi-element |
-| **Mag-Fura-2 fluorescence** | ~0.1 mM | Ex 340-380/Em 510 nm | Probe addition | Ratiometric |
+| **Mag-Fura-2 fluorescence** | ~0.1 mM | Ex 340–380/Em 510 nm | Probe addition | Ratiometric |
 | **ISE** | ~0.1 mmol/L | Potentiometric | None | Real-time |
 | **Raman / FTIR** | N/A | N/A | N/A | Not applicable |
 
 ---
 
-## References
+## Sources
 
-1. PMC - Interpreting Magnesium Status. https://ncbi.nlm.nih.gov/pmc/articles/PMC5812344/
-2. Mayo Clinic Labs - 24-h Urine Magnesium. https://www.mayocliniclabs.com/
-3. ACS Anal Chem (1961) - Ca and Mg in Urine by AAS. https://pubs.acs.org/doi/abs/10.1021/ac60172a021
-4. JCP - Ca and Mg by AAS in serum and urine. https://jcp.bmj.com/content/20/3/280
-5. StatPearls - Hypomagnesemia. https://www.ncbi.nlm.nih.gov/books/NBK500003/
+| # | Citation |
+|---|---|
+| 1 | PMC — Interpreting Magnesium Status. https://ncbi.nlm.nih.gov/pmc/articles/PMC5812344/ |
+| 2 | Mayo Clinic Labs — 24-h Urine Magnesium. https://www.mayocliniclabs.com/ |
+| 3 | ACS Anal Chem (1961) — Ca and Mg in Urine by AAS. https://pubs.acs.org/doi/abs/10.1021/ac60172a021 |
+| 4 | JCP — Ca and Mg by AAS in serum and urine. https://jcp.bmj.com/content/20/3/280 |
+| 5 | StatPearls — Hypomagnesaemia. https://www.ncbi.nlm.nih.gov/books/NBK500003/ |
+
+## Gaps
+
+- No optical or Raman/FTIR method is applicable for Mg²⁺ detection in urine; all viable approaches are electrochemical or atomic spectroscopic.
+- Fluorescent Mg probes (Mag-Fura-2) have not been validated at clinical urinary concentrations with adequate selectivity over Ca²⁺, Zn²⁺, and other cations.
+- Spot urine FEMg thresholds (<2% vs >4%) for renal vs extrarenal wasting have not been validated in large prospective studies across diverse patient populations.
+- Struvite stone formation risk prediction from urinary Mg levels alone is insufficient; co-measurement with ammonium and phosphate is required.

@@ -1,12 +1,24 @@
 ---
 title: Creatinine
+aliases:
+  - Creatinine
+  - Creatinin
+  - Urine creatinine
+  - GFR marker
+tags:
+  - topic/biomarker
+  - topic/spectroscopy
+  - type/reference
+  - status/complete
+date: 2026-04-19
+status: complete
+type: reference
 author: Usense Healthcare
-date: 2026-04-17
 ---
 
 # Creatinine
 
-**Author:** Usense Healthcare
+Creatinine is a cyclic derivative of creatine, formed by spontaneous non-enzymatic dehydration of creatine phosphate in muscle. It is the most widely used endogenous marker of glomerular filtration rate (GFR) and the standard normalisation factor for spot urine measurements. See [[datascience/spectroscopy-biomarkers]] for clinical context and [[signatures]] for Raman/FTIR spectral characteristics.
 
 ---
 
@@ -22,8 +34,8 @@ date: 2026-04-17
 | **PubChem CID** | 588 |
 | **SMILES** | CN1CC(=O)NC1=N |
 | **Appearance** | White crystalline powder |
-| **Melting point** | 300 C (decomposes) |
-| **Solubility in water** | ~90 g/L at 20 C |
+| **Melting point** | 300 °C (decomposes) |
+| **Solubility in water** | ~90 g/L at 20 °C |
 
 **Structural formula:**
 
@@ -36,8 +48,6 @@ date: 2026-04-17
           |
           NH
 ```
-
-Creatinine is a cyclic derivative of creatine, formed by spontaneous non-enzymatic dehydration of creatine phosphate in muscle. It is the most widely used endogenous marker of glomerular filtration rate (GFR). Its production rate is relatively constant for a given individual, proportional to muscle mass.
 
 ### Molecules Not to Be Confused With
 
@@ -54,34 +64,33 @@ Creatinine is a cyclic derivative of creatine, formed by spontaneous non-enzymat
 
 ### Origin
 
-#### Endogenous: Biosynthesis -- Creatine-Phosphocreatine Pathway
+#### Endogenous: Biosynthesis — Creatine-Phosphocreatine Pathway
 
 Creatinine is produced by **irreversible, non-enzymatic cyclisation** of creatine phosphate (and to a lesser extent, free creatine) in skeletal muscle. The process:
 
-1. **Creatine synthesis:** Arginine + Glycine (in kidney) via AGAT -> guanidinoacetate, then methylated by GAMT (in liver) using SAM -> **creatine**.
-2. **Phosphorylation:** Creatine + ATP (via creatine kinase) -> **creatine phosphate** (PCr) in muscle.
-3. **Creatinine formation:** PCr spontaneously dehydrates at ~1.7%/day -> **creatinine** (irreversible).
+1. **Creatine synthesis:** Arginine + Glycine (in kidney) via AGAT → guanidinoacetate, then methylated by GAMT (in liver) using SAM → **creatine**.
+2. **Phosphorylation:** Creatine + ATP (via creatine kinase) → **creatine phosphate** (PCr) in muscle.
+3. **Creatinine formation:** PCr spontaneously dehydrates at ~1.7%/day → **creatinine** (irreversible).
 
-Daily creatinine production: ~15-25 mg/kg/day (~1.0-1.8 g/day), proportional to muscle mass. Production is remarkably constant day-to-day for an individual.
+Daily creatinine production: ~15–25 mg/kg/day (~1.0–1.8 g/day), proportional to muscle mass. Production is remarkably constant day-to-day for an individual.
 
 #### Exogenous
 
-Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking converts some creatine to creatinine). Creatine supplements increase creatinine production.
+Dietary creatinine from cooked meat (~1.5–2.5 g creatine per kg of meat; cooking converts some creatine to creatinine). Creatine supplements increase creatinine production.
 
 ### Primary & Secondary Biological Roles
 
 **Primary role:**
-- **Waste product / GFR marker:** Creatinine has no physiological function. Its clinical value lies in being a nearly ideal endogenous GFR marker: freely filtered, not reabsorbed, minimal secretion (10-15% tubular secretion).
+- **Waste product / GFR marker:** Creatinine has no physiological function. Its clinical value lies in being a nearly ideal endogenous GFR marker: freely filtered, not reabsorbed, minimal secretion (10–15% tubular secretion).
 
 **Secondary roles:**
-- No known biological function.
-- Used as a normalisation factor for spot urine measurements of other analytes (analyte/creatinine ratio corrects for urine concentration).
+- Used as a **normalisation factor** for spot urine measurements of other analytes (analyte/creatinine ratio corrects for urine concentration).
 
 ### Catabolism and Elimination Pathway
 
 - Creatinine is released from muscle into plasma at a constant rate.
 - **Freely filtered** at the glomerulus (100%).
-- ~10-15% **secreted** by proximal tubular organic cation transporters (OCT2, MATE1/2).
+- ~10–15% **secreted** by proximal tubular organic cation transporters (OCT2, MATE1/2).
 - **Not reabsorbed** (or minimally so).
 - Urinary creatinine excretion = creatinine production rate at steady state.
 - Creatinine clearance (CrCl) approximates GFR (slight overestimate due to secretion).
@@ -92,11 +101,11 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 
 | Compartment | Reference Range |
 |---|---|
-| **Serum creatinine** | Male: 0.7-1.3 mg/dL (62-115 umol/L); Female: 0.6-1.1 mg/dL (53-97 umol/L) |
-| **Urinary creatinine (24-h)** | Male: 14-26 mg/kg/day (1.0-1.8 g/day); Female: 11-20 mg/kg/day (0.8-1.4 g/day) |
-| **Urinary creatinine concentration** | 3-30 mmol/L (highly variable with hydration) |
-| **Creatinine clearance** | 90-140 mL/min (approximates GFR) |
-| **eGFR (CKD-EPI)** | >90 mL/min/1.73 m2 |
+| **Serum creatinine** | Male: 0.7–1.3 mg/dL (62–115 µmol/L); Female: 0.6–1.1 mg/dL (53–97 µmol/L) |
+| **Urinary creatinine (24-h)** | Male: 14–26 mg/kg/day (1.0–1.8 g/day); Female: 11–20 mg/kg/day (0.8–1.4 g/day) |
+| **Urinary creatinine concentration** | 3–30 mmol/L (highly variable with hydration) |
+| **Creatinine clearance** | 90–140 mL/min (approximates GFR) |
+| **eGFR (CKD-EPI)** | >90 mL/min/1.73 m² |
 
 #### Factors Influencing Levels
 
@@ -106,12 +115,12 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 - Rhabdomyolysis (massive creatine release)
 - High meat diet (transient)
 - Creatine supplements
-- Drugs inhibiting secretion (trimethoprim, cimetidine) -- raise serum Cr without changing GFR
+- Drugs inhibiting secretion (trimethoprim, cimetidine) — raise serum Cr without changing GFR
 
 **Decreased serum creatinine:**
 - Low muscle mass (cachexia, elderly, amputees)
 - Liver disease (reduced creatine synthesis)
-- Pregnancy (increased GFR + hemodilution)
+- Pregnancy (increased GFR + haemodilution)
 
 #### Associated Pathologies
 
@@ -124,9 +133,9 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 
 ### Presence in Urine
 
-**Should it be normally present?** **Yes** -- creatinine is a major normal urinary solute. It is the basis for urine concentration normalisation.
+**Should it be normally present?** **Yes** — creatinine is a major normal urinary solute. It is the basis for urine concentration normalisation.
 
-**Normal urinary levels:** 1.0-1.8 g/day (8.8-15.9 mmol/day) for men; 0.8-1.4 g/day for women. Concentration: 3-30 mmol/L.
+**Normal urinary levels:** 1.0–1.8 g/day (8.8–15.9 mmol/day) for men; 0.8–1.4 g/day for women. Concentration: 3–30 mmol/L.
 
 **Form in urine:** **Native dissolved molecule** (neutral at urine pH, pKa ~4.8 for the imino group).
 
@@ -137,7 +146,7 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 | **Low 24-h excretion** | Incomplete collection, low muscle mass, advanced CKD | Common artefact |
 | **High 24-h excretion** | High muscle mass, meat-rich diet | Normal variant |
 
-**Solubility:** ~90 g/L at 20 C. Creatinine does not crystallise in urine normally.
+**Solubility:** ~90 g/L at 20 °C. Creatinine does not crystallise in urine normally.
 
 ---
 
@@ -146,14 +155,14 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 ### Available Clinical Assays
 
 1. **Jaffe reaction (alkaline picrate, most common):**
-   - **Principle:** Creatinine reacts with picric acid in alkaline solution -> orange-red Janovsky complex.
+   - **Principle:** Creatinine reacts with picric acid in alkaline solution → orange-red Janovsky complex.
    - **Detection:** Absorbance at **520 nm** (kinetic measurement).
-   - **LOD:** ~0.1 mg/dL (~9 umol/L).
+   - **LOD:** ~0.1 mg/dL (~9 µmol/L).
    - **Advantages:** Simple, inexpensive, widely available on all platforms.
    - **Disadvantages:** Non-specific; interfered by glucose, acetoacetate, proteins, cephalosporins.
 
 2. **Enzymatic creatinine assay:**
-   - **Principle:** Creatinine -> creatine (creatininase) -> sarcosine + urea (creatinase) -> glycine + HCHO + H2O2 (sarcosine oxidase) -> colour (Trinder reaction, peroxidase + chromogen).
+   - **Principle:** Creatinine → creatine (creatininase) → sarcosine + urea (creatinase) → glycine + HCHO + H₂O₂ (sarcosine oxidase) → colour (Trinder reaction, peroxidase + chromogen).
    - **Detection:** Absorbance at **546 nm** (Trinder) or **340 nm** (NADH-coupled).
    - **LOD:** ~0.05 mg/dL.
    - **Advantages:** More specific than Jaffe; less interference.
@@ -171,14 +180,14 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 
 ### Optimal Urine Type for Measurement
 
-- **24-hour urine** for creatinine clearance calculation and total excretion assessment (completeness check: expected 15-25 mg/kg/day).
+- **24-hour urine** for creatinine clearance calculation and total excretion assessment (completeness check: expected 15–25 mg/kg/day).
 - **Spot urine** for creatinine-normalised ratios (albumin/creatinine, protein/creatinine).
 - Second morning void preferred for spot ratios (less variation).
-- Stable at room temperature for 24-48 h; refrigerate for longer storage.
+- Stable at room temperature for 24–48 h; refrigerate for longer storage.
 
 ### Actual Gold Standard
 
-**IDMS** is the ultimate reference method for creatinine standardisation. For clinical use, **enzymatic assays** (IDMS-traceable calibration) are preferred over Jaffe. Both are available on all major automated platforms. CV: 2-5% (Jaffe), 1-3% (enzymatic).
+**IDMS** is the ultimate reference method for creatinine standardisation. For clinical use, **enzymatic assays** (IDMS-traceable calibration) are preferred over Jaffe. Both are available on all major automated platforms. CV: 2–5% (Jaffe), 1–3% (enzymatic).
 
 ### Interferences in Measurement
 
@@ -190,71 +199,68 @@ Dietary creatinine from cooked meat (~1.5-2.5 g creatine per kg of meat; cooking
 | **Bilirubin (Jaffe)** | Negative bias | Absorbs at 520 nm; subtractive |
 | **Haemolysis** | Variable | Released proteins interfere |
 | **Ascorbic acid (enzymatic)** | Negative bias | Inhibits Trinder reaction |
-| **Dopamine, dobutamine** | Positive bias (enzymatic) | Interfere with H2O2 detection |
+| **Dopamine, dobutamine** | Positive bias (enzymatic) | Interfere with H₂O₂ detection |
 
 ### Research Detection Methods
 
 #### Spectroscopy Detection (UV-Vis / NIR)
 
-- **UV absorption:** Creatinine absorbs at **234 nm** (epsilon ~6,850 M-1cm-1). Direct UV quantification possible but non-specific in urine matrix.
+- **UV absorption:** Creatinine absorbs at **234 nm** (ε ~6,850 M⁻¹cm⁻¹). Direct UV quantification possible but non-specific in urine matrix.
   - LOD: ~0.5 mg/dL in buffer; urine requires HPLC separation.
 - **Jaffe chromogen:** 520 nm (see above).
 - **NIR:** Creatinine has weak NIR overtone bands (~2170 nm). Multivariate calibration with PLS gives LOD ~0.5 mg/dL in urine.
 
 #### Fluorescence Detection
 
-- Creatinine itself is weakly fluorescent (Ex ~240 nm / Em ~390 nm) -- not useful.
-- **Enzymatic fluorometric:** Sarcosine oxidase cascade produces H2O2 -> coupled with Amplex Red (Ex 571 / Em 585 nm). LOD: ~0.01 mg/dL.
-- **3-Hydroxyflavone probes:** React with creatinine in alkaline conditions -> fluorescent product (Ex 370 / Em 520 nm). LOD: ~0.1 mg/dL.
+- Creatinine itself is weakly fluorescent (Ex ~240 nm / Em ~390 nm) — not useful.
+- **Enzymatic fluorometric:** Sarcosine oxidase cascade produces H₂O₂ → coupled with Amplex Red (Ex 571 / Em 585 nm). LOD: ~0.01 mg/dL.
+- **3-Hydroxyflavone probes:** React with creatinine in alkaline conditions → fluorescent product (Ex 370 / Em 520 nm). LOD: ~0.1 mg/dL.
 
 #### Raman Detection
 
-Creatinine has characteristic Raman peaks:
+Creatinine has characteristic Raman peaks useful for label-free quantification in urine. See [[signatures]] for full spectral context.
 
-| Peak (cm-1) | Assignment |
+| Peak (cm⁻¹) | Assignment |
 |---|---|
 | **~680** | Ring breathing |
-| **~845-850** | C-N stretch |
+| **~845–850** | C-N stretch |
 | **~910** | Ring deformation |
-| **~1400-1420** | CN stretch + CH3 deformation |
+| **~1400–1420** | CN stretch + CH₃ deformation |
 | **~1490** | C=N stretch |
 
-- Conventional Raman: LOD ~5 mM (~56 mg/dL) -- adequate for concentrated urine.
-- SERS (Ag nanoparticles): LOD ~10-100 uM.
+- Conventional Raman: LOD ~5 mM (~56 mg/dL) — adequate for concentrated urine.
+- SERS (Ag nanoparticles): LOD ~10–100 µM.
 - Excitation: 532 or 785 nm.
-- Sample prep: None (direct) or nanoparticle mixing.
 
 #### FTIR Detection
 
-| Band (cm-1) | Assignment | Notes |
+| Band (cm⁻¹) | Assignment | Notes |
 |---|---|---|
 | **~1492** | C=N stretch | Key diagnostic band (shifts with hydration) |
 | **~1590** | NH bending | Overlaps with urea |
 | **~1670** | C=O stretch | Ring carbonyl |
-| **~2500-3200** | N-H stretches | Broad |
+| **~2500–3200** | N-H stretches | Broad |
 
-- ATR-FTIR can quantify creatinine in urine (the 1492 cm-1 band). LOD: ~5 mM in liquid urine.
+- ATR-FTIR can quantify creatinine in urine (the 1492 cm⁻¹ band). LOD: ~5 mM in liquid urine.
 - Hydration-dependent spectral changes documented (Rich & Sheringham, 2017).
-- Sample prep: Direct ATR measurement or dried film.
 
 #### Voltammetry Detection
 
-- **Direct oxidation:** Creatinine oxidised at +0.8-1.0 V vs Ag/AgCl on modified electrodes (copper nanoparticles, MIP/graphene composites).
-  - LOD: ~1-10 uM on nanostructured electrodes.
+- **Direct oxidation:** Creatinine oxidised at +0.8–1.0 V vs Ag/AgCl on modified electrodes (copper nanoparticles, MIP/graphene composites).
+  - LOD: ~1–10 µM on nanostructured electrodes.
 - **MIP-based electrochemical sensors:** Molecularly imprinted polymer for creatinine recognition.
-  - LOD: ~0.5 uM.
-  - Linear range: 1-1000 uM.
-- **Sample prep:** Dilution in buffer; pH adjustment.
+  - LOD: ~0.5 µM.
+  - Linear range: 1–1000 µM.
 
 ### Other Detection Technologies
 
-1. **Capillary electrophoresis:** UV detection at 200-234 nm. LOD: ~0.5 uM. Fast separation.
+1. **Capillary electrophoresis:** UV detection at 200–234 nm. LOD: ~0.5 µM. Fast separation.
 2. **Paper-based colorimetric (Jaffe):** Picrate-impregnated paper strip + smartphone readout. LOD: ~0.5 mg/dL.
 3. **Microfluidic enzymatic sensor:** Lab-on-chip with integrated enzymatic cascade. LOD: ~0.1 mg/dL.
 
 ---
 
-## Summary Table: Detection Methods Comparison
+## Detection Methods Comparison
 
 | Method | LOD | Key Parameter | Sample Prep | Strengths |
 |---|---|---|---|---|
@@ -262,20 +268,29 @@ Creatinine has characteristic Raman peaks:
 | **Enzymatic assay** | ~0.05 mg/dL | 546 nm | None | More specific |
 | **HPLC-UV** | ~0.01 mg/dL | 234 nm | Inject | Reference method |
 | **IDMS** | <0.001 mg/dL | m/z | Extraction | Ultimate reference |
-| **ATR-FTIR** | ~5 mM | 1492 cm-1 | None/dry | Reagent-free |
-| **Raman** | ~5 mM | 680, 1490 cm-1 | None | Non-destructive |
-| **SERS** | ~10-100 uM | 680 cm-1 | Nanoparticles | Enhanced sensitivity |
-| **Voltammetry (MIP)** | ~0.5 uM | +0.8-1.0 V | Buffer dilution | Sensitive, selective |
+| **ATR-FTIR** | ~5 mM | 1492 cm⁻¹ | None/dry | Reagent-free |
+| **Raman** | ~5 mM | 680, 1490 cm⁻¹ | None | Non-destructive |
+| **SERS** | ~10–100 µM | 680 cm⁻¹ | Nanoparticles | Enhanced sensitivity |
+| **Voltammetry (MIP)** | ~0.5 µM | +0.8–1.0 V | Buffer dilution | Sensitive, selective |
 | **Fluorometric (Amplex)** | ~0.01 mg/dL | Ex 571/Em 585 nm | Enzyme cascade | Very sensitive |
 
 ---
 
-## References
+## Sources
 
-1. Mayo Clinic - Creatinine Test. https://www.mayoclinic.org/tests-procedures/creatinine-test/about/pac-20384646
-2. Medscape - Creatinine Reference Ranges. https://emedicine.medscape.com/article/2054342-overview
-3. StatPearls - Creatine Phosphokinase. https://www.ncbi.nlm.nih.gov/books/NBK546624/
-4. Rich & Sheringham (2017) - FTIR of urea and creatinine in urine. PMC5379246.
-5. NIST SRM 967 - Creatinine in Frozen Human Serum (reference material).
-6. PubChem - Creatinine, CID 588. https://pubchem.ncbi.nlm.nih.gov/compound/588
-7. KDIGO 2012 - CKD Guidelines (eGFR equations). https://kdigo.org/
+| # | Citation |
+|---|---|
+| 1 | Mayo Clinic — Creatinine Test. https://www.mayoclinic.org/tests-procedures/creatinine-test/about/pac-20384646 |
+| 2 | Medscape — Creatinine Reference Ranges. https://emedicine.medscape.com/article/2054342-overview |
+| 3 | StatPearls — Creatine Phosphokinase. https://www.ncbi.nlm.nih.gov/books/NBK546624/ |
+| 4 | Rich & Sheringham (2017) — FTIR of urea and creatinine in urine. PMC5379246. |
+| 5 | NIST SRM 967 — Creatinine in Frozen Human Serum (reference material). |
+| 6 | PubChem — Creatinine, CID 588. https://pubchem.ncbi.nlm.nih.gov/compound/588 |
+| 7 | KDIGO 2012 — CKD Guidelines (eGFR equations). https://kdigo.org/ |
+
+## Gaps
+
+- NIR multivariate models for urinary creatinine show LOD ~0.5 mg/dL but have not been validated across diverse patient populations and urine matrices.
+- Raman/SERS measurements are confounded by other urinary analytes at similar concentrations (urea, uric acid); multivariate deconvolution required.
+- 10–15% tubular secretion means creatinine clearance consistently overestimates true GFR; bias is larger in CKD.
+- The Jaffe reaction remains widely used despite known interferences; standardisation to IDMS-traceable enzymatic methods is incomplete across labs.
