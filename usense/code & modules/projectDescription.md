@@ -113,7 +113,7 @@ Extracts and processes a named signal component from records or datasets.
 ```
 Dataset (DatasetRecords)
   └── Record[]
-        └── Component{} (Spectrum, EISpectrum, IRMatrix, SWV, Spectrum3d)
+        └── Component{} (Spectrum, EISpectrum, IRMatrix, SWV, Spectrum3d
                 ↓  (via ExtractComponent / DatasetExtractFeatures)
 Dataset (DatasetDF)
   └── DataFrame (rows = records, columns = wavelengths or frequencies)

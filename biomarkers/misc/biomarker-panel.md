@@ -120,7 +120,7 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 - **EIS:** [[[[magnesium]]|Magnesium]]-selective ISE feasible but less developed than Na/K/Ca. Total ionic strength from conductivity provides a surrogate.
 - **Notes:** Mg²⁺ optically invisible. Lower concentration than Na/K/Ca in urine. NIR indirect approach highly speculative. ISE is the route. Clinically: low urinary Mg linked to nephrolithiasis and hypomagnesemia.
 
-### Phosphorus / [[[[phosphate]]|Phosphate]]
+### Phosphorus  [[[[phosphate]]|Phosphate]]
 - **Optical:** No direct chromophore for inorganic [[phosphate]] (PO₄³⁻) reagent-free. `210->` (very weak, requires reagent for colorimetric methods: molybdate blue at 820 nm)
 - **EIS:** [[[[phosphate]]|Phosphate]]-selective sensors (molybdate or [[phosphate]] binding protein-based) reported with EIS. Feasible.
 - **Notes:** [[[[phosphate]]|Phosphate]] is UV-transparent. Standard method uses ammonium molybdate + reducing agent (colorimetric at 820 nm) — requires reagent. In NIR, [[phosphate]] contributes subtle signals but deconvolution is very challenging. EIS with functionalized electrode is the more tractable non-optical approach. Clinically: hyperphosphaturia in Fanconi syndrome, renal tubular acidosis.
