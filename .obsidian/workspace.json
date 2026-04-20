@@ -11,10 +11,24 @@
             "id": "3b444816a22af08b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "perso/RAG for Claude.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "RAG for Claude"
             }
           }
         ]
@@ -81,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -184,7 +198,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1368.5
+    "width": 651.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,8 +213,10 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "52da6716e4cb195a",
+  "active": "41d4ac9e92101a0f",
   "lastOpenFiles": [
+    "perso/RAG for Claude.md",
+    "perso",
     "QARA/api-architecture.md",
     "biomarkers/singleBiomarkers/sheets/infection-inflammation/bacteria.md",
     "biomarkers/singleBiomarkers/sheets/fluorophores/fad.md",
@@ -214,7 +230,6 @@
     "biomarkers/singleBiomarkers/sheets/physico-chemical/BUMYmjrJ",
     "biomarkers/singleBiomarkers/sheets/metabolites/Q8I6udfK",
     "biomarkers/singleBiomarkers/sheets/metabolites/46ODZeVS",
-    "biomarkers/singleBiomarkers/sheets/metabolites/281XyCgQ",
     "biomarkers/singleBiomarkers/sheets/contaminants/chlorotalonil.md",
     "biomarkers/singleBiomarkers/sheets/contaminants/pfas.md",
     "biomarkers/singleBiomarkers/sheets/pigments-porphyrins/bilirubin.md",
@@ -237,7 +252,6 @@
     "biomarkers/singleBiomarkers/compendium.md",
     "biomarkers/singleBiomarkers/figures/fig2_molecular_weight.png",
     "spectrophotometry hardware/leds-and-sensors/suppliers.md",
-    "biomarkers/singleBiomarkers/sheets/metabolites/copper.md",
     "biomarkers/misc/image.png",
     "biomarkers/singleBiomarkers/figures/fig5_spectroscopic_map.png",
     "biomarkers/singleBiomarkers/figures/fig8_wavelength_landscape.png",
