@@ -1,0 +1,25 @@
+{
+  "showInstructions": true,
+  "showDeletePrompt": false,
+  "saveOnSwitch": false,
+  "saveOnChange": true,
+  "workspaceSettings": true,
+  "systemDarkMode": false,
+  "globalSettings": {
+    "baseFontSizeAction": true,
+    "baseFontSize": 18,
+    "cssTheme": "",
+    "showViewHeader": true,
+    "readableLineLength": false,
+    "alwaysUpdateLinks": true,
+    "promptDelete": false,
+    "propertiesInDocument": "visible",
+    "attachmentFolderPath": "./"
+  },
+  "activeWorkspaceDesktop": "rwa",
+  "activeWorkspaceMobile": "",
+  "reloadLivePreview": true,
+  "workspaceSwitcherRibbon": false,
+  "modeSwitcherRibbon": true,
+  "replaceNativeRibbon": false
+}

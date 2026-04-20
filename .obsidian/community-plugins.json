@@ -1,5 +1,7 @@
 [
   "obsidian-local-rest-api",
   "claude-sidebar",
-  "file-tree-alternative"
+  "file-tree-alternative",
+  "marp-slides",
+  "workspaces-plus"
 ]

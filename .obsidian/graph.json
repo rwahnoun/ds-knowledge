@@ -1,6 +1,6 @@
 {
-  "collapse-filter": false,
-  "search": "bio",
+  "collapse-filter": true,
+  "search": "",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 7.65625,
   "linkStrength": 0.8984375,
   "linkDistance": 376,
-  "scale": 0.7132754626224341,
-  "close": false
+  "scale": 0.7514342322277588,
+  "close": true
 }
