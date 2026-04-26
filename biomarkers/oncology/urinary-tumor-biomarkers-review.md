@@ -132,7 +132,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 
 | Metabolite | Cancer | Detection | Key Evidence |
 |------------|--------|-----------|-------------|
-| [[[[tryptophan]]\|Tryptophan]] / Kynurenine pathway | Melanoma, bladder, colorectal | Fluorescence Ex 275–295/Em 340–360 nm | Urine autofluorescence at 295 nm significantly higher in melanoma; decreases with stage (Štrumfa et al., 2021) |
+| [[tryptophan\|Tryptophan]] / Kynurenine pathway | Melanoma, bladder, colorectal | Fluorescence Ex 275–295/Em 340–360 nm | Urine autofluorescence at 295 nm significantly higher in melanoma; decreases with stage (Štrumfa et al., 2021) |
 | [[nadh\|NADH]] | Multiple (metabolic shift) | Fluorescence Ex 340/Em 460 nm | Warburg effect; detectable as bulk fluorescence in urine |
 | [[fad\|FAD]] | Multiple | Fluorescence Ex 450/Em 525 nm | Metabolic redox indicator; [[nadh\|NADH]]/[[fad\|FAD]] ratio reflects mitochondrial function |
 | Pterins (neopterin, biopterin) | Bladder, immune activation | Fluorescence Ex 365/Em 450 nm | Neopterin elevated in malignancy and inflammation |
@@ -148,7 +148,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 | Cancer | Finding | Reference |
 |--------|---------|-----------|
 | Bladder | Statistically significant spectral differences vs. controls via UV-Vis fluorescence + absorbance | Jałocha-Bratek et al., Sci Rep 2025 |
-| Melanoma | [[[[tryptophan]]\|Tryptophan]] autofluorescence (295 nm) significantly elevated in early-stage; decreases with advancing stage | Štrumfa et al., IJMS 2021 |
+| Melanoma | [[tryptophan\|Tryptophan]] autofluorescence (295 nm) significantly elevated in early-stage; decreases with advancing stage | Štrumfa et al., IJMS 2021 |
 | Multi-cancer | EEMs at 280/330/365/405 nm excitation discriminate cancer from normal with >80% sensitivity in double-blind studies | Masilamani et al., 2010; Al-Shukri, 2021 |
 | Endometrial | Urinary fluorescent metabolome profiling with ML: 94% screening accuracy | Kalinowska et al., Cancers 2024 |
 
@@ -177,13 +177,13 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 | DNA methylation | Bladder | Polymer nanobead EC | Amperometry | 5% methylation/10 ng | — | Candidate |
 | Exosomes (EGFR+) | Glioblastoma | Zr-MOF/MB EC | DPV | 7.83×10³ particles/µL | — | Candidate |
 | Exosomes (multi-marker) | Breast | FEMC microfluidic | EC multiplex | 10⁴ particles/mL | — | Clinical + murine |
-| [[[[tryptophan]]\|Tryptophan]] fluorescence | Melanoma | Autofluorescence | Fluorescence Ex 295/Em 340 | µM range | — | Clinical (n>100) |
+| [[tryptophan\|Tryptophan]] fluorescence | Melanoma | Autofluorescence | Fluorescence Ex 295/Em 340 | µM range | — | Clinical (n>100) |
 | Urinary fluorescent metabolome | Endometrial | Multi-λ EEM + ML | Fluorescence | — | — | 94% accuracy |
 | Spectral signature | Bladder | UV-Vis fluorescence + absorbance | Optical | — | — | Clinical (2025) |
 | [[nadh\|NADH]]/[[fad\|FAD]] ratio | Multiple | FLIM / bulk fluorescence | Fluorescence | µM–mM | — | Research |
 | [[total-urinary-porphyrin\|Porphyrins]] | Bladder, CRC | Fluorescence | Fluorescence Ex 405/Em 630 | µM range | — | Candidate |
 | Lactate | Multiple | LOx enzyme electrode | Amperometry | µM range | — | Organ-on-chip |
-| [[[[glucose]]\|Glucose]] | Multiple | GOx-EIS | EIS | µM range | — | Well-established |
+| [[glucose\|Glucose]] | Multiple | GOx-EIS | EIS | µM range | — | Well-established |
 
 ### Cancer Type × Biomarker Role
 
@@ -195,7 +195,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 | Renal Cell Carcinoma | Aquaporin-1 (AQP1), PLIN2, KIM-1, CAIX, urinary metabolome | VEGF, CRP | cfDNA, exosomal cargo |
 | Colorectal | CEA, KRAS mutations (trans-renal cfDNA), miR-21, [[total-urinary-porphyrin\|porphyrins]] | CEA levels, ctDNA dynamics | KRAS/BRAF ctDNA, DNA methylation |
 | Endometrial | Urinary fluorescent metabolome, miRNA panels | Not established | Not established |
-| Melanoma | [[[[tryptophan]]\|Tryptophan]] autofluorescence (Ex 295 nm), tyrosinase | [[[[tryptophan]]\|Tryptophan]]/Clark stage correlation | Urinary [[tryptophan]] monitoring |
+| Melanoma | [[tryptophan\|Tryptophan]] autofluorescence (Ex 295 nm), tyrosinase | [[tryptophan\|Tryptophan]]/Clark stage correlation | Urinary [[tryptophan]] monitoring |
 | Lung (NSCLC) | ctDNA (EGFR mutations), CEA, NSE, miR-21/miR-155, VOC profiles | ctDNA dynamics, CYFRA 21-1 | EGFR ctDNA (CRISPR biosensor) |
 | Ovarian | CA-125, HE4, exosomal miRNA | CA-125 kinetics | ctDNA, methylation panels |
 | Neuroendocrine | 5-HIAA (serotonin metabolite) | 5-HIAA levels | 5-HIAA monitoring |
@@ -250,7 +250,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 
 | Biomarker | Optical (★/5) | EIS (★/5) | Overall | Notes |
 |-----------|--------------|----------|---------|-------|
-| [[[[tryptophan]]\|Tryptophan]] autofluorescence | ★★★★★ | N/A | **EXCELLENT** | Ex 275 nm → Em 340 nm. Direct match with 275 nm LED + C12 sensor. Reagent-free. |
+| [[tryptophan\|Tryptophan]] autofluorescence | ★★★★★ | N/A | **EXCELLENT** | Ex 275 nm → Em 340 nm. Direct match with 275 nm LED + C12 sensor. Reagent-free. |
 | [[nadh\|NADH]] fluorescence | ★★★★ | N/A | **VERY GOOD** | Ex 365 nm → Em 460 nm. 365 nm LED + C12 sensor. |
 | [[fad\|FAD]] fluorescence | ★★★★ | N/A | **VERY GOOD** | Ex 405–455 nm → Em 525 nm. 405/455 nm LEDs + C12 sensor. |
 | [[total-urinary-porphyrin\|Porphyrins]] | ★★★★ | N/A | **VERY GOOD** | Ex 405 nm → Em 630 nm. Soret band excitation. |
@@ -264,7 +264,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 | miRNA (specific) | ★ | ★★★ | **LOW-MODERATE** | Requires nucleic acid probe on EIS electrode + sample extraction. |
 | ctDNA (specific) | ★ | ★★★ | **LOW-MODERATE** | Requires DNA extraction + hybridization on EIS electrode. |
 | Exosomes (specific cargo) | ★ | ★★★ | **LOW-MODERATE** | Requires antibody-functionalized EIS electrode. |
-| [[[[glucose]]\|Glucose]] | ★ | ★★★★★ | **GOOD** | GOx-EIS well-established. |
+| [[glucose\|Glucose]] | ★ | ★★★★★ | **GOOD** | GOx-EIS well-established. |
 | Lactate | ★ | ★★★★ | **MODERATE** | LOx enzyme electrode on EIS. |
 | Conductivity/ionic | N/A | ★★★★★ | **GOOD** | Low-frequency EIS; native capability. |
 | pH | N/A | ★★★★★ | **GOOD** | Potentiometric; electrode compatible. |
@@ -273,8 +273,8 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 
 | Jimini Accessibility | High (validated) | Moderate (emerging) | Low (research) |
 |---------------------|-----------------|--------------------|----|
-| **Excellent** (reagent-free optical) | — | Urinary EEM profile, [[[[tryptophan]]\|Tryptophan]] fluorescence | [[nadh\|NADH]]/[[fad\|FAD]] ratio, [[total-urinary-porphyrin\|Porphyrins]], Pterins |
-| **Good** (optical + EIS) | Hematuria (Hb), pH, Conductivity | Total protein/albumin | [[[[glucose]]\|Glucose]] (EIS) |
+| **Excellent** (reagent-free optical) | — | Urinary EEM profile, [[tryptophan\|Tryptophan]] fluorescence | [[nadh\|NADH]]/[[fad\|FAD]] ratio, [[total-urinary-porphyrin\|Porphyrins]], Pterins |
+| **Good** (optical + EIS) | Hematuria (Hb), pH, Conductivity | Total protein/albumin | [[glucose\|Glucose]] (EIS) |
 | **Moderate** (electrode modification) | — | PSA (EIS), NMP22 (EIS) | Exosome counting (MALS), Lactate (EIS) |
 | **Low** (reagents + extraction) | — | ctDNA panels, miRNA panels, exosome-specific cargo | — |
 
@@ -288,7 +288,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
    - Clinical evidence: 94% accuracy for endometrial cancer (2024); significant discrimination for bladder cancer (2025); melanoma correlation (2021)
    - Immediately actionable with ML (Random Forest, SVM, XGBoost)
 
-2. **[[[[tryptophan]]|Tryptophan]] fluorescence (Ex 275/Em 340)** correlates with melanoma stage and bladder cancer
+2. **[[tryptophan|Tryptophan]] fluorescence (Ex 275/Em 340)** correlates with melanoma stage and bladder cancer
 
 3. **[[nadh|NADH]]/[[fad|FAD]] redox ratio (Ex 365→Em 460 / Ex 455→Em 525)** reflects cancer metabolic shift (Warburg effect)
 
@@ -315,7 +315,7 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 | 6 | RCC urinary biomarkers systematic review. *BMC Cancer* 2025;25:1672 | 10.1186/s12885-025-14900-8 |
 | 7 | Wan X et al. Urine-based biomarkers in bladder cancer. *Int J Oncol* 2025;66:18 | 10.3892/ijo.2025.5724 |
 | 8 | Jałocha-Bratek A et al. Spectral characteristics of urine in bladder cancer. *Sci Rep* 2025 | 10.1038/s41598-025-15801-3 |
-| 9 | Štrumfa I et al. [[[[tryptophan]]\|Tryptophan]]-related fluorescence of urine and melanoma. *IJMS* 2021;22(4):1884 | 10.3390/ijms22041884 |
+| 9 | Štrumfa I et al. [[tryptophan\|Tryptophan]]-related fluorescence of urine and melanoma. *IJMS* 2021;22(4):1884 | 10.3390/ijms22041884 |
 | 10 | Kalinowska P et al. Non-Invasive Endometrial Cancer Screening. *Cancers* 2024;16(18):3155 | 10.3390/cancers16183155 |
 | 11 | Masilamani V et al. Diagnosis of cancer by native fluorescence of urine. *Photochem Photobiol* 2012;88:1520 | 10.1111/j.1751-1097.2012.01239.x |
 | 12 | Al-Shukri M. Cancer screening by fluorescence spectra. *J King Saud Univ Sci* 2021 | 10.1016/j.jksus.2021.101178 |

@@ -250,7 +250,7 @@ SPA selects wavelengths by minimizing collinearity. Produces small, non-redundan
 | Hemoglobin/erythrocytes | ~414 nm, 540/580 nm | Soret + Q-bands |
 | Urobilinogen | ~490 nm | — |
 | Protein | Multiple (broad) | Diverse protein types |
-| [[[[glucose]]\|Glucose]], albumin | **None** in 340–850 nm | Confirmed absent in Vis range |
+| [[glucose\|Glucose]], albumin | **None** in 340–850 nm | Confirmed absent in Vis range |
 
 **Key insight:** The UV extension to 275 nm is critical. Below 340 nm: aromatic amino acids ([[tryptophan]] 280 nm, tyrosine 274 nm), nucleobases ~260 nm, [[uric-acid|uric acid]] ~290 nm, nitrite 354 nm.
 
@@ -271,7 +271,7 @@ See [[datascience/spectroscopy-biomarkers]] for full chromophore reference.
 | Analyte | R² range | RMSEP |
 |---------|----------|-------|
 | [[creatinin\|Creatinine]] | 0.85–0.95 | 0.5–1.5 mM |
-| [[[[urea]]\|Urea]] | 0.80–0.90 | — |
+| [[urea\|Urea]] | 0.80–0.90 | — |
 | Total protein | 0.75–0.85 | — |
 
 When PLS is sufficient: for small datasets (n < 200), PLS with proper cross-validation is typically more robust than ML methods which overfit.
@@ -557,10 +557,10 @@ See [[libraries]] for the full curated library reference.
 | Hemoglobin/[[red-blood-cells\|RBC]] | 414, 540, 576, 630 nm | SNV sufficient; Beer-Lambert holds well |
 | Urobilinogen | ~490 nm | SNV; careful baseline at UV edge |
 | [[creatinin\|Creatinine]] | No strong Vis abs.; 230 nm UV | UV: arPLS + SNV; SG 2nd derivative |
-| [[[[urea]]\|Urea]] | No Vis abs.; 200 nm deep UV | NIR overtones 900–1000 nm; SG 2nd derivative |
+| [[urea\|Urea]] | No Vis abs.; 200 nm deep UV | NIR overtones 900–1000 nm; SG 2nd derivative |
 | Protein | 280 nm (aromatic), broad Vis | SNV + SG derivative; VIP selection |
 | Nitrite | 354 nm (UV) | arPLS baseline crucial; near LED noise floor |
-| [[[[glucose]]\|Glucose]] | No Vis/UV abs. in aqueous | Essentially invisible 275–1078 nm |
+| [[glucose\|Glucose]] | No Vis/UV abs. in aqueous | Essentially invisible 275–1078 nm |
 | pH | Indirect (multiple chromophores) | PLS on full spectrum; AUC > 0.85 |
 | Specific gravity | Refractive/multi-compound | PLS on full spectrum; AUC > 0.89 |
 

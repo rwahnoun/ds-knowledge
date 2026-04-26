@@ -103,7 +103,7 @@ When using multiple excitation wavelengths (Jimini's 4 LEDs) with broadband dete
 This enables simultaneous quantification of [[tryptophan]], [[nadh|NADH]], riboflavin, and [[total-urinary-porphyrin|porphyrins]] from Jimini's native multi-LED fluorescence data without overlap artefacts.
 
 **Direct application:** Jimini 4 LEDs (275, 365, 405, 455 nm) × C12 broadband detection (321–870 nm) = partial EEM. PARAFAC separates:
-- [[[[tryptophan]]|Tryptophan]]: Ex 275→Em 330–360 nm
+- [[tryptophan|Tryptophan]]: Ex 275→Em 330–360 nm
 - [[nadh|NADH]]: Ex 365→Em 440–470 nm
 - Riboflavin: Ex 365/455→Em 520 nm
 - [[total-urinary-porphyrin|Porphyrins]]: Ex 405→Em 620–640 nm

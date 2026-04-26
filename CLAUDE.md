@@ -1,5 +1,8 @@
 # Claude Code — ds-knowledge Knowledge Base
 
+## Vault Contents
+**Read [`index.md`](index.md) first** to find what's in this vault. It's the curated navigation hub — every section, subdirectory, and note has a one-line description and wikilink. Use it to locate relevant notes before starting a task instead of grepping blindly. Regenerate it via [`updateIndex.md`](updateIndex.md) when the vault structure changes.
+
 ## Markdown File Template
 **Always follow `meta/tplMarkdown.md`** when writing or editing generic markdown files in this vault.
 **Always follow `meta/tplModule.md`** when writing or editing markdown files for a code module.

@@ -346,7 +346,7 @@ For particles of radius $r$ and wavelength $\lambda$, the size parameter is $x =
 
 | Particle | Size | λ = 500 nm → x | Scattering regime |
 |---|---|---|---|
-| [[[[bacteria]]\|Bacteria]] (E. coli) | ~1 µm | ~6 | Mie |
+| [[bacteria\|Bacteria]] (E. coli) | ~1 µm | ~6 | Mie |
 | [[red-blood-cells\|RBC]] | ~7 µm disk | ~44 | Geometric optics |
 | [[white-blood-cells\|WBC]] | ~12 µm | ~75 | Geometric optics |
 | Crystals | 10–100 µm | ~63–630 | Geometric optics |

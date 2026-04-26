@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f1ba0b250441af9d",
+        "id": "3cd5b57f9391df6e",
         "type": "tabs",
         "children": [
           {
-            "id": "a5535fce1fd950de",
+            "id": "520b1033c349776f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "biomarkers/singleBiomarkers/sheets/metabolites/phosphate.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "phosphate"
+              "title": "New tab"
             }
           }
         ]
@@ -63,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"tags\"]",
+                "query": "tag:#status/complete",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,7 +90,8 @@
               "title": "File Tree"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -117,7 +104,7 @@
       {
         "id": "42b45a7e3305001e",
         "type": "tabs",
-        "dimension": 58.59826589595376,
+        "dimension": 69.41176470588235,
         "children": [
           {
             "id": "bc9af87c6721d5bc",
@@ -159,7 +146,7 @@
       {
         "id": "f612f49fcee0a83f",
         "type": "tabs",
-        "dimension": 41.40173410404625,
+        "dimension": 30.58823529411765,
         "children": [
           {
             "id": "fb40d4bf0e7e9a26",
@@ -209,13 +196,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "biomarkers/singleBiomarkers/sheets/metabolites/phosphate.md",
-                "followCursor": false,
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of phosphate"
+              "title": "Outline"
             }
           },
           {
@@ -229,7 +215,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -247,57 +233,56 @@
       "claude-sidebar:New Claude Tab": false,
       "file-tree-alternative:File Tree Alternative Plugin": false,
       "marp-slides:Show Slide Preview": false,
-      "workspaces:Manage workspace layouts": false,
-      "workspaces-plus:Manage workspaces": false
+      "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "94840e1b394100c6",
+  "active": "520b1033c349776f",
   "lastOpenFiles": [
-    "biomarkers/singleBiomarkers/instructions.md",
-    "biomarkers/singleBiomarkers/compendium.pdf",
-    "biomarkers/singleBiomarkers/sheets/infection-inflammation/bacteria.md",
-    "biomarkers/singleBiomarkers/papers/chloride.pdf",
-    "biomarkers/singleBiomarkers/papers/bilirubin.pdf",
-    "biomarkers/singleBiomarkers/papers/bacteria.pdf",
-    "biomarkers/oncology/journal-article.pdf",
-    "spectrophotometry hardware/leds-and-sensors/overview.md",
-    "spectrophotometry hardware/leds-and-sensors/leds.md",
-    "spectrophotometry hardware/iris-IQ200 precision/iQ200_precision_summary.pdf",
-    "spectrophotometry hardware/iris-IQ200 precision/iQ200_precision_summary.md",
-    "usense/code & modules/projectDescription.md",
-    "datascience/signal-processing.md",
-    "presentations/260420.md",
-    "presentations/260420.md.tmp.70508.1776670107873",
-    "biomarkers/misc/biomarker-panel.md",
-    "presentations",
-    "[phosphate.md",
-    "QARA/api-architecture.md",
-    "biomarkers/singleBiomarkers/sheets/fluorophores/fad.md",
-    "biomarkers/singleBiomarkers/sheets/contaminants/metolachlore.md",
-    "biomarkers/singleBiomarkers/sheets/pigments-porphyrins/1GVroeX8",
-    "biomarkers/singleBiomarkers/sheets/pigments-porphyrins/azKqjlZS",
-    "biomarkers/singleBiomarkers/sheets/contaminants/chlorotalonil.md",
-    "biomarkers/singleBiomarkers/sheets/contaminants/pfas.md",
-    "biomarkers/singleBiomarkers/sheets/pigments-porphyrins/bilirubin.md",
-    "biomarkers/singleBiomarkers/sheets/physico-chemical/osmolality.md",
-    "biomarkers/singleBiomarkers/sheets/physico-chemical/usg.md",
-    "QARA/database.md",
-    "biomarkerurea.md",
-    "biomarkers/singleBiomarkers/sheets/physico-chemical/ketone.md",
-    "CLAUDE.md",
+    "datascience/calibration-transfer.md",
     "meta/tplModule.md",
-    "uric acid.md",
+    "map.md",
+    "CLAUDE.md.tmp.53152.1777204958187",
+    "CLAUDE.md.tmp.53152.1777204889258",
+    "map.md.tmp.53152.1777204869049",
     "meta/tplMarkdown.md",
-    "Untitled.md",
-    "biomarkers/singleBiomarkers/figures/fig2_molecular_weight.png",
+    "meta/base.base",
+    "usense/code/datascience/transformers.md",
+    "usense/code/datascience/prcPandas.md",
+    "usense/code/datascience/overview.md",
+    "usense/code/datascience/metrics.md",
+    "usense/code/ds-learn/explain.md",
+    "usense/code/ds-scripts/overview.md",
+    "usense/code/ds-learn/overview.md",
+    "index.md.tmp.53152.1777204663061",
+    "usense/code/ds-scripts",
+    "usense/code/ds-learn",
+    "usense/code/datascience",
+    "usense/code/workspace.md",
+    "usense/code/projectDescription.md",
+    "usense/code/conventions.md",
+    "usense/code",
+    "usense/code & modules/modules/transformers.md",
+    "usense/code & modules/ds-learn/explain.md",
+    "usense/code & modules/datascience/transformers.md",
+    "usense/code & modules/datascience/prcPandas.md",
+    "usense/code & modules/datascience/metrics.md",
+    "usense/code & modules/ds-scripts/overview.md",
+    "usense/code & modules/ds-learn/overview.md",
+    "usense/code & modules/datascience/overview.md",
+    "usense/code & modules/ds-scripts",
+    "usense/code & modules/modules/prcPandas.md",
+    "usense/code & modules/modules/metrics.md",
+    "usense/code & modules/modules/explain.md",
+    "usense/code & modules/repos/datascience.md",
     "biomarkers/misc/image.png",
-    "biomarkers/singleBiomarkers/figures/fig5_spectroscopic_map.png",
-    "biomarkers/singleBiomarkers/figures/fig8_wavelength_landscape.png",
-    "biomarkers/singleBiomarkers/figures/fig7_lod_comparison.png",
-    "biomarkers/singleBiomarkers/figures/fig6_method_coverage.png",
-    "biomarkers/singleBiomarkers/figures/fig4_concentration_ranges.png",
-    "biomarkers/singleBiomarkers/figures/fig3_detection_heatmap.png",
-    "biomarkers/singleBiomarkers/figures/fig1_classification.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig2_molecular_weight.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig5_spectroscopic_map.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig8_wavelength_landscape.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig7_lod_comparison.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig6_method_coverage.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig4_concentration_ranges.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig3_detection_heatmap.png",
+    "biomarkers/papers/singleBiomarkers/figures/fig1_classification.png",
     "biomarkers/misc/image 1.png"
   ]
 }

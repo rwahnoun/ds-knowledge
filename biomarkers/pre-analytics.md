@@ -18,7 +18,7 @@ date: 2026-04-19
 # Urine Sample Pre-Analytics & Stability
 
 Jimini pen-sized LED spectrophotometer (275/365/405/455 nm + white + 1070 nm NIR + EIS) for reagent-free urinalysis.
-Analyte panel: [[white-blood-cells|WBC]], [[red-blood-cells|RBC]], BAC, epiCells, crystals, [[creatinin|creatinine]], osmolality, TUP, [[[[porphobilinogen]]|PBG]], bilirubin, [[uric-acid|uric acid]], [[nadh|NADH]], protein, nitrites, [[sodium]], [[chloride]]. 20+ sources synthesized.
+Analyte panel: [[white-blood-cells|WBC]], [[red-blood-cells|RBC]], BAC, epiCells, crystals, [[creatinin|creatinine]], osmolality, TUP, [[porphobilinogen|PBG]], bilirubin, [[uric-acid|uric acid]], [[nadh|NADH]], protein, nitrites, [[sodium]], [[chloride]]. 20+ sources synthesized.
 See also: [[biomarker-panel]] [[optical-signatures]] [[signal-processing]]
 
 ---
@@ -68,9 +68,9 @@ For Jimini — which measures both cellular and chemical analytes — the more s
 
 ---
 
-### [[[[bacteria]]|Bacteria]]
+### [[bacteria|Bacteria]]
 
-[[[[bacteria]]|Bacteria]] multiply exponentially at room temperature using urine nutrients (amino acids, [[glucose]], [[urea]]).
+[[bacteria|Bacteria]] multiply exponentially at room temperature using urine nutrients (amino acids, [[glucose]], [[urea]]).
 
 **Growth rates:**
 - UPEC (E. coli) doubling time: ~20–40 min at 37°C; ~60–90 min at ~22°C RT.
@@ -97,9 +97,9 @@ Bilirubin is highly photosensitive. UV and visible light (especially 420–500 n
 
 ---
 
-### Porphobilinogen ([[[[porphobilinogen]]|PBG]]) and [[total-urinary-porphyrin|Porphyrins]] (TUP)
+### Porphobilinogen ([[porphobilinogen|PBG]]) and [[total-urinary-porphyrin|Porphyrins]] (TUP)
 
-[[[[porphobilinogen]]|PBG]] spontaneously polymerizes to uroporphyrinogen, which oxidizes to uroporphyrin (fluorescent porphyrin):
+[[porphobilinogen|PBG]] spontaneously polymerizes to uroporphyrinogen, which oxidizes to uroporphyrin (fluorescent porphyrin):
 
 ```
 PBG → uroporphyrinogen (polymerization; slow at low pH, fast at neutral-alkaline pH)
@@ -108,10 +108,10 @@ PBG → uroporphyrinogen (polymerization; slow at low pH, fast at neutral-alkali
 
 **Stability:**
 - Stable in acid urine (pH 3–5) at 4°C for ≥ 24 h.
-- At neutral-alkaline pH, RT: significant [[[[porphobilinogen]]|PBG]] loss within 4–8 h; in light, <2 h.
+- At neutral-alkaline pH, RT: significant [[porphobilinogen|PBG]] loss within 4–8 h; in light, <2 h.
 - Pre-formed [[total-urinary-porphyrin|porphyrins]]: photolabile, degrade in <2 h in light.
 
-**Spectroscopic consequence:** [[[[porphobilinogen]]|PBG]]→porphyrin conversion IS the signal for the TUP measurement (Soret at 405 nm, fluorescence ex405/em620). Aged samples give **false-positive TUP elevation** from [[[[porphobilinogen]]|PBG]] conversion even without pathology. **Measure within 30 min of collection; use amber/opaque containers.**
+**Spectroscopic consequence:** [[porphobilinogen|PBG]]→porphyrin conversion IS the signal for the TUP measurement (Soret at 405 nm, fluorescence ex405/em620). Aged samples give **false-positive TUP elevation** from [[porphobilinogen|PBG]] conversion even without pathology. **Measure within 30 min of collection; use amber/opaque containers.**
 
 ---
 
@@ -165,7 +165,7 @@ Single Q-band at 630 nm → MetHb dominant → Delayed > 4 h at RT
 | **[[creatinin\|Creatinine]]** | > 24 h | Very stable; can use stored samples |
 | **Protein** | ~8 h | Proteolysis by [[bacteria]] only at extended delay |
 | **Nitrites** | 4 days at RT | False positive risk if [[bacteria]] produce nitrites in vitro |
-| **[[[[glucose]]\|Glucose]]** | < 2 h | Bacterial/enzymatic consumption |
+| **[[glucose\|Glucose]]** | < 2 h | Bacterial/enzymatic consumption |
 
 ---
 
@@ -177,7 +177,7 @@ Single Q-band at 630 nm → MetHb dominant → Delayed > 4 h at RT
 |---|---|---|---|---|
 | **[[red-blood-cells\|RBC]]** | 1 h (dilute/alk) – 24 h (conc/acid) | 1–4 h | Osmotic lysis, proteolysis | Soret shifts 415→405 nm; scatter ↓ |
 | **[[white-blood-cells\|WBC]]** | 1 h (pH > 7.5) – 24 h (pH < 6.5) | ~1 day | pH-driven lysis, osmotic | Scatter ↓; fluorescence transiently ↑ then ↓ |
-| **[[[[bacteria]]\|Bacteria]]** | **1–2 h** (start of significant growth) | 24 h | Exponential replication | Scatter ↑; flavin fluorescence ↑ |
+| **[[bacteria\|Bacteria]]** | **1–2 h** (start of significant growth) | 24 h | Exponential replication | Scatter ↑; flavin fluorescence ↑ |
 | **Epithelial cells** | ~3 h | Not studied | Lysis | Scatter ↓ |
 | **Casts** | ~2 days | Not allowed (freeze) | Mechanical fragility | — |
 | **Crystals** | Variable | Precipitate ↑ on cooling | Solubility equilibrium | Scatter ↑ on cooling; dissolve on warming |
@@ -187,7 +187,7 @@ Single Q-band at 630 nm → MetHb dominant → Delayed > 4 h at RT
 | Analyte | 20–25°C (dark) | 20–25°C (light) | 4–8°C (dark) | Mechanism | Jimini priority |
 |---|---|---|---|---|---|
 | **Bilirubin** | ~8 h | **< 1–2 h** | 24 h | Photodegradation to lumirubin/biliverdin | ⚠️ Measure first, in dark |
-| **[[[[porphobilinogen]]\|PBG]]** | 4–8 h (neutral pH) | **< 2 h** | ≥ 24 h (acid, dark) | Polymerization to [[total-urinary-porphyrin\|porphyrins]]; light oxidation | ⚠️ Amber tube; measure <30 min |
+| **[[porphobilinogen\|PBG]]** | 4–8 h (neutral pH) | **< 2 h** | ≥ 24 h (acid, dark) | Polymerization to [[total-urinary-porphyrin\|porphyrins]]; light oxidation | ⚠️ Amber tube; measure <30 min |
 | **[[total-urinary-porphyrin\|Porphyrins]] (TUP)** | 4–8 h | **< 2 h** | 24 h | Photodegradation | ⚠️ Amber tube; measure promptly |
 | **Urobilinogen** | ~2 h | **< 1 h** | 24 h | Oxidation to urobilin | Protect from light |
 | **[[nadh\|NADH]]** | ~1–4 h | ~1 h | 8–12 h | Oxidation to NAD⁺ | Measure within 1 h |
@@ -196,7 +196,7 @@ Single Q-band at 630 nm → MetHb dominant → Delayed > 4 h at RT
 | **[[creatinin\|Creatinine]]** | > 24 h | > 24 h | Days | Very stable | Low urgency |
 | **Protein** | ~8 h | ~8 h | 24–48 h | Proteolysis (late) | Low urgency |
 | **Nitrites** | 4 days | 4 days | 8 h | Stable (in vitro BAC production later) | Moderate |
-| **[[[[glucose]]\|Glucose]]** | **< 2 h** | < 2 h | 2 h | Bacterial/enzymatic consumption | Not Jimini target |
+| **[[glucose\|Glucose]]** | **< 2 h** | < 2 h | 2 h | Bacterial/enzymatic consumption | Not Jimini target |
 
 ---
 
@@ -220,7 +220,7 @@ Continuous catheter monitoring (as in Kuenert 2025): bacterial growth is ongoing
 | Analyte | Sensitive wavelengths | Half-life in room light | Protection needed |
 |---|---|---|---|
 | **Bilirubin** | 400–500 nm (peak ~460 nm) | ~1–2 h | Amber container; dark room |
-| **[[[[porphobilinogen]]\|PBG]]** | 300–450 nm (accelerates polymerization) | 2–4 h | Amber container |
+| **[[porphobilinogen\|PBG]]** | 300–450 nm (accelerates polymerization) | 2–4 h | Amber container |
 | **[[total-urinary-porphyrin\|Porphyrins]] (TUP)** | 400–420 nm (Soret excitation) | 1–4 h | Amber container |
 | **Urobilinogen** | 400–500 nm | ~1 h | Amber container |
 | **[[nadh\|NADH]]** | 340–365 nm | ~1–4 h (mixed oxidation + light) | Minimize UV exposure |
@@ -267,7 +267,7 @@ Urease-producing [[bacteria]] can raise pH from 5.5 to >8 within **1–2 hours**
 
 No single preservative preserves all analytes simultaneously.
 
-| Preservative | [[[[bacteria]]\|Bacteria]] | [[white-blood-cells\|WBC]] | [[red-blood-cells\|RBC]] | Bilirubin | [[total-urinary-porphyrin\|Porphyrins]] | Notes |
+| Preservative | [[bacteria\|Bacteria]] | [[white-blood-cells\|WBC]] | [[red-blood-cells\|RBC]] | Bilirubin | [[total-urinary-porphyrin\|Porphyrins]] | Notes |
 |---|---|---|---|---|---|---|
 | **Refrigeration (4°C)** | Slowed | ✅ | ✅ | ✅ (+ dark) | ✅ (+ dark) | Best general option |
 | **Boric acid (1.8%)** | Inhibited | ✅ | Variable | — | ✅ (pH kept low) | Interferes with LE/nitrite strip tests |
@@ -281,7 +281,7 @@ No single preservative preserves all analytes simultaneously.
 |---|---|
 | **Boric acid** | Weak UV absorption; pH-shifted urobilinogen/bilirubin equilibria |
 | **Formaldehyde** | Strong UV absorption at ~270 nm — **directly interferes with [[uric-acid\|uric acid]]/protein at 275 nm** |
-| **[[[[sodium]]\|Sodium]] azide** | Absorbs at ~270 nm — UV measurement interference |
+| **[[sodium\|Sodium]] azide** | Absorbs at ~270 nm — UV measurement interference |
 | **Ethanol** | Strong UV absorption; completely disrupts 275 nm measurements |
 
 > [!IMPORTANT]
@@ -295,7 +295,7 @@ No single preservative preserves all analytes simultaneously.
 |---|---|---|---|
 | **Particle analysis ([[white-blood-cells\|WBC]], [[red-blood-cells\|RBC]], [[bacteria]])** | < 2 h RT | **< 1 h RT**, < 4 h refrigerated | < 1 h at RT |
 | **Chemical analysis (bilirubin, protein, etc.)** | < 2 h RT | < 2 h RT | < 2 h at RT |
-| **Light-sensitive (bilirubin, urobilinogen, [[[[porphobilinogen]]\|PBG]], TUP)** | Protect from light | Amber containers | Dark container; measure first |
+| **Light-sensitive (bilirubin, urobilinogen, [[porphobilinogen\|PBG]], TUP)** | Protect from light | Amber containers | Dark container; measure first |
 | **Refrigeration** | 2–8°C if delay > 2 h | 2–8°C if delay > 1 h | 2–8°C if delay > 1 h |
 | **No preservative needed if...** | Analyzed < 2 h at RT | Analyzed < 1 h at RT | Analyzed < 1 h |
 
@@ -307,8 +307,8 @@ No single preservative preserves all analytes simultaneously.
 
 | Analyte | Hard deadline (RT, no preservative) | Risk of delay |
 |---|---|---|
-| **[[[[bacteria]]\|Bacteria]] (BAC)** | **1–2 h** | Overcount — false positive UTI |
-| **[[[[porphobilinogen]]\|PBG]] / TUP** | **< 30 min** ideally; **< 1 h** maximum | False positive TUP from [[[[porphobilinogen]]\|PBG]] conversion |
+| **[[bacteria\|Bacteria]] (BAC)** | **1–2 h** | Overcount — false positive UTI |
+| **[[porphobilinogen\|PBG]] / TUP** | **< 30 min** ideally; **< 1 h** maximum | False positive TUP from [[porphobilinogen\|PBG]] conversion |
 | **Bilirubin** | **< 1 h in room light** | Undercount |
 | **[[nadh\|NADH]]** | **< 1 h** | Undercount |
 | **Urobilinogen** | **< 2 h** in light | Undercount |
@@ -321,13 +321,13 @@ No single preservative preserves all analytes simultaneously.
 | **Osmolality** | > 24 h (ionic strength stable) | No concern |
 | **Protein** | ~8 h | Low urgency |
 
-### The [[[[porphobilinogen]]|PBG]]-TUP Temporal Confound
+### The [[porphobilinogen|PBG]]-TUP Temporal Confound
 
 In acute porphyria patients:
-- Fresh sample: high [[[[porphobilinogen]]|PBG]] → low TUP ([[[[porphobilinogen]]|PBG]] not yet converted)
-- Sample after 2–4 h at RT: [[[[porphobilinogen]]|PBG]] → uroporphyrin → rising Soret + fluorescence
+- Fresh sample: high [[porphobilinogen|PBG]] → low TUP ([[porphobilinogen|PBG]] not yet converted)
+- Sample after 2–4 h at RT: [[porphobilinogen|PBG]] → uroporphyrin → rising Soret + fluorescence
 
-TUP measured on delayed samples overestimates "true" [[total-urinary-porphyrin|porphyrins]], artificially mimicking porphyria. To distinguish [[[[porphobilinogen]]|PBG]] from pre-formed [[total-urinary-porphyrin|porphyrins]], a second measurement on an acidified/fresh aliquot is required.
+TUP measured on delayed samples overestimates "true" [[total-urinary-porphyrin|porphyrins]], artificially mimicking porphyria. To distinguish [[porphobilinogen|PBG]] from pre-formed [[total-urinary-porphyrin|porphyrins]], a second measurement on an acidified/fresh aliquot is required.
 
 ### Bacterial Growth as a Confound for All Particulate Analytes
 
@@ -399,7 +399,7 @@ This enables the model to apply time-based correction factors, use time-from-col
 | European Confederation of Laboratory Medicine Urinalysis Guidelines (2000) | Scand J Clin Lab Investig 60:1–96 |
 | Sysmex — Effect of delay on urine particle analysis | sysmex.co.jp |
 | Rehak et al. 2007 — Photolysis of bilirubin in serum | PMC2131702 |
-| Bossenmaier et al., *Clinical Chemistry* 1968 — Stability of ALA and [[[[porphobilinogen]]\|PBG]] in urine | academic.oup.com/clinchem |
+| Bossenmaier et al., *Clinical Chemistry* 1968 — Stability of ALA and [[porphobilinogen\|PBG]] in urine | academic.oup.com/clinchem |
 | European Porphyria Network — Laboratory diagnosis | porphyria-europe.org |
 | Clinlabint — Analyte stability for [[total-urinary-porphyrin\|porphyrins]] and precursors | clinlabint.com |
 | Rosen et al., CMR 2020 — UPEC growth and metabolism in urine | ASM CMR DOI: 10.1128/cmr.00101-19 |

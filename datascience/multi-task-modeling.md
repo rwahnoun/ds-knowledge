@@ -19,7 +19,7 @@ date: 2026-04-19
 
 When and how multiple urine biomarkers should be predicted jointly from the same spectral/EIS input. Covers architectures (hard/soft sharing, cross-stitch, modality-specific encoders, PI-MTL), loss functions (Kendall uncertainty weighting, GradNorm, PCGrad, CAGrad), and task-grouping strategies for Jimini's 16-target panel. See [[datascience/spectroscopy-biomarkers]] for per-analyte spectral properties, [[signal-processing]] for the preprocessing pipeline, and [[physics-grounded-ml]] for physics-informed constraints applicable to MTL architectures.
 
-**Inputs:** LED signals at 275/365/405/455 nm + broadband visible (C12: 340–850 nm) + 1070 nm NIR (C14: 640–1050 nm) + multi-frequency EIS (10 Hz – 100 kHz). **Targets:** [[white-blood-cells|WBC]], BAC, [[red-blood-cells|RBC]], epiCells, Crystals, [[creatinin|Creatinine]], Osmolality, TUP, [[[[porphobilinogen]]|PBG]], [[[[sodium]]|Sodium]], [[[[chloride]]|Chloride]], Nitrites, [[uric-acid|Uric acid]], Bilirubin, Protein, [[nadh|NADH]] — a mix of binary classifiers and continuous regressors.
+**Inputs:** LED signals at 275/365/405/455 nm + broadband visible (C12: 340–850 nm) + 1070 nm NIR (C14: 640–1050 nm) + multi-frequency EIS (10 Hz – 100 kHz). **Targets:** [[white-blood-cells|WBC]], BAC, [[red-blood-cells|RBC]], epiCells, Crystals, [[creatinin|Creatinine]], Osmolality, TUP, [[porphobilinogen|PBG]], [[sodium|Sodium]], [[chloride|Chloride]], Nitrites, [[uric-acid|Uric acid]], Bilirubin, Protein, [[nadh|NADH]] — a mix of binary classifiers and continuous regressors.
 
 ---
 
@@ -69,7 +69,7 @@ Multi-task learning (MTL) trains a single model to predict multiple targets simu
 | Phenomenon | Why it favors MTL |
 |---|---|
 | **Same physical input** | All biomarkers come from the same spectrum; shared feature extraction is natural |
-| **Chemical correlations** | Osmolality correlates with [[creatinin\|creatinine]]; hematuria correlates with [[white-blood-cells\|WBC]] count; [[total-urinary-porphyrin\|porphyrins]] correlate with [[[[porphobilinogen]]\|PBG]] |
+| **Chemical correlations** | Osmolality correlates with [[creatinin\|creatinine]]; hematuria correlates with [[white-blood-cells\|WBC]] count; [[total-urinary-porphyrin\|porphyrins]] correlate with [[porphobilinogen\|PBG]] |
 | **Scarce labeled data** | n < 500 per target is common in clinical pilots; joint training effectively multiplies useful signal |
 | **Shared confounders** | Turbidity, pH, and concentration all affect multiple targets simultaneously — a shared encoder can learn to factor these out once |
 | **Mixed task types** | Binary classifiers ([[white-blood-cells\|WBC]], BAC) and regressors ([[creatinin\|creatinine]], osmolality) can share a spectral encoder while having task-specific output heads |
@@ -534,9 +534,9 @@ Define task types:
 | **[[red-blood-cells\|RBC]] / Hemoglobin** (strong at 405 nm) | **[[white-blood-cells\|WBC]]** (weak) | Hematuria + pyuria co-occur in UTI, nephritis |
 | **Osmolality** (proxy via EIS + NIR) | **[[creatinin\|Creatinine]]** | [[creatinin\|Creatinine]] is a major osmolyte; corr ≈ 0.7 |
 | **[[uric-acid\|Uric acid]]** (strong at 275 nm) | **TUP** (weak overlap) | Both UV absorbers; [[uric-acid\|uric acid]] subtraction improves TUP residual |
-| **[[[[porphobilinogen]]\|PBG]]** (via porphyrin fluorescence) | **TUP** | [[[[porphobilinogen]]\|PBG]] → [[total-urinary-porphyrin\|porphyrins]]; the two are sequential in the same pathway |
+| **[[porphobilinogen\|PBG]]** (via porphyrin fluorescence) | **TUP** | [[porphobilinogen\|PBG]] → [[total-urinary-porphyrin\|porphyrins]]; the two are sequential in the same pathway |
 | **Bilirubin** | **[[total-urinary-porphyrin\|Porphyrins]]** (TUP) | Both degradation products of heme; correlated in hepatic disease |
-| **[[[[bacteria]]\|Bacteria]]** | **Nitrites** | Gram-negative [[bacteria]] → nitrite production |
+| **[[bacteria\|Bacteria]]** | **Nitrites** | Gram-negative [[bacteria]] → nitrite production |
 | **Turbidity/scatter** ($A_{1070}$) | All cell targets ([[white-blood-cells\|WBC]], BAC, [[red-blood-cells\|RBC]], epiCells, Crystals) | Scatter is a shared confound for all particulate-containing samples |
 
 ### Implementation Strategy
@@ -616,7 +616,7 @@ Some Jimini targets are much easier to predict reliably (high spectral signal-to
 
 **Stage 2 — Indirect/weak-signal targets, using Stage 1 as input features:**
 - [[white-blood-cells|WBC]] — use {Hb, osmolality, turbidity, [[nadh|NADH]] fluorescence} as inputs
-- [[[[bacteria]]|Bacteria]] — use {turbidity, scatter slope, flavin fluorescence} + Stage 1 residuals
+- [[bacteria|Bacteria]] — use {turbidity, scatter slope, flavin fluorescence} + Stage 1 residuals
 - [[creatinin|Creatinine]] — use {osmolality, [[uric-acid|uric acid]], EIS} as predictors
 - Nitrites — use {[[bacteria]] prediction, scatter} as proxies
 - epiCells — use {turbidity, scatter slope, Stage 1 residuals}
@@ -747,7 +747,7 @@ Negative transfer occurs when jointly training two tasks degrades performance co
 | Nitrites ↔ Optical targets | **High risk** | Nitrites are spectrally invisible; forcing joint training with optical features adds no signal |
 
 > [!NOTE]
-> Do NOT include Nitrites, [[[[sodium]]|Sodium]], [[[[chloride]]|Chloride]] in the optical-domain MTL model. These are EIS targets and should be modeled separately with EIS-specific inputs.
+> Do NOT include Nitrites, [[sodium|Sodium]], [[chloride|Chloride]] in the optical-domain MTL model. These are EIS targets and should be modeled separately with EIS-specific inputs.
 
 ---
 
@@ -842,17 +842,17 @@ Predicts 9 blood parameters simultaneously ([[red-blood-cells|RBC]], Hb, Fe, TIB
 | **[[red-blood-cells\|RBC]] (hemoglobin)** | Classification | ★★★★★ | A405 Soret | A (optical absorbers) |
 | **[[uric-acid\|Uric acid]]** | Regression | ★★★★★ | A275, Beer-Lambert | A (optical absorbers) |
 | **TUP ([[total-urinary-porphyrin\|porphyrins]])** | Classification | ★★★★ | ex405/em620 fluorescence | A (optical absorbers) |
-| **[[[[porphobilinogen]]\|PBG]]** | Classification | ★★★ | A405 (converted form) | A (optical absorbers) |
+| **[[porphobilinogen\|PBG]]** | Classification | ★★★ | A405 (converted form) | A (optical absorbers) |
 | **Protein** | Regression | ★★★★ | A275 (Trp), fluorescence | A (optical absorbers) |
 | **[[nadh\|NADH]]** | Regression | ★★★ | ex365/em460 fluorescence | A (optical absorbers) |
 | **[[white-blood-cells\|WBC]]** | Classification | ★★ | Scatter + fluorescence | B (scatter/cellular) |
-| **[[[[bacteria]]\|Bacteria]] (BAC)** | Classification | ★★ | Scatter + UV + fluorescence | B (scatter/cellular) |
+| **[[bacteria\|Bacteria]] (BAC)** | Classification | ★★ | Scatter + UV + fluorescence | B (scatter/cellular) |
 | **Crystals** | Classification | ★ | Scatter slope | B (scatter/cellular) |
 | **epiCells** | Classification | ★ | Scatter | B (scatter/cellular) |
 | **Osmolality** | Regression | ★★ | EIS + NIR water band | C (EIS/colligative) |
 | **[[creatinin\|Creatinine]]** | Regression | ★ | EIS conductivity | C (EIS/colligative) |
-| **[[[[sodium]]\|Sodium]]** | Regression | ☆ | EIS only | C (EIS/colligative) |
-| **[[[[chloride]]\|Chloride]]** | Regression | ☆ | EIS only | C (EIS/colligative) |
+| **[[sodium\|Sodium]]** | Regression | ☆ | EIS only | C (EIS/colligative) |
+| **[[chloride\|Chloride]]** | Regression | ☆ | EIS only | C (EIS/colligative) |
 | **Nitrites** | Classification | ☆ | Proxy: BAC model | B proxy |
 
 ### Recommended Task Groups
@@ -1019,11 +1019,11 @@ Based on physical relationships:
 |---|---|---|
 | [[white-blood-cells\|WBC]], BAC, [[red-blood-cells\|RBC]] (binary) | ~200/class | ~300/class |
 | Bilirubin (regression) | ~150 | ~200 |
-| TUP, [[[[porphobilinogen]]\|PBG]] (binary, rare condition) | ~100/class (but rare!) | ~200/class |
+| TUP, [[porphobilinogen\|PBG]] (binary, rare condition) | ~100/class (but rare!) | ~200/class |
 | [[creatinin\|Creatinine]] (regression) | ~200 | ~300 |
 | Osmolality (regression) | ~150 | ~200 |
 
-For rare-positive targets (TUP, [[[[porphobilinogen]]|PBG]]) in the ~5–15% prevalence range, **data augmentation** (spectral noise addition, concentration jitter via Beer-Lambert simulation) is essential before MTL.
+For rare-positive targets (TUP, [[porphobilinogen|PBG]]) in the ~5–15% prevalence range, **data augmentation** (spectral noise addition, concentration jitter via Beer-Lambert simulation) is essential before MTL.
 
 ---
 
@@ -1126,7 +1126,7 @@ Before deploying a multi-task model:
 2. **Optimal task grouping is empirical.** The transfer gain matrix (which tasks help/hurt each other) can only be measured on Jimini data. Theory gives guidance but actual grouping requires ablation studies.
 3. **Effect of sample size on MTL advantage.** The literature shows consistent MTL advantage at n < 500 and neutral/negative at n > 1000. Jimini's clinical dataset size per target will determine whether MTL or ensemble of single-task models is better.
 4. **EIS + optical fusion.** No published paper jointly trains on UV-Vis spectra + multi-frequency EIS for multi-biomarker prediction. The MB-PLS / SO-PLS framework is the natural chemometric approach; for DL, a dual-encoder architecture (one for spectra, one for EIS impedance features) with a shared fusion layer is the natural design.
-5. **Temporal dynamics.** If sequential measurements of the same urine sample are possible (e.g., watching [[[[porphobilinogen]]|PBG]] darken over time), time-series MTL models could extract richer information than single-shot predictions.
+5. **Temporal dynamics.** If sequential measurements of the same urine sample are possible (e.g., watching [[porphobilinogen|PBG]] darken over time), time-series MTL models could extract richer information than single-shot predictions.
 
 ---
 

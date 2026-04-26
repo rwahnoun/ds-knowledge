@@ -1,22 +1,51 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
-  "colorGroups": [],
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:biomarkers  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:datascience  ",
+      "color": {
+        "a": 1,
+        "rgb": 28415
+      }
+    },
+    {
+      "query": "path:usense  ",
+      "color": {
+        "a": 1,
+        "rgb": 16771584
+      }
+    },
+    {
+      "query": "path:",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -2.1,
+  "textFadeMultiplier": -1.8,
   "nodeSizeMultiplier": 1.18463541666667,
   "lineSizeMultiplier": 0.725260416666667,
   "collapse-forces": false,
-  "centerStrength": 0.549479166666667,
-  "repelStrength": 7.65625,
-  "linkStrength": 0.8984375,
-  "linkDistance": 376,
-  "scale": 0.7514342322277588,
-  "close": true
+  "centerStrength": 0.127604166666667,
+  "repelStrength": 2.96875,
+  "linkStrength": 0.158854166666667,
+  "linkDistance": 107,
+  "scale": 0.5359795996225929,
+  "close": false
 }

@@ -61,7 +61,7 @@ Reagentless urine spectroscopy is feasible for a number of biomarkers across UV-
 | Occult Blood | 620 |
 | Specific Gravity | 615 |
 | Bilirubin | 540 |
-| [[[[glucose]]\|Glucose]] | 450 |
+| [[glucose\|Glucose]] | 450 |
 | [[creatinin\|Creatinine]] | 550 |
 
 > [!NOTE]
@@ -80,9 +80,9 @@ Reagentless urine spectroscopy is feasible for a number of biomarkers across UV-
 | pH (acidic/basic) | LRRE | good | good |
 | Protein, SG, Urobilinogen | LRRE | good | good |
 | Nitrite | LRRE | poor | poor |
-| [[[[glucose]]\|Glucose]], Albumin | — | **no correlation** | — |
+| [[glucose\|Glucose]], Albumin | — | **no correlation** | — |
 
-- **Key finding:** [[[[glucose]]|Glucose]] and albumin at physiological concentrations are **NOT detectable** by visible absorbance alone without reagents. Key bilirubin wavelengths: 344, 387, 427 nm.
+- **Key finding:** [[glucose|Glucose]] and albumin at physiological concentrations are **NOT detectable** by visible absorbance alone without reagents. Key bilirubin wavelengths: 344, 387, 427 nm.
 - **Jimini relevance:** Most directly relevant study. Multi-LED catheter approach mirrors Jimini design.
 
 ### Paper 1.5 — SpectraPhone Smartphone Spectrometer (2026)
@@ -105,9 +105,9 @@ Reagentless urine spectroscopy is feasible for a number of biomarkers across UV-
 | Study | Year | Analytes | Model | Key Finding |
 |-------|------|---------|-------|-------------|
 | Shaw et al. (*Clin. Biochem.*) | 1996 | Protein, [[creatinin\|creatinine]], [[urea]] | PLS (NIR) | Foundational paper; NIR-PLS for 3 clinical markers without reagents |
-| Pezzaniti et al. (*Clin. Biochem.*) | 2001 | [[[[urea]]\|Urea]], [[creatinin\|creatinine]], [[glucose]], protein, ketone | PLS | Multi-analyte NIR feasibility; [[glucose]] detectable in NIR (invisible in visible) |
+| Pezzaniti et al. (*Clin. Biochem.*) | 2001 | [[urea\|Urea]], [[creatinin\|creatinine]], [[glucose]], protein, ketone | PLS | Multi-analyte NIR feasibility; [[glucose]] detectable in NIR (invisible in visible) |
 | Suzuki et al. (*Med. Biol. Eng. Comput.*) | 2020 | Multiple urine components | PLS (POC) | Direct spot urine measurement (no dilution/drying) feasible |
-| Shaw et al. (*Clin. Chem.*) | 2000 | [[[[urea]]\|Urea]], [[creatinin\|creatinine]], total protein | PLS (Mid-IR, dried films) | Dried films eliminate water interference; highly accurate |
+| Shaw et al. (*Clin. Chem.*) | 2000 | [[urea\|Urea]], [[creatinin\|creatinine]], total protein | PLS (Mid-IR, dried films) | Dried films eliminate water interference; highly accurate |
 
 > [!IMPORTANT]
 > NIR at 700–1078 nm (Jimini C14 range) is dominated by water overtones at ~970 nm. [[creatinin|Creatinine]] and [[urea]] NIR bands require PLS on many wavelengths simultaneously. Main NIR [[creatinin|creatinine]] bands (1500–2200 nm) fall outside C14 range.
@@ -120,7 +120,7 @@ Reagentless urine spectroscopy is feasible for a number of biomarkers across UV-
 
 | Fluorophore | Excitation (nm) | Emission (nm) | Jimini LED | Relevance |
 |-------------|----------------|---------------|-----------|-----------|
-| [[[[tryptophan]]\|Tryptophan]] | 275–295 | 330–360 | **275 nm** | Protein marker, metabolic disease |
+| [[tryptophan\|Tryptophan]] | 275–295 | 330–360 | **275 nm** | Protein marker, metabolic disease |
 | [[nadh\|NADH]]/NAD(P)H | 340–365 | 440–470 | **365 nm** | Metabolic status, cellular energy |
 | Riboflavin (B2) | 365–450 | 520–560 | **365/455 nm** | Nutritional status |
 | [[total-urinary-porphyrin\|Porphyrins]] | 405–420 | 620–640 | **405 nm** | Porphyria, heme metabolism |
@@ -131,7 +131,7 @@ Reagentless urine spectroscopy is feasible for a number of biomarkers across UV-
 
 **Bladder Cancer EEM + CNN (2025):** CNN on fluorescence EEMs achieved 72.1% accuracy for cancer classification — shows limits of fluorescence alone (multi-modal data fusion needed). DOI: 10.1038/s41598-025-15801-3
 
-**[[[[tryptophan]]|Tryptophan]] & Melanoma (2021):** Autofluorescence at 295 nm significantly higher in melanoma patients; 275 nm LED excites [[tryptophan]] with emission at ~330–350 nm (within C12 range). DOI: 10.3390/ijms22041884
+**[[tryptophan|Tryptophan]] & Melanoma (2021):** Autofluorescence at 295 nm significantly higher in melanoma patients; 275 nm LED excites [[tryptophan]] with emission at ~330–350 nm (within C12 range). DOI: 10.3390/ijms22041884
 
 **Body Fluid Fluorescence Signatures (2023):** Precise excitation-emission peak maps for urine, validating 275 nm → 330–350 nm ([[tryptophan]]) and 365 nm → 400–500 nm (flavins, [[nadh|NADH]]) as dominant urine fluorescence channels. DOI: 10.1038/s41598-023-30241-7
 
@@ -210,7 +210,7 @@ For binary classification: LRRE (small N) or RF/XGBoost (large N)
 
 | LED (nm) | Absorption/Excitation Targets | Detectable Biomarkers |
 |----------|------------------------------|----------------------|
-| **275 nm** | [[uric-acid\|Uric acid]] (~290–295 nm), [[[[tryptophan]]\|Tryptophan]] (Ex 280 nm), Tyrosine (Ex 270 nm), DNA/RNA bases (260–280 nm) | [[uric-acid\|Uric acid]] (Beer-Lambert), Protein/[[[[tryptophan]]\|Tryptophan]] fluorescence (Em 330–350 nm), Indoxyl sulfate |
+| **275 nm** | [[uric-acid\|Uric acid]] (~290–295 nm), [[tryptophan\|Tryptophan]] (Ex 280 nm), Tyrosine (Ex 270 nm), DNA/RNA bases (260–280 nm) | [[uric-acid\|Uric acid]] (Beer-Lambert), Protein/[[tryptophan\|Tryptophan]] fluorescence (Em 330–350 nm), Indoxyl sulfate |
 | **365 nm** | [[nadh\|NADH]] (Ex 340–365 nm → Em 440–470 nm), Riboflavin (Ex 365 nm → Em 520 nm) | [[nadh\|NADH]] metabolic index, Riboflavin (B2 status) |
 | **405 nm** | [[total-urinary-porphyrin\|Porphyrins]] (Soret ~405–415 nm → Em 620–640 nm), Bilirubin (weak, ~415–450 nm) | [[total-urinary-porphyrin\|Porphyrins]] (porphyria, heme disease), Bilirubin (indirect) |
 | **455 nm** | Bilirubin (absorption ~430–460 nm), [[fad\|FAD]]/flavins (Ex 450 nm → Em 525 nm) | Bilirubin (direct), [[fad\|FAD]]/flavin metabolites |
@@ -229,7 +229,7 @@ For binary classification: LRRE (small N) or RF/XGBoost (large N)
 | Bilirubin | Vis absorbance | 405/455 nm | AUC ~0.92 (LR) |
 | Urobilinogen | Vis absorbance | 455–500 nm | AUC ~0.85 (LR) |
 | [[total-urinary-porphyrin\|Porphyrins]] | Fluorescence Ex405→Em620 | 405 nm excitation | Medium–High (if elevated) |
-| [[[[tryptophan]]\|Tryptophan]]/protein | Fluorescence Ex275→Em335 | 275 nm excitation | Semi-quantitative |
+| [[tryptophan\|Tryptophan]]/protein | Fluorescence Ex275→Em335 | 275 nm excitation | Semi-quantitative |
 | [[nadh\|NADH]] | Fluorescence Ex365→Em460 | 365 nm excitation | Metabolic index |
 | Specific gravity | NIR (970 nm water band) + visible | C14 970 nm | AUC ~0.85 (LR) |
 | pH (acidity) | Multi-wavelength spectral shift | Broadband | AUC ~0.85 (LR) |
@@ -239,13 +239,13 @@ For binary classification: LRRE (small N) or RF/XGBoost (large N)
 
 | Biomarker | Reason | Workaround |
 |-----------|--------|------------|
-| **[[[[glucose]]\|Glucose]]** | No UV-Vis chromophore; invisible in 300–850 nm | NIR (1000–2500 nm) needed; or EIS indirect |
+| **[[glucose\|Glucose]]** | No UV-Vis chromophore; invisible in 300–850 nm | NIR (1000–2500 nm) needed; or EIS indirect |
 | **Albumin (quantitative)** | Colorless in visible; weak scattering only | NIR + PLS; or pH-indicator reagent |
 | **[[creatinin\|Creatinine]] (precise)** | Absorbs at 234 nm (too low) + weak NIR overtones | NIR PLS at 1400–2500 nm (out of range) |
-| **[[[[urea]]\|Urea]]** | No UV-Vis chromophore | NIR at 1400–2500 nm |
+| **[[urea\|Urea]]** | No UV-Vis chromophore | NIR at 1400–2500 nm |
 | **Ketones** | Weak carbonyl absorption (~1700 nm) | NIR at 1000+ nm |
 | **Nitrites** | Transparent at Jimini λ; Griess → 540 nm | Indirect proxy from BAC model |
-| **[[[[sodium]]\|Sodium]]/[[[[chloride]]\|Chloride]]** | No UV-Vis absorption | EIS conductivity |
+| **[[sodium\|Sodium]]/[[chloride\|Chloride]]** | No UV-Vis absorption | EIS conductivity |
 
 ---
 
@@ -259,7 +259,7 @@ For binary classification: LRRE (small N) or RF/XGBoost (large N)
 | Uric Acid UV 2022 | First portable UV reagentless [[uric-acid\|uric acid]] | 10.3390/s22083009 |
 | Portable POC Uric Acid 2025 | 295 nm optimal; multi-analyte UV characterization | 10.3390/bios16020076 |
 | Human Fluorescent Profile 2020 | Autofluorescence reference map for urine | 10.1016/j.bspc.2019.101693 |
-| [[[[tryptophan]]\|Tryptophan]] & Melanoma 2021 | 275 nm excitation validated clinically | 10.3390/ijms22041884 |
+| [[tryptophan\|Tryptophan]] & Melanoma 2021 | 275 nm excitation validated clinically | 10.3390/ijms22041884 |
 | Body Fluid Signatures 2023 | Quantitative Ex/Em peaks for urine fluorophores | 10.1038/s41598-023-30241-7 |
 | Bladder Cancer EEM+CNN 2025 | CNN limits on EEM alone; 72% accuracy | 10.1038/s41598-025-15801-3 |
 | Shaw et al. 1996 | NIR protein/[[creatinin\|creatinine]]/[[urea]] PLS; foundational | 10.1016/0009-9120(95)02011-X |
@@ -271,7 +271,7 @@ For binary classification: LRRE (small N) or RF/XGBoost (large N)
 ## Gaps
 
 1. **[[creatinin|Creatinine]] without reagents**: 234 nm UV absorption is below Jimini's 275 nm range. NIR at 1078 nm (C14 limit) is marginal. EIS conductivity is the most promising route.
-2. **[[[[glucose]]|Glucose]] quantification**: Confirmed absent in 340–850 nm by two independent studies (Kuenert 2025, SpectraPhone 2026). NIR extension beyond 1000 nm needed.
+2. **[[glucose|Glucose]] quantification**: Confirmed absent in 340–850 nm by two independent studies (Kuenert 2025, SpectraPhone 2026). NIR extension beyond 1000 nm needed.
 3. **Albumin quantification mechanism**: SpectraPhone achieved R²=0.9981 for albumin in visible range but albumin is colorless — mechanism unexplained. May be indirect via light scattering from protein aggregates.
 4. **EIS + spectroscopy fusion**: No published paper jointly trains UV-Vis + multi-frequency EIS for multi-biomarker urine analysis. This is Jimini's potential unique contribution.
 5. **Specific gravity via NIR**: The 970 nm water overtone accessible via C14 is theoretically linked to osmolality/SG but has not been validated in a portable LED format.

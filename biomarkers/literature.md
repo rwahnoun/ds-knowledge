@@ -35,7 +35,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 | **Bilirubin** | Vis absorbance 344–450 nm | 405, 455 | AUC = 0.92 |
 | **Urobilinogen** | Vis absorbance ~490 nm | 455, VIS | AUC ~0.85 |
 | **[[total-urinary-porphyrin\|Porphyrins]]** | Fluorescence Ex 405→Em 620 nm | 405→C12 | Qualitative/semi-quant |
-| **Protein (indirect)** | [[[[tryptophan]]\|Tryptophan]] fluorescence Ex 275→Em 335 nm | 275→C12 | Semi-quantitative |
+| **Protein (indirect)** | [[tryptophan\|Tryptophan]] fluorescence Ex 275→Em 335 nm | 275→C12 | Semi-quantitative |
 | **[[nadh\|NADH]]** | Fluorescence Ex 365→Em 460 nm | 365→C12 | Metabolic index |
 | **Riboflavin** | Fluorescence Ex 365/455→Em 520 nm | 365/455→C12 | Quantitative |
 | **Specific gravity / pH** | Multi-wavelength spectral pattern | Broadband | AUC ~0.85–0.89 |
@@ -45,8 +45,8 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 | Biomarker | Method | Jimini channels | Confidence |
 |---|---|---|---|
 | **[[white-blood-cells\|WBC]] (leukocytes)** | Scatter + [[nadh\|NADH]] autofluorescence + EIS | A₁₀₇₀, ex365/em460, EIS | Low (binary pyuria Y/N) |
-| **[[[[bacteria]]\|Bacteria]]** | Scatter + flavin fluorescence + EIS | A₁₀₇₀, ex455/em525, EIS | Low-Medium (>10⁵ CFU/mL) |
-| **[[[[porphobilinogen]]\|PBG]]** | Via conversion to [[total-urinary-porphyrin\|porphyrins]] → Soret + fluorescence | A₄₀₅, A₄₀₅/A₄₈₀, ex405/em620 | Medium (binary, acute attacks) |
+| **[[bacteria\|Bacteria]]** | Scatter + flavin fluorescence + EIS | A₁₀₇₀, ex455/em525, EIS | Low-Medium (>10⁵ CFU/mL) |
+| **[[porphobilinogen\|PBG]]** | Via conversion to [[total-urinary-porphyrin\|porphyrins]] → Soret + fluorescence | A₄₀₅, A₄₀₅/A₄₈₀, ex405/em620 | Medium (binary, acute attacks) |
 | **TUP (total [[total-urinary-porphyrin\|porphyrins]])** | Soret absorption + fluorescence | ex405/em620, 2nd deriv | Medium-High |
 | **Osmolality** | EIS conductivity + NIR scatter | EIS σ, A₁₀₇₀, spectral integral | Medium |
 | **Crystals** | Scatter (wavelength-independent at large size) | A₁₀₇₀, A₈₀₀/A₄₀₀→1.0 | Low (binary ≥+) |
@@ -55,10 +55,10 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 
 | Biomarker | Why | Workaround |
 |---|---|---|
-| **[[[[glucose]]\|Glucose]]** | No chromophore in UV-Vis at physiological levels | NIR >1400 nm or EIS |
+| **[[glucose\|Glucose]]** | No chromophore in UV-Vis at physiological levels | NIR >1400 nm or EIS |
 | **Albumin (quantitative)** | Colorless in visible | Fluorescence (275→335) or EIS |
 | **[[creatinin\|Creatinine]] (precise)** | Absorbs at 234 nm (below 275 nm LED range) | NIR PLS or EIS |
-| **[[[[urea]]\|Urea]]** | No UV-Vis chromophore | NIR >1400 nm |
+| **[[urea\|Urea]]** | No UV-Vis chromophore | NIR >1400 nm |
 | **Electrolytes (Na⁺, K⁺, Cl⁻)** | No optical signature | EIS conductivity — total ionic, not individual ions |
 | **Nitrites** | Spectrally transparent; Griess requires reagent | Indirect via bacterial detection model |
 | **Epithelial cells** | No unique chromophore; scatter only | Not separable from [[white-blood-cells\|WBC]]/[[bacteria]] by bulk spectroscopy |
@@ -90,7 +90,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 
 - **Year:** 2024 | **Journal:** *Heliyon*, 10(18):e37722 | **DOI:** [10.1016/j.heliyon.2024.e37722](https://doi.org/10.1016/j.heliyon.2024.e37722)
 - **Device:** MEMS spectrochip (340–1000 nm, 5 nm resolution), white LED source
-- **Biomarkers / characteristic wavelengths:** Leukocytes 550, Nitrite 530, Urobilinogen 570, Protein 620, pH 615, Occult Blood 620, Specific Gravity 615, Ketone 530, Bilirubin 540, [[[[glucose]]|Glucose]] 450, Microalbumin 520 & 615, [[creatinin|Creatinine]] 550 nm
+- **Biomarkers / characteristic wavelengths:** Leukocytes 550, Nitrite 530, Urobilinogen 570, Protein 620, pH 615, Occult Blood 620, Specific Gravity 615, Ketone 530, Bilirubin 540, [[glucose|Glucose]] 450, Microalbumin 520 & 615, [[creatinin|Creatinine]] 550 nm
 - **Model:** Calibration Curve Modelling (CCM); R² > 0.95 for all 12 parameters
 
 > [!NOTE]
@@ -107,7 +107,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 | Bilirubin | **0.921** | Key wavelengths: 344, 387, 427 nm |
 | Erythrocytes | ~0.88 | |
 | Specific Gravity, pH, Protein, Urobilinogen | Good | |
-| [[[[glucose]]\|Glucose]], Albumin | No correlation | Confirmed not detectable in 340–850 nm range |
+| [[glucose\|Glucose]], Albumin | No correlation | Confirmed not detectable in 340–850 nm range |
 
 - **Key finding:** Directly analogous 3-LED approach to Jimini. Confirms [[glucose]] and albumin are NOT detectable by visible absorbance alone at physiological concentrations.
 
@@ -129,7 +129,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 
 ## NIR Spectroscopy Papers
 
-### Paper 2.1 — NIR Protein, [[creatinin|Creatinine]], [[[[urea]]|Urea]] (Shaw 1996)
+### Paper 2.1 — NIR Protein, [[creatinin|Creatinine]], [[urea|Urea]] (Shaw 1996)
 
 - **Year:** 1996 | **Journal:** *Clinical Biochemistry*, 29(1):11–19 | **DOI:** [10.1016/0009-9120(95)02011-X](https://doi.org/10.1016/0009-9120(95)02011-X)
 - **Biomarkers:** Protein, [[creatinin|creatinine]], [[urea]] | **Model:** NIR-PLS (reagent-free)
@@ -138,21 +138,21 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 ### Paper 2.2 — NIR Multi-Analyte (Pezzaniti 2001)
 
 - **Year:** 2001 | **Journal:** *Clinical Biochemistry*, 34(3):239–246 | **DOI:** [10.1016/S0009-9120(01)00198-9](https://doi.org/10.1016/S0009-9120(01)00198-9)
-- **Biomarkers:** [[[[urea]]|Urea]], [[creatinin|creatinine]], [[glucose]], protein, ketone | **Model:** NIR-PLS
-- **Key finding:** All 5 analytes quantifiable from the same spectral dataset. [[[[glucose]]|Glucose]] is detectable in NIR (not visible range) — rationale for extending Jimini into NIR.
+- **Biomarkers:** [[urea|Urea]], [[creatinin|creatinine]], [[glucose]], protein, ketone | **Model:** NIR-PLS
+- **Key finding:** All 5 analytes quantifiable from the same spectral dataset. [[glucose|Glucose]] is detectable in NIR (not visible range) — rationale for extending Jimini into NIR.
 
-### Paper 2.3 — Reagentless NIR [[[[urea]]|Urea]]/[[creatinin|Creatinine]] Ratio (2018)
+### Paper 2.3 — Reagentless NIR [[urea|Urea]]/[[creatinin|Creatinine]] Ratio (2018)
 
 - **Journal:** *Advanced Biomedical Engineering*, Vol. 7 | **Source:** J-Stage
-- **Biomarkers:** [[[[urea]]|Urea]], [[creatinin|creatinine]] (ratio = [[urea]]-to-[[creatinin|creatinine]], hydration/renal index)
-- **Key finding:** [[[[urea]]|Urea]]:[[creatinin|creatinine]] ratio predicted reagent-free from NIR spectra of spot urine. Confirms C14 range (570–1078 nm) provides useful [[urea]]/[[creatinin|creatinine]] information.
+- **Biomarkers:** [[urea|Urea]], [[creatinin|creatinine]] (ratio = [[urea]]-to-[[creatinin|creatinine]], hydration/renal index)
+- **Key finding:** [[urea|Urea]]:[[creatinin|creatinine]] ratio predicted reagent-free from NIR spectra of spot urine. Confirms C14 range (570–1078 nm) provides useful [[urea]]/[[creatinin|creatinine]] information.
 
 ### Paper 2.4 — Suzuki NIR POC Spot Urine (2020)
 
 - **Year:** 2020 | **Journal:** *Medical & Biological Engineering & Computing*, 58(1):67–74 | **DOI:** [10.1007/s11517-019-02063-1](https://doi.org/10.1007/s11517-019-02063-1)
 - **Key finding:** Direct measurement of spot urine (no dilution, no reagents) in NIR is feasible — most directly relevant NIR-POC paper.
 
-### Paper 2.5 — Mid-IR Reagent-free [[[[urea]]|Urea]]/[[creatinin|Creatinine]]/Protein (Shaw 2000)
+### Paper 2.5 — Mid-IR Reagent-free [[urea|Urea]]/[[creatinin|Creatinine]]/Protein (Shaw 2000)
 
 - **Year:** 2000 | **Journal:** *Clinical Chemistry*, 46(9):1493–1495 | **DOI:** [10.1093/clinchem/46.9.1493](https://doi.org/10.1093/clinchem/46.9.1493)
 - **Note for Jimini:** Mid-IR (2.5–25 µm) is outside Jimini's detector range. Dried film methodology may be applicable if sample prep is acceptable.
@@ -167,7 +167,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 
 | Fluorophore | Excitation (nm) | Emission (nm) | Jimini LED |
 |---|---|---|---|
-| [[[[tryptophan]]\|Tryptophan]] | 275–295 | 330–360 | 275 nm |
+| [[tryptophan\|Tryptophan]] | 275–295 | 330–360 | 275 nm |
 | [[nadh\|NADH]]/NAD(P)H | 340–365 | 440–470 | 365 nm |
 | Riboflavin (B2) | 365–450 | 520–560 | 365/455 nm |
 | [[total-urinary-porphyrin\|Porphyrins]] | 405–420 | 620–640 | 405 nm |
@@ -179,7 +179,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 - **Year:** 2012 | **Journal:** *Photochemistry and Photobiology* | **DOI:** [10.1111/j.1751-1097.2012.01239.x](https://doi.org/10.1111/j.1751-1097.2012.01239.x)
 - **Key finding:** 405 nm excitation distinguishes cancer patients from normal subjects using porphyrin-region emissions (620–640 nm). 405 nm LED is perfectly positioned for this.
 
-### Paper 3.3 — [[[[tryptophan]]|Tryptophan]] Fluorescence & Melanoma
+### Paper 3.3 — [[tryptophan|Tryptophan]] Fluorescence & Melanoma
 
 - **Year:** 2021 | **Journal:** *International Journal of Molecular Sciences*, 22(4):1884 | **DOI:** [10.3390/ijms22041884](https://doi.org/10.3390/ijms22041884)
 - **Wavelengths:** Ex 295 nm (selective for Trp over Tyr) → Em 330–350 nm
@@ -262,7 +262,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 
 | Paper | DOI | Where |
 |---|---|---|
-| [[[[tryptophan]]\|Tryptophan]] & Melanoma (2021) | 10.3390/ijms22041884 | MDPI |
+| [[tryptophan\|Tryptophan]] & Melanoma (2021) | 10.3390/ijms22041884 | MDPI |
 | Uric Acid UV Portable (2022) | 10.3390/s22083009 | MDPI Sensors |
 | Spectrochip CCM (2024) | 10.1016/j.heliyon.2024.e37722 | Heliyon |
 | MVG Cross-Device Augmentation (2025) | PMC12096352 | PMC |
@@ -282,8 +282,8 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 | Lim CK. *Methods Enzymol* 1986;123:383–405 | Porphyrin optical properties |
 | Al-Awthan et al. *Spectrochim Acta A* 2020;229:117995 | NIR [[urea]]/[[creatinin\|creatinine]] PLS |
 | Topham et al. *Clin Chem* 1978;24(9):1580–1583 | [[red-blood-cells\|RBC]] turbidity |
-| Watson & Schwartz. *Proc Soc Exp Biol Med* 1941;47(3):393–398 | [[[[porphobilinogen]]\|PBG]] original test |
-| Mateen et al. *J Biomed Optics* 2018;23(5):055006 | [[[[porphobilinogen]]\|PBG]] heat conversion |
+| Watson & Schwartz. *Proc Soc Exp Biol Med* 1941;47(3):393–398 | [[porphobilinogen\|PBG]] original test |
+| Mateen et al. *J Biomed Optics* 2018;23(5):055006 | [[porphobilinogen\|PBG]] heat conversion |
 | Buttery et al. *Clin Chem* 1995;41(1):103 | TUP 2nd-derivative spectroscopy |
 | Free AH et al. *Am J Clin Pathol* 1957;27(5):493–500 | [[white-blood-cells\|WBC]] leukocyte assay |
 | Carmine TC. *Sci Rep* 2025. PMC11782553 | V-PFCRC dilution correction |
@@ -296,7 +296,7 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 ## Gaps
 
 - [[creatinin|Creatinine]] at 234 nm (below Jimini's 275 nm range): no reagent-free optical option in Jimini's LED set — NIR C14 range or EIS is the only path
-- [[[[glucose]]|Glucose]] in visible range (confirmed not detectable by Kuenert 2025 and SpectraPhone 2026): NIR >1000 nm or EIS-GOx required
+- [[glucose|Glucose]] in visible range (confirmed not detectable by Kuenert 2025 and SpectraPhone 2026): NIR >1000 nm or EIS-GOx required
 - Albumin detection mechanism in SpectraPhone R²=0.9981: albumin is colourless in visible — mechanistic explanation missing from that paper
 - Specific gravity via NIR 970 nm (C14): theoretically linked to osmolality but not yet validated in a portable LED-based format
 - EIS + optical fusion for multi-biomarker urinalysis: no published precedent as of 2026-04-19

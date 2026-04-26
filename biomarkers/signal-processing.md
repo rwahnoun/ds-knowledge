@@ -285,9 +285,9 @@ DANN with gradient-reversal layer forces device-invariant feature learning. Requ
 | Challenge | Impact | Mitigation |
 |---|---|---|
 | Complex UV background | All UV analytes ([[creatinin\|creatinine]], albumin, [[uric-acid\|uric acid]]) | Derivative spectroscopy, PLS regression |
-| Water dominance in NIR | [[[[urea]]\|Urea]], [[creatinin\|creatinine]], ions | High-SNR instrument, robust PLS, temperature control |
+| Water dominance in NIR | [[urea\|Urea]], [[creatinin\|creatinine]], ions | High-SNR instrument, robust PLS, temperature control |
 | No chromophore on ions | Na, K, Cl, Mg, [[phosphate]] | EIS with ISE or conductivity sensor |
-| Weak [[glucose]] signal | [[[[glucose]]\|Glucose]] | GOx-EIS + ML full-spectrum fingerprinting |
+| Weak [[glucose]] signal | [[glucose\|Glucose]] | GOx-EIS + ML full-spectrum fingerprinting |
 | Particle overlap ([[red-blood-cells\|RBC]]/[[white-blood-cells\|WBC]]/epith.) | Cellular classification | MALS + trained ML classifier |
 | Urochrome/bilirubin background | All visible-range analytes | 2nd derivative, PCA outlier removal |
 | Temperature drift | All measurements | Peltier-controlled cell, ±0.1°C tolerance |

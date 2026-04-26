@@ -33,7 +33,7 @@ So **1×10⁴/mL = 10/µL = 10×10⁶/L** — this sits right at/below the clini
 | **[[white-blood-cells\|WBC]]** | **22–40%** (~40% at ~5/µL, ~12% at ~30/µL) | Wah 2005 Fig 1B + Table 2 |
 | [[red-blood-cells\|RBC]] | 25–45% (~45% at ~5/µL, ~14% at ~36/µL) | Wah 2005 Fig 1A + Table 2 |
 | Epithelial | 18–35% | Wah 2005 Table 2 |
-| [[[[bacteria]]\|Bacteria]] | ~30% at ~46/µL | Linko 2006 Table 3 |
+| [[bacteria\|Bacteria]] | ~30% at ~46/µL | Linko 2006 Table 3 |
 
 > [!IMPORTANT]
 > At **1×10⁴ [[white-blood-cells|WBC]]/mL (≈10/µL)** the iQ200 is near its lower limit of quantitation. Expected within-run imprecision is **25–40% CV**. The CV ≤ 20% threshold corresponds to ~18×10⁶ [[white-blood-cells|WBC]]/L ≈ 18/µL ≈ 1.8×10⁴/mL (Wah 2005; Butch 2008).
@@ -95,12 +95,12 @@ Within-run precision (Table 3):
 | [[white-blood-cells\|WBC]]-high | 464.6 | 4.0 | 3.3 |
 | SQEP | 6.35 | 48.4 | 28.1 |
 | NSE | 6.65 | 32.4 | 27.4 |
-| **[[[[bacteria]]\|Bacteria]]** | **45.9** | **30.0** | 14.8 |
+| **[[bacteria\|Bacteria]]** | **45.9** | **30.0** | 14.8 |
 | Yeast | 32.7 | 25.1 | 12.4 |
 
 Key: "Lower limit of quantification with iQ200 was about 20–30 particles×10⁶/L when using a criterion of between-day repeatability CV < 30%."
 
-[[[[bacteria]]|Bacteria]] sensitivity: 42.9% APR alone, 64.3% after reclassification; specificity 96.4→97.0%.
+[[bacteria|Bacteria]] sensitivity: 42.9% APR alone, 64.3% after reclassification; specificity 96.4→97.0%.
 
 Linearity 0–1000×10⁶/L, R² = 0.9874–0.9987. No carry-over.
 
@@ -156,7 +156,7 @@ Authors: "still inadequate in the determination of [[white-blood-cells|WBC]], [[
 3. iQ200 tends to **under-count [[white-blood-cells|WBC]] by ~20–25%** (slope 0.81 vs Fuchs-Rosenthal)
 4. Error bars often straddle the upper-limit-of-normal cut-off (17–28/µL) — **manual confirmation is the literature-standard recommendation** (Bakan 2016, Butch 2008)
 5. [[red-blood-cells|RBC]] at same regime: CV ~25–45%
-6. [[[[bacteria]]|Bacteria]]: semiquantitative only; APR-alone sensitivity ≈ 43%, improves to ≈ 64% after reclassification
+6. [[bacteria|Bacteria]]: semiquantitative only; APR-alone sensitivity ≈ 43%, improves to ≈ 64% after reclassification
 
 ### Uncertainty Window at 1×10⁴ [[white-blood-cells|WBC]]/mL Displayed
 

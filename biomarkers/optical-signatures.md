@@ -45,7 +45,7 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 
 | LED (nm) | Absorbance Targets | Fluorescence Targets |
 |---|---|---|
-| **275** | [[uric-acid\|Uric acid]] (290–295 nm), [[[[tryptophan]]\|Tryptophan]] (280 nm), Tyrosine (274 nm), DNA/RNA (260–280 nm) | [[[[tryptophan]]\|Tryptophan]] Em 330–350 nm (protein proxy), Indoxyl sulfate Em ~330 nm (CKD) |
+| **275** | [[uric-acid\|Uric acid]] (290–295 nm), [[tryptophan\|Tryptophan]] (280 nm), Tyrosine (274 nm), DNA/RNA (260–280 nm) | [[tryptophan\|Tryptophan]] Em 330–350 nm (protein proxy), Indoxyl sulfate Em ~330 nm (CKD) |
 | **365** | [[nadh\|NADH]] (340–365 nm), bilirubin near-UV tail | [[nadh\|NADH]] Em 440–470 nm, Riboflavin Em 520 nm, Hippuric acid Em 420 nm |
 | **405** | Porphyrin Soret (405–415 nm), Bilirubin (415–450 nm), Hemoglobin Soret | Porphyrin Em 620–640 nm |
 | **455** | Bilirubin peak (430–460 nm), [[fad\|FAD]]/Flavins (450 nm) | [[fad\|FAD]] Em 525 nm, Riboflavin Em 520 nm |
@@ -59,7 +59,7 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 
 | Range | Signals |
 |---|---|
-| 321–400 nm | [[[[tryptophan]]\|Tryptophan]] emission (330–360 nm), UV fluorescence |
+| 321–400 nm | [[tryptophan\|Tryptophan]] emission (330–360 nm), UV fluorescence |
 | 400–500 nm | [[nadh\|NADH]] emission (440–470 nm), Flavin emission, Porphyrin Soret absorbance |
 | 500–600 nm | Bilirubin absorbance, Hemoglobin Q-bands (541–576 nm), Riboflavin emission (520 nm) |
 | 600–700 nm | Porphyrin emission (620–640 nm), Hemoglobin 630 nm band |
@@ -81,28 +81,28 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 |---|---|---|---|
 | **Uric Acid** | 205, 230, 260, 293 (UV abs) | Yes (enzyme) | Strong π→π* transition; λ_max 292–294 nm; sits on complex UV background |
 | **[[creatinin\|Creatinine]]** | 210, 235, 280 (UV abs) · 1600–2200 nm (NIR) | Interferent | 235 nm least interfered in UV; NIR preferred in complex matrix |
-| **[[[[urea]]\|Urea]]** | 1400, 1800, 2000, 2200 nm (NIR) | Indirect | No UV chromophore; N-H/C=O vibrational overtones; water dominates NIR |
-| **[[[[glucose]]\|Glucose]]** | 210 (weak), 260–270 (weak UV) · full NIR | Yes (GOx) | No distinct chromophore; spectral fingerprinting + ML only |
+| **[[urea\|Urea]]** | 1400, 1800, 2000, 2200 nm (NIR) | Indirect | No UV chromophore; N-H/C=O vibrational overtones; water dominates NIR |
+| **[[glucose\|Glucose]]** | 210 (weak), 260–270 (weak UV) · full NIR | Yes (GOx) | No distinct chromophore; spectral fingerprinting + ML only |
 | **Albumin** | 229, 280 (UV abs) · Ex 295→Em 340 (fluo) | Yes (immunosensor) | 229 nm distinct from [[creatinin\|creatinine]] at 249 nm; [[tryptophan]] fluorescence more sensitive |
 | **Protein (Total)** | 220–230 (peptide bonds), 280 (aromatic) · Ex 280→Em 340 | Yes | Non-specific; multiple proteins contribute |
 | **[[total-urinary-porphyrin\|Porphyrins]] (TUP)** | 407 (Soret abs) · Ex 407→Em 620 (fluo) | — | High ε (~500,000 M⁻¹cm⁻¹); coproporphyrin Em 596/652, uroporphyrin Em 618/675 |
-| **Porphobilinogen ([[[[porphobilinogen]]\|PBG]])** | Abs ~240 nm (out of range); 405 nm after heat conversion | — | Heat converts [[[[porphobilinogen]]\|PBG]] → uroporphyrin (fluorescent); differential scan needed |
+| **Porphobilinogen ([[porphobilinogen\|PBG]])** | Abs ~240 nm (out of range); 405 nm after heat conversion | — | Heat converts [[porphobilinogen\|PBG]] → uroporphyrin (fluorescent); differential scan needed |
 | **Bilirubin** | 450–460 (vis abs) | — | Liver disease; photolabile; ε ≈ 55,000 M⁻¹cm⁻¹ at 454 nm |
 | **Red Blood Cells ([[red-blood-cells\|RBC]])** | 415/541/577 (oxyHb Soret+Q) · 660 (turbidity) | Yes | MetHb at 405 nm; hemolysis shifts spectrum; MALS for counting |
 | **White Blood Cells ([[white-blood-cells\|WBC]])** | 660 (turbidity) · 260 (DNA, post-lysis) | Yes | Slightly larger than [[red-blood-cells\|RBC]] (~10–15 µm); MALS + ML for differentiation |
-| **[[[[bacteria]]\|Bacteria]]** | 260 (DNA/RNA) · 660 (turbidity at >10⁵ CFU/mL) | Yes | Smaller particles (~1–5 µm) → more isotropic scatter |
+| **[[bacteria\|Bacteria]]** | 260 (DNA/RNA) · 660 (turbidity at >10⁵ CFU/mL) | Yes | Smaller particles (~1–5 µm) → more isotropic scatter |
 | **Crystals** | 660 (turbidity; wavelength-independent scatter) | — | High RI → strong MALS signal; crystal type not distinguishable by bulk spectroscopy |
 | **Cylinders (Casts)** | 660 (turbidity) · MALS (large cylindrical) | — | Tamm-Horsfall protein; cylindrical shape → anisotropic MALS profile |
 | **Epithelial Cells** | 660 (scatter) · MALS | — | Large (>20 µm squamous); no unique spectral signature |
 | **Oxalate** | 200, 220 (weak UV) | Yes (enzyme) | Direct optical challenging; indirect via crystal turbidity/MALS |
 | **Osmolality** | Refractometry 589 nm proxy · NIR 970 nm (water overtone) | Yes (conductivity) | No direct chromophore; EIS conductivity is practical surrogate |
 | **pH** | 434, 578 nm (indicator-based) · NIR water bands (indirect) | Yes (electrode) | NIR water-band shift with pH is very weak; indicator or electrode required |
-| **[[[[sodium]]\|Sodium]]** | 1450, 1940 nm (indirect NIR, exploratory) | Yes (ISE) | No direct chromophore; dominant urinary cation |
+| **[[sodium\|Sodium]]** | 1450, 1940 nm (indirect NIR, exploratory) | Yes (ISE) | No direct chromophore; dominant urinary cation |
 | **Potassium** | 1450, 1940 nm (indirect NIR, exploratory) | Yes (ISE) | No chromophore |
-| **[[[[chloride]]\|Chloride]]** | — | Yes (ISE) | Optically invisible |
+| **[[chloride\|Chloride]]** | — | Yes (ISE) | Optically invisible |
 | **Calcium** | 210–230 (very weak, as Ca-oxalate crystals) · 660 (turbidity) | Yes (ISE) | Dissolved Ca²⁺ optically transparent |
-| **[[[[magnesium]]\|Magnesium]]** | — | Yes (ISE) | Optically invisible |
-| **[[[[phosphate]]\|Phosphate]]** | — (820 nm with molybdate reagent) | Yes | Reagent required; inorganic [[phosphate]] UV-transparent |
+| **[[magnesium\|Magnesium]]** | — | Yes (ISE) | Optically invisible |
+| **[[phosphate\|Phosphate]]** | — (820 nm with molybdate reagent) | Yes | Reagent required; inorganic [[phosphate]] UV-transparent |
 | **[[nadh\|NADH]]** | Ex 340–365→Em 440–470 (fluorescence) | — | Metabolic activity marker; oxidizes to NAD⁺ (non-fluorescent) over hours |
 | **Riboflavin (B2)** | Ex 365/455→Em 520 (fluorescence) | — | Nutritional status; high quantum yield |
 
@@ -142,7 +142,7 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 | **Bilirubin** | Vis absorbance 344–450 nm | 405/455 → C12 | AUC = 0.92 (LRRE) |
 | **Urobilinogen** | Vis absorbance ~490 nm | 455/VIS → C12 | AUC ~0.85 (LRRE) |
 | **[[total-urinary-porphyrin\|Porphyrins]] (TUP)** | Fluorescence Ex 405→Em 620 | 405 LED → C12 620 nm | Semi-quantitative |
-| **Protein (indirect)** | [[[[tryptophan]]\|Tryptophan]] fluorescence Ex 275→Em 335 | 275 LED → C12 330–360 nm | Semi-quantitative |
+| **Protein (indirect)** | [[tryptophan\|Tryptophan]] fluorescence Ex 275→Em 335 | 275 LED → C12 330–360 nm | Semi-quantitative |
 | **[[nadh\|NADH]]** | Fluorescence Ex 365→Em 460 | 365 LED → C12 | Metabolic index |
 | **Riboflavin** | Fluorescence Ex 365/455→Em 520 | 365/455 → C12 | Quantitative |
 | **Specific gravity / osmolality** | Multi-wavelength + NIR water overtone | C14 970 nm + EIS | AUC ~0.85–0.89 |
@@ -152,8 +152,8 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 | Biomarker | Method | Jimini channels | Confidence |
 |---|---|---|---|
 | **[[white-blood-cells\|WBC]] (pyuria)** | Mie scatter + [[nadh\|NADH]] autofluorescence + EIS | A₁₀₇₀, ex365/em460, EIS | Low — binary Y/N |
-| **[[[[bacteria]]\|Bacteria]]** | Scatter + flavin fluorescence + EIS | A₁₀₇₀, ex455/em525, EIS | Low-medium (>10⁵ CFU/mL) |
-| **[[[[porphobilinogen]]\|PBG]]** | Heat-induced conversion → Soret + fluorescence | A₄₀₅, A₄₀₅/A₄₈₀, ex405/em620 | Medium — binary acute attacks |
+| **[[bacteria\|Bacteria]]** | Scatter + flavin fluorescence + EIS | A₁₀₇₀, ex455/em525, EIS | Low-medium (>10⁵ CFU/mL) |
+| **[[porphobilinogen\|PBG]]** | Heat-induced conversion → Soret + fluorescence | A₄₀₅, A₄₀₅/A₄₈₀, ex405/em620 | Medium — binary acute attacks |
 | **Crystals** | Scatter (wavelength-independent at large size) | A₁₀₇₀, A₈₀₀/A₄₀₀ → 1.0 | Low — binary |
 | **[[creatinin\|Creatinine]] (NIR)** | NIR vibrational overtones | C14 900–1078 nm + PLS | R² ~0.7–0.85 |
 
@@ -161,10 +161,10 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 
 | Biomarker | Why | Workaround |
 |---|---|---|
-| **[[[[glucose]]\|Glucose]]** | No UV-Vis chromophore at physiological concentrations | NIR >1400 nm or EIS (GOx electrode) |
+| **[[glucose\|Glucose]]** | No UV-Vis chromophore at physiological concentrations | NIR >1400 nm or EIS (GOx electrode) |
 | **Albumin (quantitative)** | Colorless in visible | Fluorescence Ex 275→Em 335; or EIS immunosensor |
 | **[[creatinin\|Creatinine]] (precise)** | UV peak at 234 nm (below 275 nm LED range) | NIR PLS or EIS |
-| **[[[[urea]]\|Urea]]** | No UV-Vis chromophore | NIR >1400 nm + PLS |
+| **[[urea\|Urea]]** | No UV-Vis chromophore | NIR >1400 nm + PLS |
 | **Electrolytes (Na⁺, K⁺, Cl⁻, Mg²⁺)** | No optical signature | EIS conductivity (total ionic) or ISE |
 | **Nitrites** | ε ~23 M⁻¹cm⁻¹ at 354 nm — negligible | Griess reagent cuvette or bacterial detection model |
 | **Epithelial cells** | No unique chromophore; scatter only | Not separable from [[white-blood-cells\|WBC]]/[[bacteria]] by bulk spectroscopy |
@@ -182,7 +182,7 @@ Single reference for absorbance, fluorescence, and scattering properties of urin
 | Temperature drift | Baseline shift; fluorescence quantum yield change | Peltier-controlled cell, ±0.1°C tolerance |
 | Diet pigments | Variable 400–600 nm background | Robust PCA outlier removal |
 | Bilirubin | Strong 400–500 nm overlap | A(454 nm) proxy; subtract scaled reference spectrum |
-| pH drift | Shifts urobilin peak (~50 nm across pH 5–8); alters [[[[porphobilinogen]]\|PBG]] conversion | Include pH as model covariate; EMSC pH-state references |
+| pH drift | Shifts urobilin peak (~50 nm across pH 5–8); alters [[porphobilinogen\|PBG]] conversion | Include pH as model covariate; EMSC pH-state references |
 | Inner filter effect | Non-linear fluorescence at high absorbance | IFE correction: F_corr = F_obs × 10^((A_ex + A_em)/2) |
 
 ---

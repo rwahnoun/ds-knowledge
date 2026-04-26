@@ -24,7 +24,7 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 
 ## Soluble Metabolites
 
-### [[[[urea]]|Urea]]
+### [[urea|Urea]]
 - **Optical:** `1400->` `1800->` `2000->` `2200->` (NIR vibrational overtones of N-H and C=O bonds)
 - **EIS:** Indirect — contributes to conductivity/ionic strength; not EIS-primary target.
 - **Notes:** No UV chromophore. High feasibility via NIR + PLS regression (correlation >0.99 in literature). Quantification requires multivariate chemometrics — water background dominates NIR. A key anchor for normalization ratios ([[urea]]-to-[[creatinin|creatinine]]).
@@ -39,7 +39,7 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 - **EIS:** EIS biosensors reported using uricase-modified electrodes; feasible.
 - **Notes:** High feasibility. Strong π→π* transition from purine ring. Peak at 293 nm sits on complex sloping UV background — requires derivative spectroscopy or baseline correction. Ascorbate and some drugs overlap at 260 nm. Most reliable detection at 290–294 nm window.
 
-### [[[[glucose]]|Glucose]]
+### [[glucose|Glucose]]
 - **Optical:** `210->` `260->` `270->` (weak UV) | NIR full-spectrum fingerprint
 - **EIS:** Well-documented — [[glucose]] oxidase (GOx)-based EIS biosensors; yes, EIS is strong here.
 - **Notes:** Low feasibility for reagent-free spectroscopy. No distinct chromophore. Only viable via broadband spectral fingerprinting + advanced ML (Random Forest, etc.). Clinically relevant threshold ~25 mg/dL glucosuria is very challenging optically. EIS with enzyme electrode is the better route.
@@ -95,7 +95,7 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 > [!IMPORTANT]
 > None of these ions have direct UV-Vis-NIR chromophores or fluorescence. All direct optical methods require reagents (colorimetric complexation). Reagent-free sensing relies on indirect NIR (water structure perturbation) or electrochemical methods.
 
-### [[[[sodium]]|Sodium]]
+### [[sodium|Sodium]]
 - **Optical:** `1450->` `1940->` (indirect NIR — ion hydration perturbs water bands; exploratory/high-risk)
 - **EIS:** Strong candidate — conductivity sensor measures total ionic strength (Na+ is dominant cation). Ion-selective electrode (ISE) + EIS can give Na+ specific signal. Feasible.
 - **Notes:** Most abundant urinary cation. Direct optical: not feasible reagent-free. EIS conductimetry is the practical route; combined with K+/Cl- model to parse contributions. Clinically: urinary Na+ reflects dietary intake and renal tubular function.
@@ -105,9 +105,9 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 - **EIS:** Ion-selective electrode (K+-ISE) combined with EIS feasible. Total conductivity reflects K+ among other ions.
 - **Notes:** Potassium has no optical signature. ISE electrochemistry is the standard analytical approach. In a multi-sensor device, a K+-selective film on an impedimetric electrode can provide selectivity. Clinically: urinary K+ for hypokalemia/hyperkalemia, aldosterone effects.
 
-### [[[[chloride]]|Chloride]]
+### [[chloride|Chloride]]
 - **Optical:** No direct chromophore. Not detectable by spectroscopy reagent-free.
-- **EIS:** Conductivity sensor (Cl- is dominant anion). [[[[chloride]]|Chloride]]-selective ISE + EIS feasible.
+- **EIS:** Conductivity sensor (Cl- is dominant anion). [[chloride|Chloride]]-selective ISE + EIS feasible.
 - **Notes:** Similar to Na+/K+ — electrochemical ISE is the only viable reagent-free route. Cl- tracks closely with Na+ in urine. Important for acid-base and hydration assessment.
 
 ### Calcium
@@ -115,15 +115,15 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 - **EIS:** Calcium-selective electrodes (ISE) combined with EIS reported. Feasible.
 - **Notes:** Ca²⁺ itself is UV-transparent. Detection as dissolved ion requires reagents. As crystals (Ca-oxalate), detectable via MALS/turbidity. ISE + EIS is more tractable for ionic calcium. Clinically: hypercalciuria (>7.5 mmol/day) is a major risk factor for urolithiasis.
 
-### [[[[magnesium]]|Magnesium]]
+### [[magnesium|Magnesium]]
 - **Optical:** No direct chromophore. Not detectable by spectroscopy reagent-free.
-- **EIS:** [[[[magnesium]]|Magnesium]]-selective ISE feasible but less developed than Na/K/Ca. Total ionic strength from conductivity provides a surrogate.
+- **EIS:** [[magnesium|Magnesium]]-selective ISE feasible but less developed than Na/K/Ca. Total ionic strength from conductivity provides a surrogate.
 - **Notes:** Mg²⁺ optically invisible. Lower concentration than Na/K/Ca in urine. NIR indirect approach highly speculative. ISE is the route. Clinically: low urinary Mg linked to nephrolithiasis and hypomagnesemia.
 
-### Phosphorus  [[[[phosphate]]|Phosphate]]
+### Phosphorus  [[phosphate|Phosphate]]
 - **Optical:** No direct chromophore for inorganic [[phosphate]] (PO₄³⁻) reagent-free. `210->` (very weak, requires reagent for colorimetric methods: molybdate blue at 820 nm)
-- **EIS:** [[[[phosphate]]|Phosphate]]-selective sensors (molybdate or [[phosphate]] binding protein-based) reported with EIS. Feasible.
-- **Notes:** [[[[phosphate]]|Phosphate]] is UV-transparent. Standard method uses ammonium molybdate + reducing agent (colorimetric at 820 nm) — requires reagent. In NIR, [[phosphate]] contributes subtle signals but deconvolution is very challenging. EIS with functionalized electrode is the more tractable non-optical approach. Clinically: hyperphosphaturia in Fanconi syndrome, renal tubular acidosis.
+- **EIS:** [[phosphate|Phosphate]]-selective sensors (molybdate or [[phosphate]] binding protein-based) reported with EIS. Feasible.
+- **Notes:** [[phosphate|Phosphate]] is UV-transparent. Standard method uses ammonium molybdate + reducing agent (colorimetric at 820 nm) — requires reagent. In NIR, [[phosphate]] contributes subtle signals but deconvolution is very challenging. EIS with functionalized electrode is the more tractable non-optical approach. Clinically: hyperphosphaturia in Fanconi syndrome, renal tubular acidosis.
 
 ---
 
@@ -157,13 +157,13 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 - **EIS:** Not a primary EIS target.
 - **Notes:** Formed from Tamm-Horsfall mucoprotein in renal tubules. Large size and cylindrical shape give distinctive MALS angular profile (anisotropic, forward-scattered). Differentiation of cast types (hyaline, granular, cellular) requires detailed scattering + ML. Low abundance in typical samples. Clinically: granular/cellular casts indicate significant renal pathology.
 
-### [[[[bacteria]]|Bacteria]] (Total Count)
+### [[bacteria|Bacteria]] (Total Count)
 - **Optical:** `260->` (DNA/RNA absorption) | `660->` (turbidity at >10⁵ CFU/mL)
 - **Fluorescence:** `260->340` (nucleic acid fluorescence)
 - **EIS:** Label-free impedimetric detection of [[bacteria]] well documented. EIS very feasible (impedance changes with bacterial adhesion/growth).
-- **Notes:** [[[[bacteria]]|Bacteria]] are smaller than eukaryotic cells (~1–5 µm), giving a more isotropic MALS profile. Simple turbidimetry at 600–660 nm effective for high loads. DNA absorbance at 260 nm adds specificity. EIS biosensors for [[bacteria]] (E. coli, etc.) demonstrated in literature. Significant bacteriuria: >10⁵ CFU/mL.
+- **Notes:** [[bacteria|Bacteria]] are smaller than eukaryotic cells (~1–5 µm), giving a more isotropic MALS profile. Simple turbidimetry at 600–660 nm effective for high loads. DNA absorbance at 260 nm adds specificity. EIS biosensors for [[bacteria]] (E. coli, etc.) demonstrated in literature. Significant bacteriuria: >10⁵ CFU/mL.
 
-### [[[[bacteria]]|Bacteria]] Type 2 (bacteria2Type)
+### [[bacteria|Bacteria]] Type 2 (bacteria2Type)
 - **Optical:** Same as [[bacteria]] above; type differentiation via MALS scattering profile shape.
 - **EIS:** Antibody-functionalized EIS biosensors can provide species-level differentiation; feasible.
 - **Notes:** Likely refers to a second bacterial population or gram-classification. Gram-positive vs. gram-negative [[bacteria]] differ in cell wall thickness → different RI → subtly different MALS profiles. Full ML-based classification from MALS is the primary approach. EIS with species-selective antibodies provides the most specific route.
@@ -188,10 +188,10 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 
 | Biomarker | Absorbance / Fluorescence | EIS? | Feasibility |
 |-----------|--------------------------|------|-------------|
-| **[[[[urea]]\|Urea]]** | `1400->` `1800->` `2000->` `2200->` | Indirect | High |
+| **[[urea\|Urea]]** | `1400->` `1800->` `2000->` `2200->` | Indirect | High |
 | **[[creatinin\|Creatinine]]** | `210->` `235->` `280->` `1600->` `1700->` `1800->` `2100->` `2200->` | Interferent | High |
 | **Uric Acid** | `205->` `230->` `260->` `293->` | Yes (enzyme) | High |
-| **[[[[glucose]]\|Glucose]]** | `210->` `260->` (NIR full spectrum) | Yes (GOx) | Low (optical); High (EIS) |
+| **[[glucose\|Glucose]]** | `210->` `260->` (NIR full spectrum) | Yes (GOx) | Low (optical); High (EIS) |
 | **Oxalate** | `200->` `220->` (weak, reagent-free) | Yes (enzyme) | Low (optical) |
 | **Ammonia** | `220->` `260->` (reagent-free weak) | Yes | Low (optical) |
 | **pH** | `434->` `578->` (indicator) | Yes (electrode) | Reagent-needed |
@@ -199,19 +199,19 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 | **Osmolality** | Refractometry 589 nm proxy | Yes (conductivity) | Medium (indirect) |
 | **Protein (total)** | `220->` `280->` · `280->340` `295->340` | Yes | Medium |
 | **Albumin** | `229->` `280->` · `295->340` | Yes (immunosensor) | Medium |
-| **[[[[sodium]]\|Sodium]]** | `1450->` `1940->` (exploratory) | Yes (ISE) | Exploratory (optical); High (EIS) |
+| **[[sodium\|Sodium]]** | `1450->` `1940->` (exploratory) | Yes (ISE) | Exploratory (optical); High (EIS) |
 | **Potassium** | `1450->` `1940->` (exploratory) | Yes (ISE) | Exploratory (optical); High (EIS) |
-| **[[[[chloride]]\|Chloride]]** | — | Yes (ISE) | Not optical |
+| **[[chloride\|Chloride]]** | — | Yes (ISE) | Not optical |
 | **Calcium** | `210->` `230->` (weak, crystal turbidity 660) | Yes (ISE) | Low (optical) |
-| **[[[[magnesium]]\|Magnesium]]** | — | Yes (ISE) | Not optical |
-| **Phosphorus / [[[[phosphate]]\|Phosphate]]** | — (820 nm with molybdate reagent) | Yes (func. electrode) | Not optical (reagent-free) |
+| **[[magnesium\|Magnesium]]** | — | Yes (ISE) | Not optical |
+| **Phosphorus / [[phosphate\|Phosphate]]** | — (820 nm with molybdate reagent) | Yes (func. electrode) | Not optical (reagent-free) |
 | **Red Blood Cells** | `660->` (scattering) · `415->` `541->` (Hb post-lysis) | Yes (impedance) | Medium |
 | **White Blood Cells** | `660->` (scattering) · `260->` `280->` (post-lysis) | Yes (impedance) | Medium |
 | **Epithelial Cells** | `660->` (scattering) + MALS | No | Medium |
 | **Crystals** | `660->` (turbidity) + MALS | No | Medium |
 | **Cylinders** | `660->` (scattering) + MALS | No | Medium |
-| **[[[[bacteria]]\|Bacteria]] (total)** | `260->` `660->` | Yes (label-free) | Medium |
-| **[[[[bacteria]]\|Bacteria]] Type 2** | `260->` `660->` + MALS | Yes (antibody EIS) | Medium |
+| **[[bacteria\|Bacteria]] (total)** | `260->` `660->` | Yes (label-free) | Medium |
+| **[[bacteria\|Bacteria]] Type 2** | `260->` `660->` + MALS | Yes (antibody EIS) | Medium |
 | **Urine Output** | Volume (flow sensor) | Possible (flow) | N/A (not spectroscopy) |
 | **Body Surface** | Calculated (BSA formula) | N/A | N/A (external input) |
 
@@ -221,9 +221,9 @@ Reagent-free detection reference for the Jimini panel. Device specs and LED-to-b
 
 EIS is most useful for:
 - **Electrolytes** (Na+, K+, Cl-, Ca2+, Mg2+) via ISE-EIS — the only feasible reagent-free path for individual ion quantification
-- **[[[[glucose]]|Glucose]]** via GOx enzyme electrode — well-established, high accuracy
+- **[[glucose|Glucose]]** via GOx enzyme electrode — well-established, high accuracy
 - **Albumin** via immunosensor — excellent sensitivity for microalbuminuria range
-- **[[[[bacteria]]|Bacteria]]** via label-free impedimetry — changes in charge transfer resistance upon bacterial adhesion
+- **[[bacteria|Bacteria]]** via label-free impedimetry — changes in charge transfer resistance upon bacterial adhesion
 - **Osmolality** via conductivity (low-frequency EIS) — practical surrogate for total ionic strength
 - **pH** via potentiometric electrode integrated alongside EIS cell
 
@@ -236,9 +236,9 @@ EIS is **not applicable** to: crystals, casts, epithelial cells (morphological/p
 | Challenge | Impact | Mitigation |
 |-----------|--------|------------|
 | Complex UV background | All UV analytes ([[creatinin\|creatinine]], albumin, [[uric-acid\|uric acid]]) | Derivative spectroscopy, PLS regression |
-| Water dominance in NIR | [[[[urea]]\|Urea]], [[creatinin\|creatinine]], ions | High-SNR instrument, robust PLS, temperature control |
+| Water dominance in NIR | [[urea\|Urea]], [[creatinin\|creatinine]], ions | High-SNR instrument, robust PLS, temperature control |
 | No chromophore on ions | Na, K, Cl, Mg, [[phosphate]] | EIS with ISE or conductivity sensor |
-| Weak [[glucose]] signal | [[[[glucose]]\|Glucose]] | GOx-EIS + ML full-spectrum fingerprinting |
+| Weak [[glucose]] signal | [[glucose\|Glucose]] | GOx-EIS + ML full-spectrum fingerprinting |
 | Particle overlap ([[red-blood-cells\|RBC]]/[[white-blood-cells\|WBC]]/epith.) | Cellular classification | MALS + trained ML classifier (SVM/CNN) |
 | Urochrome/bilirubin background | All visible-range analytes | 2nd derivative, PCA outlier removal |
 | Temperature drift | All measurements | Peltier-controlled cell, ±0.1°C tolerance |

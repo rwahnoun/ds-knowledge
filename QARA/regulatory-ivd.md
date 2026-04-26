@@ -28,7 +28,7 @@ Before any classification can be determined, the **intended purpose** must be pr
 > Jimini is a portable in vitro diagnostic device intended for the qualitative and semi-quantitative analysis of human urine in point-of-care or near-patient settings. The device uses multi-wavelength UV-Vis-NIR optical spectroscopy (275–1078 nm) and electrochemical impedance spectroscopy (EIS) to detect and estimate the following analytes in urine:
 >
 > **Cellular/particulate markers (binary classification):** white blood cells ([[white-blood-cells|WBC]]/leukocytes), red blood cells ([[red-blood-cells|RBC]]/erythrocytes), [[bacteria]] (BAC), epithelial cells, crystals
-> **Chemical analytes (quantitative/semi-quantitative):** [[creatinin|creatinine]], osmolality, total urinary [[total-urinary-porphyrin|porphyrins]] (TUP), [[porphobilinogen]] ([[[[porphobilinogen]]|PBG]]), bilirubin, [[uric-acid|uric acid]], protein
+> **Chemical analytes (quantitative/semi-quantitative):** [[creatinin|creatinine]], osmolality, total urinary [[total-urinary-porphyrin|porphyrins]] (TUP), [[porphobilinogen]] ([[porphobilinogen|PBG]]), bilirubin, [[uric-acid|uric acid]], protein
 > **Supporting markers:** [[sodium]], [[chloride]], nitrites
 >
 > Results are intended to assist healthcare professionals in screening for urinary tract infection, haematuria, metabolic disorders, and porphyria. They are not intended as a definitive diagnosis. Confirmation by laboratory testing is required when clinically indicated.
@@ -49,7 +49,7 @@ The EU IVDR (Regulation 2017/746) uses a risk-based seven-rule classification sy
 |---|---|---|
 | **Rule 1** | Jimini detects [[bacteria]] in urine (not blood supply screening) | Not applicable → Not Class D |
 | **Rule 2** | No blood group or transplant markers | Not applicable |
-| **Rule 3(a–l)** | **Key question: does porphyria screening trigger Rule 3(j)?** Porphyria is life-threatening — detecting [[[[porphobilinogen]]\|PBG]]/TUP for acute attack identification *could* trigger Rule 3(j) | Borderline Class B/C — see below |
+| **Rule 3(a–l)** | **Key question: does porphyria screening trigger Rule 3(j)?** Porphyria is life-threatening — detecting [[porphobilinogen\|PBG]]/TUP for acute attack identification *could* trigger Rule 3(j) | Borderline Class B/C — see below |
 | **Rule 4** | Intended for professional use, not home self-testing | Not applicable |
 | **Rule 5** | Jimini IS intended for a specific IVD purpose | Not a Class A instrument |
 
@@ -59,7 +59,7 @@ The EU IVDR (Regulation 2017/746) uses a risk-based seven-rule classification sy
 
 General urinalysis falls under the **Class B default** for devices not meeting Rules 1–4. MDCG 2020-16 rev.3 explicitly lists clinical chemistry analyzers and general urinalysis systems as Class B examples.
 
-**Porphyria markers ([[[[porphobilinogen]]|PBG]], TUP) → potentially Class C**
+**Porphyria markers ([[porphobilinogen|PBG]], TUP) → potentially Class C**
 
 If the device's intended purpose explicitly includes "detection of acute porphyria attacks" or "management of patients with porphyria," Rule 3(j) — "devices used in the management of patients suffering from life-threatening diseases or conditions" — may apply, elevating these analytes to **Class C**.
 
@@ -78,8 +78,8 @@ If the device's intended purpose explicitly includes "detection of acute porphyr
 | Analyte Group | Classification | Rule | Rationale |
 |---|---|---|---|
 | General urinalysis ([[white-blood-cells\|WBC]], [[red-blood-cells\|RBC]], BAC, epiCells, crystals, bilirubin, protein, [[uric-acid\|uric acid]], [[creatinin\|creatinine]], osmolality, Na, Cl, nitrites) | **Class B** | Rule 5/default | General urinalysis — Class B default |
-| TUP, [[[[porphobilinogen]]\|PBG]] (scoped as screening) | **Class B** | Rule 5/default | Screening/informational claim |
-| TUP, [[[[porphobilinogen]]\|PBG]] (if acute management claimed) | **Class C** | Rule 3(j) | Life-threatening condition management |
+| TUP, [[porphobilinogen\|PBG]] (scoped as screening) | **Class B** | Rule 5/default | Screening/informational claim |
+| TUP, [[porphobilinogen\|PBG]] (if acute management claimed) | **Class C** | Rule 3(j) | Life-threatening condition management |
 | **Overall device (recommended)** | **Class B** | — | Conservative scoping; revisit for v2.0 |
 
 ---
@@ -174,10 +174,10 @@ If the spectroscopic approach is considered **novel** (no predicate with the sam
 |---|---|
 | **[[white-blood-cells\|WBC]] (leukocytes)** | Manual phase-contrast microscopy, Fuchs-Rosenthal chamber |
 | **[[red-blood-cells\|RBC]] (erythrocytes)** | Manual phase-contrast microscopy |
-| **[[[[bacteria]]\|Bacteria]] (BAC)** | Urine culture (>10⁵ CFU/mL) |
+| **[[bacteria\|Bacteria]] (BAC)** | Urine culture (>10⁵ CFU/mL) |
 | **[[creatinin\|Creatinine]]** | Enzymatic [[creatinin\|creatinine]] assay |
 | **Bilirubin** | Clinical chemistry analyzer |
-| **TUP/[[[[porphobilinogen]]\|PBG]]** | HPLC porphyrin quantification |
+| **TUP/[[porphobilinogen\|PBG]]** | HPLC porphyrin quantification |
 
 ### Performance Benchmarks
 
@@ -215,7 +215,7 @@ The Jimini AI/ML prediction models qualify as **high-risk AI** under the EU AI A
 | Spectral acquisition firmware (STM32) | Class B | Hardware failure could affect measurement accuracy |
 | Signal processing pipeline | Class B | Errors could propagate to incorrect results |
 | ML prediction models | **Class B–C** | Incorrect [[white-blood-cells\|WBC]]/[[red-blood-cells\|RBC]]/BAC result could delay treatment |
-| Porphyria detection ([[[[porphobilinogen]]\|PBG]]/TUP) | **Class C** | Acute porphyria is life-threatening; missed detection has serious consequences |
+| Porphyria detection ([[porphobilinogen\|PBG]]/TUP) | **Class C** | Acute porphyria is life-threatening; missed detection has serious consequences |
 | Result display and reporting | Class B | |
 
 ### Predetermined Change Control Plan (PCCP)
