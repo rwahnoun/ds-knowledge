@@ -1,4 +1,9 @@
 ---
+type: Note
+belongs_to: "[[xxx]]"
+related_to: "[[D:\code\ds-knowledge\biomarkers\papers\singleBiomarkers\compendium]]"
+---
+---
 title: Multi-Task & Multi-Output Prediction for Spectroscopic Biomarker Analysis
 aliases:
   - multi-task learning

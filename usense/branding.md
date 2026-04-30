@@ -44,6 +44,5 @@ For markdown-to-PDF rendering, **invoke the `/md2pdf` skill** rather than re-imp
 | `~/.claude/assets/usenseLogo.png` | Logo file |
 
 ## Gaps
-
 - No documented Usense slide template equivalent to `md2pdf`. PowerPoint and Beamer decks are produced ad-hoc via [[scientific-slides]] without enforced branding.
 - Brand palette is not formally specified anywhere outside the `md2pdf` source — exact hex values would help if other tools need to match.
