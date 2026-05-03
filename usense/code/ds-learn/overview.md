@@ -57,3 +57,8 @@ Repo-internal docs live in `docs/` as Markdown files.
 - This repo did not have a `CLAUDE.md` at migration time, so package structure, training entrypoints, and Azure ML deployment workflow are documented only at the readme/code level.
 - Need a written counterpart to [[datascience]]'s deployment section: which scripts produce which `.joblib`, where they land, how they reach `ds-compute`.
 - Trained-model registry (which versions are deployed, who deployed when) is not documented in this vault.
+
+[workspace]: ../workspace.md "Workspace Layout — datascience, ds-scripts, ds-learn"
+[conventions]: ../conventions.md "Code Conventions — Usense Datascience Repos"
+[projectDescription]: ../projectDescription.md "ds-learn — Project Description & Data Model"
+[conventions#Data & models]: <../conventions.md#Data & models> "Code Conventions — Usense Datascience Repos"

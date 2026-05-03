@@ -18,7 +18,7 @@ date: 2026-04-19
 # Feasibility Analysis — Reagent-Free Multi-Modal Spectrophotometric Urinalysis
 
 Comprehensive feasibility analysis for reagent-free quantitative analysis of 20 key urine biomarkers using UV-Vis absorption, NIR spectroscopy, fluorescence, and MALS.
-See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[literature]]
+See also: [[optical-signatures]] [[biomarker-panel]] [[jimini-signal-processing]] [[literature]]
 
 ---
 
@@ -261,3 +261,37 @@ Chemometrics is the analytical engine of a reagent-free system — raw spectral 
 - Individual inorganic ion sensing via NIR water-band perturbation: no commercial POC validation exists
 - Thermal management specifications (±0.1°C Peltier control) require engineering validation for miniaturized device form factor
 - Albumin fluorescence inner filter effect: Jimini path length and typical urine absorbance range not yet characterized
+
+[optical-signatures]: optical-signatures.md "Urine Biomarker Optical Signatures — Reference Tables"
+[biomarker-panel]: biomarker-panel.md "Urine Biomarker Panel — Jimini Reference"
+[signal-processing]: signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[literature]: literature.md "Literature — LED Spectroscopy & EIS for Urine Biomarker Prediction"
+[urea\|Urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[creatinin\|creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid\|uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[total-urinary-porphyrin\|porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[red-blood-cells\|RBC]: papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[white-blood-cells\|WBC]: papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[phosphate]: papers/singleBiomarkers/sheets/metabolites/phosphate.md "Phosphate"
+[porphobilinogen|PBG]: papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[creatinin|creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid|uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[total-urinary-porphyrin|porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[tryptophan]: papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[nadh|NADH]: papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[fad|FAD]: papers/singleBiomarkers/sheets/fluorophores/fad.md "FAD (Flavin Adenine Dinucleotide)"
+[red-blood-cells|RBC]: papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[white-blood-cells|WBC]: papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[urea|Urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[creatinin|Creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[glucose|Glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[total-urinary-porphyrin|Porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[bacteria\|Bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[porphobilinogen\|PBG]: papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[creatinin\|Creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid\|Uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[glucose\|Glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[total-urinary-porphyrin\|Porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"

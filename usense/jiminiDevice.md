@@ -116,3 +116,7 @@ Measurements are represented as structured Python objects in the `datascience` (
 - SWV voltage sweep range and step not documented
 - HDR merge algorithm (long + short exposure combination) not described
 - No documented calibration procedure for cross-device normalization of optical signals
+
+[datascience/spectroscopy-biomarkers]: ../datascience/spectroscopy-biomarkers.md "Urine Spectroscopy & Biomarker Prediction with LED-Based Portable Devices"
+[turbidity]: ../datascience/turbidity.md "Turbidity Estimation in Urine Spectrophotometry"
+[calibration-transfer]: ../datascience/calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"

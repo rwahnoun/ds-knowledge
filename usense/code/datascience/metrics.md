@@ -125,3 +125,6 @@ Thin wrapper around `scipy.stats.kurtosis`.
 - `metGeneric` requires a pandas Series with numeric index; behavior on plain ndarray is not documented
 - No aggregate QC thresholds defined — callers must set pass/fail criteria externally
 - `resizeDataFrame` uses image resize (bilinear) which may introduce artifacts for sparse spectra
+
+[signal-processing]: ../../../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[jiminiDevice]: ../../jiminiDevice.md "Jimini Device"

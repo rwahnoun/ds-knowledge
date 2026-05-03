@@ -601,3 +601,22 @@ See [[datascience/spectroscopy-biomarkers]] for full chromophore reference.
 4. **Quantification vs. classification:** Most recent studies focus on binary classification. Quantitative prediction requires concentration-balanced training sets and RMSEP below clinical decision threshold: [[creatinin|creatinine]] RMSEP < 0.5 mM; total protein RMSEP < 30 mg/24h; specific gravity RMSEP < 0.002 SG units.
 
 5. **Comparison with strip-based systems:** No published comparison between pure spectroscopic methods and semi-quantitative strips for the 275–1078 nm range.
+
+[normalization]: normalization.md "Signal Normalization in Photospectroscopy"
+[matrix-correction]: matrix-correction.md "Matrix Correction for Urine Variability in Spectroscopic Measurements"
+[calibration-transfer]: calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"
+[multi-task-modeling]: multi-task-modeling.md "Multi-Task & Multi-Output Prediction for Spectroscopic Biomarker Analysis"
+[turbidity]: turbidity.md "Turbidity Estimation in Urine Spectrophotometry"
+[total-urinary-porphyrin|porphyrins]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[nadh|NADH]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[urea]: ../biomarkers/papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[glucose\|Glucose]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[tryptophan]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[uric-acid|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[datascience/spectroscopy-biomarkers]: spectroscopy-biomarkers.md "Urine Spectroscopy & Biomarker Prediction with LED-Based Portable Devices"
+[creatinin\|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[urea\|Urea]: ../biomarkers/papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[physics-grounded-ml]: physics-grounded-ml.md "Physics-Grounded Machine Learning for Spectral Analysis"
+[red-blood-cells\|RBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[libraries]: libraries.md "Python Libraries for Spectrophotometry & Biomarker Estimation"

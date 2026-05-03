@@ -366,3 +366,17 @@ Layer 3: Validation via Explainability (Category E)
 4. **Matrix effects in urine are severe.** Physics-grounded models need to account for inner-filter effects, pH-dependent spectral shifts, and variable dilution — most papers assume well-controlled lab conditions. See [[matrix-correction]].
 5. **Calibration transfer with physics models.** If model features are truly physically grounded (extinction coefficients, not learned biases), calibration transfer should be easier — but not empirically tested for LED-based devices. See [[calibration-transfer]].
 6. **SHAPCA** (arXiv:2603.19141) is from March 2026 — no independent replication yet.
+
+[datascience/spectroscopy-biomarkers]: spectroscopy-biomarkers.md "Urine Spectroscopy & Biomarker Prediction with LED-Based Portable Devices"
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[multi-task-modeling]: multi-task-modeling.md "Multi-Task & Multi-Output Prediction for Spectroscopic Biomarker Analysis"
+[glucose]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[uric-acid\|Uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[nadh\|NADH]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[uric-acid|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[nadh|NADH]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[total-urinary-porphyrin\|Porphyrins]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[creatinin|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[matrix-correction]: matrix-correction.md "Matrix Correction for Urine Variability in Spectroscopic Measurements"
+[calibration-transfer]: calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"

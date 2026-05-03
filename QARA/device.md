@@ -92,3 +92,7 @@ SLC column names in the processed dataframe follow the format `{sensor}-{emitter
 
 1. Exact firmware version history and SLC naming changes across hardware generations not documented here — refer to the `knowledge` repository ontology for normalization mappings.
 2. IRM sensor pixel layout and spatial correspondence to the 1070 nm IR matrix not specified — needs hardware documentation update.
+
+[optical-path-design]: <../spectrophotometry hardware/optical-path-design.md> "Optical Path Design for Pen-Form Spectrophotometry of Urine"
+[QARA/overview]: overview.md "Datascience Overview — ds-learn"
+[database]: database.md "Datascience ETL and Database (PostgreSQL)"

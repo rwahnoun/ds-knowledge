@@ -24,3 +24,7 @@
 - Biomarker detection summary from: `D:/code/datascience/docs/knowledge/biomarkers/summary.md`
 
 ## Date: 2026-04-15
+
+[fad|FAD]: ../papers/singleBiomarkers/sheets/fluorophores/fad.md "FAD (Flavin Adenine Dinucleotide)"
+[tryptophan]: ../papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[tryptophan|Tryptophan]: ../papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"

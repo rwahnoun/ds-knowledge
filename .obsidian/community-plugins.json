@@ -1,7 +1,9 @@
 [
   "obsidian-local-rest-api",
   "claude-sidebar",
-  "file-tree-alternative",
   "marp-slides",
-  "workspaces-plus"
+  "workspaces-plus",
+  "dataview",
+  "excalibrain",
+  "obsidian-excalidraw-plugin"
 ]

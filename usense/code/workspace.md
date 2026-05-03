@@ -93,3 +93,5 @@ The Obsidian vault at `d:\code\ds-knowledge\` (this note's home) is the higher-l
 
 - No top-level `pyproject.toml` or workspace tool that installs all three repos in one command.
 - The `knowledge` private dependency is referenced by `datascience` and `ds-learn` but its install procedure is not documented in this vault.
+
+[conventions]: conventions.md "Code Conventions — Usense Datascience Repos"

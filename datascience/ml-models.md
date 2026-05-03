@@ -248,3 +248,21 @@ Global metrics:
 - WGAN and diffusion model augmentation: validated on other biological spectral types but not LED-based urine spectroscopy specifically
 - Clinical threshold RMSEP targets: derived from literature — Jimini-specific sensitivity/specificity trade-offs at those thresholds not yet characterised
 - EIS feature fusion with optical features: no published precedent; optimal fusion strategy (early/late/intermediate) unknown
+
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[optical-signatures]: ../biomarkers/optical-signatures.md "Urine Biomarker Optical Signatures — Reference Tables"
+[biomarker-panel]: ../biomarkers/biomarker-panel.md "Urine Biomarker Panel — Jimini Reference"
+[literature]: ../biomarkers/literature.md "Literature — LED Spectroscopy & EIS for Urine Biomarker Prediction"
+[red-blood-cells\|RBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[creatinin\|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[urea]: ../biomarkers/papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[tryptophan]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[nadh|NADH]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[total-urinary-porphyrin|porphyrins]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[tryptophan|Tryptophan]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[total-urinary-porphyrin|Porphyrins]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[uric-acid\|Uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[creatinin\|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid\|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

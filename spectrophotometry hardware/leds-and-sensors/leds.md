@@ -515,3 +515,10 @@ Several OSRAM violet/UV products (LD CQ7P, LA CP7P) have been discontinued follo
 3. **1070 nm exact pricing** — Epigap OSA and Ushio Epitex both require direct contact/quote for 1070 nm. Standard pricing not publicly available.
 4. **Availability confirmation** — Several parts (OSRAM Golden Dragon LD W5KM) should be verified against current Mouser/DigiKey stock before BOM finalization.
 5. **Optical bandwidth requirements** — For [[uric-acid|uric acid]] at 275 nm, the LED FWHM (~11 nm) combined with the 15 nm C12880MA resolution may limit specificity. Thread on optical filters should address this.
+
+[spectrophotometry hardware/leds-and-sensors/overview]: overview.md "LEDs & Sensors — Component Overview"
+[optical-path-design]: ../optical-path-design.md "Optical Path Design for Pen-Form Spectrophotometry of Urine"
+[nadh|NADH]: ../../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[total-urinary-porphyrin|porphyrins]: ../../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[fad|FAD]: ../../biomarkers/papers/singleBiomarkers/sheets/fluorophores/fad.md "FAD (Flavin Adenine Dinucleotide)"
+[uric-acid|uric acid]: ../../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

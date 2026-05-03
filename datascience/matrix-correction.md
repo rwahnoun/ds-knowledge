@@ -375,3 +375,13 @@ Where z_k are basis spectra: polynomial baseline, known interferent spectra (uro
 3. **pH correction formula for urobilin**: Qualitative documentation exists but no quantitative isobestic-point-based correction formula validated across pH 4.5–8.5.
 4. **EMSC reference spectra for urine**: No standard library of urine interferent spectra (urochrome, bilirubin, indoxyl sulfate at physiological concentrations) has been published.
 5. **IFE in EEM (2D version)**: The 2D IFE correction for EEM matrices in urine has not been systematically validated.
+
+[normalization]: normalization.md "Signal Normalization in Photospectroscopy"
+[turbidity]: turbidity.md "Turbidity Estimation in Urine Spectrophotometry"
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[bacteria]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[creatinin|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[glucose]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[creatinin\|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[phosphate]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/phosphate.md "Phosphate"

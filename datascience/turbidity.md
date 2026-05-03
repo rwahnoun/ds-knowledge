@@ -134,3 +134,8 @@ Run both spectral and heating measurements in a single workflow:
 2. **Low-turbidity sensitivity**: The 660 nm single-wavelength method has a LOD of ~5–10 NTU; samples with mild turbidity (1+ grade) near the threshold may be misclassified.
 3. **LED bandwidth effects**: The exponential turbidity model and CIE L\*a\*b\* conversion were validated on bench-top spectrometers; adaptation for LED narrow-band sources has not been published.
 4. **Integration with matrix correction pipeline**: How turbidity correction interacts with SNV and EMSC preprocessing in an end-to-end pipeline for Jimini has not been characterized. See [[matrix-correction]] for correction methods.
+
+[bacteria]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[matrix-correction]: matrix-correction.md "Matrix Correction for Urine Variability in Spectroscopic Measurements"
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"

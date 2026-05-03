@@ -410,3 +410,6 @@ HAL_ADC_Start_DMA(&hadc1, spectrum_buf, 288);
 2. **EIS alternative to AD5933:** AD5941 (lower power, SPI) may be better for battery-powered pen device. Action: Compare AD5933 vs AD5941 datasheets for power budget and interface compatibility.
 3. **C12880MA stray light below 400 nm:** Known issue (elevated baseline from MEMS grating design). Characterization against a calibrated reference spectrometer needed for the 275–400 nm range on Jimini prototypes.
 4. **AS7343 UV gap (380–400 nm):** May need a supplemental UV photodiode channel if absorption at 280 nm (protein) or 293 nm ([[uric-acid|uric acid]] peak) is required independently of the C12880MA.
+
+[spectrophotometry hardware/leds-and-sensors/overview]: overview.md "LEDs & Sensors — Component Overview"
+[uric-acid|uric acid]: ../../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

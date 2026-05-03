@@ -113,3 +113,6 @@ Declared in `pyproject.toml` (name: `scripts`). Core: `numpy`, `pandas`, `scipy`
 
 - No documented retention policy for old `dsNNN` studies — when (if ever) are they archived?
 - Project-level `ingest.py` patterns are not standardized; conventions vary across `projects/`.
+
+[workspace]: ../workspace.md "Workspace Layout — datascience, ds-scripts, ds-learn"
+[conventions]: ../conventions.md "Code Conventions — Usense Datascience Repos"

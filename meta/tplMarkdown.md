@@ -27,15 +27,43 @@ author: Usense Healthcare
 
 **Tag namespaces:**
 - `topic/` — spectroscopy, ml, chemometrics, hardware, biomarker, signal-processing
-- `type/` — concept, literature, pipeline, reference, architecture, decision
-- `status/` — draft, in-progress, complete
+- `type/` — concept, literature, pipeline, reference, architecture, decision, index
+- `status/` — draft, in-progress, complete, living
 - `device/` — jimini
+
+**Biomarker-specific namespaces** (used on compound sheets in `biomarkers/compounds/`):
+- `class/` — metabolite, electrolyte, vitamin, amino-acid, protein, cellular, small-molecule, contaminant, pigment, trace-element, physico-chemical
+- `subclass/` — finer chemical classification (e.g. `subclass/nitrogenous-waste`, `subclass/heme-protein`)
+- `clinical/` — kidney-function, uti, hematuria, diabetes, oncology, electrolyte-balance, nephrolithiasis, contamination, liver, porphyria, normalization-reference, …
+- `modality/` — uv, vis, nir, fluorescence, scattering, eis, raman, ftir, refractometry
+- `presence/` — normal, trace, trace-or-abnormal, abnormal
 
 **Rules:**
 - `aliases` must include every name you might use in a `[[wikilink]]` elsewhere
 - `title` can be omitted if the H1 heading is identical
 - Use nested tags (`topic/ml`) not flat tags (`ml`) — Obsidian renders them as a hierarchy
 - `status/draft` = rough notes; `status/in-progress` = active; `status/complete` = stable reference
+
+---
+
+## Biomarker compound sheets — ontology fields
+
+Compound sheets under `biomarkers/compounds/<class>/` carry additional structured frontmatter so they can be queried by Dataview and visualised by Breadcrumbs/Excalibrain. Generated and refreshed by `meta/enrich_frontmatter.py` — edit the table at the top of that script to update vault-wide.
+
+```yaml
+class: metabolite                   # single string, matches a class/ tag
+subclass: nitrogenous-waste         # optional finer classification
+clinical-use:                       # list of clinical contexts
+  - kidney-function
+  - normalization-reference
+detection-modality:                 # list of measurement modalities
+  - uv
+  - nir
+presence: normal                    # normal | trace | trace-or-abnormal | abnormal
+parent: "[[biomarkers/compounds/metabolites/index|metabolites]]"   # Breadcrumbs typed link
+```
+
+The `parent:` key is a Breadcrumbs hierarchical relation. The corresponding tags (`class/metabolite`, `clinical/kidney-function`, `modality/uv`, `presence/normal`, etc.) are added to the `tags:` block so the same information is queryable both ways.
 
 ---
 

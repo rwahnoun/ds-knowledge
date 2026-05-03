@@ -137,3 +137,6 @@ es.mkPltBar(ax=axes[1])
 - KernelSHAP is slow on large datasets — no batch/sampling strategy documented
 - No multi-class support documented (binary classification assumed throughout)
 - `getBands` direction logic not validated for non-binary outputs
+
+[signal-processing]: ../../../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[multi-task-modeling]: ../../../datascience/multi-task-modeling.md "Multi-Task & Multi-Output Prediction for Spectroscopic Biomarker Analysis"

@@ -217,3 +217,7 @@ The algorithm takes as input two Jimini scans of a raw then heated urine sample.
 1. The TUP and [[porphobilinogen|PBG]] algorithm step-by-step design documentation is incomplete — algorithm-specific design docs should be added as algorithms are finalized.
 2. The API endpoint URL and authentication method for external callers not documented here — refer to ds-compute repository.
 3. Staging vs production environment configuration differences not documented.
+
+[database]: database.md "Datascience ETL and Database (PostgreSQL)"
+[device]: device.md "Jimini Device Description"
+[porphobilinogen|PBG]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"

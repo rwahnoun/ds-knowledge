@@ -133,3 +133,7 @@ See [[multi-task-modeling]] for multi-output model libraries and architectures.
 1. No single curated Python chemometrics library covers the full pipeline (SNV + EMSC + arPLS + PLS + CARS). The R `prospectr` and `mdatools` packages are more complete; Python equivalents are fragmented across scipy, sklearn, and smaller packages.
 2. EMSC has no maintained Python package — the R `EMSC` package (Khliland) is more complete. A Python port or wrapper is needed.
 3. Library availability for some entries (e.g., `pycalibrate`, `pychemviz`) is uncertain and should be verified before use.
+
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[calibration-transfer]: calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"
+[multi-task-modeling]: multi-task-modeling.md "Multi-Task & Multi-Output Prediction for Spectroscopic Biomarker Analysis"

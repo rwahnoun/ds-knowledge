@@ -190,3 +190,6 @@ python -c "import ds; print('OK')"
 
 - No documented type-hint policy. Some files use full type hints, others don't — convention should be made explicit.
 - Pre-commit hook config is not standardized across the three repos.
+
+[workspace]: workspace.md "Workspace Layout — datascience, ds-scripts, ds-learn"
+[libraries]: ../../datascience/libraries.md "Python Libraries for Spectrophotometry & Biomarker Estimation"

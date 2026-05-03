@@ -382,3 +382,23 @@ The V20 results show [[white-blood-cells|WBC]] (Sen 0.74) and [[red-blood-cells|
 2. The clinical study design (sites, n, reference standard protocols, pre-specified SAP) needs to be developed before any clinical data collection.
 3. ISO 13485 QMS has not yet been implemented — prerequisite for any NB engagement.
 4. PCCP scope has been outlined but not formally drafted as a regulatory document.
+
+[device]: device.md "Jimini Device Description"
+[api-architecture]: api-architecture.md "Datascience Architecture & API"
+[white-blood-cells|WBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[red-blood-cells|RBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[bacteria]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[total-urinary-porphyrin|porphyrins]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[porphobilinogen]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[porphobilinogen|PBG]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[uric-acid|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[sodium]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/sodium.md "Sodium"
+[chloride]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/chloride.md "Chloride"
+[porphobilinogen\|PBG]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[white-blood-cells\|WBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[red-blood-cells\|RBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[uric-acid\|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[creatinin\|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[creatinin\|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[bacteria\|Bacteria]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"

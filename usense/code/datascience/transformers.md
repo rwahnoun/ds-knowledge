@@ -234,3 +234,8 @@ ppl = mkPipeline([
 - `ExtractComponent` failure mode (returns empty Series) can silently propagate through a pipeline
 - `DatasetExtractFeatures` component name filter (starts with `"c"`) is undocumented and surprising
 - EMSC `order` parameter behavior not described in detail
+
+[prcPandas]: prcPandas.md "ds.process.prcPandas — Low-Level Signal Processing"
+[normalization]: ../../../datascience/normalization.md "Signal Normalization in Photospectroscopy"
+[signal-processing]: ../../../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[libraries]: ../../../datascience/libraries.md "Python Libraries for Spectrophotometry & Biomarker Estimation"

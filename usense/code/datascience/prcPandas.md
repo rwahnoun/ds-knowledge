@@ -163,3 +163,7 @@ Extracts 31 EIS features from a complex impedance Series (frequency-indexed). Ac
 - `correctionRobustNormalVariate` IQR convention (`[upper, lower]`) is non-standard — worth documenting rationale
 - No documented frequency band definitions for EIS feature extraction (low/mid/high freq boundaries)
 - `fltLowess` index shrinkage behavior is a known footgun — no utility to re-align index after differentiation
+
+[transformers]: transformers.md "ds.process.transformers — Sklearn-Compatible Spectral Transformers"
+[normalization]: ../../../datascience/normalization.md "Signal Normalization in Photospectroscopy"
+[signal-processing]: ../../../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"

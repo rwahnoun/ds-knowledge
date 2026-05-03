@@ -20,7 +20,7 @@ date: 2026-04-19
 
 Consolidated paper reference for reagent-free urine biomarker prediction from LED-based spectroscopy and EIS.
 Compiled by: Feynman multi-agent research pipeline (4 parallel threads, 60+ sources, 2026-04-09).
-See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-models]]
+See also: [[optical-signatures]] [[biomarker-panel]] [[jimini-signal-processing]] [[ml-models]]
 
 ---
 
@@ -301,3 +301,34 @@ See also: [[optical-signatures]] [[biomarker-panel]] [[signal-processing]] [[ml-
 - Specific gravity via NIR 970 nm (C14): theoretically linked to osmolality but not yet validated in a portable LED-based format
 - EIS + optical fusion for multi-biomarker urinalysis: no published precedent as of 2026-04-19
 - Priority literature to obtain: Suzuki 2020 (NIR POC full text), Shaw 1996 (NIR PLS full text), EEM-PARAFAC cannabis metabolites (ACS Omega 2023, PMC10552475)
+
+[optical-signatures]: optical-signatures.md "Urine Biomarker Optical Signatures — Reference Tables"
+[biomarker-panel]: biomarker-panel.md "Urine Biomarker Panel — Jimini Reference"
+[signal-processing]: signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[ml-models]: ../datascience/ml-models.md "ML Models for Jimini Urine Spectroscopy"
+[uric-acid\|Uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[total-urinary-porphyrin\|Porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[tryptophan\|Tryptophan]: papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[nadh\|NADH]: papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[white-blood-cells\|WBC]: papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[bacteria\|Bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[porphobilinogen\|PBG]: papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[total-urinary-porphyrin\|porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[glucose\|Glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[creatinin\|Creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[urea\|Urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[uric-acid|Uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[uric-acid|uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[tryptophan]: papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[creatinin|creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[glucose|Glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[creatinin|Creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[red-blood-cells\|RBC]: papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[urea|Urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[tryptophan|Tryptophan]: papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[nadh|NADH]: papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[creatinin\|creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid\|uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

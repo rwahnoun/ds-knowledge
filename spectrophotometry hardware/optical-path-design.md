@@ -472,3 +472,17 @@ EIS electrodes:
 2. **[[uric-acid|Uric acid]] saturation at 1 mm path length not empirically confirmed** — path length selection for the 275 nm channel should be validated with known [[uric-acid|uric acid]] standards.
 3. **Bubble rejection algorithm not designed** — the operating sequence specifies a 3 s wait, but a quantitative bubble detection check (intensity ratio threshold) has not been specified or validated.
 4. **Capillary fill surface treatment protocol** — PEG coating vs plasma treatment vs surfactant pre-rinse have not been evaluated for the Jimini cuvette material (SLA resin + quartz windows).
+
+[leds]: leds-and-sensors/leds.md "UV and Specific-Wavelength LEDs for Portable Spectrophotometry"
+[sensors]: leds-and-sensors/sensors.md "Spectral Sensors for Portable Spectrophotometry"
+[datascience/spectroscopy-biomarkers]: ../datascience/spectroscopy-biomarkers.md "Urine Spectroscopy & Biomarker Prediction with LED-Based Portable Devices"
+[uric-acid|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[red-blood-cells|RBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[uric-acid|Uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[white-blood-cells|WBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[bacteria]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[nadh|NADH]: ../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[total-urinary-porphyrin|porphyrins]: ../biomarkers/papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[bacteria\|Bacteria]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[red-blood-cells\|RBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[white-blood-cells\|WBC]: ../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"

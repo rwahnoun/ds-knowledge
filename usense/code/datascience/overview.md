@@ -152,3 +152,7 @@ Algorithms are serialised as `.joblib` pickles and deployed via Azure Functions 
 
 - `qtp/` workflow is referenced but the protocol structure is not detailed in this vault.
 - `ds-compute` integration step is referenced but that repo is not documented here.
+
+[workspace]: ../workspace.md "Workspace Layout — datascience, ds-scripts, ds-learn"
+[conventions]: ../conventions.md "Code Conventions — Usense Datascience Repos"
+[projectDescription]: ../projectDescription.md "ds-learn — Project Description & Data Model"

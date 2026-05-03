@@ -280,3 +280,10 @@ After water-blank normalization (absorbance = −log(I/I₀)), residual preproce
 3. **Empirical comparison**: Run DS, slope-bias, CORAL, and MVG augmentation on actual Jimini inter-unit data. Theoretical preference is MVG + per-channel gain but empirical validation is needed.
 4. **Temporal drift**: Methods above address unit-to-unit variation but not temporal drift (LED aging, detector degradation). EPO applied to water reference trends over time can address this separately.
 5. **AS7343 vs AS7341 for urine**: AS7343's UV channel at ~340 nm could detect [[uric-acid|uric acid]] indirectly. AS7341 limited to 415+ nm.
+
+[normalization]: normalization.md "Signal Normalization in Photospectroscopy"
+[matrix-correction]: matrix-correction.md "Matrix Correction for Urine Variability in Spectroscopic Measurements"
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[urea]: ../biomarkers/papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[uric-acid|uric acid]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

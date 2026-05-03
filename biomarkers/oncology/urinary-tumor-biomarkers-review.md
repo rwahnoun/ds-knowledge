@@ -16,7 +16,7 @@ date: 2026-04-19
 # Systematic Review: Urinary Tumor Biomarkers Detectable via Optical and Electrochemical Methods
 
 > [!NOTE]
-> Comprehensive systematic review mapping urinary tumor biomarkers to optical and electrochemical detection feasibility, with Jimini device compatibility assessment. Date: 2026-04-15. Related: [[datascience/spectroscopy-biomarkers]] [[optical-properties]] [[signatures]] [[signal-processing]]
+> Comprehensive systematic review mapping urinary tumor biomarkers to optical and electrochemical detection feasibility, with Jimini device compatibility assessment. Date: 2026-04-15. Related: [[datascience/spectroscopy-biomarkers]] [[optical-properties]] [[signatures]] [[jimini-signal-processing]]
 
 ## Executive Summary
 
@@ -339,3 +339,18 @@ Cancer alters metabolic pathways, producing detectable changes in urinary metabo
 - miRNA and ctDNA assays require nucleic acid extraction, making them incompatible with Jimini's reagent-free approach.
 - Metabolic fluorescence is promising but needs larger prospective validation studies; urinary autofluorescence is affected by diet, hydration, medications, and infections — normalization to [[creatinin|creatinine]] and multi-parameter modeling is essential.
 - Raw spectra and labels from clinical studies are not openly published, limiting cross-instrument harmonisation.
+
+[datascience/spectroscopy-biomarkers]: ../../datascience/spectroscopy-biomarkers.md "Urine Spectroscopy & Biomarker Prediction with LED-Based Portable Devices"
+[signal-processing]: ../signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[nadh|NADH]: ../papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[fad|FAD]: ../papers/singleBiomarkers/sheets/fluorophores/fad.md "FAD (Flavin Adenine Dinucleotide)"
+[tryptophan]: ../papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[tryptophan\|Tryptophan]: ../papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[nadh\|NADH]: ../papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[fad\|FAD]: ../papers/singleBiomarkers/sheets/fluorophores/fad.md "FAD (Flavin Adenine Dinucleotide)"
+[total-urinary-porphyrin\|Porphyrins]: ../papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[glucose\|Glucose]: ../papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[total-urinary-porphyrin\|porphyrins]: ../papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[tryptophan|Tryptophan]: ../papers/singleBiomarkers/sheets/fluorophores/tryptophan.md "Tryptophan"
+[creatinin|creatinine]: ../papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[uric-acid|uric acid]: ../papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

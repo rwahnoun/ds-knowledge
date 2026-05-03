@@ -159,3 +159,9 @@ A Dataset contains multiple Records, each Record holds multiple Components (sens
 1. The `Spectrum3d` and `SquareWaveVoltamogram` component types are listed but not described in detail — document their data structure and use cases.
 2. No description of how the `knowledge` repository ontology maps raw SLC names to normalized component identifiers in the ETL step.
 3. `DatasetExtractFeatures` and `ExtractComponent` distinction not fully explained — clarify when each is used in the training pipeline.
+
+[api-architecture]: api-architecture.md "Datascience Architecture & API"
+[database]: database.md "Datascience ETL and Database (PostgreSQL)"
+[device]: device.md "Jimini Device Description"
+[calibration-transfer]: ../datascience/calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"
+[signal-processing]: ../biomarkers/signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"

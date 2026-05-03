@@ -171,3 +171,8 @@ Contact **Marktech Optoelectronics** for a custom 4–5 die multi-chip LED packa
 1. No evaluation of SunLike vs Optisolis in an actual Jimini prototype — recommendation is based on published SPD data, not measured spectrophotometric performance.
 2. InGaAs detector pairing for 1070 nm not covered in this overview; see [[sensors]] for full NIR coverage discussion.
 3. Multi-chip LED custom quote from Marktech not yet requested; lead time and prototype pricing unknown.
+
+[leds]: leds.md "UV and Specific-Wavelength LEDs for Portable Spectrophotometry"
+[sensors]: sensors.md "Spectral Sensors for Portable Spectrophotometry"
+[suppliers]: suppliers.md "Suppliers & Distributors for UV/Vis/NIR LEDs and Spectral Sensors"
+[optical-path-design]: ../optical-path-design.md "Optical Path Design for Pen-Form Spectrophotometry of Urine"

@@ -133,3 +133,7 @@ Dataset (DatasetDF)
 - `Spectrum3d` (3D EEM) component is listed but not documented in detail
 - `SquareWaveVoltamogram` processing pipeline is not described
 - No documented strategy for handling failed component extraction in a batch pipeline
+
+[jiminiDevice|Jimini]: ../jiminiDevice.md "Jimini Device"
+[calibration-transfer]: ../../datascience/calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"
+[transformers]: datascience/transformers.md "ds.process.transformers — Sklearn-Compatible Spectral Transformers"

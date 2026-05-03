@@ -197,3 +197,13 @@ At a conservative 40% CV, the 95% window widens to roughly **2–18/µL (2×10³
 1. No data on iQ200 performance at [[uric-acid|uric acid]] or bilirubin concentrations (optical rather than cell-count analytes).
 2. All studies use laboratory-grade instruments; POC performance may differ.
 3. iQ200 uses flow cytometry; Jimini's optical spectroscopy approach requires separate precision characterization.
+
+[white-blood-cells|WBC]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[red-blood-cells|RBC]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[bacteria]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[optical-path-design]: ../optical-path-design.md "Optical Path Design for Pen-Form Spectrophotometry of Urine"
+[white-blood-cells\|WBC]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[red-blood-cells\|RBC]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[bacteria\|Bacteria]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[bacteria|Bacteria]: ../../biomarkers/papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[uric-acid|uric acid]: ../../biomarkers/papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"

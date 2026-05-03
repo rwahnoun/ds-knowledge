@@ -127,3 +127,6 @@ A USense storage service allowing direct saving and querying (including individu
 1. No documentation of the specific PostgreSQL schema (column names, data types, foreign keys) — this should be extracted from `db.createTables()` and documented here.
 2. Reset/migration procedure not documented — if changes are made to ingested information, the procedure for a full DB reset needs to be specified.
 3. The `querySensors` and `queryRecords` filter parameter API not fully documented here — refer to the source code in `datascience.dataio.remote.dbpg`.
+
+[QARA/overview]: overview.md "Datascience Overview — ds-learn"
+[device]: device.md "Jimini Device Description"

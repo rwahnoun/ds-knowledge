@@ -322,3 +322,7 @@ Critical for spectrophotometry — you must know the **exact spectral shape**, n
 2. **Crystal IS Optan pricing:** CDI quotes required. No public per-unit pricing.
 3. **455 nm LED selection:** ams OSRAM LD W5KM-1T4T-35 is noted but not deeply researched. Action: verify current availability and stock at Mouser/DigiKey before BOM finalization.
 4. **EIS alternative to AD5933:** AD5941 (lower power, SPI) may be better for battery-powered pen device. Action: Compare AD5933 vs AD5941 datasheets for power budget and interface compatibility.
+
+[leds]: leds.md "UV and Specific-Wavelength LEDs for Portable Spectrophotometry"
+[sensors]: sensors.md "Spectral Sensors for Portable Spectrophotometry"
+[nadh|NADH]: ../../biomarkers/papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"

@@ -213,3 +213,9 @@ Model:
 1. **V-PFCRC for spectroscopic analytes**: Validated for metals/iodine by ICP-MS; unclear if the same c/d coefficients transfer to spectroscopically-estimated biomarkers (e.g., [[creatinin|creatinine]] by Raman).
 2. **LED-specific SNV behavior**: Most SNV validation is for bench-top spectrometers. Whether SNV behaves differently for narrow-band LED excitation sources (e.g., 275 nm LED with sparse spectral coverage) has not been characterized.
 3. **Optimal cross-device method for Jimini**: The empirical comparison of water-reference regression calibration vs. CORAL vs. per-channel gain correction on actual Jimini inter-unit data has not been published.
+
+[matrix-correction]: matrix-correction.md "Matrix Correction for Urine Variability in Spectroscopic Measurements"
+[calibration-transfer]: calibration-transfer.md "Calibration Transfer & Device Harmonization for Portable Spectrometers"
+[turbidity]: turbidity.md "Turbidity Estimation in Urine Spectrophotometry"
+[creatinin|Creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[creatinin|creatinine]: ../biomarkers/papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"

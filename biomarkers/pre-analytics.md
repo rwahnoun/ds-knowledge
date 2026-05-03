@@ -19,7 +19,7 @@ date: 2026-04-19
 
 Jimini pen-sized LED spectrophotometer (275/365/405/455 nm + white + 1070 nm NIR + EIS) for reagent-free urinalysis.
 Analyte panel: [[white-blood-cells|WBC]], [[red-blood-cells|RBC]], BAC, epiCells, crystals, [[creatinin|creatinine]], osmolality, TUP, [[porphobilinogen|PBG]], bilirubin, [[uric-acid|uric acid]], [[nadh|NADH]], protein, nitrites, [[sodium]], [[chloride]]. 20+ sources synthesized.
-See also: [[biomarker-panel]] [[optical-signatures]] [[signal-processing]]
+See also: [[biomarker-panel]] [[optical-signatures]] [[jimini-signal-processing]]
 
 ---
 
@@ -413,3 +413,34 @@ This enables the model to apply time-based correction factors, use time-from-col
 - Pediatric sample stability data sparse; adult thresholds used throughout
 - Crystal dissolution kinetics on warming from refrigeration not quantified for Jimini sample protocol
 - [[nadh|NADH]] concentration levels in normal urine before/after cell lysis not well characterized in the literature
+
+[white-blood-cells|WBC]: papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[red-blood-cells|RBC]: papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[creatinin|creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[porphobilinogen|PBG]: papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[uric-acid|uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[nadh|NADH]: papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[sodium]: papers/singleBiomarkers/sheets/metabolites/sodium.md "Sodium"
+[chloride]: papers/singleBiomarkers/sheets/metabolites/chloride.md "Chloride"
+[biomarker-panel]: biomarker-panel.md "Urine Biomarker Panel — Jimini Reference"
+[optical-signatures]: optical-signatures.md "Urine Biomarker Optical Signatures — Reference Tables"
+[signal-processing]: signal-processing.md "Signal Processing & Matrix Correction for Jimini Urine Spectroscopy"
+[bacteria|Bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[urea]: papers/singleBiomarkers/.plans/urea.md "Literature Review Plan — urea"
+[bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[total-urinary-porphyrin|Porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[total-urinary-porphyrin|porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[uric-acid\|Uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[creatinin\|Creatinine]: papers/singleBiomarkers/sheets/metabolites/creatinin.md "Creatinine"
+[glucose\|Glucose]: papers/singleBiomarkers/sheets/metabolites/glucose.md "Glucose"
+[red-blood-cells\|RBC]: papers/singleBiomarkers/sheets/infection-inflammation/red-blood-cells.md "Red Blood Cells"
+[white-blood-cells\|WBC]: papers/singleBiomarkers/sheets/infection-inflammation/white-blood-cells.md "White Blood Cells"
+[bacteria\|Bacteria]: papers/singleBiomarkers/sheets/infection-inflammation/bacteria.md "Bacteria (Bacteriuria)"
+[porphobilinogen\|PBG]: papers/singleBiomarkers/sheets/pigments-porphyrins/porphobilinogen.md "Porphobilinogen"
+[total-urinary-porphyrin\|porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[total-urinary-porphyrin\|Porphyrins]: papers/singleBiomarkers/sheets/pigments-porphyrins/total-urinary-porphyrin.md "Total Urinary Porphyrin"
+[nadh\|NADH]: papers/singleBiomarkers/sheets/fluorophores/nadh.md "NADH (Reduced Nicotinamide Adenine Dinucleotide)"
+[uric-acid\|uric acid]: papers/singleBiomarkers/sheets/metabolites/uric-acid.md "Uric Acid"
+[sodium\|Sodium]: papers/singleBiomarkers/sheets/metabolites/sodium.md "Sodium"
+[phosphate]: papers/singleBiomarkers/sheets/metabolites/phosphate.md "Phosphate"
