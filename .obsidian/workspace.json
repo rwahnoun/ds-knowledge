@@ -12,19 +12,30 @@
             "type": "leaf",
             "pinned": true,
             "state": {
+              "type": "empty",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "0790a5cc9870720a",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/globalReport/globalReport.md",
+                "file": "excalibrain.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
-              "pinned": true,
               "icon": "lucide-file",
-              "title": "globalReport"
+              "title": "excalibrain"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,13 +102,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/globalReport/globalReport.md",
+                "file": "excalibrain.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of globalReport"
+              "title": "Outline of excalibrain"
             }
           }
         ]
@@ -235,8 +246,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "94840e1b394100c6",
+  "active": "0790a5cc9870720a",
   "lastOpenFiles": [
+    "excalibrain.md",
     "sideQuests/__pycache__/__init__.cpython-312.pyc",
     "sideQuests/__pycache__",
     "sideQuests/calibration/runs/__pycache__/summary.cpython-312.pyc",
@@ -247,7 +259,6 @@
     "sideQuests/calibration/runs/__pycache__/l5_visd_jointpca.cpython-312.pyc",
     "sideQuests/calibration/runs/__pycache__/l5_snv.cpython-312.pyc",
     "sideQuests/calibration/runs/__pycache__/l5_sgsnv.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_sgderiv.cpython-312.pyc",
     "hydra/docs/media/panel2.png",
     "hydra/docs/media/panel1.jpg",
     "hydra/docs/media/hydra_mmoe.png",
@@ -267,7 +278,6 @@
     "docs/globalReport/hydraCat.md",
     "docs/globalReport/hydraCnt.md",
     "docs/globalReport/hydraBin.md",
-    "excalibrain.md",
     "docs/objectives.md",
     "docs/globalReport.md",
     "docs/interpretable-spectral-models.md",
