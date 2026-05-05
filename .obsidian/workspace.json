@@ -91,13 +91,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/globalReport/globalReport.md",
+                "file": "excalibrain.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of globalReport"
+              "title": "Outline of excalibrain"
             }
           }
         ]
@@ -235,8 +235,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "94840e1b394100c6",
+  "active": "e6e405ddcbdfb31a",
   "lastOpenFiles": [
+    "docs/globalReport/globalReport.md",
     "sideQuests/__pycache__/__init__.cpython-312.pyc",
     "sideQuests/__pycache__",
     "sideQuests/calibration/runs/__pycache__/summary.cpython-312.pyc",
@@ -247,7 +248,6 @@
     "sideQuests/calibration/runs/__pycache__/l5_visd_jointpca.cpython-312.pyc",
     "sideQuests/calibration/runs/__pycache__/l5_snv.cpython-312.pyc",
     "sideQuests/calibration/runs/__pycache__/l5_sgsnv.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_sgderiv.cpython-312.pyc",
     "hydra/docs/media/panel2.png",
     "hydra/docs/media/panel1.jpg",
     "hydra/docs/media/hydra_mmoe.png",
@@ -262,7 +262,6 @@
     "hydra/docs/hydraCat.md",
     "hydra/docs/hydraBin.md",
     "hydra/docs/hydraDescription.md",
-    "docs/globalReport/globalReport.md",
     "docs/globalReport/objectives.md",
     "docs/globalReport/hydraCat.md",
     "docs/globalReport/hydraCnt.md",

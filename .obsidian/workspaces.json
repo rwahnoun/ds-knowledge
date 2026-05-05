@@ -10,15 +10,20 @@
             "type": "tabs",
             "children": [
               {
-                "id": "e83d900fdfd7cc2a",
+                "id": "a02c8751a949ac4f",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
-                  "type": "empty",
-                  "state": {},
+                  "type": "markdown",
+                  "state": {
+                    "file": "docs/globalReport/globalReport.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": false
+                  },
                   "pinned": true,
                   "icon": "lucide-file",
-                  "title": "New tab"
+                  "title": "globalReport"
                 }
               }
             ]
@@ -101,7 +106,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 494.5
+        "width": 467.5
       },
       "right": {
         "id": "6982c054f9a3b1f6",
@@ -215,7 +220,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 575.5
+        "width": 571.5
       },
       "left-ribbon": {
         "hiddenItems": {
@@ -232,12 +237,14 @@
           "obsidian-excalidraw-plugin:New drawing": false
         }
       },
-      "active": "94840e1b394100c6",
-      "mtime": "2026-05-03T17:33:15+02:00",
+      "active": "e6e405ddcbdfb31a",
+      "mtime": "2026-05-05T09:35:45+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
-          "usense"
+          "docs",
+          "docs/globalReport",
+          "sideQuests/calibration/__pycache__"
         ]
       }
     }
