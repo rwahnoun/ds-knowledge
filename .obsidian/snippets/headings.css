@@ -1,0 +1,132 @@
+/*
+author: Daniel, sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1155544494897365084
+*/
+
+/* inside Dynamic ToC */
+.dynamic-toc ol {
+  list-style-type: none;
+}
+.dynamic-toc ol {
+  counter-reset: decimal;
+}
+.dynamic-toc ol > li {
+  display: block;
+}
+.dynamic-toc ol > li::before {
+  content: counters(decimal, ".") " ";
+  counter-increment: decimal;
+  color: var(--text-accent);
+}
+
+/* reading view */
+div:has(> h1) {
+  counter-increment: h1counter;
+  counter-reset: h2counter;
+  margin-top: 1em;
+}
+div:has(> h1) > h1::before {
+  content: counter(h1counter) " ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+h2 {
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+h2::before {
+  content: counter(h1counter) "." counter(h2counter) "  ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+div:has(> h3) {
+  counter-increment: h3counter;
+  counter-reset: h4counter;
+}
+div:has(> h3) > h3::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "   ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+div:has(> h4) {
+  counter-increment: h4counter;
+  counter-reset: h5counter;
+}
+div:has(> h4) > h4::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "    ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+div:has(> h5) {
+  counter-increment: h5counter;
+  counter-reset: h6counter;
+}
+div:has(> h5) > h5::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "     ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+div:has(> h6) {
+  counter-increment: h6counter;
+}
+div:has(> h6) > h6::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) "      ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+
+/* live preview */
+.HyperMD-header-1 {
+  counter-increment: h1counter;
+  counter-reset: h2counter;
+  margin-top: 1em;
+}
+.HyperMD-header-1::before {
+  content: counter(h1counter) " ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+.HyperMD-header-2 {
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+.HyperMD-header-2::before {
+  content: counter(h1counter) "." counter(h2counter) "  ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+.HyperMD-header-3 {
+  counter-increment: h3counter;
+  counter-reset: h4counter;
+}
+.HyperMD-header-3::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "   ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+.HyperMD-header-4 {
+  counter-increment: h4counter;
+  counter-reset: h5counter;
+}
+.HyperMD-header-4::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "    ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+.HyperMD-header-5 {
+  counter-increment: h5counter;
+  counter-reset: h6counter;
+}
+.HyperMD-header-5::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "     ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}
+.HyperMD-header-6 {
+  counter-increment: h6counter;
+}
+.HyperMD-header-6::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) "      ";
+  color: var(--text-muted);
+  font-size: 0.5em;
+}

@@ -34,7 +34,7 @@ src/ds/
     component.py        # Component abstraction
     loaders/            # Source-specific loaders (jimini, jasco, palmsens, ...)
     etl/                # ETL pipelines — ingest, transform, update databases
-    remote/             # DB clients: MongoDB (azureUsense), PostgreSQL (dbpg), SQLite, GDrive, Azure Blob/FileShare
+    remote/             # DB clients: MongoDB (azureUsense), PostgreSQL (dbpg), SQLite, GDrive, Azure Blob/FileShare  → see [[remoteClients]]
   process/
     transformers.py     # Scikit-learn compatible transformers
     prcPandas.py        # Pandas-based signal processing (filters, peaks, scatter corrections)
@@ -84,6 +84,8 @@ slc = rec.signals['C12-405']    # Access a component/slice
 Example notebooks demonstrating library usage live in `examples/` at the repo root:
 
 - `transformers.ipynb` — transformer pipeline usage and patterns
+
+See also [[remoteClients]] for the standard sheet → DB → dataset → pickle pattern used across `ds6xx` notebooks.
 
 ## Repo-specific conventions
 

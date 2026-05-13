@@ -38,7 +38,7 @@
           {
             "id": "ea666a166851b744",
             "type": "tabs",
-            "dimension": 52.20030349013657,
+            "dimension": 59.07365223993926,
             "children": [
               {
                 "id": "94840e1b394100c6",
@@ -59,7 +59,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#status/complete",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -85,7 +85,7 @@
           {
             "id": "54e435762f000315",
             "type": "tabs",
-            "dimension": 47.79969650986343,
+            "dimension": 40.92634776006074,
             "children": [
               {
                 "id": "4cf07ea0b6f0a4e0",
@@ -93,20 +93,20 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "excalibrain.md",
+                    "file": "docs/globalReport/globalReport.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline of excalibrain"
+                  "title": "Outline of globalReport"
                 }
               }
             ]
           }
         ],
         "direction": "horizontal",
-        "width": 467.5
+        "width": 264.5
       },
       "right": {
         "id": "6982c054f9a3b1f6",
@@ -115,16 +115,14 @@
           {
             "id": "42b45a7e3305001e",
             "type": "tabs",
-            "dimension": 42.35294117647059,
+            "dimension": 62.13235294117647,
             "children": [
               {
                 "id": "1d52abed4e7972d4",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
                   "type": "vault-terminal",
                   "state": {},
-                  "pinned": true,
                   "icon": "bot",
                   "title": "Claude"
                 }
@@ -164,20 +162,31 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "datascience/matrix-correction.md",
+                    "file": "docs/globalReport/ideas and plan.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   },
                   "icon": "links-going-out",
-                  "title": "Outgoing links from matrix-correction"
+                  "title": "Outgoing links from ideas and plan"
+                }
+              },
+              {
+                "id": "6fcc55b92ae6b694",
+                "type": "leaf",
+                "state": {
+                  "type": "vault-terminal",
+                  "state": {},
+                  "icon": "bot",
+                  "title": "Claude"
                 }
               }
-            ]
+            ],
+            "currentTab": 4
           },
           {
             "id": "f612f49fcee0a83f",
             "type": "tabs",
-            "dimension": 57.647058823529406,
+            "dimension": 37.86764705882353,
             "children": [
               {
                 "id": "9607ff4d7b3f57ad",
@@ -215,12 +224,11 @@
                   "title": "excalibrain"
                 }
               }
-            ],
-            "currentTab": 2
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 571.5
+        "width": 925.5
       },
       "left-ribbon": {
         "hiddenItems": {
@@ -237,14 +245,19 @@
           "obsidian-excalidraw-plugin:New drawing": false
         }
       },
-      "active": "e6e405ddcbdfb31a",
-      "mtime": "2026-05-05T09:35:45+02:00",
+      "active": "6fcc55b92ae6b694",
+      "mtime": "2026-05-07T16:39:04+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
           "docs",
           "docs/globalReport",
-          "sideQuests/calibration/__pycache__"
+          "docs/media",
+          "hydra/docs",
+          "hydra/hydraBin",
+          "sideQuests/calibration",
+          "sideQuests/calibration/__pycache__",
+          "sideQuests/calibration/docs"
         ]
       }
     }

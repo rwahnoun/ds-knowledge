@@ -36,7 +36,7 @@
       {
         "id": "ea666a166851b744",
         "type": "tabs",
-        "dimension": 52.20030349013657,
+        "dimension": 59.07365223993926,
         "children": [
           {
             "id": "94840e1b394100c6",
@@ -57,7 +57,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#status/complete",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,7 +83,7 @@
       {
         "id": "54e435762f000315",
         "type": "tabs",
-        "dimension": 47.79969650986343,
+        "dimension": 40.92634776006074,
         "children": [
           {
             "id": "4cf07ea0b6f0a4e0",
@@ -91,20 +91,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "excalibrain.md",
+                "file": "docs/globalReport/globalReport.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of excalibrain"
+              "title": "Outline of globalReport"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 467.5
+    "width": 264.5
   },
   "right": {
     "id": "6982c054f9a3b1f6",
@@ -113,16 +113,14 @@
       {
         "id": "42b45a7e3305001e",
         "type": "tabs",
-        "dimension": 42.35294117647059,
+        "dimension": 62.13235294117647,
         "children": [
           {
             "id": "1d52abed4e7972d4",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "vault-terminal",
               "state": {},
-              "pinned": true,
               "icon": "bot",
               "title": "Claude"
             }
@@ -162,20 +160,31 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "datascience/matrix-correction.md",
+                "file": "docs/globalReport/ideas and plan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from matrix-correction"
+              "title": "Outgoing links from ideas and plan"
+            }
+          },
+          {
+            "id": "6fcc55b92ae6b694",
+            "type": "leaf",
+            "state": {
+              "type": "vault-terminal",
+              "state": {},
+              "icon": "bot",
+              "title": "Claude"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "f612f49fcee0a83f",
         "type": "tabs",
-        "dimension": 57.647058823529406,
+        "dimension": 37.86764705882353,
         "children": [
           {
             "id": "9607ff4d7b3f57ad",
@@ -213,12 +222,11 @@
               "title": "excalibrain"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 571.5
+    "width": 925.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,52 +243,53 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e6e405ddcbdfb31a",
+  "active": "6fcc55b92ae6b694",
   "lastOpenFiles": [
+    "automl/~$overview.xlsx",
+    "automl/overview.xlsx",
+    "automl/mkOverview.py.tmp.69884.ad39ca78e8e1",
+    "automl/mkOverview.py.tmp.69884.e06f5a835d21",
+    "automl/mkOverview.py",
+    "automl/mkOverview.py.tmp.69884.3943223a16df",
+    "automl/overviewInstructions.md",
+    "automl/overviewInstructions.md.tmp.69884.ec0f5212d89e",
+    "docs/globalReport/globalReport.md.tmp.55140.a800140161b1",
+    "docs/globalReport/globalReport.md.tmp.55140.5f48a9997eee",
+    "docs/globalReport/globalReport.md.tmp.55140.b7542c55658e",
+    "sideQuests/information/media/top10binary.py.tmp.55140.6636f7475a9f",
+    "sideQuests/information/media/top10binary.png",
     "docs/globalReport/globalReport.md",
-    "sideQuests/__pycache__/__init__.cpython-312.pyc",
-    "sideQuests/__pycache__",
-    "sideQuests/calibration/runs/__pycache__/summary.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/regression.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/pca_latent.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_visd_residual.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_visd_ratio.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_visd_jointpca.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_snv.cpython-312.pyc",
-    "sideQuests/calibration/runs/__pycache__/l5_sgsnv.cpython-312.pyc",
+    "docs/globalReport/ideas and plan.md",
+    "sideQuests/calibration/docs/calibrationDsp.md",
+    "hydra/docs/hydraCat.md",
+    "sideQuests/calibration/docs/plan.md",
+    "hydra/docs/hydraCnt.md",
+    "hydra/docs/hydraBin.md",
+    "hydra/docs/improvements.md",
+    "hydra/docs/summary.md",
+    "hydra/docs/hydraDescription.md",
+    "docs/media/deployedResults.png",
+    "docs/globalReport/objectives.md",
+    "docs/figures/mi_rbc_binary.png",
+    "docs/figures/mi_totalBacteriaCount_binary.png",
+    "docs/figures/mi_wbc_binary.png",
+    "docs/figures/qtp088_lodo.png",
+    "docs/globalReport/project-organization.md",
+    "excalibrain.md",
+    "docs/globalReport/v20 global report.md",
+    "sideQuests/calibration/docs/results.md",
+    "ideas.md",
+    "automl/rbc/outputs/qtp/cell_shap-spectra_0.png",
+    "automl/rbc/outputs/qtp/cell_3579f255_0.png",
     "hydra/docs/media/panel2.png",
     "hydra/docs/media/panel1.jpg",
-    "hydra/docs/media/hydra_mmoe.png",
-    "hydra/docs/media/hydra2.jpg",
-    "hydra/docs/media/architecture.png",
-    "hydra/docs/media/cnt/diag_wbc.png",
-    "hydra/docs/media/cnt/diag_tbc.png",
-    "hydra/docs/media/cnt/diag_rbc.png",
-    "hydra/docs/media/cnt/diag_overall.png",
-    "hydra/docs/media/cnt/convergence.png",
-    "hydra/docs/hydraCnt.md",
-    "hydra/docs/hydraCat.md",
-    "hydra/docs/hydraBin.md",
-    "hydra/docs/hydraDescription.md",
-    "docs/globalReport/objectives.md",
     "docs/globalReport/hydraCat.md",
     "docs/globalReport/hydraCnt.md",
     "docs/globalReport/hydraBin.md",
-    "excalibrain.md",
     "docs/objectives.md",
     "docs/globalReport.md",
     "docs/interpretable-spectral-models.md",
     "docs/methods-and-todo.md",
-    "datascience/matrix-correction.md",
-    "Excalidraw/Drawing 2026-05-01 10.48.37.excalidraw.md",
-    "index.md",
-    "usense/jiminiDevice.md",
-    "usense/index.md",
-    "usense/branding.md",
-    "updateIndex.md",
-    "optical-properties.md",
-    "spectrophotometry hardware/index.md",
-    "Excalidraw/ExcaliBrain Snapshot - ketone.excalidraw.md",
-    "biomarkers/compounds/physico-chemical/ketone.md"
+    "datascience/matrix-correction.md"
   ]
 }
