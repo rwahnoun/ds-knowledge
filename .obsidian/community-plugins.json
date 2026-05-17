@@ -1,10 +1,10 @@
 [
   "obsidian-local-rest-api",
-  "claude-sidebar",
   "marp-slides",
   "workspaces-plus",
   "dataview",
   "excalibrain",
   "obsidian-excalidraw-plugin",
-  "shell-path-copy"
+  "shell-path-copy",
+  "terminal"
 ]

@@ -1,0 +1,22 @@
+{
+  "id": "conv-1778959133351-1dagtjyum",
+  "providerId": "claude",
+  "title": "opus vs sonnet",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1778959133351,
+  "updatedAt": 1778959248263,
+  "lastResponseAt": 1778959167844,
+  "sessionId": "a11a8c9f-47dc-4bef-b733-5b36f2116bce",
+  "providerState": {
+    "providerSessionId": "a11a8c9f-47dc-4bef-b733-5b36f2116bce"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 0,
+    "percentage": 0
+  }
+}
