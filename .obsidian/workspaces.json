@@ -8,7 +8,6 @@
           {
             "id": "5ae2a8139ef3273c",
             "type": "tabs",
-            "dimension": 72.25694444444444,
             "children": [
               {
                 "id": "9a0a77194f20776a",
@@ -16,64 +15,13 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "misc/science-code.md",
+                    "file": "misc/RAG.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": false
                   },
                   "icon": "lucide-file",
-                  "title": "science-code"
-                }
-              }
-            ]
-          },
-          {
-            "id": "484d958369dd1db9",
-            "type": "tabs",
-            "dimension": 27.743055555555557,
-            "children": [
-              {
-                "id": "371a64ac215733a7",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "terminal:terminal",
-                  "state": {
-                    "terminal:terminal": {
-                      "cwd": "D:\\code\\ds-knowledge",
-                      "focus": false,
-                      "profile": {
-                        "args": [
-                          "--dangerously-skip-permissions"
-                        ],
-                        "executable": "claude",
-                        "followTheme": true,
-                        "name": "claude",
-                        "platforms": {
-                          "win32": true
-                        },
-                        "pythonExecutable": "",
-                        "restoreHistory": false,
-                        "rightClickAction": "copyPaste",
-                        "successExitCodes": [
-                          "0",
-                          "SIGINT",
-                          "SIGTERM"
-                        ],
-                        "terminalOptions": {
-                          "fontSize": 12,
-                          "documentOverride": null
-                        },
-                        "type": "integrated",
-                        "useWin32Conhost": true
-                      },
-                      "profileSourceId": "5032ea6e-14bb-4a81-afec-2271c46d3987",
-                      "serial": null
-                    }
-                  },
-                  "pinned": true,
-                  "icon": "terminal",
-                  "title": "Terminal: ✳ Claude Code"
+                  "title": "RAG"
                 }
               }
             ]
@@ -143,13 +91,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "misc/science-code.md",
+                    "file": "misc/RAG.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline of science-code"
+                  "title": "Outline of RAG"
                 }
               }
             ]
@@ -277,11 +225,10 @@
         }
       },
       "active": "9a0a77194f20776a",
-      "mtime": "2026-05-17T10:16:03+02:00",
+      "mtime": "2026-05-17T13:10:10+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
-          "meta",
           "misc"
         ]
       }

@@ -34,8 +34,8 @@
         "SIGTERM"
       ],
       "terminalOptions": {
-        "documentOverride": null,
-        "fontSize": 12
+        "fontSize": 12,
+        "documentOverride": null
       },
       "type": "integrated",
       "useWin32Conhost": true
