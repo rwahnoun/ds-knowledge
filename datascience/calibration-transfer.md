@@ -214,12 +214,12 @@ Train a single model on data from 2–3 representative devices. Sun et al. 2019 
 
 ### Robust Preprocessing
 
-| Preprocessing | Removes | Useful for |
-|---------------|---------|-----------|
-| SNV | Multiplicative + additive baseline | Unit intensity differences |
-| MSC | Baseline + slope vs. mean spectrum | Scatter/path length variation |
-| 1st Derivative (SG) | Additive baseline offset | LED intensity drift |
-| L2 Normalization | Overall scale | Concentration-independent features |
+| Preprocessing       | Removes                            | Useful for                         |     |
+| ------------------- | ---------------------------------- | ---------------------------------- | --- |
+| SNV                 | Multiplicative + additive baseline | Unit intensity differences         |     |
+| MSC                 | Baseline + slope vs. mean spectrum | Scatter/path length variation      |     |
+| 1st Derivative (SG) | Additive baseline offset           | LED intensity drift                |     |
+| L2 Normalization    | Overall scale                      | Concentration-independent features |     |
 
 After water-blank normalization (absorbance = −log(I/I₀)), residual preprocessing with SNV or L2 normalization handles remaining scale differences.
 
