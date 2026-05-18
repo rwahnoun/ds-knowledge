@@ -8,37 +8,42 @@ aliases:
 tags:
   - topic/repo
   - type/reference
-  - status/complete
 date: 2026-04-26
-status: complete
-type: reference
-author: Usense Healthcare
 ---
 
 # Code Conventions
 
-Shared conventions across [[datascience]], [[ds-scripts]], and [[ds-learn]]. **These are non-negotiable** — they are enforced by ruff config, by code review, and by the people who have to read each other's notebooks. See [[workspace]] for repo layout.
+Shared conventions for `datascience`, `ds-scripts`, `ds-learn`. See [[workspace]] for repo layout.
 
-## Language & tools
+## Behavioral Guidelines
 
-- **Python**: 3.11+
-- **Package manager**: `uv`
-- **Build system**: `hatchling`
-- **Linter/formatter**: `ruff` (line-length 150)
-- **Testing**: `pytest`
+**Think before coding.** State assumptions explicitly. If multiple interpretations exist, present them — don't pick silently. Push back if a simpler approach exists. If something is unclear, ask before implementing.
+
+**Surgical changes.** Touch only what's needed for the request. Don't improve adjacent code, comments, or formatting. Remove imports/variables YOUR changes made unused; mention pre-existing dead code rather than deleting it.
+
+**Goal-driven execution.** For multi-step tasks, state a brief plan with checkpoints before starting. Define verifiable success criteria — "tests pass" beats "make it work".
+
+## Language & Tools
+
+| Tool | Choice |
+|------|--------|
+| Python | 3.11+ |
+| Package manager | `uv` |
+| Build system | `hatchling` |
+| Linter/formatter | `ruff` (line-length 150) |
+| Testing | `pytest` |
 
 ## Naming
 
-> [!IMPORTANT]
-> All naming rules below are **strict** and apply across all three repos. No underscores in variable, function, or method names.
+**Strict — no underscores in variables, functions, or methods.**
 
-| Element | Convention | Examples |
-|---------|------------|----------|
-| Variables, functions, methods | `camelCase` — no underscores | ✅ `xTest`, `dataFrame`, `trainModel()` <br> ❌ `X_test`, `data_frame`, `train_model()` |
-| Classes | `CamelCase` (PascalCase) | ✅ `FleetPDS`, `DataLoader`, `SignalProcessor` <br> ❌ `fleet_pds`, `data_loader` |
-| Constants | `UPPER_CASE` | `MAX_ITERATIONS`, `DEFAULT_SIZE` |
+| Element | Convention | Example |
+|---------|------------|---------|
+| Variables, functions, methods | `camelCase` | `xTest`, `trainModel()` |
+| Classes | `PascalCase` | `FleetPDS`, `SignalProcessor` |
+| Constants | `UPPER_CASE` | `MAX_ITERATIONS` |
 
-**Names must be meaningful but kept short.** Use the standard abbreviations:
+Standard abbreviations:
 
 | Short | Meaning | Short | Meaning |
 |-------|---------|-------|---------|
@@ -47,35 +52,24 @@ Shared conventions across [[datascience]], [[ds-scripts]], and [[ds-learn]]. **T
 | `ds` | dataset | `res` | result |
 | `sid` | sampleId | `idx` | index |
 | `rec` | record | `df` | DataFrame |
-| `slc` | slice / component | | |
+| `slc` | slice/component | | |
 
-**Train/test/validation splits** use the suffix form, never the underscore form:
+Train/test splits — suffix form only:
 
-| ✅ Use | ❌ Don't use |
-|--------|--------------|
-| `xTr`, `xTe`, `xVal` | `X_train`, `X_test`, `X_val` |
-| `yTr`, `yTe`, `yVal` | `y_train`, `y_test`, `y_val` |
-| `idxTr`, `idxTe`, `idxVal` | `idx_train`, `idx_test`, `idx_val` |
-| `srcDs`, `tgtRec`, `sidList` | `sourceDataset`, `targetRecord`, `sampleIdList` |
+| | x | y | idx |
+|---|---|---|---|
+| ✅ | `xTr` `xTe` `xVal` | `yTr` `yTe` `yVal` | `idxTr` `idxTe` `idxVal` |
+| ❌ | `X_train` `X_test` `X_val` | `y_train` `y_test` `y_val` | `idx_train` `idx_test` `idx_val` |
 
-## Class member visibility
+## Class Members
 
-**Default: write all class members as public** unless explicitly asked otherwise.
+Default: **all public**. No leading underscores unless explicitly requested.
 
-- No leading underscore prefixes (`_methodName`, `_attribute`) on methods or properties
-- Make everything public by default; only use private/protected if explicitly requested for a particular context
+## Code Style
 
-## Code style
+Indent: **4 spaces** across all repos.
 
-- **Indent**: varies by repo — see table below
-- **Philosophy**: lean, efficient code; comments only for non-obvious logic
-- **Docstrings**: Google format, required on all public functions, methods, and classes
-
-| Repo | Indent |
-|------|--------|
-| [[datascience]] | **4 spaces** |
-| [[ds-scripts]] | **tab** |
-| [[ds-learn]] | **tab** |
+Comments only for non-obvious logic. Docstrings: Google format, required on all public functions, methods, and classes.
 
 ```python
 def myFunction(arg1, arg2):
@@ -86,110 +80,52 @@ def myFunction(arg1, arg2):
         arg2: Description.
 
     Returns:
-        Description of return value.
+        Description.
 
     Raises:
         ValueError: When arg1 is invalid.
     """
 ```
 
-## Data & models
+## Data & Models
 
-- **Data models**: Pydantic v2 (`BaseModel`) with `computed_field` and `PlainSerializer` where needed
-- **ML pipelines**: scikit-learn `Pipeline` + custom transformers
-- **Model serialization**: `joblib` (`.joblib` files)
-- **Algorithm versioning**: `name-Vx.y.z`
-  - `x` = signal/model change (major)
-  - `y` = bugfix (minor)
-  - `z` = data version (patch)
-  - Example: `mdlPbgCntRngNw-V0.1.joblib`
+- Pydantic v2 (`BaseModel`) with `computed_field` and `PlainSerializer`
+- ML pipelines: sklearn `Pipeline` + custom transformers
+- Serialization: `joblib` (`.joblib` files)
+- Versioning: `name-Vx.y.z` — `x` signal/model, `y` bugfix, `z` data version
 
 ## Errors
 
-- Define new error types in `exceptions.py` — never use bare strings for error codes
-- Use domain-specific error codes with clear messages
+Define new types in `exceptions.py`. Never use bare strings for error codes.
 
-## Libraries (preferred)
+## Libraries
 
-When available, use:
-
-- `sklearn` (scikit-learn)
-- `tensorflow`
-- `pandas`
-- `numpy`
-- `scipy`
-- `matplotlib.pyplot`
-
-See [[libraries]] for the full ecosystem reference.
+Prefer: `sklearn`, `tensorflow`, `pandas`, `numpy`, `scipy`, `matplotlib.pyplot`. See [[libraries]].
 
 ## Visualization
 
-Matplotlib plots use thin lines: `lw=1` for all plot calls.
-
-```python
-import matplotlib.pyplot as plt
-plt.plot(x, y, lw=1)
-```
+`lw=1` for all plot calls.
 
 ## Imports
 
-- Prefer importing from the [[datascience]] library (core shared package)
-- Keep imports organized: stdlib → third-party → local
+stdlib → third-party → local. Prefer importing from `datascience` and `ds-learn` libraries.
 
 ## Dependencies
 
-The `knowledge` package (private GitHub repo: device/biomarker ontology) is required in:
-
-- [[datascience]]
-- [[ds-learn]]
+`knowledge` package (private) required in `datascience` and `ds-learn`.
 
 ## Setup
 
 ```bash
-# Install uv
 python -m pip install uv
-
-# Install repo in editable mode
 uv pip install -e .
-
-# With extras (ds-learn only)
-uv pip install -e ".[azure]"
+uv pip install -e ".[azure]"   # ds-learn only
 ```
 
-## Common workflows
-
-**Lint & format**:
+## Workflows
 
 ```bash
-ruff check src/ --fix
-ruff format src/
-```
-
-**Run tests**:
-
-```bash
+ruff check src/ --fix && ruff format src/
 python -m pytest src/tests/ -v
 python -m pytest src/tests/ --cov=<package>
 ```
-
-**Verify installation**:
-
-```bash
-python -c "import ds; print('OK')"
-```
-
-## Sources
-
-| Source | Notes |
-|--------|-------|
-| `~/.claude/code-conventions.md` | (deprecated — content moved here) |
-| Each repo's `pyproject.toml` | Ruff config, deps |
-| Each repo's `CLAUDE.md` | Pointers back to this note |
-
-## Gaps
-
-- No documented type-hint policy. Some files use full type hints, others don't — convention should be made explicit.
-- Pre-commit hook config is not standardized across the three repos.
-
-[workspace]: workspace.md "Workspace Layout — datascience, ds-scripts, ds-learn"
-[libraries]: ../../datascience/libraries.md "Python Libraries for Spectrophotometry & Biomarker Estimation"
