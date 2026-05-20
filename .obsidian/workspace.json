@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "misc/localLLM.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "localLLM"
             }
           }
         ]
@@ -89,13 +89,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "misc/localLLM.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of localLLM"
             }
           }
         ]
@@ -192,12 +192,10 @@
             "id": "e6e405ddcbdfb31a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "excalibrain.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "excalibrain"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -224,25 +222,28 @@
   },
   "active": "f18aac795d8d634a",
   "lastOpenFiles": [
-    "meta/updateIndex.md",
+    "misc/localLLM.md.tmp.52152.6409082a9e5e",
+    "misc/localLLM.md.tmp.52152.e48e1542c765",
+    "misc/localLLM.md.tmp.52152.701f8e689942",
+    "misc/localLLM.md.tmp.52152.eb0da60477e4",
+    "misc/science-code.md",
+    "misc/localLLM.md",
+    "misc/localLLM.md.tmp.52152.b381ce9cbbbe",
+    "misc/RAG.md",
+    "misc/vllm.md",
     "index.md",
+    "misc/voice.md",
+    "meta/updateIndex.md",
     "index.md.tmp.84852.2424f256ff3b",
     "meta/mkIndex.md",
     "CLAUDE.md",
     "meta/compare.md",
     "meta/base.base",
-    "misc/RAG.md",
-    "misc/science-code.md",
-    "misc/voice.md",
     "meta/compareReadme.md",
     "misc/voice.md.tmp.76832.cbc1dcbb7caf",
     "misc/voice.md.tmp.76832.9c74843b67cc",
     "misc/voice.md.tmp.76832.0e163b5eee37",
     "misc/voice.md.tmp.76832.186f2a1a8e1d",
-    "misc/voice.md.tmp.76832.913cc5062370",
-    "misc/voice.md.tmp.76832.4face70d95ae",
-    "misc/voice.md.tmp.76832.acd0b8514d07",
-    "misc/voice.md.tmp.76832.b3a530129dba",
     "misc/Pasted image 20260516210930.png",
     "inbox/RAG for Claude.md",
     "meta/tplMarkdown.md",
@@ -260,13 +261,10 @@
     "hydra/docs/summary.md",
     "hydra/docs/hydraDescription.md",
     "docs/media/deployedResults.png",
-    "docs/globalReport/objectives.md",
     "docs/figures/mi_rbc_binary.png",
     "docs/figures/mi_totalBacteriaCount_binary.png",
     "docs/figures/mi_wbc_binary.png",
     "docs/figures/qtp088_lodo.png",
-    "docs/globalReport/project-organization.md",
-    "excalibrain.md",
     "automl/rbc/outputs/qtp/cell_shap-spectra_0.png",
     "automl/rbc/outputs/qtp/cell_3579f255_0.png",
     "hydra/docs/media/panel2.png"

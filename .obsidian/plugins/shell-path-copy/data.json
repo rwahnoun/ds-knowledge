@@ -1,0 +1,158 @@
+{
+  "showNotifications": true,
+  "markdownLinkFormat": "wiki-style",
+  "warnOnUnresolvedTokens": true,
+  "customFormats": [
+    {
+      "id": "b3b8562e-48e9-4a8d-84a7-831fad82f4ba",
+      "name": "Relative Linux/macOS path",
+      "template": "<relative-path-unix>",
+      "wrapping": "backticks",
+      "icon": "terminal",
+      "enabled": true,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "5bbf8282-4ec4-47b9-9204-132120d243f2",
+      "name": "Relative Windows path",
+      "template": "<relative-path-windows>",
+      "wrapping": "backticks",
+      "icon": "folder-closed",
+      "enabled": true,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "913bf9ed-9930-4955-98a4-5c82c2edf91b",
+      "name": "Absolute path",
+      "template": "<absolute-path>",
+      "wrapping": "backticks",
+      "icon": "folder-closed",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "8acdaac7-d161-4fbc-9670-fcb89a121290",
+      "name": "file:// URL",
+      "template": "<file-url>",
+      "wrapping": "none",
+      "icon": "globe",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "f4974114-1fab-4dc3-b8a1-a54618d06065",
+      "name": "Obsidian URL",
+      "template": "<obsidian-url>",
+      "wrapping": "none",
+      "icon": "link-2",
+      "enabled": true,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "66dc9b6c-4365-418b-90c4-0f57ac3d0fdd",
+      "name": "Markdown link",
+      "template": "<markdown-link>",
+      "wrapping": "none",
+      "icon": "link",
+      "enabled": true,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "8e399954-7b78-497b-8e57-219b7ad852c7",
+      "name": "Filename",
+      "template": "<filename>",
+      "wrapping": "none",
+      "icon": "file-text",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "ba85e530-0c34-46b8-9c37-9fb9948505ed",
+      "name": "Filename with extension",
+      "template": "<filename-ext>",
+      "wrapping": "none",
+      "icon": "file",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "a1d3f801-7744-409d-a405-23c74eea7453",
+      "name": "Example: name and Obsidian URL",
+      "template": "<filename> -> <obsidian-url>",
+      "wrapping": "none",
+      "icon": "link-2",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "95695547-8a0c-4341-b066-210d70e4473c",
+      "name": "Example: line reference",
+      "template": "<filename-ext>#L<line-number>",
+      "wrapping": "none",
+      "icon": "hash",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "0aa664ce-c5ba-42d0-b6b6-009718677ecc",
+      "name": "Example: name and line number",
+      "template": "<filename-ext> Line <line-number>",
+      "wrapping": "none",
+      "icon": "hash",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "e9c39b8b-963d-4d18-be6d-fb8723a0e931",
+      "name": "Obsidian URL (to heading)",
+      "template": "<obsidian-url-heading>",
+      "wrapping": "none",
+      "icon": "link-2",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "c1a60189-689d-4366-b7e7-4c6fb18074e4",
+      "name": "Wiki link (to heading)",
+      "template": "<wikilink-heading>",
+      "wrapping": "none",
+      "icon": "hash",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "6db19950-cf2f-40fc-90a8-7d179c9de7c5",
+      "name": "Obsidian URL (to block)",
+      "template": "<obsidian-url-block>",
+      "wrapping": "none",
+      "icon": "link-2",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    },
+    {
+      "id": "78221356-9545-4059-a4dc-9a15d140aae4",
+      "name": "Wiki link (to block)",
+      "template": "<wikilink-block>",
+      "wrapping": "none",
+      "icon": "hash",
+      "enabled": false,
+      "showInMenu": true,
+      "showInCommands": true
+    }
+  ],
+  "settingsVersion": 4
+}

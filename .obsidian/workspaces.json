@@ -15,13 +15,13 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "index.md",
+                    "file": "misc/localLLM.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": false
                   },
                   "icon": "lucide-file",
-                  "title": "index"
+                  "title": "localLLM"
                 }
               }
             ]
@@ -91,13 +91,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "index.md",
+                    "file": "misc/localLLM.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline of index"
+                  "title": "Outline of localLLM"
                 }
               }
             ]
@@ -194,12 +194,10 @@
                 "id": "e6e405ddcbdfb31a",
                 "type": "leaf",
                 "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "excalibrain.md"
-                  },
-                  "icon": "excalidraw-icon",
-                  "title": "excalibrain"
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
                 }
               }
             ]
@@ -225,11 +223,11 @@
         }
       },
       "active": "f18aac795d8d634a",
-      "mtime": "2026-05-17T20:55:16+02:00",
+      "mtime": "2026-05-20T09:24:44+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
-          "meta"
+          "misc"
         ]
       }
     }
