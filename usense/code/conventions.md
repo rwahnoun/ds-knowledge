@@ -15,6 +15,9 @@ date: 2026-04-26
 
 Shared conventions for `datascience`, `ds-scripts`, `ds-learn`. See [[workspace]] for repo layout.
 
+> [!note] Auto-loaded rules
+> The enforceable parts of this note are mirrored as path-scoped Claude Code rules in [`claude-rules/`](file:///D:/code/ds-knowledge/usense/code/claude-rules/), symlinked into each repo's `.claude/rules/usense-shared/`. They load automatically whenever Claude touches `.py`/`.ipynb` files. **When editing conventions here, update the matching rule file too.**
+
 ## Behavioral Guidelines
 
 **Think before coding.** State assumptions explicitly. If multiple interpretations exist, present them — don't pick silently. Push back if a simpler approach exists. If something is unclear, ask before implementing.
