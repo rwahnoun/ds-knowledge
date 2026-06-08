@@ -6,22 +6,24 @@
         "type": "split",
         "children": [
           {
-            "id": "929a591471371000",
+            "id": "f044dead31b31a70",
             "type": "tabs",
             "children": [
               {
-                "id": "f18aac795d8d634a",
+                "id": "2cd7eab91549d225",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "misc/localLLM.md",
+                    "file": "usense/code/datascience/stream objectives.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": false
                   },
+                  "pinned": true,
                   "icon": "lucide-file",
-                  "title": "localLLM"
+                  "title": "stream objectives"
                 }
               }
             ]
@@ -36,7 +38,7 @@
           {
             "id": "ea666a166851b744",
             "type": "tabs",
-            "dimension": 71.75398633257403,
+            "dimension": 44.43620178041543,
             "children": [
               {
                 "id": "94840e1b394100c6",
@@ -83,7 +85,7 @@
           {
             "id": "54e435762f000315",
             "type": "tabs",
-            "dimension": 28.24601366742597,
+            "dimension": 55.56379821958457,
             "children": [
               {
                 "id": "4cf07ea0b6f0a4e0",
@@ -91,13 +93,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "misc/localLLM.md",
+                    "file": "usense/code/datascience/stream objectives.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline of localLLM"
+                  "title": "Outline of stream objectives"
                 }
               }
             ]
@@ -222,12 +224,19 @@
           "terminal:Open terminal": false
         }
       },
-      "active": "f18aac795d8d634a",
-      "mtime": "2026-05-24T17:38:15+02:00",
+      "active": "2cd7eab91549d225",
+      "mtime": "2026-06-08T16:22:33+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
-          "misc"
+          "biomarkers/compounds",
+          "biomarkers/compounds/metabolites",
+          "biomarkers/oncology/papers",
+          "QARA",
+          "usense",
+          "usense/code",
+          "usense/code/datascience",
+          "usense/code/ds-learn"
         ]
       }
     }

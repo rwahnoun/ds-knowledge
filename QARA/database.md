@@ -53,11 +53,11 @@ The DS-DB creates processed and normalized copies of the available data. Any del
 
 The database contains three tables:
 
-| Table | Contents |
-|---|---|
-| **Records** | Metadata for each record |
-| **Sensors** | Sensor metadata, raw data, and processed data for all records |
-| **Biomarkers** | Exported and cleaned biomarker values |
+| Table          | Contents                                                      |
+| -------------- | ------------------------------------------------------------- |
+| **Records**    | Metadata for each record                                      |
+| **Sensors**    | Sensor metadata, raw data, and processed data for all records |
+| **Biomarkers** | Exported and cleaned biomarker values                         |
 
 ### The DS Database Class `DbPostGreSql`
 

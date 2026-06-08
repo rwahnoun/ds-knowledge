@@ -2,6 +2,8 @@
   "showNotifications": true,
   "markdownLinkFormat": "wiki-style",
   "warnOnUnresolvedTokens": true,
+  "useSubmenu": true,
+  "groupWithNativeCopyPath": false,
   "customFormats": [
     {
       "id": "b3b8562e-48e9-4a8d-84a7-831fad82f4ba",
@@ -11,7 +13,10 @@
       "icon": "terminal",
       "enabled": true,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "5bbf8282-4ec4-47b9-9204-132120d243f2",
@@ -21,7 +26,10 @@
       "icon": "folder-closed",
       "enabled": true,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "913bf9ed-9930-4955-98a4-5c82c2edf91b",
@@ -31,7 +39,10 @@
       "icon": "folder-closed",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "8acdaac7-d161-4fbc-9670-fcb89a121290",
@@ -41,7 +52,10 @@
       "icon": "globe",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "f4974114-1fab-4dc3-b8a1-a54618d06065",
@@ -51,7 +65,10 @@
       "icon": "link-2",
       "enabled": true,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "66dc9b6c-4365-418b-90c4-0f57ac3d0fdd",
@@ -61,7 +78,10 @@
       "icon": "link",
       "enabled": true,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "8e399954-7b78-497b-8e57-219b7ad852c7",
@@ -71,7 +91,10 @@
       "icon": "file-text",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "ba85e530-0c34-46b8-9c37-9fb9948505ed",
@@ -81,7 +104,10 @@
       "icon": "file",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "a1d3f801-7744-409d-a405-23c74eea7453",
@@ -91,7 +117,10 @@
       "icon": "link-2",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "95695547-8a0c-4341-b066-210d70e4473c",
@@ -101,7 +130,10 @@
       "icon": "hash",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "0aa664ce-c5ba-42d0-b6b6-009718677ecc",
@@ -111,7 +143,10 @@
       "icon": "hash",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "e9c39b8b-963d-4d18-be6d-fb8723a0e931",
@@ -121,7 +156,10 @@
       "icon": "link-2",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "c1a60189-689d-4366-b7e7-4c6fb18074e4",
@@ -131,7 +169,10 @@
       "icon": "hash",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "6db19950-cf2f-40fc-90a8-7d179c9de7c5",
@@ -141,7 +182,10 @@
       "icon": "link-2",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     },
     {
       "id": "78221356-9545-4059-a4dc-9a15d140aae4",
@@ -151,8 +195,11 @@
       "icon": "hash",
       "enabled": false,
       "showInMenu": true,
-      "showInCommands": true
+      "showInCommands": true,
+      "showInRibbon": false,
+      "pinToRoot": false,
+      "appliesTo": "both"
     }
   ],
-  "settingsVersion": 4
+  "settingsVersion": 6
 }

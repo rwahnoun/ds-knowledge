@@ -4,22 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "929a591471371000",
+        "id": "f044dead31b31a70",
         "type": "tabs",
         "children": [
           {
-            "id": "f18aac795d8d634a",
+            "id": "2cd7eab91549d225",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/localLLM.md",
+                "file": "usense/code/datascience/stream objectives.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "localLLM"
+              "title": "stream objectives"
             }
           }
         ]
@@ -34,7 +36,7 @@
       {
         "id": "ea666a166851b744",
         "type": "tabs",
-        "dimension": 71.75398633257403,
+        "dimension": 44.43620178041543,
         "children": [
           {
             "id": "94840e1b394100c6",
@@ -81,7 +83,7 @@
       {
         "id": "54e435762f000315",
         "type": "tabs",
-        "dimension": 28.24601366742597,
+        "dimension": 55.56379821958457,
         "children": [
           {
             "id": "4cf07ea0b6f0a4e0",
@@ -89,13 +91,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/localLLM.md",
+                "file": "usense/code/datascience/stream objectives.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of localLLM"
+              "title": "Outline of stream objectives"
             }
           }
         ]
@@ -220,46 +222,46 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f18aac795d8d634a",
+  "active": "2cd7eab91549d225",
   "lastOpenFiles": [
+    "usense/code/datascience/stream objectives-claude.md",
+    "QARA/database.md",
+    "usense/code/datascience/stream objectives.md",
+    "QARA/api-architecture.md",
+    "usense/code/ds-learn/explain.md",
+    "usense/jiminiDevice.md",
+    "index.md",
+    "CLAUDE.md",
+    "usense/code/projectDescription.md",
+    "usense/code/conventions.md",
+    "usense/code/ds-learn/overview.md",
+    "usense/code/datascience/index.md",
+    "usense/code/datascience/transformers.md",
+    "usense/code/datascience/metrics.md",
+    "usense/code/datascience/overview.md",
+    "usense/code/datascience/prcPandas.md",
+    "usense/code/datascience/remoteClients.md",
+    "QARA/device.md",
+    "QARA/overview.md",
+    "usense/branding.md",
+    "usense/code/ds-scripts/overview.md",
+    "usense/code/ds-scripts/index.md",
+    "misc/localLLM.md",
     "misc/localLLM.md.tmp.52152.6409082a9e5e",
     "misc/localLLM.md.tmp.52152.e48e1542c765",
     "misc/localLLM.md.tmp.52152.701f8e689942",
     "misc/localLLM.md.tmp.52152.eb0da60477e4",
     "misc/science-code.md",
-    "misc/localLLM.md",
     "misc/localLLM.md.tmp.52152.b381ce9cbbbe",
     "misc/RAG.md",
     "misc/vllm.md",
-    "index.md",
-    "misc/voice.md",
-    "meta/updateIndex.md",
     "index.md.tmp.84852.2424f256ff3b",
-    "meta/mkIndex.md",
-    "CLAUDE.md",
-    "meta/compare.md",
     "meta/base.base",
-    "meta/compareReadme.md",
     "misc/voice.md.tmp.76832.cbc1dcbb7caf",
     "misc/voice.md.tmp.76832.9c74843b67cc",
     "misc/voice.md.tmp.76832.0e163b5eee37",
-    "misc/voice.md.tmp.76832.186f2a1a8e1d",
     "misc/Pasted image 20260516210930.png",
-    "inbox/RAG for Claude.md",
-    "meta/tplMarkdown.md",
-    "meta/compareReport/summary.md",
-    "automl/overviewInstructions.md",
     "sideQuests/information/media/top10binary.png",
-    "docs/globalReport/globalReport.md",
-    "docs/globalReport/ideas and plan.md",
-    "sideQuests/calibration/docs/calibrationDsp.md",
-    "hydra/docs/hydraCat.md",
-    "sideQuests/calibration/docs/plan.md",
-    "hydra/docs/hydraCnt.md",
-    "hydra/docs/hydraBin.md",
-    "hydra/docs/improvements.md",
-    "hydra/docs/summary.md",
-    "hydra/docs/hydraDescription.md",
     "docs/media/deployedResults.png",
     "docs/figures/mi_rbc_binary.png",
     "docs/figures/mi_totalBacteriaCount_binary.png",
