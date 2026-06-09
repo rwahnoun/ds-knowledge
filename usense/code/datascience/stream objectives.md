@@ -1,54 +1,49 @@
-# Datascience vision and scope
-The datascience stream is involved in several steps of the development of the Jimini medical device.
-1. Literature reviews
-	- Understanding the optical and electrical signals, methods for preprocessing, processing and modeling towards biomarker estimation.
-	- Scientific grounding of the biomarker estimation methods.
-2. Device development support
-	- Defining hardware specifications to obtain signals maximizing information on the target biomarkers.
-	- Assessment of the signal quality, inter device variability, and conformity to specifications using notebooks and reports.
-3. Data normalization and storage
-	- creating and maintaining a normalized database of signals, metadata and biomarkers.
-4. Algorithm development
-	- Real time tracking of scientific studies, automatic estimation during internal trials.
-	- Development of biomarker estimation algorithms from Jimini signals
-5. Production
-	- creating and managing biomarker estimation endpoints in production
-	- validation of devices post production, assessing conformity to product specifications.
-6. Tracking the performance of the deployed devices and algorithms.
+# Data Science Vision and Scope
 
-# Datascience SDK
-For this purpose, we developed a Software Development Kit (SDK) with:
-- loaders for the different Jimini, gold standard devices and gold standard lab results  file formats.
-- normalisation of any any source to a common internal format.
-- sub repositories:
-	- process spectral data and electroimpedance data
-	- normalize samples and devices
-	- statistical methods for continuous, categorical and binary variables.
-	- wrapped models to estimate the relationship between data and biomarkers
-These modules are used to create notebooks to, evaluate different devices, train algorithms, and gain information for device development and production tracking.
+The Jimini device generates complex optical and electrical signals that require rigorous data science to turn raw measurements into clinically meaningful biomarker estimates. The Data Science team underpins every stage of this process — from hardware specification to production deployment — ensuring that algorithms are scientifically grounded, reproducible, and ready for regulatory scrutiny.
+
+The Data Science team is involved in the following steps of the development of the Jimini medical device:
+
+1. Literature reviews
+	- Understanding optical and electrical signals, and the methods for preprocessing, processing, and modeling for biomarker estimation.
+	- Scientific grounding of biomarker estimation methods.
+2. Device development support
+	- Defining hardware specifications to obtain signals that maximize information on target biomarkers.
+	- Assessment of signal quality, inter-device variability, and conformity to specifications.
+3. Data normalization and storage
+	- Creating and maintaining a normalized database of signals, metadata, and biomarkers.
+4. Algorithm development
+	- Real-time tracking of scientific studies and automatic estimation during internal trials.
+	- Development of biomarker estimation algorithms from Jimini signals.
+5. Production
+	- Creating and managing biomarker estimation endpoints in production.
+	- Validation of devices post-production, assessing conformity to product specifications.
+6. Post-market performance tracking
+	- Continuous monitoring of deployed device and algorithm performance to detect drift and ensure sustained accuracy in the field.
+
+# Data Science SDK
+
+To support these activities, we developed a proprietary Software Development Kit (SDK) that standardizes data from all device types and formats into a single unified pipeline, enabling consistent algorithm development, reproducible experiments, and reliable quality assessment across all studies and production deployments.
+
+The SDK is organized into several repositories. A first set of repositories handles **loading and normalization**, with dedicated loaders for each data provider that ingest heterogeneous source formats and map them onto the universal record format. A second set provides **transformers** — modular processing units that implement signal processing, spectral-specific transformations, calibrations, and normalization. Each transformer is programmed as a self-contained, interchangeable module with a common interface, so transformers can be freely composed, reordered, and swapped. This modular design lets us assemble them into both machine learning and deep learning pipelines, keeping every step of the data flow explicit, reusable, and reproducible across experiments and production.
+
+Beyond data handling and modeling, the SDK provides **statistical functions** to assess model performance and to characterize interactions with metadata and biomarkers — for example, identifying confounders or quantifying how predictions vary across patient subgroups. It also includes **interpretability tools** that reveal where a model is looking within its inputs, helping us understand and scientifically ground the algorithms rather than treating them as black boxes. Finally, the SDK packages **Quality Test Protocols (QTPs)** and a collection of notebooks used to validate algorithms and to share results, figures, and analyses with the other teams.
 
 # Data
-The data science team handles two main types of data:
-- **Device records** contain signals and associated data. These records can originate from Jiminis, spectrophotometers, and other external or research devices. All records are normalized through loaders into a universal format in the class `Records`. An ontology is used to resolve data heterogeneity.
-- **Biomarkers** originate from columnar automatic exports from our partners, or CSV files written by our technicians. Similarly, they are normalized into a common format.
-An ETL pipeline integrates and processes records and biomarkers to feed a mongo (records) and a SQL (biomarkers) database.
-To maximize the security of PHI, the data-science database contains the minimum necessary amount of information to estimate the biomarker concentration.
+
+The Data Science team handles two main types of data:
+
+- **Device records** contain signals and associated data. These records can originate from Jiminis, spectrophotometers, and other external or research devices. All records are normalized through loaders into a universal format, with an ontology used to resolve data heterogeneity across sources.
+- **Biomarkers** originate from automatic exports from our partners or from values recorded by our technicians. They are normalized into a common format for consistent processing.
+
+An ETL (Extract, Transform, Load) pipeline integrates and processes records and biomarkers into a unified database.
+
+To maximize the security of Protected Health Information (PHI), the Data Science database contains the minimum necessary amount of information required to estimate biomarker concentrations.
+The data minimization principle — collecting only the minimum necessary PHI — aligns with Article 10 of the EU AI Act, which mandates that training data for high-risk AI systems respect data protection and privacy requirements.
 
 ## ETL
-Regarding the data pipelines, USense has several sources of information for Jimini data:
-- An **indexing database**: maintains an index of the records from the devices.
-- A **record blob storage**: stores raw records as JSON files in blob storage.
-- A **biomarkers blob storage**: contains exports from our partners.
-- **Google Sheets**: used to save information not present in the other databases for specific experiments, validations, etc.
-- **Individual folders**: for records acquired with the HW-SDK.
 
-These are the unique sources of persistent information and require careful handling. However, they contain raw, unprocessed data and are not directly queryable for batch processing. Additionally, the raw data has several formats, is not normalized, and lacks a common unique key between the biomarkers and the collected data.
-The DS ETL: 
-Processes biomarkers and data to create a common unique key for each record in the format `<organization><sampleId><year>`, avoiding conflicts among and within organizations.
-- Normalizes the data, creating names for the SLCs, cleaning sample IDs, and reformatting SLCs to the v1 data model.
-- Preprocesses the SLCs for faster access and resamples them to common wavelengths.
-- Normalizes the biomarkers, cleaning values for numeric and categorical biomarkers.
-- Stores the processed information into DS-DB, a PostgreSQL database.
+USense integrates data from multiple heterogeneous sources — device records, lab biomarker exports, and experiment-specific files — into a single, normalized, and queryable database. A custom ETL pipeline processes and harmonizes all incoming data, assigns unique identifiers to each record to avoid conflicts across organizations and studies, and stores the result in a structured PostgreSQL database. This ensures full consistency, traceability, and reproducibility across all algorithm development and production workflows.
 
 The database contains three tables:
 
@@ -57,75 +52,119 @@ The database contains three tables:
 | **Records**    | Metadata for each record                                      |
 | **Sensors**    | Sensor metadata, raw data, and processed data for all records |
 | **Biomarkers** | Exported and cleaned biomarker values                         |
-We can then use it to query records from a given study, filtering by device, date or the presence of a gold standard biomarker value.
 
-## Available data 
+This structure allows querying records from a given study, filtering by device, date, or the presence of a gold-standard biomarker value.
+
+The pipeline is organized into four stages — extraction of raw data from heterogeneous sources, transformation into a universal format, loading into the PostgreSQL database, and consumption by algorithm development:
+
+```mermaid
+flowchart TB
+    subgraph EXTRACT["1 · Extract — heterogeneous sources"]
+        direction LR
+        SRC_REC["Device records<br/>(Jimini, spectrophotometers)<br/>Google Drive · Azure Storage · Jimini SDK · local files"]
+        SRC_BM["Lab biomarker exports<br/>(per partner organization)"]
+    end
+
+    subgraph TRANSFORM["2 · Transform — normalize to universal format"]
+        direction LR
+        T_REC["Record loaders<br/>raw signals → universal record<br/>(metadata + sensor signals,<br/>spectral processing)"]
+        T_BM["Biomarker converter<br/>rename → map partner codes to<br/>canonical codes (concept map) →<br/>normalize values → dedup → pivot per sample"]
+    end
+
+    subgraph LOAD["3 · Load — PostgreSQL"]
+        direction LR
+        TR["Records<br/>(metadata)"]
+        TS["Sensors<br/>(meta + raw + processed)"]
+        TB["Biomarkers<br/>(cleaned values)"]
+        TR -. "1-to-many" .- TS
+    end
+
+    subgraph CONSUME["4 · Consume — algorithm development"]
+        DSR["Query → Dataset<br/>→ compact, reproducible<br/>cached datasets"]
+    end
+
+    SRC_REC --> T_REC
+    SRC_BM --> T_BM
+    T_REC --> TR
+    T_REC --> TS
+    T_BM --> TB
+    T_BM -. "joined on sample id" .- T_REC
+    LOAD --> DSR
+```
+
+Each record is assigned a unique identifier on load, and records and biomarkers are joined on a shared sample key, so the same query interface serves both algorithm development and production.
+
+## Available data
+As of 2026-06-04, the Data Science database holds 43,122 device records (1,568,600 individual sensor signals) collected since 2025-03-25 across 19 partner organizations and 21 studies/campaigns, using 21 Jimini devices. Of these, 37,946 are urine measurements (the clinical target), and 19,531 records (45%) are paired with a gold-standard lab biomarker drawn from 10,881 labelled samples. The labelled cohort is 57% female / 43% male with a median age of 58 years, and includes 10,832 samples with an infection label.
+
+![alt text](image.png)
+
+
 
 # Biomarker Estimation
-The Jimini device developed by Usense is a pen-like probe that can be dipped into a liquid sample (urine, water, or air). Via a companion app, it drives onboard emitters and reads signals from multiple sensors. The goal is to measure urine biomarker concentrations non-invasively.  From an algorithm development point of view, this converts to predicting a continuous, categorical, or binary concentration of a biomarker present in the urine from a matrix of electric and optic signals.
 
-## Overall strategy
-#### Explainability and simplicity
-The strategy is to reach the simplest model that solves the problem. In the case of optical estimation of biomarker, we start from naive and science rooted methods, for example following the Beer Lambert law. We then try signal processing and normalisation techniques to circumvent sample and device variability. For the model, we start by using machine learning techniques (PCA for feature selection), Logistic Regression (model). If necessary, we switch to deep learning methods, when enough data is available. 
-#### Science-backed algorithms
-as mentioned earlier, algorithm development starts with understanding the expected impact of the target biomarker on the signals. In coordination with the science team, literature reviews drive the development of the device as well as the algorithms to target optical wavelengths in order to maximize biomarker responses. Algorithm development will first target expected signal changes. 
+The Jimini device developed by USense is a pen-like probe that can be dipped into a liquid sample (urine, water, or air). Via a companion app, it drives onboard emitters and reads signals from multiple sensors. The goal is to measure urine biomarker concentrations non-invasively — enabling point-of-care diagnostics that could replace or complement laboratory testing, reducing time-to-result and improving access to care. From an algorithm development standpoint, this translates to predicting a continuous, categorical, or binary concentration of a biomarker from a matrix of electrical and optical signals.
+
+## Overall Strategy
+
+#### Explainability and Simplicity
+
+The strategy is to reach the simplest model that solves the problem. For optical biomarker estimation, we start from naive, science-rooted methods — for example, following the Beer-Lambert law — and progressively apply signal processing and normalization techniques to address sample and device variability. For modeling, we begin with interpretable machine learning techniques (PCA for feature selection, Logistic Regression for classification). Deep learning methods are only adopted when simpler approaches are insufficient and enough data is available. This preference for simplicity means our models are more auditable, easier to validate with regulators, and faster to iterate on.
+This "simplest model first" philosophy directly supports the EU AI Act's requirement (Article 13) that high-risk AI systems be sufficiently transparent for users and notified bodies to understand and verify their outputs.
+
+#### Science-Backed Algorithms
+
+Algorithm development starts with understanding the expected impact of the target biomarker on the signals. In coordination with the science team, literature reviews drive device development as well as algorithm design — targeting specific optical wavelengths to maximize biomarker response. This scientific grounding strengthens the defensibility of our IP and supports faster regulatory approval by aligning algorithmic choices with established biochemical mechanisms.
+
 #### Determinism
-All developed algorithms are deterministic, i.e. for a given input signal, the algorithm output will be the same. The hardware is designed to minimize variability between devices, and the datascience code contains several functions to reduce as much as possible inter and intra devices variations on the same sample.
-#### Input validation
-Algorithms are designed to accept specific input data. The models are wrapped to reject input signals when its requirements are not met.
-This includes low signal level, metadata issues (wrong sample type), wrong hardware or firmware version, electroimpedance errors (when the device is not recording in urine, or with a low liquid level)
-When algorithmic requirements are not met for a specific model, error codes are returned to the backend and mobile application. 
-#### Tracability
-Algorithm input and outputs are stored in our backend. We normally do not have gold standard biomarker levels when the device is in production, we therefore can not 
 
-## Algorithm development
-- Data are selected from the DS database for a given biomarker, and stored into a compact and reproductible format.
-- The dataset is split into a training and testing dataset, ensuring that the same sample is not in the train and test dataset.
-- We then implement descriptive overviews to better understand the problem, signals and distribution of biomarkers. This step helps choosing the development strategy for the models.
-- Algorithms are trained, hyperparameter optimized and logged using a dedicated experiment tracking service (mlflow).  We then perform threshold optimization techniques to fit as much as possible to the product specifications.
-- Once one or several candidate algorithms are in place. we run reports indicating the performance of the algorithms in prediction the biomarker concentration, and the potential confounders (i.e. other biomarkers that could increase the model error)
-- The algorithm then undergoes the validation stage in collaboration with the science team.
+All developed algorithms are deterministic: for a given input signal, the algorithm will always produce the same output. The hardware is designed to minimize variability between devices, and the Data Science codebase contains dedicated functions to reduce inter- and intra-device signal variation on the same sample. This reproducibility is essential for regulatory submissions and clinical validation.
+Deterministic algorithms satisfy the EU AI Act's requirement (Article 9) for risk management and consistent, predictable behavior in high-risk AI systems — a key criterion for CE marking and clinical validation.
 
-## Compute service and ML-OPS
-The data-science algorithms are exposed using **Azure Functions**. This allows controlled access as well as scalability. 
-The Azure Functions can be called from a local computer, or from the cloud service after authentication. Examples of exposed functions include biomarker estimation from one or more Jimini records, or quality estimation of a given record.
-The platform can be directly deployed from VS-Code, after validation of the related unit tests and QTPs. The platform is first deployed into a staging environment, then into a production environment once approved by the cloud team's integration tests.
-A standardized **API** allows to call one or several biomarker estimation algorithms, providing the record(s) and requested analyses. The service responds in a format adapted from the FHIR standard.
-The service is hosted by the Usense's cloud stream and inherits its firewall and security settings.
-As of today,  a single endpoint for each biomarker is deployed, however, with this architecture, the system can easily evolve to add redundancy, and scale to any number of devices.
+#### Input Validation
 
-<STOP HERE>
-------
+Algorithms are designed to accept only specific, well-defined input data. The models actively reject input signals that do not meet their requirements — including low signal levels, metadata issues (wrong sample type), incompatible hardware or firmware versions, and electroimpedance errors (e.g., the device not recording in urine, or insufficient liquid level). When requirements are not met, error codes are returned to the backend and mobile application rather than producing an unreliable result.
+This input validation mechanism aligns with the EU AI Act's Article 9 requirements for risk management: the system actively detects out-of-scope conditions and refuses to operate rather than producing potentially harmful outputs.
 
+#### Traceability
 
-# Vision Data Science
-Expliquer précisément quel problème le développement d'algorithmes sur le Jimini résout, pour qui (patient, médecin, hôpital et payeur) et quel gain mesurable il apporte (diagnostic plus précoce etc.).
-=> PRODUCT
+Algorithm inputs and outputs are stored in our backend for every production call. Since gold-standard biomarker values are not routinely available in production settings, direct accuracy monitoring is not always possible; instead, we track signal quality metrics, output distributions, and error rates to detect drift and flag anomalies. This traceability infrastructure enables post-market surveillance and supports regulatory audit requirements.
+Full traceability of algorithm inputs and outputs supports compliance with the EU AI Act's Article 12, which requires high-risk AI systems to automatically log events throughout their lifecycle to enable post-market monitoring and auditability.
 
-# Taille et qualité des datasets
-Présenter les datasets de données disponibles (nb échantillons/patients, campagnes de collecte...), leur représentativité et les éléments qui garantissent leur qualité (homme/femme, diversité, qualité des signaux, données longitudinales...).
-Dataset Lisa / Dataset spectro / Dataset Jimini
+## Algorithm Development
 
-# ~~Pipeline de données~~
-~~Décrire comment les données sont collectées, transmises, stockées, transformées, en garantissant traçabilité, sécurité et conformité réglementaire.~~
+Algorithm development follows a structured, reproducible workflow that takes a target biomarker from a raw query to a validation-ready candidate model. Each stage is logged and versioned so that any result can be reproduced and audited.
 
-# ~~Stratégie de validation~~
-~~Expliquer comment les mesures de référence (gold standard) sont obtenues et intégrées.~~
+- **Dataset creation.** Records and gold-standard biomarker values are queried from the Data Science database for a given biomarker and frozen into a compact, versioned, reproducible dataset, so every experiment runs against an immutable, traceable snapshot.
+- **Splitting.** Data are partitioned into training and test sets at the **sample level**, guaranteeing that no sample appears in both, which prevents data leakage and yields honest generalization estimates.
+- **Exploratory analysis.** Descriptive overviews characterize the problem, the signals, and the biomarker distribution (including class imbalance and potential confounders), informing the modeling strategy before any model is trained.
+- **Preprocessing pipeline.** Signals are passed through a composable chain of SDK transformers — signal processing, spectral transformations, calibration, and normalization — to reduce sample and inter/intra-device variability and to expose the biomarker-relevant information.
+- **Modeling, simplest-first.** Starting from science-rooted baselines (e.g. Beer-Lambert) and interpretable models (PCA, Logistic Regression), algorithms are trained, hyperparameter-optimized via cross-validation, and tracked with a dedicated experiment-tracking service (MLflow). More complex methods are introduced only when simpler ones prove insufficient. Threshold-optimization techniques align operating points (sensitivity/specificity) with product specifications.
+- **Reporting and interpretability.** For each candidate, reports document prediction performance against product-spec metrics, residual error, potential confounders (other biomarkers that could degrade accuracy), and interpretability analyses showing where the model draws its signal — keeping models auditable rather than black-box.
+- **Validation.** The selected, versioned candidate undergoes a formal validation stage with the science team, after which it is handed off to the production/deployment workflow.
 
-# ~~Architecture ML~~
-~~Présenter la stratégie, les types de modèles utilisés, les données d'entrée, les principales variables de suivi et les raisons qui justifient les choix technologiques effectués.~~
+## Automated Research (AutoML)
 
-# Résultats de performance
+To accelerate algorithm development, we built an in-house **autoresearch system** that turns our modular SDK into a self-driving experimentation engine. The system automatically assembles the SDK's building blocks — signal-processing transformers, feature extractors, and models — into complete candidate pipelines, trains each one to predict the target biomarker, and records its performance. An **AI agent then reads and interprets the results of every run**, reasons about what worked and what did not — grounded in the underlying biology and signal physics — forms the next hypothesis, and decides which pipeline to try next. Every experiment is logged, and the system **tracks the evolution of performance over time**, so progress toward the clinical target (balanced accuracy, sensitivity, and specificity each above 80%) is continuously visible and fully traceable.
 
+Crucially, the process is **semi-automated, not a black box**. The system runs in short autonomous bursts, but a data scientist **reviews the consolidated reports every five to ten runs**, validates the agent's conclusions, and **updates the research objectives and strategy** before the next burst — for example, redirecting the search to a different signal family when a line of attack stalls. This human-in-the-loop checkpoint keeps the search scientifically grounded and aligned with product requirements, combining the speed and tirelessness of automated experimentation with expert oversight and accountability. The result is faster iteration toward validated models, with a complete, auditable record of how each model was reached. This continuous human oversight also supports the EU AI Act's Article 14 requirement that high-risk AI systems remain under meaningful human control.
 
-# Montrer les métriques clés
+![The semi-automated autoresearch loop. Inside the autonomous loop (right), the AI agent assembles SDK blocks into a candidate pipeline, trains and evaluates it, logs the result, then reasons from the outcome to plan the next experiment. Every five to ten runs, a data scientist (left) reviews the consolidated report and updates the objectives and strategy before the search continues.](autoResearchLoop.png)
 
-# ~~Validation clinique~~
-~~Création de dataset de validation analytiques~~
-~~=> SCIENCE~~ 
+![Evolution of model performance across an autoresearch campaign for total bacteria count (TBC): 72 successive runs improving balanced accuracy from a 0.68 baseline to a 0.78 champion. Each point is one experiment; arrows trace which prior run each new hypothesis built on (green = improvement, red = regression), and the lower panel shows the running best.](evolutionTbc.png)
 
+## Compute Service and MLOps
 
-# Monitoring et MLOps
-Décrire les mécanismes permettant de surveiller la qualité des données et des modèles en production, détecter les dérives et assurer des mises à jour contrôlées.
+The Data Science algorithms are exposed using **Azure Functions**, enabling controlled access and horizontal scalability. The Azure Functions can be called from a local computer or from the cloud service after authentication. Examples of exposed functions include biomarker estimation from one or more Jimini records and quality estimation of a given record.
 
-Conformité réglementaire IAExpliquer comment les développements algorithmiques s'intègrent dans le système qualité, dans l'IA act et les règles de bonnes pratiques
+The platform is deployed directly from VS Code, following successful unit tests and Qualification Test Protocols (QTPs). Deployment follows a controlled two-stage process: first into a staging environment, then into production after approval by cloud team integration tests — ensuring that no unvalidated changes reach clinical users.
+This staged deployment process supports the EU AI Act's Articles 9 and 17 requirements for quality management systems governing AI system updates and post-deployment control.
+
+A standardized **API** allows calling one or several biomarker estimation algorithms, providing the record(s) and requested analyses. The service responds in a format adapted from the Fast Healthcare Interoperability Resources (FHIR) standard, ensuring interoperability with clinical information systems.
+
+The service is hosted by USense's cloud infrastructure and inherits its firewall and security settings. The current architecture supports a single endpoint per biomarker, with built-in capacity to add redundancy and scale to any number of devices.
+
+Our architecture was designed from the ground up to meet the requirements of high-risk AI systems under the EU AI Act and the In Vitro Diagnostic Regulation (IVDR) — combining deterministic algorithms, input validation, full traceability, staged deployment, and PHI minimization into a cohesive, audit-ready system.
+
+## Current performance of deployed algorithms
+![alt text](image-1.png)

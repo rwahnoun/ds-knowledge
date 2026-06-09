@@ -1,0 +1,31 @@
+%%{init: {'flowchart': {'curve': 'basis', 'nodeSpacing': 28, 'rankSpacing': 42, 'htmlLabels': true}}}%%
+flowchart LR
+    SDK["SDK blocks<br/><small>transformers · features · models</small>"]
+
+    subgraph LOOP["Autonomous loop · every run"]
+        direction LR
+        ASM["Assemble<br/>pipeline"] --> TRAIN["Train &amp;<br/>evaluate"] --> LOG["Log &amp; track<br/>evolution"] --> AGENT["AI agent<br/>reason &amp; plan next"]
+        AGENT -->|"next hypothesis"| ASM
+    end
+
+    subgraph HUMAN["Human checkpoint · every 5–10 runs"]
+        direction LR
+        REVIEW["Review<br/>report"] --> UPDATE["Update objectives<br/>&amp; strategy"]
+    end
+
+    SDK --> ASM
+    LOG --> GOAL(["Validated model<br/>bAcc · Se · Sp ≥ 0.8"])
+    LOG -. "report" .-> REVIEW
+    UPDATE -. "redirect" .-> AGENT
+
+    classDef auto fill:#dfe9f3,stroke:#1f3b57,stroke-width:1px,color:#16202b;
+    classDef agent fill:#1f3b57,stroke:#16202b,stroke-width:1px,color:#ffffff;
+    classDef human fill:#f6dca6,stroke:#b5532a,stroke-width:1px,color:#5a2f15;
+    classDef goal fill:#cfe8d4,stroke:#2f7d4f,stroke-width:1.5px,color:#1c3a26;
+    classDef src fill:#eef1f4,stroke:#9aa7b1,stroke-width:1px,color:#16202b;
+
+    class ASM,TRAIN,LOG auto;
+    class AGENT agent;
+    class REVIEW,UPDATE human;
+    class GOAL goal;
+    class SDK src;

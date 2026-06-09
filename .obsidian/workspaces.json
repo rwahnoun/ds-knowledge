@@ -38,7 +38,7 @@
           {
             "id": "ea666a166851b744",
             "type": "tabs",
-            "dimension": 44.43620178041543,
+            "dimension": 74.41154138192863,
             "children": [
               {
                 "id": "94840e1b394100c6",
@@ -85,7 +85,7 @@
           {
             "id": "54e435762f000315",
             "type": "tabs",
-            "dimension": 55.56379821958457,
+            "dimension": 25.588458618071375,
             "children": [
               {
                 "id": "4cf07ea0b6f0a4e0",
@@ -224,19 +224,14 @@
           "terminal:Open terminal": false
         }
       },
-      "active": "2cd7eab91549d225",
-      "mtime": "2026-06-08T16:22:33+02:00",
+      "active": "94840e1b394100c6",
+      "mtime": "2026-06-09T12:02:11+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
-          "biomarkers/compounds",
-          "biomarkers/compounds/metabolites",
-          "biomarkers/oncology/papers",
-          "QARA",
+          "misc",
           "usense",
-          "usense/code",
-          "usense/code/datascience",
-          "usense/code/ds-learn"
+          "usense/code"
         ]
       }
     }

@@ -36,7 +36,7 @@
       {
         "id": "ea666a166851b744",
         "type": "tabs",
-        "dimension": 44.43620178041543,
+        "dimension": 74.41154138192863,
         "children": [
           {
             "id": "94840e1b394100c6",
@@ -83,7 +83,7 @@
       {
         "id": "54e435762f000315",
         "type": "tabs",
-        "dimension": 55.56379821958457,
+        "dimension": 25.588458618071375,
         "children": [
           {
             "id": "4cf07ea0b6f0a4e0",
@@ -224,9 +224,24 @@
   },
   "active": "2cd7eab91549d225",
   "lastOpenFiles": [
+    "usense/code/datascience/Data Science Vision and Scope.pdf",
+    "usense/code/datascience/streamObjectives.build.md",
+    "usense/code/datascience/etlPipeline.png",
+    "usense/code/datascience/etlPipeline.mmd",
+    "usense/code/datascience/etlPipeline.mmd.tmp.39496.21d2dfa75f20",
+    "usense/code/datascience/image-1.png",
+    "usense/code/datascience/image.png",
+    "usense/code/datascience/availableData.ipynb.tmp.39496.e62be5951395",
+    "usense/code/datascience/availableData.ipynb",
+    "usense/code/datascience/availableData.ipynb.tmp.39496.d5f71d9e4000",
+    "usense/code/datascience/stream objectives.md.tmp.39496.534e4adab01e",
+    "usense/code/datascience/stream objectives.md.tmp.15596.6e85722365ea",
+    "usense/code/datascience/stream objectives.md.tmp.15596.fd5bdce937c4",
+    "usense/code/datascience/stream objectives.md.tmp.15596.4acec368a552",
+    "usense/code/datascience/stream objectives.md.tmp.15596.6b75434b8579",
+    "usense/code/datascience/stream objectives.md",
     "usense/code/datascience/stream objectives-claude.md",
     "QARA/database.md",
-    "usense/code/datascience/stream objectives.md",
     "QARA/api-architecture.md",
     "usense/code/ds-learn/explain.md",
     "usense/jiminiDevice.md",
@@ -247,28 +262,13 @@
     "usense/code/ds-scripts/overview.md",
     "usense/code/ds-scripts/index.md",
     "misc/localLLM.md",
-    "misc/localLLM.md.tmp.52152.6409082a9e5e",
-    "misc/localLLM.md.tmp.52152.e48e1542c765",
-    "misc/localLLM.md.tmp.52152.701f8e689942",
-    "misc/localLLM.md.tmp.52152.eb0da60477e4",
     "misc/science-code.md",
-    "misc/localLLM.md.tmp.52152.b381ce9cbbbe",
-    "misc/RAG.md",
-    "misc/vllm.md",
-    "index.md.tmp.84852.2424f256ff3b",
-    "meta/base.base",
-    "misc/voice.md.tmp.76832.cbc1dcbb7caf",
-    "misc/voice.md.tmp.76832.9c74843b67cc",
-    "misc/voice.md.tmp.76832.0e163b5eee37",
     "misc/Pasted image 20260516210930.png",
     "sideQuests/information/media/top10binary.png",
     "docs/media/deployedResults.png",
     "docs/figures/mi_rbc_binary.png",
     "docs/figures/mi_totalBacteriaCount_binary.png",
     "docs/figures/mi_wbc_binary.png",
-    "docs/figures/qtp088_lodo.png",
-    "automl/rbc/outputs/qtp/cell_shap-spectra_0.png",
-    "automl/rbc/outputs/qtp/cell_3579f255_0.png",
-    "hydra/docs/media/panel2.png"
+    "docs/figures/qtp088_lodo.png"
   ]
 }

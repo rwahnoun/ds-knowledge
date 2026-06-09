@@ -1,0 +1,43 @@
+%%{init: {'flowchart': {'curve': 'basis', 'nodeSpacing': 24, 'rankSpacing': 46, 'htmlLabels': true}}}%%
+flowchart LR
+    subgraph EXTRACT["1 · Extract"]
+        direction TB
+        SRC_REC["Device records<br/><small>Jimini · spectrophotometers<br/>Drive · Azure · SDK · files</small>"]
+        SRC_BM["Lab biomarker exports<br/><small>per partner organization</small>"]
+    end
+
+    subgraph TRANSFORM["2 · Transform · normalize"]
+        direction TB
+        T_REC["Record loaders<br/><small>raw signals → universal record</small>"]
+        T_BM["Biomarker converter<br/><small>map codes → normalize → pivot</small>"]
+    end
+
+    subgraph LOAD["3 · Load · PostgreSQL"]
+        direction TB
+        TR["Records<br/><small>metadata</small>"]
+        TS["Sensors<br/><small>raw + processed</small>"]
+        TBM["Biomarkers<br/><small>cleaned values</small>"]
+        TR -. "1-to-many" .- TS
+    end
+
+    subgraph CONSUME["4 · Consume"]
+        DSR["Query → Dataset<br/><small>cached · reproducible</small>"]
+    end
+
+    SRC_REC --> T_REC
+    SRC_BM --> T_BM
+    T_REC --> TR
+    T_REC --> TS
+    T_BM --> TBM
+    T_BM -. "joined on sample id" .- T_REC
+    LOAD --> DSR
+
+    classDef extract fill:#eef1f4,stroke:#9aa7b1,stroke-width:1px,color:#16202b;
+    classDef transform fill:#dfe9f3,stroke:#1f3b57,stroke-width:1px,color:#16202b;
+    classDef load fill:#e3eeee,stroke:#3c8d8d,stroke-width:1px,color:#133230;
+    classDef consume fill:#cfe8d4,stroke:#2f7d4f,stroke-width:1.5px,color:#1c3a26;
+
+    class SRC_REC,SRC_BM extract;
+    class T_REC,T_BM transform;
+    class TR,TS,TBM load;
+    class DSR consume;
