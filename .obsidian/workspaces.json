@@ -14,16 +14,11 @@
                 "type": "leaf",
                 "pinned": true,
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "usense/code/datascience/stream objectives.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": false
-                  },
+                  "type": "empty",
+                  "state": {},
                   "pinned": true,
                   "icon": "lucide-file",
-                  "title": "stream objectives"
+                  "title": "New tab"
                 }
               }
             ]
@@ -85,7 +80,7 @@
           {
             "id": "54e435762f000315",
             "type": "tabs",
-            "dimension": 25.588458618071375,
+            "dimension": 25.58845861807138,
             "children": [
               {
                 "id": "4cf07ea0b6f0a4e0",
@@ -93,13 +88,12 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "usense/code/datascience/stream objectives.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline of stream objectives"
+                  "title": "Outline"
                 }
               }
             ]
@@ -224,8 +218,8 @@
           "terminal:Open terminal": false
         }
       },
-      "active": "94840e1b394100c6",
-      "mtime": "2026-06-09T12:02:11+02:00",
+      "active": "2cd7eab91549d225",
+      "mtime": "2026-06-10T11:55:37+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [

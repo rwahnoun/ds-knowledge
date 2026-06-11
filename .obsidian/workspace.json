@@ -12,16 +12,11 @@
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "usense/code/datascience/stream objectives.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "pinned": true,
               "icon": "lucide-file",
-              "title": "stream objectives"
+              "title": "New tab"
             }
           }
         ]
@@ -83,7 +78,7 @@
       {
         "id": "54e435762f000315",
         "type": "tabs",
-        "dimension": 25.588458618071375,
+        "dimension": 25.58845861807138,
         "children": [
           {
             "id": "4cf07ea0b6f0a4e0",
@@ -91,13 +86,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "usense/code/datascience/stream objectives.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of stream objectives"
+              "title": "Outline"
             }
           }
         ]
