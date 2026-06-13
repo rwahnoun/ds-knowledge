@@ -1,6 +1,9 @@
 {
   "baseFontSizeAction": true,
   "baseFontSize": 18,
-  "cssTheme": "",
-  "showViewHeader": true
+  "cssTheme": "Claude",
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "headings"
+  ]
 }
