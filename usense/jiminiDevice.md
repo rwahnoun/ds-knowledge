@@ -70,10 +70,28 @@ Examples: `C12-275-100.0mA`, `C14-VIS-50.0mA`
 
 | Signal | Index | Values |
 |--------|-------|--------|
-| Optical (C12, C14) | wavelength (nm) | intensity array |
+| Optical (C12, C14) | wavelength (nm) | **raw intensity** — photon counts per integration time |
 | EIS | frequency (Hz) | complex impedance (real + imaginary) |
 | IRM | 2D matrix | IR absorbance values |
 | SWV | voltage (V) | current sweep |
+
+> [!IMPORTANT]
+> **Optical `_raw` data is intensity (photon counts), NOT absorbance.** Each C12/C14
+> value is the number of photons the detector collected in the integration time
+> (scaled), and it depends on LED drive current, integration time, detector gain and
+> dark current — so raw values are only comparable across SLCs/devices **after
+> normalising to a blank acquired at the same settings** (water or `C12-off`).
+> **Absorbance is a derived quantity:** `A = -log10(I_sample / I_reference)` (the `rAbs`
+> / `abs` processing chains). Consequences:
+> - **Beer–Lambert (`-log10` → absorption) applies only to opposite-side (transmission)
+>   emitters** (`275/365/405/455/VIS`). Attenuation there = absorption **+** scattering.
+> - **Same-side (reflectance) emitters `VISD` and `R405` measure back-scattered
+>   intensity, which *rises* with scattering** — do **not** convert them to absorbance.
+> - Because intensities are **additive photon counts**, transmission `T` and reflectance
+>   `R` (co-scaled) give a forward-model-free split: `T+R` falls with absorption (photons
+>   destroyed), `R/(T+R)` rises with scatter (photons redistributed). See the scatter
+>   estimation plan in `ds-learn/.../reduce/scatter/readme.md`.
+> - Reflectance is ~10× weaker than transmission → more **Poisson shot noise** (∝ √counts).
 
 ## Sample Characteristics
 
