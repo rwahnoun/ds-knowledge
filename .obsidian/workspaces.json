@@ -6,19 +6,22 @@
         "type": "split",
         "children": [
           {
-            "id": "f044dead31b31a70",
+            "id": "e42d7701400fda26",
             "type": "tabs",
             "children": [
               {
-                "id": "2cd7eab91549d225",
+                "id": "f486658863a7cc22",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "empty",
-                  "state": {},
-                  "pinned": true,
+                  "type": "markdown",
+                  "state": {
+                    "file": "ds-learn/src/learn/projects/v20/reduce/scatter/conciseSummary.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": false
+                  },
                   "icon": "lucide-file",
-                  "title": "New tab"
+                  "title": "conciseSummary"
                 }
               }
             ]
@@ -33,7 +36,7 @@
           {
             "id": "ea666a166851b744",
             "type": "tabs",
-            "dimension": 74.41154138192863,
+            "dimension": 74.64788732394366,
             "children": [
               {
                 "id": "94840e1b394100c6",
@@ -80,7 +83,7 @@
           {
             "id": "54e435762f000315",
             "type": "tabs",
-            "dimension": 25.58845861807138,
+            "dimension": 25.352112676056336,
             "children": [
               {
                 "id": "4cf07ea0b6f0a4e0",
@@ -88,19 +91,20 @@
                 "state": {
                   "type": "outline",
                   "state": {
+                    "file": "ds-learn/src/learn/projects/v20/reduce/scatter/conciseSummary.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline"
+                  "title": "Outline of conciseSummary"
                 }
               }
             ]
           }
         ],
         "direction": "horizontal",
-        "width": 264.5
+        "width": 902.5
       },
       "right": {
         "id": "6982c054f9a3b1f6",
@@ -218,14 +222,67 @@
           "terminal:Open terminal": false
         }
       },
-      "active": "2cd7eab91549d225",
-      "mtime": "2026-06-10T11:55:37+02:00",
+      "floating": {
+        "id": "353b7919fcb5a2fa",
+        "type": "floating",
+        "children": [
+          {
+            "id": "21d80b42257b307f",
+            "type": "window",
+            "children": [
+              {
+                "id": "8e33f6041177cbdb",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "4053579a7133176e",
+                    "type": "leaf",
+                    "pinned": true,
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "ds-learn/src/learn/projects/v20/reduce/docs/todo.md",
+                        "mode": "source",
+                        "source": false,
+                        "backlinks": false
+                      },
+                      "pinned": true,
+                      "icon": "lucide-file",
+                      "title": "todo"
+                    }
+                  }
+                ]
+              }
+            ],
+            "direction": "vertical",
+            "x": 3907,
+            "y": 35,
+            "width": 1202,
+            "height": 1352,
+            "maximize": false,
+            "zoom": 0
+          }
+        ]
+      },
+      "active": "f486658863a7cc22",
+      "mtime": "2026-06-15T10:09:03+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
-          "misc",
-          "usense",
-          "usense/code"
+          "ds-learn",
+          "ds-learn/src",
+          "ds-learn/src/learn",
+          "ds-learn/src/learn/projects",
+          "ds-learn/src/learn/projects/v20",
+          "ds-learn/src/learn/projects/v20/pipeline",
+          "ds-learn/src/learn/projects/v20/reduce",
+          "ds-learn/src/learn/projects/v20/reduce/docs",
+          "ds-learn/src/learn/projects/v20/reduce/inception",
+          "ds-learn/src/learn/projects/v20/reduce/inception/dumps",
+          "ds-learn/src/learn/projects/v20/reduce/scatter",
+          "ds-learn/src/learn/projects/v20/reduce/scatter/notebooks",
+          "ds-scripts/src",
+          "ds-scripts/src/notebooks"
         ]
       }
     }
