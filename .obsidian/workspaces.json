@@ -91,13 +91,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "ds-learn/src/learn/projects/v20/reduce/scatter/conciseSummary.md",
+                    "file": "ds-learn/src/learn/projects/v20/reduce/docs/todo.md",
                     "followCursor": true,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "Outline of conciseSummary"
+                  "title": "Outline of todo"
                 }
               }
             ]
@@ -264,8 +264,8 @@
           }
         ]
       },
-      "active": "f486658863a7cc22",
-      "mtime": "2026-06-15T10:09:03+02:00",
+      "active": "4053579a7133176e",
+      "mtime": "2026-07-27T14:54:24+02:00",
       "workspaces-plus:settings-v1": {
         "mode": null,
         "explorerFoldState": [
